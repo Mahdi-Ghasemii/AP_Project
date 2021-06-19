@@ -22,7 +22,7 @@ Logo::Logo(QWidget *parent) :
     movie->start();
 
     t1 = new QTimer(this);
-    t1->setInterval(500);
+    t1->setInterval(8500);
     connect(t1, SIGNAL(timeout()), this, SLOT(logo_show()));
     t1->start();
 
