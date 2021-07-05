@@ -1,5 +1,12 @@
-﻿#include "Storage.h"
-#include <time.h>
+#include "Storage.h"
+#include "ui_Storage.h"
+
+/*Storage::Storage(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::Storage)
+{
+    ui->setupUi(this);
+}*/
 
 Storage::Storage ()
 {
@@ -78,11 +85,10 @@ void Storage::Set_Pashm (Product _pashm)
 
 void Storage::Increase_Capasity ()
 {
-    
+
 }
 
 void Storage::Check_Storages_Product ()
 {
-    
-}
 
+}

@@ -1,14 +1,22 @@
-﻿#include "Product.h"
-#include "Building.h"
+#ifndef SILOO_H
+#define SILOO_H
 
-using namespace std;
+#include <QWidget>
+#include "Product.h"
 
-class Siloo :  public Building
+namespace Ui {
+class Siloo;
+}
+
+class Siloo : public QWidget
 {
-    private:
-        Product gandom;
+    Q_OBJECT
 
-    public:
+private:
+        Product gandom;
+        Ui::Siloo *ui;
+
+public:
 
         Siloo ();
         Product Get_gandom ();
@@ -17,4 +25,7 @@ class Siloo :  public Building
         void Increase_Capacity ();
         void Check_Siloos_Product ();
 
+
 };
+
+#endif // SILOO_H
