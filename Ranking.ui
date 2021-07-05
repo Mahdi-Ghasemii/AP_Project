@@ -2,8 +2,8 @@
  <author/>
  <comment/>
  <exportmacro/>
- <class>Storage</class>
- <widget class="QWidget" name="Storage">
+ <class>Ranking</class>
+ <widget class="QWidget" name="Ranking">
   <property name="geometry">
    <rect>
     <x>0</x>

@@ -1,3 +1,4 @@
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -10,6 +11,11 @@ CONFIG += c++11
 
 SOURCES += \
     Habitat.cpp \
+    Logo.cpp \
+    Player.cpp \
+    Ranking.cpp \
+    SignIn.cpp \
+    SignUp.cpp \
     main.cpp\
     Siloo.cpp\
     Building.cpp\
@@ -19,7 +25,11 @@ SOURCES += \
 
 HEADERS +=\
     Habitat.h \
-    main.h\
+    Logo.h \
+    Player.h \
+    Ranking.h \
+    SignIn.h \
+    SignUp.h \
     Siloo.h\
     Building.h\
     Storage.h\
@@ -28,9 +38,13 @@ HEADERS +=\
 
 FORMS += \
     Habitat.ui \
+    Logo.ui \
+    Ranking.ui \
+    SignIn.ui \
+    SignUp.ui \
     Storage.ui\
     Siloo.ui\
-    Store.ui
+    Store.ui\
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

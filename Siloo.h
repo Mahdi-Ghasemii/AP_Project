@@ -1,20 +1,34 @@
-﻿#include "Product.h"
-#include "Building.h"
+#ifndef SILOO_H
+#define SILOO_H
 
-using namespace std;
+#include <QWidget>
+#include "Product.h"
+#include <QMainWindow>
 
-class Siloo :  public Building
+namespace Ui {
+class Siloo;
+}
+
+class Siloo : public QMainWindow
 {
-    private:
+    Q_OBJECT
+
+private:
         Product gandom;
+        Ui::Siloo *ui;
 
-    public:
+public:
 
-        Siloo ();
+        explicit Siloo(QWidget *parent = nullptr);
+        ~Siloo();
+
         Product Get_gandom ();
         void Set_Gandom (Product _gandom);
 
         void Increase_Capacity ();
         void Check_Siloos_Product ();
 
+
 };
+
+#endif // SILOO_H

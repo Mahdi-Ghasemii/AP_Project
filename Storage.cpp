@@ -1,8 +1,13 @@
-﻿#include "Storage.h"
-#include <time.h>
+#include "Storage.h"
+#include "ui_Storage.h"
 
-Storage::Storage ()
+Storage::Storage(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::Storage)
 {
+    ui->setupUi(this);
+
+
     this->bill.Set_Type("bill");
     this->mikh.Set_Type("mikh");
     this->yonjeh.Set_Type("yonjeh");
@@ -12,8 +17,9 @@ Storage::Storage ()
     this->bill.Set_Type("bill");
 
     this->time_add_milk = time(NULL);
-
 }
+
+
 
 Product Storage::Get_bill ()
 {
@@ -78,11 +84,14 @@ void Storage::Set_Pashm (Product _pashm)
 
 void Storage::Increase_Capasity ()
 {
-    
+
 }
 
 void Storage::Check_Storages_Product ()
 {
-    
+
 }
 
+Storage::~Storage(){
+    delete ui;
+}

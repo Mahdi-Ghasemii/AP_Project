@@ -7,16 +7,147 @@ Habitat::Habitat() :
     ui->setupUi(this);
 }
 
-void Habitat::upgrade(){
+void Habitat::upgrade(list<Player>::iterator it){
 
 }
 
-void Habitat::feedeing(){
+void Habitat::feedeing(list<Player>::iterator it){
+    if(type=="chicken"){
+        if(it->get_farm().get_siloo().get_gandom()>=stock_animal){
+            if(difftime(feed_time,time(NULL))>2*24*3600){
+                if (is_collected==true){
+                    it->get_farm().get_siloo().set_gandom(it->get_farm().get_siloo().get_gandom()-stock_animal);
+                    is_collected=false;
+                    feed_time=time(NULL);
+                    //QMessageBox
+                }
+                else {
+                    //QMessageBox
+                }
+            }
+            else {
+                //QMessageBox
+            }
+        }
+        else {
+            //QMessageBox
+        }
+    }
 
+    else if(type=="cow"){
+        if(it->get_farm().get_storage().get_yonjeh()>=2*stock_animal){
+            if(difftime(feed_time,time(NULL))>3*24*3600){
+                if (is_collected==true){
+                    it->get_farm().get_storage().set_yonjeh(it->get_farm().get_storage().get_yonjeh()-2*stock_animal);
+                    is_collected=false;
+                    feed_time=time(NULL);
+                    //QMessageBox
+                }
+                else {
+                    //QMessageBox
+                }
+            }
+            else {
+                //QMessageBox
+            }
+        }
+        else {
+            //QMessageBox
+        }
+    }
+
+    else if(type=="sheep"){
+        if(it->get_farm().get_storage().get_yonjeh()>=stock_animal){
+            if(difftime(feed_time,time(NULL))>10*24*3600){
+                if (is_collected==true){
+                    it->get_farm().get_storage().set_yonjeh(it->get_farm().get_storage().get_yonjeh()-stock_animal);
+                    is_collected=false;
+                    feed_time=time(NULL);
+                    //QMessageBox
+                }
+                else {
+                    //QMessageBox
+                }
+            }
+            else {
+                //QMessageBox
+            }
+        }
+        else {
+            //QMessageBox
+        }
+    }
 }
 
-void Habitat::collect(){
+void Habitat::collect(list<Player>::iterator it){
+    if(type=="chicken"){
+        if(is_collected==false){
+            if(difftime(feed_time,time(NULL))>2*24*3600){
+                if(it->get_farm().get_storage().get_capacity()-it->get_farm().get_storage().get_occupid_capacity()>=stock_animal){
+                    is_collected=true;
+                    it->get_farm().get_storage().get_egg().set_number(it->get_farm().get_storage().get_egg().get_number+stock_animal);
+                    it->get_farm().get_storage().set_occupid_capacity(it->get_farm().get_storage().get_egg().get_number+stock_animal);
+                }
+                else {
+                    //QMessageBox
+                }
+            }
+            else {
+                //QMessageBox
+            }
+        }
+        else {
+            //QMessageBox
+        }
+    }
 
+    else if(type=="cow"){
+        if(is_collected==false){
+            if(difftime(feed_time,time(NULL))>3*24*3600){
+                if(it->get_farm().get_storage().get_capacity()-it->get_farm().get_storage().get_occupid_capacity()>=stock_animal){
+                    is_collected=true;
+                    it->get_farm().get_storage().get_milk().set_number(it->get_farm().get_storage().get_milk().get_number+stock_animal);
+                    it->get_farm().get_storage().set_occupid_capacity(it->get_farm().get_storage().get_milk().get_number+stock_animal);
+                }
+                else {
+                    //QMessageBox
+                }
+            }
+            else {
+                //QMessageBox
+            }
+        }
+        else {
+            //QMessageBox
+        }
+    }
+
+    else if(type=="sheep"){
+        if(is_collected==false){
+            if(difftime(feed_time,time(NULL))>10*24*3600){
+                if(it->get_farm().get_storage().get_capacity()-it->get_farm().get_storage().get_occupid_capacity()>=stock_animal){
+                    if(it->get_coin()>=10*stock_animal){
+                        is_collected=true;
+                        it->get_farm().get_storage().get_pashm().set_number(it->get_farm().get_storage().get_pashm().get_number+stock_animal);
+                        it->get_farm().get_storage().set_occupid_capacity(it->get_farm().get_storage().get_pashm().get_number+stock_animal);
+                        it->set_coin(it->get_coin()-10*stock_animal);
+                    }
+                    else {
+                        //QMessageBox
+                    }
+                }
+                else {
+                    //QMessageBox
+                }
+            }
+            else {
+                //QMessageBox
+            }
+        }
+        else {
+            //QMessageBox
+        }
+    }
 }
 
 void Habitat::set_capacity(int _capacity){
