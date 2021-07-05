@@ -3,12 +3,13 @@
 
 #include <QWidget>
 #include "Product.h"
+#include <QMainWindow>
 
 namespace Ui {
 class Siloo;
 }
 
-class Siloo : public QWidget
+class Siloo : public QMainWindow
 {
     Q_OBJECT
 
@@ -18,7 +19,9 @@ private:
 
 public:
 
-        Siloo ();
+        explicit Siloo(QWidget *parent = nullptr);
+        ~Siloo();
+
         Product Get_gandom ();
         void Set_Gandom (Product _gandom);
 

@@ -3,12 +3,13 @@
 
 #include "Product.h"
 #include <QWidget>
+#include <QMainWindow>
 
 namespace Ui {
 class Storage;
 }
 
-class Storage : public QWidget
+class Storage : public QMainWindow
 {
     Q_OBJECT
 
@@ -26,7 +27,9 @@ private:
 
    public:
 
-       Storage ();
+       explicit Storage(QWidget *parent = nullptr);
+       ~Storage();
+
 
        Product Get_bill ();
        void Set_bill (Product _bill);

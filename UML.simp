@@ -1,0 +1,1228 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="10.3" multi-file="no">
+  <meta>
+    <name>Project</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="class" type="UmlClass" />
+        <value>24</value>
+      </counter>
+      <counter>
+        <item-type stereotype="struct" type-id="class" type="UmlClass" />
+        <value>1</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="class" type="UmlClass" />
+        <value>26</value>
+      </counter>
+      <counter>
+        <item-type type-id="comment" type="UmlComment" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="comment-connector" type="UmlCommentConnector" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="generalization" type="UmlGeneralization" />
+        <value>53</value>
+      </counter>
+      <counter>
+        <item-type type-id="relationship" type="UmlAssociation" />
+        <value>39</value>
+      </counter>
+      <counter>
+        <item-type type-id="text" type="AbstractTextItem" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="" type="AbstractElementGroup" />
+        <value>8</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>3</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
+        <value>167</value>
+      </counter>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>174</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management>
+    <persons>
+      <person id="Pe1f6becaa97d433691179adbdb9f1d5e">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <tasks />
+    <requirements />
+    <issues />
+    <to-dos />
+  </management>
+  <glossary />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="Class:di757154655793052208" tid="" name="Milk" description="" nullable="false" class-ref="di757154655793052208" />
+      <type id="Class:di638635904113035083" tid="" name="Bil" description="" nullable="false" class-ref="di638635904113035083" />
+      <type id="Class:di866082428651647938" tid="" name="Mikh" description="" nullable="false" class-ref="di866082428651647938" />
+      <type id="Class:di154953672759333148" tid="" name="Yonjeh" description="" nullable="false" class-ref="di154953672759333148" />
+      <type id="Class:di621729295150210285" tid="" name="Egg" description="" nullable="false" class-ref="di621729295150210285" />
+      <type id="Class:di528075008966253563" tid="" name="Gandom" description="" nullable="false" class-ref="di528075008966253563" />
+      <type id="Class:di335050499139689859" tid="" name="Sheeps_Pashm" description="" nullable="false" class-ref="di335050499139689859" />
+      <type id="Class:di638200626834373232" tid="" name="Product" description="" nullable="false" class-ref="di638200626834373232" />
+      <type id="string- capacity: Integer- stock_animal: Integer- level_habitat: Integer- feed_time: time_t- number_of_chickens_eaten: Integer" tid="" name="string- capacity: Integer- stock_animal: Integer- level_habitat: Integer- feed_time: time_t- number_of_chickens_eaten: Integer" description="" nullable="false" />
+      <type id="Class:di491866097121556088" tid="" name="Storage" description="" nullable="false" class-ref="di491866097121556088" />
+      <type id="string" tid="" name="string" description="" nullable="false" />
+      <type id="time_t" tid="" name="time_t" description="" nullable="false" />
+      <type id="Class:di398282160899527797" tid="" name="Store" description="" nullable="false" class-ref="di398282160899527797" />
+      <type id="Class:di550477850113409367" tid="" name="Siloo" description="" nullable="false" class-ref="di550477850113409367" />
+      <type id="Class:di744018009993086928" tid="" name="Farm" description="" nullable="false" class-ref="di744018009993086928" />
+      <type id="Class:di962261065125559420" tid="" name="Ranking" description="" nullable="false" class-ref="di962261065125559420" />
+      <type id="QPushButton" tid="" name="QPushButton" description="" nullable="false" />
+      <type id="QLabel" tid="" name="QLabel" description="" nullable="false" />
+      <type id="QLineEdit" tid="" name="QLineEdit" description="" nullable="false" />
+      <type id="Class:di437829516345296231" tid="" name="Habitat" description="" nullable="false" class-ref="di437829516345296231" />
+      <type id="Storage*" tid="" name="Storage*" description="" nullable="false" />
+      <type id="Store*" tid="" name="Store*" description="" nullable="false" />
+      <type id="Ranking*" tid="" name="Ranking*" description="" nullable="false" />
+      <type id="Siloo*" tid="" name="Siloo*" description="" nullable="false" />
+      <type id="Habitat*" tid="" name="Habitat*" description="" nullable="false" />
+      <type id="Yonjefarm*" tid="" name="Yonjefarm*" description="" nullable="false" />
+      <type id="Gandomfarm*" tid="" name="Gandomfarm*" description="" nullable="false" />
+      <type id="vector&lt;struct User&gt;" tid="" name="vector&lt;struct User&gt;" description="" nullable="false" />
+      <type id="static Ranking" tid="" name="static Ranking" description="" nullable="false" />
+      <type id="Class:di436518574765486457" tid="" name="Yonjefarm" description="" nullable="false" class-ref="di436518574765486457" />
+      <type id="Class:di305197727804886918" tid="" name="Gandomfarm" description="" nullable="false" class-ref="di305197727804886918" />
+    </custom-types>
+  </types>
+  <filters />
+  <macros />
+  <items>
+    <item id="di638200626834373232" cid="RQ001" type="class" name="Product" style-class="" visibility="package" change-tracking-state="added" creator="Pe1f6becaa97d433691179adbdb9f1d5e" creation-date="06/24/2021 17:07:59">
+      <style class="default" />
+      <attributes>
+        <attribute id="ad5b05e1e5b1e4bb6a8e17dbbfb404838482" cid="ELEM075" name="type" type="string" type-id="string" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a065768d4674f4d3db85085a750011c3b90" cid="ELEM076" name="price_to_Buy" type="Integer" type-id="Uml.Integer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a76dc9da30cb74e229576992c6b5fa212632" cid="ELEM077" name="price_to_sell" type="Integer" type-id="Uml.Integer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a8a5778676e75452b8b3b50b7da62cda6890" cid="ELEM078" name="increase_amount_experience" type="Integer" type-id="Uml.Integer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a91ec88a1c4a74fd7b123d33072172fbc665" cid="ELEM079" name="required_level" type="Integer" type-id="Uml.Integer" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a4a519cad714a4703912e0892b6439e4c966" cid="ELEM081" name="number" type="Integer" type-id="Uml.Integer" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o25c330002089430499e2b26ae573a091451" cid="ELEM005" name="Product" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="of12b3a42871542c0bb0e8986fe93e754157" cid="ELEM006" name="Get_Price_to_Buy" type="Integer" type-id="Uml.Integer" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o19ea6e2e400e4bc18d3c527f9798ddd8179" cid="ELEM007" name="Get_Increase_Amount_Experience" type="Integer" type-id="Uml.Integer" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="of3de11603e254fea8156837eb67e50ed628" cid="ELEM008" name="Get_Required_Level" type="Integer" type-id="Uml.Integer" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o061dcbb78b8d424a98ca4f1641c0c1ba164" cid="ELEM016" name="Get_Price_to_Buy" type="Integer" type-id="Uml.Integer" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o712f53cade0e457f9e2b9ab05493177d388" cid="ELEM080" name="GetType" type="String" type-id="Uml.String" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="ob6082b12cc2f4062870b9de4201aa00d716" cid="ELEM084" name="Get_Number" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="of9b4517adc4a4e55bd57cbe38587998d974" cid="ELEM085" name="Set_Price_to_Buy" type="" type-id="" visibility="private">
+          <style class="default" />
+          <parameters>
+            <parameter id="p8c053695165f4476accecd314910f902" name="_Price_to_Buy" type="Integer" type-id="Uml.Integer" />
+          </parameters>
+        </operation>
+        <operation id="o70322fe1616e4aecadfe035930453e6e359" cid="ELEM086" name="Set_Price_to_Sell" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p8d826870171e47baa1b87f9d83a5969b" name="_Price_to_Sell" type="Integer" type-id="Uml.Integer" />
+          </parameters>
+        </operation>
+        <operation id="o020d7eb7b27542b7be1eeab09412d36d816" cid="ELEM111" name="Set_Increase_Amount_Experience" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p87f2d46c99954720bd21fb6360eb8969" name="_Increase_Amount_Experience" type="Integer" type-id="Uml.Integer" />
+          </parameters>
+        </operation>
+        <operation id="o4f76d386a50e4a12ab95f3e5fd3f4c0874" cid="ELEM112" name="Set_Required_Level" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pb68d416ee7244ebeb53980643cf4da58" name="_Required_Level" type="Integer" type-id="Uml.Integer" />
+          </parameters>
+        </operation>
+        <operation id="oe442ded6f6114c9f903e2a7d0a4cd73d462" cid="ELEM113" name="Set_Number" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p88bba00eaae24d50aeecb32d547057d2" name="_Number" type="Integer" type-id="Uml.Integer" />
+          </parameters>
+        </operation>
+        <operation id="of4ff52f96c5e48c797548317375045b1149" cid="ELEM169" name="Set_Type" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pc0fb3418a2db4ed683b08a12c2542474" name="_type" type="string" type-id="string" />
+          </parameters>
+        </operation>
+        <operation id="oe5f2d362b917421e85cad88ed8f4d82d400" cid="ELEM173" name="Get_Type" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p8443e2ffaf9f425e86b5834ed64081ba" name="_type" type="string" type-id="string" />
+          </parameters>
+        </operation>
+      </operations>
+      <source-codes>
+        <source-code language="ActionScript" />
+      </source-codes>
+    </item>
+    <item id="di853861867759635702" cid="RQ016" type="class" name="Building" style-class="" visibility="package" change-tracking-state="added" creator="Pe1f6becaa97d433691179adbdb9f1d5e" creation-date="06/24/2021 17:47:03">
+      <style class="default" />
+      <attributes>
+        <attribute id="a5aa393af007e496693197e859276f99b296" cid="ELEM017" name="capasity" type="Integer" type-id="Uml.Integer" visibility="protected">
+          <style class="default" />
+        </attribute>
+        <attribute id="a68dde35632ec43ec8ae336c70a60005d453" cid="ELEM018" name="buliding_Level" type="Integer" type-id="Uml.Integer" visibility="protected">
+          <style class="default" />
+        </attribute>
+        <attribute id="a4076515d5e7d4309801d5196ee8ee2f57" cid="ELEM021" name="occupied_Capacity" type="Integer" type-id="Uml.Integer" visibility="protected">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o29eab9fcce554f84ae0977bf12098f88123" cid="ELEM024" name="Buliding" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="ob0fb3f7227af4021aea6995301984b9c284" cid="ELEM025" name="GetCapasity" type="Integer" type-id="Uml.Integer" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o8875161f8bd74546925fd0c9226f66e2506" cid="ELEM026" name="Get_Buliding_Level" type="Integer" type-id="Uml.Integer" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o2230a78cd96349e18a86405c874dc1ca736" cid="ELEM027" name="Get_Occupied_Capacity" type="Integer" type-id="Uml.Integer" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o866596382714415e8aced917cffcb8a4733" cid="ELEM123" name="Set_Capacity" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pba5c8fa4fd9b4325862f7ba476e434e2" name="_capasity" type="Integer" type-id="Uml.Integer" />
+          </parameters>
+        </operation>
+        <operation id="oa3985040443148bba3f1c5cab5556b26275" cid="ELEM124" name="Set_Bulding_Level" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p8a59bf2d93984601bf0e2c38bccf78d2" name="_BL" type="Integer" type-id="Uml.Integer" />
+          </parameters>
+        </operation>
+        <operation id="obb1dadca76d44f4c8778ba146a6ab2d0259" cid="ELEM125" name="Set_Occupied_Capacity" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pc72175ef65264952968b43f263aed72c" name="_OC" type="Integer" type-id="Uml.Integer" />
+          </parameters>
+        </operation>
+      </operations>
+    </item>
+    <item id="di550477850113409367" cid="RQ017" type="class" name="Siloo" style-class="" visibility="package" change-tracking-state="added" creation-date="06/24/2021 17:54:32">
+      <style class="default" />
+      <attributes>
+        <attribute id="a2332738fb98042f8a338183f7af4aa98614" cid="ELEM022" name="gandom" type="Product" type-id="Class:di638200626834373232" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o5c7f877d38a54a76bbad13aa38ae691a620" cid="ELEM047" name="Siloo" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o2e6e768cc5ce4230b38346f9b25dad43127" cid="ELEM065" name="Get_gandom" type="Product" type-id="Class:di638200626834373232" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="ocebe256739824913b99545358b4fac9d971" cid="ELEM066" name="Set_Gandom" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pc6653006eceb4474bd31d14b150b4506" name="_gandom" type="Product" type-id="Class:di638200626834373232" />
+          </parameters>
+        </operation>
+        <operation id="o0b68dddd89974b7c8e9dcddb960cc049464" cid="ELEM067" name="Increase_Capacity" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="ob9ebaa71da16426f952bca478926b2ae955" cid="ELEM131" name="Check_Siloos_Product" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di491866097121556088" cid="RQ018" type="class" name="Storage" style-class="" visibility="package" change-tracking-state="added" creation-date="06/24/2021 17:58:42">
+      <style class="default" />
+      <attributes>
+        <attribute id="a25f895d101fe4a75a2c9ea5aaefe475e860" cid="ELEM023" name="bil" type="Product" type-id="Class:di638200626834373232" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a9fe124437c7143a7a4aa2808ede806f7847" cid="ELEM028" name="mikh" type="Product" type-id="Class:di638200626834373232" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a4decf39cca1d4887b4e2dd01878b8bee304" cid="ELEM029" name="yonjeh" type="Product" type-id="Class:di638200626834373232" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a05c62b317f664edbb22aa7e1cf2f1e1b811" cid="ELEM039" name="egg" type="Product" type-id="Class:di638200626834373232" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a32c0e89382964117a388ef350b7bd0e7266" cid="ELEM040" name="milk" type="Product" type-id="Class:di638200626834373232" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a3ffbc3c0ff2c455fa03b39e44b05f44d779" cid="ELEM041" name="pashm" type="Product" type-id="Class:di638200626834373232" visibility="private">
+          <style class="default" />
+        </attribute>
+        <attribute id="a4fe5956d9fc24b6e958fa7cf2ab328d1757" cid="ELEM141" name="time_add_milk" type="time_t" type-id="time_t" visibility="private">
+          <style class="default" />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="o8901a429cae7417dbd943cb3e57b784b333" cid="ELEM055" name="Storage" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o364f5cad709a4d659e9c56662f49b827358" cid="ELEM056" name="Get_bil" type="Product" type-id="Class:di638200626834373232" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o6291b272b83e43f4ab6fddca9b213652279" cid="ELEM057" name="Get_mikh" type="Product" type-id="Class:di638200626834373232" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="oaf22312d0fce4bf7a0e7e6150430834e890" cid="ELEM058" name="Get_yonjeh" type="Product" type-id="Class:di638200626834373232" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="oe279e149862948dd9863b20f6002f7b2247" cid="ELEM059" name="Get_egg" type="Product" type-id="Class:di638200626834373232" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="ob51f09c2bbbd41e1a6ffb2741066415248" cid="ELEM060" name="Get_milk" type="Product" type-id="Class:di638200626834373232" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="oce704aea508645369f3f5ac0049762be247" cid="ELEM061" name="Get_pashm" type="Product" type-id="Class:di638200626834373232" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="oa636ef06c23a47949a2476293ff42f75761" cid="ELEM062" name="Set_bil" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p7b9b9e8bc4e04d7691a46a769ff49a4f" name="_bill" type="Product" type-id="Class:di638200626834373232" />
+          </parameters>
+        </operation>
+        <operation id="o6a08884311da465abfc6ffd055578113250" cid="ELEM063" name="Set_Mikh" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pc5eed25637f9425e903b23567f73180a" name="_mikh" type="Product" type-id="Class:di638200626834373232" />
+          </parameters>
+        </operation>
+        <operation id="o33bb5d8db63d42ea8d5183b8112d94f8677" cid="ELEM064" name="Set_Yonjeh" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="p2dff25e19269455ca3f8019e9b4b6758" name="_yonjeh" type="Product" type-id="Class:di638200626834373232" />
+          </parameters>
+        </operation>
+        <operation id="o1d19ef76eaae468697b0d67ff1a70e09587" cid="ELEM126" name="Set_Egg" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pb8aece83fee242c2bc4167993698b189" name="_egg" type="Product" type-id="Class:di638200626834373232" />
+          </parameters>
+        </operation>
+        <operation id="o72d773b18d4a4705b04fb0ae1c7d88d6287" cid="ELEM127" name="Set_Milk" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pf22f424cb850425ba2fafb97218a5426" name="_milk" type="Product" type-id="Class:di638200626834373232" />
+          </parameters>
+        </operation>
+        <operation id="ob2cf2715830e4bbba2281e233c057144260" cid="ELEM128" name="Set_Pashm" type="" type-id="" visibility="public">
+          <style class="default" />
+          <parameters>
+            <parameter id="pd8340b615a844fd0a0a9cd21b7381012" name="_pashm" type="Product" type-id="Class:di638200626834373232" />
+          </parameters>
+        </operation>
+        <operation id="o348e940fbe934273b7b8e2cab1d7892d324" cid="ELEM129" name="Increase_Capasity" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o15c3ae66ca98433f81e1ae75e644d2f9351" cid="ELEM130" name="Check_Storages_Product" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di398282160899527797" cid="RQ019" type="class" name="Store" style-class="" visibility="package" change-tracking-state="added" creation-date="06/24/2021 18:14:50">
+      <style class="default" />
+      <operations>
+        <operation id="o9c7e86a6378a426bbff250c34ebcec25803" cid="ELEM069" name="Store" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o083222fd32334cdcb8d976ca032a5f43876" cid="ELEM070" name="Check_All_Products" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o1e1537006ad549a1a942ce353f24f48e514" cid="ELEM071" name="Sell_Product" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+        <operation id="o53eef51b7a4a422f8d4d10e893e08b8b988" cid="ELEM072" name="Buy_Product" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+    <item id="di764443340396244530" cid="C001" type="class" name="Logo" style-class="" visibility="package" change-tracking-state="added" creation-date="06/24/2021 17:35:56">
+      <style class="default" />
+      <operations>
+        <operation id="o30c5bcef5dc94f628f53674fc4104322123" cid="ELEM167" name="Read_From_File" type="" type-id="" visibility="public">
+          <style class="default" />
+        </operation>
+      </operations>
+    </item>
+  </items>
+  <models>
+    <model id="p67da375435cd458387988c2923f7e254_950195520" name="Model 1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>06/24/2021 17:07:51</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="pfd3777b4383a45a092aae759497acef3_418313539" name="ClassDiagram1" order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="68,719" zoom="0.5">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>06/24/2021 17:07:51</creation-date>
+          <change-date>06/26/2021 12:59:27</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="di866082428651647938" cid="RQ009" type="class" name="Mikh" style-class="" visibility="package" change-tracking-state="added" creator="Pe1f6becaa97d433691179adbdb9f1d5e" creation-date="06/24/2021 17:23:29">
+            <style class="default" />
+            <operations>
+              <operation id="o0f540df0197a4010abdb8d7644d04589678" cid="ELEM015" name="Mikh" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di757154655793052208" cid="RQ010" type="class" name="Milk" style-class="" visibility="package" change-tracking-state="added" creator="Pe1f6becaa97d433691179adbdb9f1d5e" creation-date="06/24/2021 17:23:33">
+            <style class="default" />
+            <operations>
+              <operation id="odfa78ed128dd47849fa5034864e3af35953" cid="ELEM014" name="Milk" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di638635904113035083" cid="RQ011" type="class" name="Bil" style-class="" visibility="package" change-tracking-state="added" creator="Pe1f6becaa97d433691179adbdb9f1d5e" creation-date="06/24/2021 17:23:52">
+            <style class="default" />
+            <operations>
+              <operation id="obe378bab0c9a45dca605a1e7a4b108a7941" cid="ELEM010" name="Bil" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di154953672759333148" cid="RQ012" type="class" name="Yonjeh" style-class="" visibility="package" change-tracking-state="added" creator="Pe1f6becaa97d433691179adbdb9f1d5e" creation-date="06/24/2021 17:24:04">
+            <style class="default" />
+            <operations>
+              <operation id="o69e274b2c78e4968b6c04bae1316274c246" cid="ELEM011" name="Yonjeh" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di528075008966253563" cid="RQ013" type="class" name="Gandom" style-class="" visibility="package" change-tracking-state="added" creator="Pe1f6becaa97d433691179adbdb9f1d5e" creation-date="06/24/2021 17:24:18">
+            <style class="default" />
+            <operations>
+              <operation id="o4e9b19bdf23142c5a2122f527a68eff6706" cid="ELEM009" name="Gandom" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di335050499139689859" cid="RQ014" type="class" name="Sheeps_Pashm" style-class="" visibility="package" change-tracking-state="added" creator="Pe1f6becaa97d433691179adbdb9f1d5e" creation-date="06/24/2021 17:24:41">
+            <style class="default" />
+            <operations>
+              <operation id="o411a8e32cb37440f8abb9ae83afc32e0829" cid="ELEM012" name="Sheeps_Pashm" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di621729295150210285" cid="RQ015" type="class" name="Egg" style-class="" visibility="package" change-tracking-state="added" creator="Pe1f6becaa97d433691179adbdb9f1d5e" creation-date="06/24/2021 17:24:47">
+            <style class="default" />
+            <operations>
+              <operation id="o9421635d45ff4756813ef48209c31068810" cid="ELEM013" name="Egg" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di105659176754743264" cid="RQ002" type="class" name="Player" style-class="" visibility="package" change-tracking-state="added" creation-date="06/24/2021 17:43:38">
+            <style style-name="Custom Style" shadow-type="smooth" shadow-offset="1,1" shadow-visible="true" shadow-color="#32000000" gloss-effect="true" wrap-name-text="true" wrap-other-text="true" padding="1" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+              <text-style type="name" use-defaults="false" color="#FF000000" font="Verdana;10;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+              <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+              <text-style type="text" use-defaults="false" color="#FF000000" font="Verdana;9;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+              <text-style type="tagged-value" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+              <text-style type="stereotype" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+              <background type="forward-diagonal" color="#FFFFFFFF" color2="#FFEBEBEB" />
+              <border color="#FF000000" width="1" dash-style="Solid" />
+              <label-connector color="#80000000" width="1" dash-style="Dash" />
+              <alternate-styles>
+                <alternate-style style-name="Alternate" shadow-type="smooth" shadow-offset="1,1" shadow-color="#32000000" gloss-effect="true" wrap-name-text="true" padding="1" margin="1" glow-color="#FFFFFFFF" accuracy="0.9">
+                  <text-style type="name" use-defaults="false" color="#FF000000" font="Verdana;10;B" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+                  <text-style type="part-header" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+                  <text-style type="text" use-defaults="false" color="#FF000000" font="Verdana;9;" horizontal-alignment="left" vertical-alignment="center" shadow="false" />
+                  <text-style type="tagged-value" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+                  <text-style type="stereotype" use-defaults="false" color="#FF1E1E1E" font="Verdana;9;I" horizontal-alignment="center" vertical-alignment="center" shadow="false" />
+                  <background type="vertical-linear" color="#FF1E90FF" color2="#FF87CEFA" />
+                  <border color="#FF00008B" width="1" dash-style="Solid" />
+                  <label-connector color="#FF000000" width="1" dash-style="Solid" />
+                </alternate-style>
+              </alternate-styles>
+            </style>
+            <attributes>
+              <attribute id="a9886b5229e89472d8c1a65eb62e90555581" cid="ELEM011" name="name" type="string" type-id="string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a37c5830ca49f4764941d935eda72d667605" cid="ELEM012" name="username" type="string" type-id="string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a8210e0169ae94e7287faff3eb0965ef928" cid="ELEM013" name="password" type="string" type-id="string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a2556179b2aa3484690e527cf02dc87e8556" cid="ELEM014" name="email" type="string" type-id="string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a9aea6e521d0b4050818909f74ea431f6644" cid="ELEM015" name="coin" type="Integer" type-id="Uml.Integer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ada33278c23b941a4af1850d3e098efda109" cid="ELEM016" name="level" type="Integer" type-id="Uml.Integer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6f0112783ab549c89364610ffa2f65f5143" cid="ELEM017" name="experience" type="Integer" type-id="Uml.Integer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a8689e4dd250b4fa5b47eee78a358064b484" cid="ELEM018" name="signUp_time" type="time_t" type-id="time_t" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a6d9c90ce1a704a1db923a8ae6b359945105" cid="ELEM089" name="farm" type="Farm" type-id="Class:di744018009993086928" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o28e8c2e364dc423daecac539ffcfa416267" cid="ELEM039" name="Player" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o53bb79d6537b427dab578d0b97eb6e3a671" cid="ELEM020" name="set_name" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p0feb30d59829436583e6f1be2eb0229b" name="_name" type="string" type-id="string" />
+                </parameters>
+              </operation>
+              <operation id="o84e20c0befc5418880c3ff76fc2ba7c493" cid="ELEM021" name="get_name" type="string" type-id="string" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o61f97a5562ef4a55a2b3ca37d76a6659154" cid="ELEM022" name="set_username" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pbac3f2a7754b467e9b1817186d339518" name="_username" type="string" type-id="string" />
+                </parameters>
+              </operation>
+              <operation id="occ57bc562d10414192489bae372166c2785" cid="ELEM023" name="get_name" type="string" type-id="string" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="od1e3bc6a7f464fe88dd82c3ac8d5ff5d912" cid="ELEM024" name="set_password" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p9223dceb77ae4d1d9545f6a521cf0427" name="_username" type="string" type-id="string" />
+                </parameters>
+              </operation>
+              <operation id="o8f82a49ec4c847b3a4cbba7485855231248" cid="ELEM025" name="get_password" type="string" type-id="string" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="oe61ae6677a834c25bb37d56b0057e011562" cid="ELEM026" name="set_email" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p666cb253c24940debe8c25a8d3bd7d2e" name="_email" type="string" type-id="string" />
+                </parameters>
+              </operation>
+              <operation id="oaca74e312f7c4c83af1c25f503d67598717" cid="ELEM027" name="get_email" type="string" type-id="string" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o0cb257e17c39420da865df5658f2233e353" cid="ELEM028" name="set_coin" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pa801fe9d87814af7a6768e30bb390199" name="_coin" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="o0df1900c65d742e78038ae3717087b08438" cid="ELEM029" name="get_coin" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o112aee38c7f04da6b140cfbfbbb9b2fb443" cid="ELEM030" name="set_level" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p4ce91aedba0c4b7ca65b1879ccd518e6" name="_level" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="o0d14ca71bf044f79be87bfee5da38c54755" cid="ELEM031" name="get_level" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o8c3b3c3d084445dfb0c7643f16f0dc58359" cid="ELEM032" name="set_experience" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p6190e16ec0e44279a2136ec53d2f9cff" name="_experience" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="o9c7c9382aa4848e18b595080dceec75c531" cid="ELEM033" name="get_experience" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o709bb743d7ee4d53a949a4210d80977171" cid="ELEM035" name="get_sighnUp_time" type="time_t" type-id="time_t" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="ob15a7d678ec741f68fbda8f15ad9cbb0254" cid="ELEM132" name="Set_signUp_time" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p0fa9ab227adf4100bf9b7cf2161b2990" name="_time" type="time_t" type-id="time_t" />
+                </parameters>
+              </operation>
+              <operation id="o76d7366c43674d099f34baf37b8a1e0c258" cid="ELEM133" name="Get_Farm" type="Farm" type-id="Class:di744018009993086928" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o4b2fb9923151407f9407f746199d54d8162" cid="ELEM134" name="Set_Farm" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p4e2825ba22054fa0b4708c32de8bdfb6" name="_farm" type="Farm" type-id="Class:di744018009993086928" />
+                </parameters>
+              </operation>
+              <operation id="obb0b5780980441229d8d6342b4b0e504546" cid="ELEM136" name="Get_Habitat" type="Habitat" type-id="Class:di437829516345296231" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o5ada521669ec45118a38efa9430c610f434" cid="ELEM137" name="Set_Habitat" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p07704644c7da402f8f3c6f56eb491f9b" name="_habitat" type="Habitat" type-id="Class:di437829516345296231" />
+                </parameters>
+              </operation>
+              <operation id="oe2def73dcc0345c996c9b942a1ab2c47584" cid="ELEM168" name="static Write_On_File" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di437829516345296231" cid="RQ001" type="class" name="Habitat" style-class="" visibility="package" change-tracking-state="added" creation-date="06/24/2021 15:38:18">
+            <style class="default" />
+            <attributes>
+              <attribute id="a6647a78f560148508730e04d585b4de9763" cid="ELEM002" name="type" type="string" type-id="string" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a4cf62a432ab34633a44e0fa681fbb3d2167" cid="ELEM003" name="capacity" type="Integer" type-id="Uml.Integer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a7bdc4c93c15c4bf2a538bd4471f1ad8d175" cid="ELEM004" name="stock_animal" type="Integer" type-id="Uml.Integer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a072c04a47db746bcb58b87010cb18222267" cid="ELEM005" name="level_habitat" type="Integer" type-id="Uml.Integer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a4db2b7e2def44df7afdc55db8d5e4f72625" cid="ELEM006" name="feed_time" type="time_t" type-id="time_t" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o1afd3caff29c4d60b0668bda405f93ef189" cid="ELEM040" name="Habitat" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o7566c09f09ed4586b75b6fb9e16e9173556" cid="ELEM008" name="upgrade" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o2fc34a2f89814d2bb7a6621115bc920342" cid="ELEM009" name="feeding" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="oe73992dba88748f984a2e9533ac2a28a123" cid="ELEM010" name="collect" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="ofe584befa49041e89097ce5a7be13887369" cid="ELEM041" name="set_capacity" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pc60c60430a5948ffae0d372750fd8c4a" name="_capacity" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="o4ecf4cab9bfe4aa9adb0194946419010430" cid="ELEM042" name="get_capacity" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o175b4d288e094f0da59d74fbe13e407b907" cid="ELEM043" name="set_stock_animal" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pba02813b16624712a73399908104dc2b" name="_stock_animal" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="o2ebbf001417949efac4c7152bd152a7d863" cid="ELEM044" name="get_stock_animal" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o7b23061ebed842c28f5757f6f1c9afa731" cid="ELEM045" name="set_level_habitat" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pb5204d54ba554d488eab9d65ff26d169" name="_level_habitat" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="o3966d2c2140940ff8337bea444028378897" cid="ELEM046" name="get_level_habitat" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o9d51ddd53fe549c8b52e56da09568f4f539" cid="ELEM047" name="set_feed_time" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p8ac2b704cd5c4fec9ee167ec91a7d3dc" name="_feed_time" type="time_t" type-id="time_t" />
+                </parameters>
+              </operation>
+              <operation id="ocb30ab0be9c446daa11056e760f0f878317" cid="ELEM048" name="get_feed_time" type="time_t" type-id="time_t" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o11ca9d21ae9f47679310ba1975533c03840" cid="ELEM049" name="set_number_of_chickens_eaten" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pca7c9fbec38a4b6d9d91aca8330e41b7" name="_number_of_chickens_eaten" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="oda1c2fb41d004505852dfa07b2585aac752" cid="ELEM050" name="get_number_of_animals_eaten" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="off7f0e330caf4df19b99dd8d9e9fb43c121" cid="ELEM170" name="Set_Type" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p02d5ce08734149bfa40f9b02a1c12808" name="_type" type="string" type-id="string" />
+                </parameters>
+              </operation>
+              <operation id="od17a297a7bf24d77b36537c6780aa95f824" cid="ELEM171" name="Get_Type" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p0c1417c6121148caa6c369fccbbdfbf1" name="_type" type="string" type-id="string" />
+                </parameters>
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di744018009993086928" cid="RQ021" type="class" name="Farm" style-class="" visibility="package" change-tracking-state="added" creation-date="06/25/2021 20:00:00">
+            <style class="default" />
+            <attributes>
+              <attribute id="a249870a314a04d049c3f766fa444c208436" cid="ELEM091" name="storage" type="Storage" type-id="Class:di491866097121556088" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ab4e711ac673945759953c275e93f76bf781" cid="ELEM092" name="store" type="Store" type-id="Class:di398282160899527797" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a9812a2cffd2e405a8ccc1a4db22f31d6220" cid="ELEM093" name="siloo" type="Siloo" type-id="Class:di550477850113409367" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a594fa1f804e4426eb62a76261b726051890" cid="ELEM094" name="ranking" type="static Ranking" type-id="static Ranking" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aab92ad386a364b94a3511521ba4b172f73" cid="ELEM138" name="chickenHome" type="Habitat" type-id="Class:di437829516345296231" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a9da0800c44824598b2cdf3c3c418437b90" cid="ELEM147" name="cowHome" type="Habitat" type-id="Class:di437829516345296231" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="ad1ba64b2a18b4a3686a8254a0aa3b644274" cid="ELEM148" name="sheepHome" type="Habitat" type-id="Class:di437829516345296231" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a400806797f1d4a55844f17bafbe658d3178" cid="ELEM164" name="yonjefarm" type="Yonjefarm" type-id="Class:di436518574765486457" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="a08a58413e9a145dfbb1a3b402bc40822974" cid="ELEM165" name="gandomfarm" type="Gandomfarm" type-id="Class:di305197727804886918" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="oa91868121c454aedb3988bdc44a2d6a3593" cid="ELEM114" name="Farm" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="ocbcec126eade4b4ab12c4ddfba6339ee182" cid="ELEM115" name="Get_Storage" type="Storage" type-id="Class:di491866097121556088" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o2521a9ef73c548d1a3ef4211c803167c830" cid="ELEM116" name="Get_Store" type="Store" type-id="Class:di398282160899527797" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o23f57576601247199f8b7638273714d8102" cid="ELEM117" name="Get_Siloo" type="Siloo" type-id="Class:di550477850113409367" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="oba4c5afffa814f7cad5a4d1bc103e451496" cid="ELEM118" name="Set_Storage" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p0753b72170e7466197fcaff980a219db" name="_storage" type="Storage" type-id="Class:di491866097121556088" />
+                </parameters>
+              </operation>
+              <operation id="o3312f4118a3e4ab08d7f16670aab1a5c918" cid="ELEM119" name="Set_Store" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pcd4b86f754f3461b9d5cf9ab0c16368d" name="_store" type="Store" type-id="Class:di398282160899527797" />
+                </parameters>
+              </operation>
+              <operation id="o2e857295f5fe4ea49304d69d078b4d9a36" cid="ELEM120" name="Set_Siloo" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p0800bf3b68b74c29bf06ba109fa0b817" name="_siloo" type="Siloo" type-id="Class:di550477850113409367" />
+                </parameters>
+              </operation>
+              <operation id="ofc16d8050fb544e1978dbc6f9dae81af55" cid="ELEM121" name="Set_Ranking" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pb060a9e622da4054bbbbd5b241378147" name="_ranking" type="Ranking" type-id="Class:di962261065125559420" />
+                </parameters>
+              </operation>
+              <operation id="ob90a56adbb3f4f17955bf16dba8e0b1c905" cid="ELEM139" name="Get_ChickenHome" type="Habitat" type-id="Class:di437829516345296231" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="obc74bb81f94640f28f3a421b4f0a9d41933" cid="ELEM140" name="Set_ChickenHome" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p52e905a7c3e546929c3e498d56e14a59" name="_h" type="Habitat" type-id="Class:di437829516345296231" />
+                </parameters>
+              </operation>
+              <operation id="o251e5b64419649c598ef11efaeb78c0e304" cid="ELEM149" name="Get_CowHome" type="Habitat" type-id="Class:di437829516345296231" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o374bd4a4e46747ba99129ab034db9d84508" cid="ELEM150" name="Set_CowHome" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p112abadfe4a54d61a7057c71132ae0e9" name="_ch" type="Habitat" type-id="Class:di437829516345296231" />
+                </parameters>
+              </operation>
+              <operation id="o72ef522549cb4eac999a5af0b7a24254595" cid="ELEM151" name="Set_SheepHome" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p9412f8b9e2544e35ad5f8db0f1f6c5b5" name="_sheepsHome" type="Habitat" type-id="Class:di437829516345296231" />
+                </parameters>
+              </operation>
+              <operation id="o9fdf697f396e42f795a7163f2b427580118" cid="ELEM152" name="Get_SheepHome" type="Habitat" type-id="Class:di437829516345296231" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o2420f854ba2947f39b0d3de4818bf4d0674" cid="ELEM172" name="Get_Ranking" type="Ranking" type-id="Class:di962261065125559420" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di888590393993277284" cid="C002" type="class" name="SignIn" style-class="" visibility="package" change-tracking-state="added" creation-date="06/24/2021 17:36:35">
+            <style class="default" />
+          </item>
+          <item id="di815091786755296327" cid="C003" type="class" name="SignUp" style-class="" visibility="package" change-tracking-state="added" creation-date="06/24/2021 17:36:44">
+            <style class="default" />
+          </item>
+          <item id="di962261065125559420" cid="C004" type="class" name="Ranking" style-class="" visibility="package" change-tracking-state="added" creation-date="06/24/2021 18:49:06">
+            <style class="default" />
+          </item>
+          <item id="di284058852972505859" cid="REL036" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:14:32" from="di744018009993086928" to="di962261065125559420">
+            <style class="default" />
+            <relation from="di744018009993086928" to="di962261065125559420">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di624051271939790866" cid="RQ022" type="class" name="Mainfarm" style-class="" visibility="package" change-tracking-state="added" creation-date="06/25/2021 20:06:04">
+            <style class="default" />
+            <attributes>
+              <attribute id="ad383dbf769a94da1ad8ba8a724a20063320" cid="ELEM096" name="area" type="Integer" type-id="Uml.Integer" visibility="protected">
+                <style class="default" />
+              </attribute>
+              <attribute id="a78f6f44f488a4525b1c7461391008e51636" cid="ELEM097" name="plantingdate" type="time_t" type-id="time_t" visibility="protected">
+                <style class="default" />
+              </attribute>
+              <attribute id="ad7feb42d89784f5b925714efc680808d921" cid="ELEM142" name="level" type="Integer" type-id="Uml.Integer" visibility="protected">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o97bd365772044a59ab84f854c7d7c5dd341" cid="ELEM156" name="Mainfarm" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o354254240686444eac94a156427e28ee427" cid="ELEM157" name="Set_Area" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pc7f3031a5bb94764907436ee2696cdec" name="_area" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="oe8af988bb714426bb048ecefd9e864f9655" cid="ELEM101" name="Get_Area" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="oe11ea37e5e3647e685b5c54ea2b29e21311" cid="ELEM158" name="Set_ plantingdate" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="pd1fe10798be244cdb0df998497938b0d" name="_plantingdate" type="time_t" type-id="time_t" />
+                </parameters>
+              </operation>
+              <operation id="o97bc3978dc3549b0bd277113c9cabf00849" cid="ELEM159" name="get_plantingdate" type="time_t" type-id="time_t" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o6216a9eb29334b0a86a4b89f7fd62c8e247" cid="ELEM146" name="Set_Level" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p60f23f395e5448a3994bdf38f5180a2c" name="_level" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="o0ad2213e058a43c5b6dfc9ceef7a8394119" cid="ELEM145" name="Get_Level" type="Integer" type-id="Uml.Integer" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o516b6c9293244fc3b7683284309be9c7331" cid="ELEM100" name="IsUnderPlanting" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="o3b73242ea3664087a6344a0c0cc3972d108" cid="ELEM102" name="planting" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p22ece6b3efb14f4f8763a3d371962c17" name="PlantingAreaWant" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="obbeabcd97c7841e6b7847d274a59f9da236" cid="ELEM103" name="DeroKardan" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di305197727804886918" cid="RQ023" type="class" name="Gandomfarm" style-class="" visibility="package" change-tracking-state="added" creation-date="06/25/2021 20:18:56">
+            <style class="default" />
+            <operations>
+              <operation id="ob745683551164882a322adf967e08f1c62" cid="ELEM106" name="UpgradeGandomFarm" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="odf5b34d2c36a47889e0ca054bb3a42be910" cid="ELEM107" name="planting" type="" type-id="" visibility="public">
+                <style class="default" />
+                <parameters>
+                  <parameter id="p8ca8357d7ede45a8971faf41d636a992" name="PlantingAreaWant" type="Integer" type-id="Uml.Integer" />
+                </parameters>
+              </operation>
+              <operation id="oa2ee2e53b3b542288b962a88c2d367c5930" cid="ELEM108" name="DeroKardan" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+          </item>
+          <item id="di436518574765486457" cid="RQ024" type="class" name="Yonjefarm" style-class="" visibility="package" change-tracking-state="added" creation-date="06/25/2021 20:22:29">
+            <style class="default" />
+            <attributes>
+              <attribute id="a1e3a5f72f13d4ef08b294ea895dbd055756" cid="ELEM143" name="time_shokhm_zadan" type="Integer" type-id="Uml.Integer" visibility="private">
+                <style class="default" />
+              </attribute>
+              <attribute id="aa081eb76acb84ed7803804d81615889d863" cid="ELEM144" name="is_plantable" type="Boolean" type-id="Uml.Boolean" visibility="private">
+                <style class="default" />
+              </attribute>
+            </attributes>
+            <operations>
+              <operation id="o8c577c0d664a42098c0d20e8e94eb1d0737" cid="ELEM162" name="Yonjefarm" type="" type-id="" visibility="public">
+                <style class="default" />
+              </operation>
+              <operation id="obc2f61b30be846db8f74db670864c4f0912" cid="ELEM110" name="UpgradeYonjehFarm" type="Boolean" type-id="Uml.Boolean" visibility="public">
+                <style class="default" />
+              </operation>
+            </operations>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="di430832975109570974" cid="REL027" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:11:25" from="di744018009993086928" to="di550477850113409367">
+            <style class="default" />
+            <relation from="di744018009993086928" to="di550477850113409367">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di726095598132947173" cid="REL026" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:11:12" from="di744018009993086928" to="di491866097121556088">
+            <style class="default" />
+            <relation from="di744018009993086928" to="di491866097121556088">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di957031461586828407" cid="REL030" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:12:53" from="di744018009993086928" to="di398282160899527797">
+            <style class="default" />
+            <relation from="di744018009993086928" to="di398282160899527797">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di384957178995472205" cid="REL038" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:51:09" from="di105659176754743264" to="di744018009993086928">
+            <style class="default" />
+            <relation from="di105659176754743264" to="di744018009993086928">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di813855087337435642" cid="REL037" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:15:33" from="di744018009993086928" to="di437829516345296231">
+            <style class="default" />
+            <relation from="di744018009993086928" to="di437829516345296231">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di965250360382950762" cid="REL032" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:13:19" from="di744018009993086928" to="di305197727804886918">
+            <style class="default" />
+            <relation from="di744018009993086928" to="di305197727804886918">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di567559033448289341" cid="REL031" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:13:06" from="di744018009993086928" to="di436518574765486457">
+            <style class="default" />
+            <relation from="di744018009993086928" to="di436518574765486457">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di684982659221826135" cid="GNR032" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 11:21:23" from="di436518574765486457" to="di624051271939790866">
+            <style class="default" />
+          </item>
+          <item id="di180290231404065595" cid="GNR049" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 11:23:41" from="di305197727804886918" to="di624051271939790866">
+            <style class="default" />
+          </item>
+          <item id="di714953781251894337" cid="GNR051" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 11:58:01" from="di491866097121556088" to="di853861867759635702">
+            <style class="default" />
+          </item>
+          <item id="di350988040401247878" cid="GNR052" type="generalization" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 11:58:15" from="di550477850113409367" to="di853861867759635702">
+            <style class="default" />
+          </item>
+          <item id="di810279041761541205" cid="REL029" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:12:11" from="di550477850113409367" to="di638200626834373232">
+            <style class="default" />
+            <relation from="di550477850113409367" to="di638200626834373232">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+          <item id="di207435834135989942" cid="REL028" type="relationship" name="" style-class="" visibility="package" change-tracking-state="added" creation-date="06/26/2021 12:11:52" from="di491866097121556088" to="di638200626834373232">
+            <style class="default" />
+            <relation from="di491866097121556088" to="di638200626834373232">
+              <start-role id="" name="" navigability="" association-type="composition" visibility="private" />
+              <end-role id="" name="" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+        </abstract-items>
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di853861867759635702" iid="9de9fe204654487292ec24ad1b764493" creation-date="06/24/2021 17:47:03" order-index="20" type="entity">
+            <layout ax="1356.919" ay="828.9127" awidth="301" aheight="219" x="1356.919" y="828.9127" width="301" height="219" />
+            <class />
+          </item>
+          <item id="di550477850113409367" iid="95f85374b15f4a4399b444b35cd1a4d7" creation-date="06/24/2021 17:54:32" order-index="21" type="entity">
+            <layout ax="675.2411" ay="868.929" awidth="316" aheight="145.0001" x="675.2411" y="868.929" width="316" height="145.0001" />
+            <class />
+          </item>
+          <item id="di491866097121556088" iid="9d232612005746cb8481e5ec145332c3" creation-date="06/24/2021 17:58:42" order-index="23" type="entity">
+            <layout ax="2033.496" ay="752.2332" awidth="301" aheight="423" x="2033.496" y="752.2332" width="301" height="423" />
+            <class />
+          </item>
+          <item id="di398282160899527797" iid="049f63abfe0044fd81c277c68fb2481f" creation-date="06/24/2021 18:14:50" order-index="25" type="entity">
+            <layout ax="2145.616" ay="1453.379" awidth="263" aheight="119" x="2145.616" y="1453.379" width="263" height="119" />
+            <class />
+          </item>
+          <item id="di638200626834373232" iid="ca2bf22841b5433e98c56bfa706ea91e" creation-date="06/24/2021 17:07:59" order-index="0" type="entity">
+            <layout ax="1286.973" ay="126.8363" awidth="542" aheight="403" x="1286.973" y="126.8363" width="542" height="403" />
+            <class />
+          </item>
+          <item id="di437829516345296231" iid="ff3adbf7e3fe448094980d37023025da" creation-date="06/24/2021 15:38:18" order-index="0" type="entity">
+            <layout ax="512.9662" ay="1484.754" awidth="400" aheight="420" x="512.9662" y="1484.754" width="400" height="420" />
+            <class />
+          </item>
+          <item id="di105659176754743264" iid="65f6bd365ae54882929b8072a8f4c3b5" creation-date="06/24/2021 17:43:38" order-index="1" type="entity">
+            <layout ax="1335.634" ay="2167.96" awidth="473" aheight="576" x="1335.634" y="2167.96" width="473" height="576" />
+            <class />
+          </item>
+          <item id="di744018009993086928" iid="6e5effc7ee394140a860ca34ddf174dd" creation-date="06/25/2021 20:00:00" order-index="43" type="entity">
+            <layout ax="1429.134" ay="1476.744" awidth="286" aheight="457" x="1429.134" y="1476.744" width="286" height="457" />
+            <class />
+          </item>
+          <item id="di888590393993277284" iid="391e0f101070447e9709579fdebc2b0a" creation-date="06/24/2021 17:36:35" order-index="1" type="entity">
+            <layout ax="739.5358" ay="520.1072" awidth="168" aheight="155.4148" x="739.5358" y="520.1072" width="168" height="155.4148" />
+            <class />
+          </item>
+          <item id="di815091786755296327" iid="46986b231ad44210a827148fb7f699cc" creation-date="06/24/2021 17:36:44" order-index="2" type="entity">
+            <layout ax="749.0114" ay="101.0798" awidth="168" aheight="145" x="749.0114" y="101.0798" width="168" height="145" />
+            <class />
+          </item>
+          <item id="di764443340396244530" iid="85ef2bc1ce244811a4a69cd32a736bce" creation-date="06/24/2021 17:35:56" order-index="0" type="entity">
+            <layout ax="745.2135" ay="320.4642" awidth="168" aheight="145.7176" x="745.2135" y="320.4642" width="168" height="145.7176" />
+            <class />
+          </item>
+          <item id="di962261065125559420" iid="948d769a06a1467db6667f3c834a38e8" creation-date="06/24/2021 18:49:06" order-index="3" type="entity">
+            <layout ax="762.4221" ay="2054.904" awidth="251" aheight="118.9999" x="762.4221" y="2054.904" width="251" height="118.9999" />
+            <class />
+          </item>
+          <item id="di624051271939790866" iid="9ce2acf73e4f459cbe14e15195d26a50" creation-date="06/25/2021 20:06:04" order-index="45" type="entity">
+            <layout ax="2656.622" ay="1834.607" awidth="286" aheight="272" x="2656.622" y="1834.607" width="286" height="272" />
+            <class />
+          </item>
+          <item id="di305197727804886918" iid="a4125a54659c4c71b3ecbbfb8c85fa2b" creation-date="06/25/2021 20:18:56" order-index="46" type="entity">
+            <layout ax="2128.636" ay="2123.864" awidth="286" aheight="100" x="2128.636" y="2123.864" width="286" height="100" />
+            <class />
+          </item>
+          <item id="di436518574765486457" iid="ffbfc1f77b3c48dca7ba79ce05c4709d" creation-date="06/25/2021 20:22:29" order-index="47" type="entity">
+            <layout ax="2148.479" ay="1750.95" awidth="227" aheight="119" x="2148.479" y="1750.95" width="227" height="119" />
+            <class />
+          </item>
+          <item id="di684982659221826135" iid="b1a04e1f36f444049c20df510ed0c75b" creation-date="06/26/2021 11:21:23" order-index="55" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="2375" y1="1844" x2="2657" y2="1928" start-border-pos="0.445096312450762" end-border-pos="0.914245717665728" name-position="0,0">
+              <points>
+                <point x="2375" y="1844" />
+                <point x="2657" y="1928" />
+              </points>
+            </layout>
+            <relation from="di436518574765486457" from-iid="ffbfc1f77b3c48dca7ba79ce05c4709d" to="di624051271939790866" to-iid="9ce2acf73e4f459cbe14e15195d26a50" />
+          </item>
+          <item id="di180290231404065595" iid="1f15bfe1e8ba43d5bda5f9576fae86f7" creation-date="06/26/2021 11:23:41" order-index="56" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" auto-path="" x1="2402" y1="2124" x2="2657" y2="2026" start-border-pos="0.238997666152207" end-border-pos="0.823752571554745" name-position="0,0">
+              <points>
+                <point x="2402" y="2124" />
+                <point x="2657" y="2026" />
+              </points>
+            </layout>
+            <relation from="di305197727804886918" from-iid="a4125a54659c4c71b3ecbbfb8c85fa2b" to="di624051271939790866" to-iid="9ce2acf73e4f459cbe14e15195d26a50" />
+          </item>
+          <item id="di714953781251894337" iid="1d7520ac1e0b4958977259018a85ad58" creation-date="06/26/2021 11:58:01" order-index="57" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="2033" y1="964" x2="1658" y2="942" start-border-pos="0.875116569195604" end-border-pos="0.378524292549586" name-position="0,0">
+              <points>
+                <point x="2033" y="964" />
+                <point x="1658" y="942" />
+              </points>
+            </layout>
+            <relation from="di491866097121556088" from-iid="9d232612005746cb8481e5ec145332c3" to="di853861867759635702" to-iid="9de9fe204654487292ec24ad1b764493" to-field="ob0fb3f7227af4021aea6995301984b9c284" />
+          </item>
+          <item id="di350988040401247878" iid="f8ff91a4ba4549a0bde19cac5ee9484f" creation-date="06/26/2021 11:58:15" order-index="58" type="relation">
+            <layout line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="991" y1="941" x2="1357" y2="946" start-border-pos="0.374659992086476" end-border-pos="0.866197183098592" name-position="0,0">
+              <points>
+                <point x="991" y="941" />
+                <point x="1357" y="946" />
+              </points>
+            </layout>
+            <relation from="di550477850113409367" from-iid="95f85374b15f4a4399b444b35cd1a4d7" to="di853861867759635702" to-iid="9de9fe204654487292ec24ad1b764493" />
+          </item>
+          <item id="di726095598132947173" iid="a13995ff123044e5934cfd29de88ecd8" creation-date="06/26/2021 12:11:12" order-index="61" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1715" y1="1477" x2="2178" y2="1175" start-border-pos="0.25" end-border-pos="0.629759119990656" name-position="0,0">
+              <points>
+                <point x="1715" y="1477" />
+                <point x="2178" y="1175" />
+              </points>
+            </layout>
+            <relation from="di744018009993086928" from-iid="6e5effc7ee394140a860ca34ddf174dd" to="di491866097121556088" to-iid="9d232612005746cb8481e5ec145332c3" />
+          </item>
+          <item id="di430832975109570974" iid="524b2d3e31b2443cac0d3b386d78609b" creation-date="06/26/2021 12:11:25" order-index="62" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1429" y1="1477" x2="828" y2="1014" start-border-pos="0.000118015529392483" end-border-pos="0.629351265822785" name-position="0,0">
+              <points>
+                <point x="1429" y="1477" />
+                <point x="828" y="1014" />
+              </points>
+            </layout>
+            <relation from="di744018009993086928" from-iid="6e5effc7ee394140a860ca34ddf174dd" to="di550477850113409367" to-iid="95f85374b15f4a4399b444b35cd1a4d7" />
+          </item>
+          <item id="di207435834135989942" iid="063b0c7be19c4cfd9e8a9c386f848940" creation-date="06/26/2021 12:11:52" order-index="63" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="2033" y1="752" x2="1829" y2="530" start-border-pos="0" end-border-pos="0.5" name-position="0,0">
+              <points>
+                <point x="2033" y="752" />
+                <point x="1829" y="530" />
+              </points>
+            </layout>
+            <relation from="di491866097121556088" from-iid="9d232612005746cb8481e5ec145332c3" to="di638200626834373232" to-iid="ca2bf22841b5433e98c56bfa706ea91e" />
+          </item>
+          <item id="di810279041761541205" iid="7e35cd50e17441b6a4c628e5e5f78911" creation-date="06/26/2021 12:12:11" order-index="64" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="833" y1="869" x2="1287" y2="530" start-border-pos="0.124604430379747" end-border-pos="0.75" name-position="0,0">
+              <points>
+                <point x="833" y="869" />
+                <point x="1287" y="530" />
+              </points>
+            </layout>
+            <relation from="di550477850113409367" from-iid="95f85374b15f4a4399b444b35cd1a4d7" to="di638200626834373232" to-iid="ca2bf22841b5433e98c56bfa706ea91e" />
+          </item>
+          <item id="di957031461586828407" iid="14d467c955514ed48c4db314d5a09f58" creation-date="06/26/2021 12:12:53" order-index="65" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1715" y1="1607" x2="2146" y2="1520" start-border-pos="0.321428571428571" end-border-pos="0.859243697478992" name-position="0,0">
+              <points>
+                <point x="1715" y="1607" />
+                <point x="2146" y="1520" />
+              </points>
+            </layout>
+            <relation from="di744018009993086928" from-iid="6e5effc7ee394140a860ca34ddf174dd" to="di398282160899527797" to-iid="049f63abfe0044fd81c277c68fb2481f" />
+          </item>
+          <item id="di567559033448289341" iid="2613e02a26e04ab598a05eb408760853" creation-date="06/26/2021 12:13:06" order-index="66" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="18.5479,-12.28489" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1715" y1="1801" x2="2148" y2="1806" start-border-pos="0.427339901477833" end-border-pos="0.884804082897809" name-position="0,0">
+              <points>
+                <point x="1715" y="1801" />
+                <point x="2148" y="1806" />
+              </points>
+            </layout>
+            <relation from="di744018009993086928" from-iid="6e5effc7ee394140a860ca34ddf174dd" to="di436518574765486457" to-iid="ffbfc1f77b3c48dca7ba79ce05c4709d" />
+          </item>
+          <item id="di965250360382950762" iid="42b6ec27843a41b0bfa4558a28f49093" creation-date="06/26/2021 12:13:19" order-index="67" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25.0001,-15.00003" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1715" y1="1934" x2="2132" y2="2124" start-border-pos="0.5" end-border-pos="0.00285840868116259" name-position="0,0">
+              <points>
+                <point x="1715" y="1934" />
+                <point x="2132" y="2124" />
+              </points>
+            </layout>
+            <relation from="di744018009993086928" from-iid="6e5effc7ee394140a860ca34ddf174dd" to="di305197727804886918" to-iid="a4125a54659c4c71b3ecbbfb8c85fa2b" />
+          </item>
+          <item id="di284058852972505859" iid="3785905c87534d5881a94dadb790d56b" creation-date="06/26/2021 12:14:32" order-index="70" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25.00001,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1429" y1="1934" x2="1013" y2="2055" start-border-pos="0.749881984470608" end-border-pos="0.250046957294245" name-position="0,0">
+              <points>
+                <point x="1429" y="1934" />
+                <point x="1013" y="2055" />
+              </points>
+            </layout>
+            <relation from="di744018009993086928" from-iid="6e5effc7ee394140a860ca34ddf174dd" to="di962261065125559420" to-iid="948d769a06a1467db6667f3c834a38e8" />
+          </item>
+          <item id="di813855087337435642" iid="0a0ccad1fafd475982a429fe39e08727" creation-date="06/26/2021 12:15:33" order-index="71" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1429" y1="1705" x2="913" y2="1694" start-border-pos="0.875" end-border-pos="0.374744040896469" name-position="0,0">
+              <points>
+                <point x="1429" y="1705" />
+                <point x="913" y="1694" />
+              </points>
+            </layout>
+            <relation from="di744018009993086928" from-iid="6e5effc7ee394140a860ca34ddf174dd" to="di437829516345296231" to-iid="ff3adbf7e3fe448094980d37023025da" />
+          </item>
+          <item id="di384957178995472205" iid="1728ce335291487cb1b06b7f57fe363a" creation-date="06/26/2021 12:51:09" order-index="72" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="1572" y1="2168" x2="1571" y2="1934" start-border-pos="0.125071358227075" end-border-pos="0.625756110344733" name-position="0,0">
+              <points>
+                <point x="1572" y="2168" />
+                <point x="1571" y="1934" />
+              </points>
+            </layout>
+            <relation from="di105659176754743264" from-iid="65f6bd365ae54882929b8072a8f4c3b5" to="di744018009993086928" to-iid="6e5effc7ee394140a860ca34ddf174dd" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+  <documents />
+  <document-templates />
+</sim-project>

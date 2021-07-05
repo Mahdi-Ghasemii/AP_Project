@@ -1,17 +1,15 @@
 #include "Siloo.h"
 #include "ui_Siloo.h"
 
-/*Siloo::Siloo(QWidget *parent) :
-    QWidget(parent),
+Siloo::Siloo(QWidget *parent) :
+    QMainWindow(parent),
     ui(new Ui::Siloo)
 {
     ui->setupUi(this);
-}*/
 
-Siloo::Siloo ()
-{
     this->gandom.Set_Type("gandom");
 }
+
 
 Product Siloo::Get_gandom ()
 {
@@ -31,4 +29,8 @@ void Siloo::Increase_Capacity ()
 void Siloo::Check_Siloos_Product ()
 {
 
+}
+
+Siloo::~Siloo(){
+    delete ui;
 }

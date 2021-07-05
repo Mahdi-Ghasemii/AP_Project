@@ -1,3 +1,4 @@
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -9,6 +10,11 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Logo.cpp \
+    Player.cpp \
+    Ranking.cpp \
+    SignIn.cpp \
+    SignUp.cpp \
     main.cpp\
     Siloo.cpp\
     Building.cpp\
@@ -17,7 +23,11 @@ SOURCES += \
     Product.cpp\
 
 HEADERS +=\
-    main.h\
+    Logo.h \
+    Player.h \
+    Ranking.h \
+    SignIn.h \
+    SignUp.h \
     Siloo.h\
     Building.h\
     Storage.h\
@@ -25,6 +35,10 @@ HEADERS +=\
     Product.h\
 
 FORMS += \
+    Logo.ui \
+    Ranking.ui \
+    SignIn.ui \
+    SignUp.ui \
     Storage.ui\
     Siloo.ui\
     Store.ui\
