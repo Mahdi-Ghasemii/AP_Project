@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Habitat.cpp \
     main.cpp\
     Siloo.cpp\
     Building.cpp\
@@ -17,6 +18,7 @@ SOURCES += \
     Product.cpp\
 
 HEADERS +=\
+    Habitat.h \
     main.h\
     Siloo.h\
     Building.h\
@@ -25,9 +27,10 @@ HEADERS +=\
     Product.h\
 
 FORMS += \
+    Habitat.ui \
     Storage.ui\
     Siloo.ui\
-    Store.ui\
+    Store.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
