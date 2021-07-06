@@ -1,4 +1,6 @@
-﻿
+﻿#ifndef BUILDING_H
+#define BUILDING_H
+
 class Building
 {
     protected:
@@ -22,3 +24,5 @@ class Building
         void Set_Occupied_Capacity (int _OC);
 
 };
+
+#endif // BUILDING_H
