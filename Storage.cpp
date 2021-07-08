@@ -1,5 +1,7 @@
 #include "Storage.h"
 #include "ui_Storage.h"
+#include <QMessageBox>
+#include <math.h>
 
 Storage::Storage(QWidget *parent) :
     QMainWindow(parent),
@@ -15,6 +17,10 @@ Storage::Storage(QWidget *parent) :
     this->milk.Set_Type("milk");
     this->pashm.Set_Type("pashm");
     this->bill.Set_Type("bill");
+
+    this->capasity = 5;
+    this->yonjeh.Set_Number(1);
+    this->mikh.Set_Number(1);
 
     this->time_add_milk = time(NULL);
 }
@@ -82,8 +88,25 @@ void Storage::Set_Pashm (Product _pashm)
 
 
 
-void Storage::Increase_Capasity ()
+void Storage::Increase_Capasity (int coin,int level)
 {
+
+    if(level<=this->building_Level){
+        //warning :QMessageBox()
+        return;
+    }
+
+    else if(!(this->mikh.Get_Number() >= this->building_Level && this->bill.Get_Number()-1 >= this->building_Level
+            && coin >= pow(this->building_Level,3) * 10)){
+
+        // Warning : QmessageBox()
+    }
+
+    else {
+        this->building_Level = round(this->building_Level *3 / 2);
+
+        //Information : Qmessagebox()
+    }
 
 }
 

@@ -4,12 +4,13 @@
 #include "Product.h"
 #include <QWidget>
 #include <QMainWindow>
+#include "Building.h"
 
 namespace Ui {
 class Storage;
 }
 
-class Storage : public QMainWindow
+class Storage : public QMainWindow , public Building
 {
     Q_OBJECT
 
@@ -45,7 +46,7 @@ private:
        void Set_Pashm (Product _pashm);
 
 
-       void Increase_Capasity ();
+       void Increase_Capasity (int coin,int level);
        void Check_Storages_Product ();
 };
 

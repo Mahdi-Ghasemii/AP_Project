@@ -3,14 +3,14 @@
 Building::Building ()
 {
     this->capasity = 0;
-    this->buliding_Level = 0;
+    this->building_Level = 0;
     this->occupied_capacity = 0;
 }
 Building::Building (int _capacity, int _BulidingLevel,int _occupied_capacity)
 {
-    this->capasity = 0;
-    this->buliding_Level = 0;
-    this->occupied_capacity = 0;
+    this->capasity = _capacity;
+    this->building_Level = _BulidingLevel;
+    this->occupied_capacity = _occupied_capacity;
 }
 
 int Building::GetCapasity ()
@@ -25,11 +25,11 @@ void Building::Set_Capacity (int _capasity)
 
 int Building::Get_Buliding_Level ()
 {
-    return this->buliding_Level;
+    return this->building_Level;
 }
 void Building::Set_Bulding_Level (int _BL)
 {
-    this->buliding_Level = _BL;
+    this->building_Level = _BL;
 }
 
 

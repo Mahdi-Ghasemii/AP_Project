@@ -6,7 +6,7 @@ class Building
     protected:
 
         int capasity;
-        int buliding_Level;
+        int building_Level;
         int occupied_capacity;
 
     public:
