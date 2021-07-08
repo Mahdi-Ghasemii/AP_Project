@@ -22,7 +22,10 @@ SOURCES += \
     Building.cpp\
     Storage.cpp\
     Store.cpp\
-    Product.cpp
+    Product.cpp\
+    Mainfarm.cpp\
+    Gandomfarm.cpp\
+    Yonjefarm.cpp
 
 HEADERS +=\
     Farm.h \
@@ -37,6 +40,9 @@ HEADERS +=\
     Storage.h\
     Store.h\
     Product.h\
+    Mainfarm.h\
+    Gandomfarm.h\
+    Yonjefarm.h
 
 FORMS += \
     Farm.ui \
@@ -48,6 +54,8 @@ FORMS += \
     Storage.ui\
     Siloo.ui\
     Store.ui\
+    Gandomfarm.ui\
+    Yonjefarm.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

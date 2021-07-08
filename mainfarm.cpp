@@ -1,4 +1,4 @@
-#include "mainfarm.h"
+#include "Mainfarm.h"
 
 
 MainFarm::MainFarm(){ }

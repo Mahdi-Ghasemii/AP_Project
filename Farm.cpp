@@ -1,5 +1,8 @@
 #include "Farm.h"
 #include "ui_Farm.h"
+#include "Storage.h"
+#include "Store.h"
+#include "Siloo.h"
 
 Farm::Farm() :
     ui(new Ui::Farm)
@@ -34,3 +37,21 @@ Habitat& Farm::get_cowHome(){
 Habitat& Farm::get_sheepHome(){
     return sheepHome;
 }
+
+void Farm::on_pushButton_clicked()
+{
+    store.show();
+}
+
+
+void Farm::on_pushButton_2_clicked()
+{
+    storage.show();
+}
+
+
+void Farm::on_pushButton_3_clicked()
+{
+    siloo.show();
+}
+

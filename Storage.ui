@@ -18,7 +18,8 @@
     <normaloff>Storage.png</normaloff>Storage.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">border-color: rgb(85, 0, 255);
+</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -98,11 +99,11 @@
     <string>0</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="Return_to_Farm">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>30</y>
+     <x>600</x>
+     <y>620</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -112,10 +113,13 @@
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>220</y>
+     <x>60</x>
+     <y>160</y>
      <width>681</width>
      <height>401</height>
     </rect>
@@ -156,10 +160,10 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton:hover
-{
-   background-color:white;
-}</string>
+     <string notr="true">
+border-color: rgb(255, 85, 255);
+background-color: rgb(85, 170, 255);
+</string>
     </property>
    </widget>
    <widget class="QTableWidget" name="tableWidget_3">
@@ -348,6 +352,35 @@
      <string>0</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>90</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="Increase_Capasity">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>620</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>افزايش ظرفيت</string>
+   </property>
   </widget>
  </widget>
  <resources/>

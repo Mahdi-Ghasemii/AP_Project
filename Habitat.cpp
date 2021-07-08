@@ -13,7 +13,7 @@ void Habitat::upgrade(list<Player>::iterator it){
 
 void Habitat::feedeing(list<Player>::iterator it){
     if(type=="chicken"){
-        if(it->get_farm().get_siloo().get_gandom()>=stock_animal){
+        if(it->get_farm().get_siloo().Get_gandom() >=stock_animal){
             if(difftime(feed_time,time(NULL))>2*24*3600){
                 if (is_collected==true){
                     it->get_farm().get_siloo().set_gandom(it->get_farm().get_siloo().get_gandom()-stock_animal);

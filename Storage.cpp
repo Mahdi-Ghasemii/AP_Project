@@ -118,3 +118,17 @@ void Storage::Check_Storages_Product ()
 Storage::~Storage(){
     delete ui;
 }
+
+void Storage::on_Return_to_Farm_clicked()
+{
+    this->close();
+}
+
+
+void Storage::on_Increase_Capasity_clicked()
+{
+
+
+     //  Increase_Capasity();
+}
+

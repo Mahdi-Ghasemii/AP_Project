@@ -3,7 +3,7 @@
 
 
 #include <string>
-//#include "Farm.h"
+#include "Farm.h"
 
 using namespace std;
 
@@ -17,7 +17,7 @@ class Player
     int level;
     int experience;
     time_t signUp_time;
-    //Farm farm;
+    Farm farm;
 
 public:
     Player();
@@ -42,6 +42,7 @@ public:
 
     void set_experience(int);
     int get_experience();
+
 
     void set_signUp_time(time_t);
     time_t get_signUp_time();

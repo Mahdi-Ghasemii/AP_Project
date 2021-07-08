@@ -1,5 +1,5 @@
-#include "yonjefarm.h"
-#include "ui_yonjefarm.h"
+#include "Yonjefarm.h"
+#include "ui_Yonjefarm.h"
 
 YonjeFarm::YonjeFarm(QWidget *parent) :
     QWidget(parent),

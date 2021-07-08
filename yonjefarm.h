@@ -8,7 +8,7 @@ namespace Ui {
 class YonjeFarm;
 }
 
-class YonjeFarm : public QWidget
+class YonjeFarm : public QWidget , public MainFarm
 {
     Q_OBJECT
 
