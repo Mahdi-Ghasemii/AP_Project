@@ -1,4 +1,4 @@
-#include "Yonjefarm.h"
+#include "yonjefarm.h"
 #include "ui_Yonjefarm.h"
 
 YonjeFarm::YonjeFarm(QWidget *parent) :

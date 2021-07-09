@@ -2,7 +2,7 @@
 #define GANDOMFARM_H
 
 #include <QWidget>
-#include "MainFarm.h"
+#include "mainfarm.h"
 #include <ctime>
 
 

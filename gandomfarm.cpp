@@ -1,4 +1,4 @@
-#include "Gandomfarm.h"
+#include "gandomfarm.h"
 #include "ui_Gandomfarm.h"
 
 GandomFarm::GandomFarm(QWidget *parent) :

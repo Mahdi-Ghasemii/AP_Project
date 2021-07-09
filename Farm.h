@@ -6,9 +6,13 @@
 #include "Store.h"
 #include "Siloo.h"
 #include "Habitat.h"
-#include "GandomFarm.h"
-#include "YonjeFarm.h"
+#include "gandomfarm.h"
+#include "yonjefarm.h"
 #include "Ranking.h"
+#include "ChickenHome.h"
+#include "CowHome.h"
+#include "SheepHome.h"
+
 namespace Ui {
 class Farm;
 }
@@ -41,9 +45,9 @@ private:
     Store store;
     Siloo siloo;
     static Ranking ranking;
-    Habitat chickenHome;
-    Habitat cowHome;
-    Habitat sheepHome;
+    ChickenHome chickenHome;
+    CowHome cowHome;
+    SheepHome sheepHome;
     YonjeFarm yonjeFarm;
     GandomFarm gandomFarm;
 };
