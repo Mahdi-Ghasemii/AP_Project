@@ -18,14 +18,14 @@ SOURCES += \
     SignIn.cpp \
     SignUp.cpp \
     main.cpp\
-    Siloo.cpp\
     Building.cpp\
-    Storage.cpp\
     Store.cpp\
     Product.cpp\
     Mainfarm.cpp\
     Gandomfarm.cpp\
-    Yonjefarm.cpp
+    Yonjefarm.cpp\
+    Siloo.cpp\
+    Storage.cpp
 
 HEADERS +=\
     Farm.h \
@@ -35,14 +35,14 @@ HEADERS +=\
     Ranking.h \
     SignIn.h \
     SignUp.h \
-    Siloo.h\
     Building.h\
-    Storage.h\
     Store.h\
     Product.h\
     Mainfarm.h\
     Gandomfarm.h\
-    Yonjefarm.h
+    Yonjefarm.h\
+    Siloo.h\
+    Storage.h
 
 FORMS += \
     Farm.ui \
@@ -51,11 +51,14 @@ FORMS += \
     Ranking.ui \
     SignIn.ui \
     SignUp.ui \
-    Storage.ui\
-    Siloo.ui\
     Store.ui\
     Gandomfarm.ui\
-    Yonjefarm.ui
+    Yonjefarm.ui\
+    Siloo.ui\
+    Storage.ui
+
+RESOURCES += \
+resource.qrc
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
