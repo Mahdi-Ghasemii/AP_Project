@@ -28,7 +28,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../Downloads/Store.png</normaloff>../../Downloads/Store.png</iconset>
+      <normaloff>Icons/Store.png</normaloff>Icons/Store.png</iconset>
     </property>
     <property name="iconSize">
      <size>
