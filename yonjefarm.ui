@@ -27,7 +27,7 @@
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../Pictures/alfalfa farm111.jpg</normaloff>../../../Pictures/alfalfa farm111.jpg</iconset>
+     <normaloff>Icons/alfalfa farm111.jpg</normaloff>Icons/alfalfa farm111.jpg</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -76,7 +76,7 @@
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../Downloads/icons8-tree-planting-64.png</normaloff>../../../Downloads/icons8-tree-planting-64.png</iconset>
+     <normaloff>Icons/icons8-tree-planting-64.png</normaloff>Icons/icons8-tree-planting-64.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -99,7 +99,7 @@
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../Downloads/icons8-upgrade-64.png</normaloff>../../../Downloads/icons8-upgrade-64.png</iconset>
+     <normaloff>Icons/icons8-upgrade-64.png</normaloff>Icons/icons8-upgrade-64.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -122,7 +122,7 @@
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../Downloads/icons8-sickle-40.png</normaloff>../../../Downloads/icons8-sickle-40.png</iconset>
+     <normaloff>Icons/icons8-sickle-40.png</normaloff>Icons/icons8-sickle-40.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -145,7 +145,7 @@
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../Downloads/icons8-plow-48.png</normaloff>../../../Downloads/icons8-plow-48.png</iconset>
+     <normaloff>Icons/icons8-plow-48.png</normaloff>Icons/icons8-plow-48.png</iconset>
    </property>
    <property name="iconSize">
     <size>
