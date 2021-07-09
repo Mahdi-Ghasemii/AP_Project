@@ -2,7 +2,7 @@
 #define YONJEFARM_H
 #include <ctime>
 #include <QWidget>
-#include "MainFarm.h"
+#include "mainfarm.h"
 
 namespace Ui {
 class YonjeFarm;
