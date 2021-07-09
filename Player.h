@@ -47,6 +47,9 @@ public:
     void set_signUp_time(time_t);
     time_t get_signUp_time();
 
+    void set_farm(Farm);
+    Farm get_farm();
+
     static void write_on_file();
 
 };
