@@ -16,13 +16,34 @@ Store::~Store(){
 
 // Slots :
 
-void Store::on_Return_to_Farm_pbn_clicked()
+
+void Store::on_Return_to_Farm_clicked()
 {
     this->close();
 }
 
+void Store::on_Buy_Gandom_pbn_clicked()
+{
+
+}
 
 
+void Store::on_Sell_Gandom_pbn_clicked()
+{
+
+}
+
+
+void Store::on_Buy_Yonjeh_pbn_clicked()
+{
+
+}
+
+
+void Store::on_Sell_Yonjeh_pbn_clicked()
+{
+
+}
 
 
 void Store::on_Buy_Cow_pbn_clicked()
@@ -97,30 +118,6 @@ void Store::on_Sell_Egg_pbn_clicked()
 }
 
 
-void Store::on_Buy_Gandom_pbn_clicked()
-{
-
-}
-
-
-void Store::on_Sell_Gandom_pbn_clicked()
-{
-
-}
-
-
-void Store::on_Buy_Yonjeh_pbn_clicked()
-{
-
-}
-
-
-void Store::on_Sell_Gandom_pbn_2_clicked()
-{
-
-}
-
-
 void Store::on_Buy_Bill_pbn_clicked()
 {
 
@@ -143,4 +140,6 @@ void Store::on_Sell_Mikh_pbn_clicked()
 {
 
 }
+
+
 

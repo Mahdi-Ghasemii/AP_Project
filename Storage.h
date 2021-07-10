@@ -51,7 +51,7 @@ private:
 
 private slots:
        void on_Upgrade_Storage_clicked();
-       void on_Return_to_Farm_clicked();
+       void on_Return_to_Farm_pbn_clicked();
 };
 
 #endif // STORAGE_H

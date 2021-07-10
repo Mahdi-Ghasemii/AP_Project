@@ -25,8 +25,13 @@ public:
 
 
 private slots:
-    void on_Return_to_Farm_pbn_clicked();
 
+    void on_Return_to_Farm_clicked();
+
+    void on_Buy_Gandom_pbn_clicked();
+    void on_Sell_Gandom_pbn_clicked();
+    void on_Buy_Yonjeh_pbn_clicked();
+    void on_Sell_Yonjeh_pbn_clicked();
     void on_Buy_Cow_pbn_clicked();
     void on_Sell_Cow_pbn_clicked();
     void on_Buy_Sheep_pbn_clicked();
@@ -39,10 +44,6 @@ private slots:
     void on_Sell_Wool_pbn_clicked();
     void on_Buy_Egg_pbn_clicked();
     void on_Sell_Egg_pbn_clicked();
-    void on_Buy_Gandom_pbn_clicked();
-    void on_Sell_Gandom_pbn_clicked();
-    void on_Buy_Yonjeh_pbn_clicked();
-    void on_Sell_Gandom_pbn_2_clicked();
     void on_Buy_Bill_pbn_clicked();
     void on_Sell_Bill_pbn_clicked();
     void on_Buy_Mikh_pbn_clicked();

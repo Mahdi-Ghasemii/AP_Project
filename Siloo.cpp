@@ -1,5 +1,8 @@
 #include "Siloo.h"
 #include "ui_Siloo.h"
+#include <QString>
+#include "Data.h"
+#include <QMessageBox>
 
 Siloo::Siloo(QWidget *parent) :
     QMainWindow(parent),
@@ -8,10 +11,12 @@ Siloo::Siloo(QWidget *parent) :
     ui->setupUi(this);
 
     this->gandom.Set_Type("gandom");
+    this->gandom.Set_Number(1);
+    this->capasity = 10;
 
-    ui->Siloo_Capacity = this->capasity;
-    ui->Gandom_Available = this->occupied_capacity;
-    ui->Siloo_Level = this->building_Level;
+    ui->Siloo_Capacity->setText(QString::number(this->capasity));
+    ui->Gandom_Available->setText(QString::number(this->occupied_capacity));
+    ui->Siloo_Level->setText(QString::number(this->building_Level));
 }
 
 
@@ -25,24 +30,26 @@ void Siloo::Set_Gandom (Product _gandom)
     gandom = _gandom;
 }
 
+Siloo::~Siloo(){
+    delete ui;
+}
 
-
+// Slots
 
 void Siloo::on_Upgrade_Siloo_clicked()
 {
 
-    /*
-        if(!(Num_Mikh >= this->building_Level && Num_Coin >= pow((this->building_Level*2),2))*100){
 
-            // Warning : QmessageBox()
+        if(!(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number() >= this->building_Level && Data::get_iterator()->get_coin() >= pow((this->building_Level*2),2))*100){
+
+            //QMessageBox::Warning("Not Enough Resources","");
         }
 
         else {
             this->building_Level *= 2;
-
-            //Information : Qmessagebox()
+           // QMessageBox::information("proccess was successfully","Siloo has upgraded succesfully",0);
         }
-    */
+
 
 }
 
@@ -54,6 +61,3 @@ void Siloo::on_Return_to_Farm_clicked()
 
 
 
-Siloo::~Siloo(){
-    delete ui;
-}

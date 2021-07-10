@@ -22,14 +22,16 @@ class Farm : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Farm();
+    explicit Farm(QWidget *parent = nullptr);
+    ~Farm();
+
     Storage& get_storage();
     Store& get_store();
     Siloo& get_siloo();
     Ranking& get_ranking();
-    Habitat& get_chickenHome();
-    Habitat& get_cowHome();
-    Habitat& get_sheepHome();
+    ChickenHome& get_chickenHome();
+    CowHome& get_cowHome();
+    SheepHome& get_sheepHome();
 
 
 

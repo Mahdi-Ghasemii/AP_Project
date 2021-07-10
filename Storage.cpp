@@ -36,8 +36,8 @@ Storage::Storage(QWidget *parent) :
     // Set Number of available products in storage
 
     ui->Milk_Available->setText(QString::number(this->milk.Get_Number()));
-    ui->Egg_Available->setText(QString::number(this->egg.Get_Number()));
-    ui->Wool_Aailable->setText(QString::number(this->pashm.Get_Number()));
+    ui->Egg_Availbale->setText(QString::number(this->egg.Get_Number()));
+    ui->Wool_Available->setText(QString::number(this->pashm.Get_Number()));
     ui->Yonjeh_Available->setText(QString::number(this->yonjeh.Get_Number()));
     ui->Mikh_Available->setText(QString::number(this->mikh.Get_Number()));
     ui->Bill_Available->setText(QString::number(this->bill.Get_Number()));
@@ -112,36 +112,32 @@ Storage::~Storage(){
 
 // Slots
 
-void Storage::on_Upgrade_Storage_clicked(/* int coin , int level*/)
+
+
+void Storage::on_Upgrade_Storage_clicked(/*int coin , int level*/)
 {
+    /*
+        if(level<=this->building_Level){
+            //warning :QMessageBox()
+            return;
+        }
 
+        else if(!(this->mikh.Get_Number() >= this->building_Level && this->bill.Get_Number()-1 >= this->building_Level
+                && coin >= pow(this->building_Level,3) * 10)){
 
+            // Warning : QmessageBox()
+        }
 
-/*
-    if(level<=this->building_Level){
-        //warning :QMessageBox()
-        return;
-    }
+        else {
+            this->building_Level = round(this->building_Level *3 / 2);
 
-    else if(!(this->mikh.Get_Number() >= this->building_Level && this->bill.Get_Number()-1 >= this->building_Level
-            && coin >= pow(this->building_Level,3) * 10)){
-
-        // Warning : QmessageBox()
-    }
-
-    else {
-        this->building_Level = round(this->building_Level *3 / 2);
-
-        //Information : Qmessagebox()
-    }
-*/
+            //Information : Qmessagebox()
+        }
+    */
 }
 
-
-void Storage::on_Return_to_Farm_clicked()
+void Storage::on_Return_to_Farm_pbn_clicked()
 {
     this->close();
 }
-
-
 

@@ -55,6 +55,7 @@ FORMS += \
     CowHome.ui \
     Farm.ui \
     Logo.ui \
+    Player.ui \
     Ranking.ui \
     SheepHome.ui \
     SignIn.ui \
