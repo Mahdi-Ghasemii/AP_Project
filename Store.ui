@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>611</width>
-    <height>891</height>
+    <width>762</width>
+    <height>935</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,111 +17,56 @@
    <iconset>
     <normaloff>../../Downloads/Store.png</normaloff>../../Downloads/Store.png</iconset>
   </property>
-  <widget class="QLabel" name="label_32">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>480</y>
-     <width>91</width>
-     <height>20</height>
+     <x>540</x>
+     <y>1000</y>
+     <width>131</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
-    <string>پشم گوسفند : </string>
+    <string>بازگشت</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Buy_Cow_pbn">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>502</x>
-     <y>345</y>
-     <width>71</width>
-     <height>28</height>
+     <x>710</x>
+     <y>110</y>
+     <width>181</width>
+     <height>151</height>
     </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Num_Sheep_lbl">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>310</y>
-     <width>16</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_25">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>575</y>
-     <width>151</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/wheat.png</pixmap>
+    <pixmap>Icons/coin.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="Num_yonjeh_lbl">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>675</y>
-     <width>16</width>
-     <height>16</height>
+     <x>780</x>
+     <y>270</y>
+     <width>41</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>0</string>
+    <string>سکه :</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Buy_Yonjeh_pbn">
+  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>705</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Buy_Wool_pbn">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>510</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Num_Wool_lbl">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>480</y>
+     <x>770</x>
+     <y>270</y>
      <width>16</width>
      <height>21</height>
     </rect>
@@ -130,47 +75,24 @@
     <string>0</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_23">
+  <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>104</x>
-     <y>310</y>
-     <width>41</width>
-     <height>20</height>
+     <x>622</x>
+     <y>370</y>
+     <width>71</width>
+     <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>مرغ  :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_8">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>570</y>
-     <width>151</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Icons/bill.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
+    <string>خرید</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>395</y>
+     <x>540</x>
+     <y>430</y>
      <width>151</width>
      <height>81</height>
     </rect>
@@ -189,76 +111,82 @@ background-color: rgb(255, 255, 255);</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_17">
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>315</y>
-     <width>31</width>
+     <x>600</x>
+     <y>520</y>
+     <width>41</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>گاو :</string>
+    <string>شیر :</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Sell_Wool_pbn">
+  <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>510</y>
-     <width>71</width>
-     <height>28</height>
+     <x>80</x>
+     <y>435</y>
+     <width>141</width>
+     <height>81</height>
     </rect>
    </property>
-   <property name="text">
-    <string>فروش</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Sell_Egg_pbn">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>510</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>فروش</string>
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Icons/egg.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="Num_Milk_lbl">
+  <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>485</y>
-     <width>16</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_20">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>310</y>
+     <x>140</x>
+     <y>515</y>
      <width>55</width>
-     <height>16</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>گوسفند :</string>
+    <string>تخم مرغ :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>610</y>
+     <width>151</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Icons/bill.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>675</y>
+     <x>150</x>
+     <y>710</y>
      <width>31</width>
      <height>20</height>
     </rect>
@@ -267,24 +195,11 @@ background-color: rgb(255, 255, 255);</string>
     <string>بیل : </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Sell_Mikh_pbn">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>870</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>فروش</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>750</y>
+     <x>310</x>
+     <y>800</y>
      <width>151</width>
      <height>91</height>
     </rect>
@@ -302,221 +217,50 @@ background-color: rgb(255, 255, 255);</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_12">
+  <widget class="QLabel" name="label_11">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>850</y>
-     <width>16</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Sell_Cow_pbn">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>345</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>فروش</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Sell_Gandom_pbn_2">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>705</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>فروش</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Sell_Milk_pbn">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>515</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>فروش</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Num_Bill_lbl">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>675</y>
-     <width>16</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Buy_Bill_pbn">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>705</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_29">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>675</y>
-     <width>55</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>یونجه : </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>485</y>
-     <width>41</width>
+     <x>390</x>
+     <y>900</y>
+     <width>31</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>شیر :</string>
+    <string>میخ : </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_28">
+  <widget class="QLabel" name="label_12">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>570</y>
-     <width>151</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Icons/Yonjeh.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Num_Chicken_lbl">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>310</y>
+     <x>370</x>
+     <y>900</y>
      <width>16</width>
-     <height>16</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
     <string>0</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Sell_Gandom_pbn">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>710</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>فروش</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Buy_Egg_pbn">
+  <widget class="QLabel" name="label_13">
    <property name="geometry">
     <rect>
      <x>120</x>
      <y>510</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>470</x>
-     <y>160</y>
-     <width>41</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>سکه :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_26">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>670</y>
-     <width>41</width>
+     <width>20</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>گندم  :</string>
+    <string>0</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_6">
+  <widget class="QLabel" name="label_14">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>395</y>
-     <width>151</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Icons/egg.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Num_gandom_lbl">
-   <property name="geometry">
-    <rect>
-     <x>470</x>
-     <y>680</y>
+     <x>590</x>
+     <y>520</y>
      <width>16</width>
      <height>21</height>
     </rect>
@@ -525,76 +269,24 @@ background-color: rgb(255, 255, 255);</string>
     <string>0</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Sell_Chicken_pbn">
+  <widget class="QLabel" name="label_15">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>340</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>فروش</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Num_Coin_lbl">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>160</y>
-     <width>16</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Buy_Milk_pbn">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>515</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Buy_Gandom_pbn">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
+     <x>130</x>
      <y>710</y>
-     <width>71</width>
-     <height>28</height>
+     <width>16</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>475</y>
-     <width>55</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>تخم مرغ :</string>
+    <string>0</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_16">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>205</y>
+     <x>540</x>
+     <y>230</y>
      <width>151</width>
      <height>101</height>
     </rect>
@@ -609,11 +301,467 @@ background-color: rgb(255, 255, 255);</string>
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>340</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>گاو :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_18">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>340</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_19">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>230</y>
+     <width>151</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Icons/Sheep.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_20">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>340</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>گوسفند :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_21">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>340</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_22">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>230</y>
+     <width>151</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Icons/Chicken.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_23">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>340</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>مرغ  :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_24">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>340</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_25">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>610</y>
+     <width>151</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Icons/wheat.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_26">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>700</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>گندم  :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_27">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>710</y>
+     <width>16</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_28">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>610</y>
+     <width>151</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Icons/Yonjeh.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_29">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>710</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>یونجه : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_30">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>710</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>370</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>370</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>370</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_7">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>370</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>370</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_13">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>940</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_12">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>940</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_10">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>740</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_11">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>740</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_9">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>740</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_8">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>740</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_15">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>550</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_14">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>550</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_16">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>550</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_17">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>550</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_18">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>550</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_19">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>740</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_20">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>740</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_21">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>550</y>
+     <width>71</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>فروش</string>
+   </property>
+  </widget>
   <widget class="QLabel" name="label_31">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>390</y>
+     <x>310</x>
+     <y>430</y>
      <width>151</width>
      <height>81</height>
     </rect>
@@ -631,76 +779,38 @@ background-color: rgb(255, 255, 255);</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="Sell_Sheep_pbn">
+  <widget class="QLabel" name="label_32">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>340</y>
-     <width>71</width>
-     <height>28</height>
+     <x>360</x>
+     <y>520</y>
+     <width>91</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>فروش</string>
+    <string>پشم گوسفند : </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="label_33">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>70</y>
-     <width>131</width>
-     <height>101</height>
+     <x>340</x>
+     <y>520</y>
+     <width>16</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Icons/coin.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Sell_Bill_pbn">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>705</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>فروش</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_19">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>200</y>
-     <width>151</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Icons/Sheep.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
+    <string>0</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_34">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>551</width>
+     <x>40</x>
+     <y>30</y>
+     <width>761</width>
      <height>61</height>
     </rect>
    </property>
@@ -710,119 +820,6 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;فروشگاه&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Buy_Sheep_pbn">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>340</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Return_to_Farm_pbn">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>90</y>
-     <width>151</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>بازگشت</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Num_Egg_lbl">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>470</y>
-     <width>20</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Num_Cow_lbl">
-   <property name="geometry">
-    <rect>
-     <x>470</x>
-     <y>315</y>
-     <width>21</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_11">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>850</y>
-     <width>31</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>میخ : </string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Buy_Chicken_pbn">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>340</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Buy_Mikh_pbn">
-   <property name="geometry">
-    <rect>
-     <x>312</x>
-     <y>870</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_22">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>200</y>
-     <width>151</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Icons/Chicken.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
    </property>
   </widget>
  </widget>

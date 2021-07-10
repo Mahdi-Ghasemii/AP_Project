@@ -32,6 +32,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string>سطح آغل: 0</string>
     </property>
@@ -54,6 +57,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string>ظرفیت آغل: 0</string>
     </property>
@@ -75,6 +81,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>تعداد گوسفند موجود: 0</string>
@@ -100,7 +109,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 208, 141);
+     <string notr="true">background-color: rgb(255, 194, 158);
 color: rgb(170, 0, 0);</string>
     </property>
     <property name="text">
@@ -124,7 +133,7 @@ color: rgb(170, 0, 0);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 208, 141);
+     <string notr="true">background-color: rgb(255, 194, 158);
 color: rgb(170, 0, 0);</string>
     </property>
     <property name="text">
@@ -148,7 +157,7 @@ color: rgb(170, 0, 0);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 208, 141);
+     <string notr="true">background-color: rgb(255, 194, 158);
 color: rgb(170, 0, 0);</string>
     </property>
     <property name="text">
@@ -172,7 +181,7 @@ color: rgb(170, 0, 0);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 208, 141);
+     <string notr="true">background-color: rgb(255, 194, 158);
 color: rgb(170, 0, 0);</string>
     </property>
     <property name="text">

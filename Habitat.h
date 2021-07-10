@@ -6,7 +6,7 @@
 #include <Storage.h>
 #include <list>
 #include <QMessageBox>
-#include "Player.h"
+#include "Data.h"
 using namespace std;
 
 class Habitat
