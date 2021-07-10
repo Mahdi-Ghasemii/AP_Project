@@ -14,9 +14,9 @@ class SheepHome : public QMainWindow, public Habitat
 public:
     explicit SheepHome(QWidget *parent = nullptr);
     ~SheepHome();
-    void upgrade(list<Player>::iterator it);
-    void feedeing(list<Player>::iterator it);
-    void collect(list<Player>::iterator it);
+    void upgrade();
+    void feedeing();
+    void collect();
 
 private:
     Ui::SheepHome *ui;

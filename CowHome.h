@@ -14,9 +14,9 @@ class CowHome : public QMainWindow, public Habitat
 public:
     explicit CowHome(QWidget *parent = nullptr);
     ~CowHome();
-    void upgrade(list<Player>::iterator it);
-    void feedeing(list<Player>::iterator it);
-    void collect(list<Player>::iterator it);
+    void upgrade();
+    void feedeing();
+    void collect();
 
 private:
     Ui::CowHome *ui;

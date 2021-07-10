@@ -32,6 +32,7 @@ SOURCES += \
 HEADERS +=\
     ChickenHome.h \
     CowHome.h \
+    Data.h \
     Farm.h \
     Habitat.h \
     Logo.h \
