@@ -16,6 +16,7 @@ class Player
     int coin;
     int level;
     int experience;
+    int experience_required_for_levelUp;
     time_t signUp_time;
     Farm farm;
 
@@ -43,6 +44,8 @@ public:
     void set_experience(int);
     int get_experience();
 
+    void set_experience_required_for_levelUp(int);
+    int get_experience_required_for_levelUp();
 
     void set_signUp_time(time_t);
     time_t get_signUp_time();
