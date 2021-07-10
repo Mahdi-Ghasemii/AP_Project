@@ -46,13 +46,12 @@ private:
        void Set_Pashm (Product _pashm);
 
 
-       void Increase_Capasity (int coin,int level);
-       void Check_Storages_Product ();
+
+
+
 private slots:
-       void on_pushButton_clicked();
-       void on_pushButton_2_clicked();
+       void on_Upgrade_Storage_clicked();
        void on_Return_to_Farm_clicked();
-       void on_Increase_Capasity_clicked();
 };
 
 #endif // STORAGE_H

@@ -8,6 +8,10 @@ Siloo::Siloo(QWidget *parent) :
     ui->setupUi(this);
 
     this->gandom.Set_Type("gandom");
+
+    ui->Siloo_Capacity = this->capasity;
+    ui->Gandom_Available = this->occupied_capacity;
+    ui->Siloo_Level = this->building_Level;
 }
 
 
@@ -21,27 +25,34 @@ void Siloo::Set_Gandom (Product _gandom)
     gandom = _gandom;
 }
 
-void Siloo::Increase_Capacity (int Num_Mikh,int Num_Coin)
+
+
+
+void Siloo::on_Upgrade_Siloo_clicked()
 {
 
+    /*
+        if(!(Num_Mikh >= this->building_Level && Num_Coin >= pow((this->building_Level*2),2))*100){
 
-    if(!(Num_Mikh >= this->building_Level && Num_Coin >= pow((this->building_Level*2),2))*100){
+            // Warning : QmessageBox()
+        }
 
-        // Warning : QmessageBox()
-    }
+        else {
+            this->building_Level *= 2;
 
-    else {
-        this->building_Level *= 2;
-
-        //Information : Qmessagebox()
-    }
+            //Information : Qmessagebox()
+        }
+    */
 
 }
 
-void Siloo::Check_Siloos_Product ()
+void Siloo::on_Return_to_Farm_clicked()
 {
-
+    this->close();
 }
+
+
+
 
 Siloo::~Siloo(){
     delete ui;

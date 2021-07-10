@@ -26,10 +26,11 @@ public:
         Product Get_gandom ();
         void Set_Gandom (Product _gandom);
 
-        void Increase_Capacity (int Num_Mikh,int Num_Coin);
-        void Check_Siloos_Product ();
 
 
+private slots:
+        void on_Return_to_Farm_clicked();
+        void on_Upgrade_Siloo_clicked();
 };
 
 #endif // SILOO_H

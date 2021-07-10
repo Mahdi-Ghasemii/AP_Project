@@ -31,6 +31,8 @@ public:
     Habitat& get_cowHome();
     Habitat& get_sheepHome();
 
+
+
 private slots:
     void on_pushButton_clicked();
 

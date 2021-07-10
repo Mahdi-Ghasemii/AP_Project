@@ -23,6 +23,26 @@ Storage::Storage(QWidget *parent) :
     this->mikh.Set_Number(1);
 
     this->time_add_milk = time(NULL);
+
+    //*******************************************************************
+    // Set 3 arguman of storage building
+
+    ui->Occupied_Capasity->setText(QString::number(this->occupied_capacity));
+    ui->Storage_Level->setText(QString::number(this->building_Level));
+    ui->Storage_Level->setText(QString::number(this->building_Level));
+
+
+    //*******************************************************************
+    // Set Number of available products in storage
+
+    ui->Milk_Available->setText(QString::number(this->milk.Get_Number()));
+    ui->Egg_Available->setText(QString::number(this->egg.Get_Number()));
+    ui->Wool_Aailable->setText(QString::number(this->pashm.Get_Number()));
+    ui->Yonjeh_Available->setText(QString::number(this->yonjeh.Get_Number()));
+    ui->Mikh_Available->setText(QString::number(this->mikh.Get_Number()));
+    ui->Bill_Available->setText(QString::number(this->bill.Get_Number()));
+
+
 }
 
 
@@ -86,11 +106,18 @@ void Storage::Set_Pashm (Product _pashm)
     this->pashm = _pashm;
 }
 
+Storage::~Storage(){
+    delete ui;
+}
 
+// Slots
 
-void Storage::Increase_Capasity (int coin,int level)
+void Storage::on_Upgrade_Storage_clicked(/* int coin , int level*/)
 {
 
+
+
+/*
     if(level<=this->building_Level){
         //warning :QMessageBox()
         return;
@@ -107,17 +134,9 @@ void Storage::Increase_Capasity (int coin,int level)
 
         //Information : Qmessagebox()
     }
-
+*/
 }
 
-void Storage::Check_Storages_Product ()
-{
-
-}
-
-Storage::~Storage(){
-    delete ui;
-}
 
 void Storage::on_Return_to_Farm_clicked()
 {
@@ -125,9 +144,4 @@ void Storage::on_Return_to_Farm_clicked()
 }
 
 
-void Storage::on_Increase_Capasity_clicked()
-{
 
-
-     //  Increase_Capasity();
-}

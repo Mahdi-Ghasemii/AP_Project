@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>618</width>
-    <height>397</height>
+    <width>569</width>
+    <height>357</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>20</y>
+     <x>20</x>
+     <y>10</y>
      <width>531</width>
      <height>61</height>
     </rect>
@@ -30,11 +30,11 @@ color: rgb(255, 255, 255);</string>
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;سیلو&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_14">
+  <widget class="QLabel" name="Gandom_Available">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>100</y>
+     <x>60</x>
+     <y>90</y>
      <width>16</width>
      <height>21</height>
     </rect>
@@ -46,8 +46,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>160</y>
+     <x>40</x>
+     <y>150</y>
      <width>281</width>
      <height>181</height>
     </rect>
@@ -69,8 +69,8 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label_19">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>100</y>
+     <x>440</x>
+     <y>90</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -79,11 +79,11 @@ background-color: rgb(255, 255, 255);</string>
     <string>سطح سیلو :</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="Return_to_Farm">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>280</y>
+     <x>360</x>
+     <y>270</y>
      <width>161</width>
      <height>61</height>
     </rect>
@@ -98,11 +98,11 @@ color: rgb(170, 0, 0);
     <string>بازگشت</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_20">
+  <widget class="QLabel" name="Siloo_Capacity">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>100</y>
+     <x>240</x>
+     <y>90</y>
      <width>21</width>
      <height>21</height>
     </rect>
@@ -114,8 +114,8 @@ color: rgb(170, 0, 0);
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>100</y>
+     <x>80</x>
+     <y>90</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -124,11 +124,11 @@ color: rgb(170, 0, 0);
     <string>موجودی گندم : </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="Upgrade_Siloo">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>160</y>
+     <x>360</x>
+     <y>150</y>
      <width>161</width>
      <height>61</height>
     </rect>
@@ -146,8 +146,8 @@ color: rgb(170, 0, 0);
   <widget class="QLabel" name="label_21">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>100</y>
+     <x>260</x>
+     <y>90</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -156,11 +156,11 @@ color: rgb(170, 0, 0);
     <string>ظرفیت سیلو : </string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_18">
+  <widget class="QLabel" name="Siloo_Level">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>100</y>
+     <x>430</x>
+     <y>90</y>
      <width>21</width>
      <height>21</height>
     </rect>
