@@ -3,7 +3,7 @@
 #include <QPalette>
 #include "dialoggandomplanting.h"
 #include <QMessageBox>
-#include <Data.h>
+#include "Data.h"
 YonjeFarm::YonjeFarm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::YonjeFarm)
@@ -17,14 +17,63 @@ YonjeFarm::YonjeFarm(QWidget *parent) :
        this->setPalette(palette);
        ui->yonjearealbl->setText(QString::number(area));
 }
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 YonjeFarm::YonjeFarm(int _area)
 {
     area=_area;
 }
+void YonjeFarm:: set_area(int _area){area=_area;}
+
+int YonjeFarm:: getarea(void){return area;}
+
+void YonjeFarm::set_planingdate(time_t _plantingdate){plantingdate=_plantingdate;}
+
+time_t YonjeFarm::get_plantingdate(void){return plantingdate;}
+
+void YonjeFarm::set_level(int _level){farm_level=_level;}
+
+int YonjeFarm::get_level(void){return farm_level;}
+
+//bool isunderplanting(void){}
+
+bool YonjeFarm::derokardan(void){}
+
+void YonjeFarm::planting(int plantingareawant){}
+
+void YonjeFarm::upgrade(){
+    if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=0){
+        //if(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()>=(area*2)){
+        if(Data::get_iterator()->get_coin()>=(5*area)){
+            if(Data::get_iterator()->get_level()>=4){
+                Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()-0);
+                Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-(5*area));
+                Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(3*area));
+                area*=2;
+                //QMessageBox
+                if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+                    Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+                    //QMessageBox
+                }
+            }
+            else {
+                //QMessageBox
+            }
+        }
+        else {
+            //QMessageBox
+        }
+    }
+    else {
+        //QMessageBox
+    }
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 bool YonjeFarm::upgradeyonjefarm(int &_nail ,int &_hoe,int &_coin,time_t &_date,int &_playerlevel,int &experience ){}
 
-void YonjeFarm:: planting(int plantingareawant){}
+//void YonjeFarm:: planting(int plantingareawant){}
 
 
 
@@ -66,20 +115,29 @@ void YonjeFarm::on_pushButton_3_clicked()
 
 void YonjeFarm::on_upgradebutton_clicked()
 {
-    if(!(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number() >= this->building_Level*2)){
 
-                QMessageBox::warning(this,"کمبود منابع","تعداد میخ ها برای ارتقا سیلو کافی نمی باشد .",QMessageBox::Ok);
-            }
-            else if(!( Data::get_iterator()->get_coin() >= pow((this->building_Level*2),2))*100){
-                QMessageBox::warning(this,"کمبود منابع","تعداد سکه ها برای ارتقا سیلو کافی نمی باشد",QMessageBox::Ok);
-            }
+}
 
-            else {
-                this->building_Level *= 2;
-                QMessageBox::information(this,"","سیلو با موفقیت ارتقا پیدا کرد .",QMessageBox::Ok);
 
-                Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + (this->building_Level * 2));
-            }
+void YonjeFarm::on_derokardan_clicked()
+{
+    ///
 
+    ///
+    /// ////////////////چک کند د روز بعد کاش باشد
+   if (//بله)
+         1 ){
+
+    Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()+2*areawanted);
+    QMessageBox::warning(this,"موفقیت","درو شد. .",QMessageBox::Ok);
+    if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+       Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+       Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+       //QMessageBox
+     }
+   }
+   else {
+       QMessageBox::warning(this,"تاریخ","زمین آماده برداشت نیست. .",QMessageBox::Ok);
+   }
 }
 
