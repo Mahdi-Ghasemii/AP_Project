@@ -56,6 +56,7 @@ private:
     Ui::YonjeFarm *ui;
 
     time_t time_shokhm_zadan;
+<<<<<<< HEAD
     ////////////////////////////
     int area;
     time_t plantingdate;
@@ -66,6 +67,9 @@ private:
       int areawanted;
 
 
+=======
+    bool is_plantable;
+>>>>>>> c3276557bcbf5916ef883f6b08881e841175b3fe
 
 
 };

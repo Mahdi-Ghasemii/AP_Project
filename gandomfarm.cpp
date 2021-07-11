@@ -1,9 +1,13 @@
 #include "gandomfarm.h"
 #include "ui_gandomfarm.h"
+<<<<<<< HEAD
 #include "dialoggandomplanting.h"
 #include "Data.h"
 #include <QString>
 #include <QMessageBox>
+=======
+
+>>>>>>> c3276557bcbf5916ef883f6b08881e841175b3fe
 GandomFarm::GandomFarm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::GandomFarm)

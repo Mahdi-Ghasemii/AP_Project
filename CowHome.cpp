@@ -1,5 +1,6 @@
 #include "CowHome.h"
 #include "ui_CowHome.h"
+#include "Data.h"
 
 CowHome::CowHome(QWidget *parent) :
     QMainWindow(parent),
@@ -22,8 +23,13 @@ void CowHome::upgrade(){
                 Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+6);
                 capacity*=2;
                 //QMessageBox
+<<<<<<< HEAD
                 if(Data::get_iterator()->get_experience()>=it->get_experience_required_for_levelUp()){
                     Data::get_iterator()->set_experience(it->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+=======
+                if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+>>>>>>> c3276557bcbf5916ef883f6b08881e841175b3fe
                     Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
                     //QMessageBox
                 }

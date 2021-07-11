@@ -1,9 +1,13 @@
 #include "yonjefarm.h"
 #include "ui_yonjefarm.h"
+<<<<<<< HEAD
 #include <QPalette>
 #include "dialoggandomplanting.h"
 #include <QMessageBox>
 #include "Data.h"
+=======
+
+>>>>>>> c3276557bcbf5916ef883f6b08881e841175b3fe
 YonjeFarm::YonjeFarm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::YonjeFarm)

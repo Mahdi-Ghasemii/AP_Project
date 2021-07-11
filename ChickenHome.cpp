@@ -1,5 +1,6 @@
 #include "ChickenHome.h"
 #include "ui_ChickenHome.h"
+#include "Data.h"
 
 ChickenHome::ChickenHome(QWidget *parent) :
     QMainWindow(parent),
