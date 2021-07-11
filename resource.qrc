@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>Icons/alfalfa farm111.jpg</file>
+        <file>Icons/bill.png</file>
+        <file>Icons/Chicken.jpg</file>
+        <file>Icons/coin.png</file>
+        <file>Icons/comment_avatar.jpg</file>
+        <file>Icons/Cow.jpg</file>
+        <file>Icons/egg.png</file>
+        <file>Icons/icons8-back-arrow-64.png</file>
+        <file>Icons/icons8-plow-48.png</file>
+        <file>Icons/icons8-sickle-40.png</file>
+        <file>Icons/icons8-tree-planting-64.png</file>
+        <file>Icons/icons8-upgrade-64.png</file>
+        <file>Icons/mikh.png</file>
+        <file>Icons/milk.png</file>
+        <file>Icons/Sheep.jpg</file>
+        <file>Icons/Siloo.jpg</file>
+        <file>Icons/Storage.JPEG</file>
+        <file>Icons/Storage2.png</file>
+        <file>Icons/Store.png</file>
+        <file>Icons/whaewt farm2.jpg</file>
+        <file>Icons/wheat.png</file>
+        <file>Icons/Wool.png</file>
+        <file>Icons/Yonjeh.jpg</file>
+    </qresource>
+</RCC>

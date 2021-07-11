@@ -43,7 +43,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/coin.png</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/coin.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -105,7 +105,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/milk.png</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/milk.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -140,7 +140,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/egg.png</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/egg.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -176,7 +176,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/bill.png</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/bill.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -211,7 +211,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/mikh.png</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/mikh.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -295,7 +295,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/Cow.jpg</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/Cow.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -314,7 +314,7 @@ background-color: rgb(255, 255, 255);</string>
     <string>گاو :</string>
    </property>
   </widget>
-  <widget class="QLabel" name="Num_Yonjeh_2">
+  <widget class="QLabel" name="Num_Cow">
    <property name="geometry">
     <rect>
      <x>460</x>
@@ -340,7 +340,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/Sheep.jpg</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/Sheep.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -385,7 +385,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/Chicken.jpg</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/Chicken.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -433,7 +433,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/wheat.png</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/wheat.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -478,7 +478,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/Yonjeh.jpg</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/Yonjeh.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -653,38 +653,12 @@ background-color: rgb(255, 255, 255);</string>
     <string>فروش</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Buy_Milk_pbn">
-   <property name="geometry">
-    <rect>
-     <x>870</x>
-     <y>530</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Buy_Egg_pbn">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>530</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="Sell_Egg_pbn">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>430</x>
      <y>530</y>
-     <width>71</width>
+     <width>111</width>
      <height>28</height>
     </rect>
    </property>
@@ -692,25 +666,12 @@ background-color: rgb(255, 255, 255);</string>
     <string>فروش</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Buy_Wool_pbn">
-   <property name="geometry">
-    <rect>
-     <x>680</x>
-     <y>530</y>
-     <width>71</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>خرید</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="Sell_Wool_pbn">
    <property name="geometry">
     <rect>
-     <x>600</x>
+     <x>620</x>
      <y>530</y>
-     <width>71</width>
+     <width>121</width>
      <height>28</height>
     </rect>
    </property>
@@ -747,9 +708,9 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="Sell_Milk_pbn">
    <property name="geometry">
     <rect>
-     <x>790</x>
+     <x>800</x>
      <y>530</y>
-     <width>71</width>
+     <width>131</width>
      <height>28</height>
     </rect>
    </property>
@@ -773,7 +734,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/Wool.png</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/Wool.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -836,6 +797,8 @@ color: rgb(255, 255, 255);</string>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

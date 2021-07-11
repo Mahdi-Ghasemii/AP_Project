@@ -17,7 +17,6 @@ public:
 
     static void set_players(QList<Player> _players){ players=_players; }
 
-    static QList<Player>& set_players(){ return players; }
 
     static void write_on_file();
 };
