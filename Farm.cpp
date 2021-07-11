@@ -5,7 +5,8 @@
 #include "Siloo.h"
 
 
-Farm::Farm() :
+Farm::Farm(QWidget *parent) :
+    QMainWindow(parent),
     ui(new Ui::Farm)
 {
     ui->setupUi(this);

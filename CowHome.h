@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include "Habitat.h"
-#include "Data.h"
 
 namespace Ui {
 class CowHome;

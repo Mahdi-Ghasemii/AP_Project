@@ -63,7 +63,7 @@ QString Player::get_password(){
 void Player::set_email(QString){
 
 }
-string Player::get_email(){
+QString Player::get_email(){
     return email;
 }
 
@@ -105,10 +105,6 @@ void Player::set_signUp_time(time_t _signUp_time){
 
 time_t Player::get_signUp_time(){
     return signUp_time;
-}
-
-void Player::set_farm(Farm _farm){
-    farm = _farm;
 }
 
 Farm& Player::get_farm(){
