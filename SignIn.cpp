@@ -17,3 +17,11 @@ SignIn::~SignIn()
 {
     delete ui;
 }
+
+void SignIn::on_sign_up_pbn_clicked()
+{
+    SignUp* su = new SignUp();
+    this->hide();
+    su->show();
+}
+
