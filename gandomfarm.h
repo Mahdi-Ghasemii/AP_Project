@@ -26,8 +26,13 @@ public:
 
     ~GandomFarm();
 
-private:
+private slots:
+       void on_pushButton_2_clicked();
+       void plantingareawanted(int _area);
+       void on_pushButton_5_clicked();
 
+private:
+     int areawanted;
     Ui::GandomFarm *ui;
 };
 
