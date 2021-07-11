@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "Habitat.h"
+#include "Data.h"
 
 namespace Ui {
 class ChickenHome;
@@ -15,9 +16,9 @@ class ChickenHome : public QMainWindow, public Habitat
 public:
     explicit ChickenHome(QWidget *parent = nullptr);
     ~ChickenHome();
-    void upgrade(list<Player>::iterator it);
-    void feedeing(list<Player>::iterator it);
-    void collect(list<Player>::iterator it);
+    void upgrade();
+    void feedeing();
+    void collect();
 
 private:
     Ui::ChickenHome *ui;

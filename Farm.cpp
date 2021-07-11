@@ -4,10 +4,15 @@
 #include "Store.h"
 #include "Siloo.h"
 
+
 Farm::Farm() :
     ui(new Ui::Farm)
 {
     ui->setupUi(this);
+}
+
+Farm::~Farm(){
+    delete ui;
 }
 
 Storage& Farm::get_storage(){
@@ -26,15 +31,15 @@ Ranking& Farm::get_ranking(){
     return ranking;
 }
 
-Habitat& Farm::get_chickenHome(){
+ChickenHome& Farm::get_chickenHome(){
     return chickenHome;
 }
 
-Habitat& Farm::get_cowHome(){
+CowHome& Farm::get_cowHome(){
     return cowHome;
 }
 
-Habitat& Farm::get_sheepHome(){
+SheepHome& Farm::get_sheepHome(){
     return sheepHome;
 }
 

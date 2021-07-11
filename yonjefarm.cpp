@@ -3,7 +3,7 @@
 #include <QPalette>
 #include "dialoggandomplanting.h"
 #include <QMessageBox>
-
+#include <Data.h>
 YonjeFarm::YonjeFarm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::YonjeFarm)
@@ -61,5 +61,25 @@ void YonjeFarm::plantingareawanted(int _area)
 void YonjeFarm::on_pushButton_3_clicked()
 {
     this->close();
+}
+
+
+void YonjeFarm::on_upgradebutton_clicked()
+{
+    if(!(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number() >= this->building_Level*2)){
+
+                QMessageBox::warning(this,"کمبود منابع","تعداد میخ ها برای ارتقا سیلو کافی نمی باشد .",QMessageBox::Ok);
+            }
+            else if(!( Data::get_iterator()->get_coin() >= pow((this->building_Level*2),2))*100){
+                QMessageBox::warning(this,"کمبود منابع","تعداد سکه ها برای ارتقا سیلو کافی نمی باشد",QMessageBox::Ok);
+            }
+
+            else {
+                this->building_Level *= 2;
+                QMessageBox::information(this,"","سیلو با موفقیت ارتقا پیدا کرد .",QMessageBox::Ok);
+
+                Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + (this->building_Level * 2));
+            }
+
 }
 

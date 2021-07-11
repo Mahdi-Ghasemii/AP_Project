@@ -1,37 +1,32 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-
-#include <string>
+#include <QMainWindow>
+#include <QString>
 #include "Farm.h"
 
-using namespace std;
+namespace Ui {
+class Player;
+}
 
-class Player
+class Player : public QMainWindow
 {
-    string name;
-    string username;
-    string password;
-    string email;
-    int coin;
-    int level;
-    int experience;
-    time_t signUp_time;
-    Farm farm;
+    Q_OBJECT
 
 public:
-    Player();
+    explicit Player(QWidget *parent = nullptr);
+    ~Player();
 
-    void set_name(string);
-    string get_name();
+    void set_name(QString);
+    QString get_name();
 
-    void set_username(string);
-    string get_username();
+    void set_username(QString);
+    QString get_username();
 
-    void set_password(string);
-    string get_password();
+    void set_password(QString);
+    QString get_password();
 
-    void set_email(string);
+    void set_email(QString);
     string get_email();
 
     void set_coin(int);
@@ -43,6 +38,8 @@ public:
     void set_experience(int);
     int get_experience();
 
+    void set_experience_required_for_levelUp(int);
+    int get_experience_required_for_levelUp();
 
     void set_signUp_time(time_t);
     time_t get_signUp_time();
@@ -52,7 +49,24 @@ public:
 
     static void write_on_file();
 
+private:
+    Ui::Player *ui;
+
+    QString name;
+    QString username;
+    QString password;
+    string email;
+    int coin;
+    int level;
+    int experience;
+    int experience_required_for_levelUp;
+    time_t signUp_time;
+    Farm farm;
 };
 
-
 #endif // PLAYER_H
+
+
+
+
+

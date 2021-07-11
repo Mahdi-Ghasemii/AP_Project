@@ -33,6 +33,7 @@ SOURCES += \
 HEADERS +=\
     ChickenHome.h \
     CowHome.h \
+    Data.h \
     Farm.h \
     Habitat.h \
     Logo.h \
@@ -56,6 +57,7 @@ FORMS += \
     CowHome.ui \
     Farm.ui \
     Logo.ui \
+    Player.ui \
     Ranking.ui \
     SheepHome.ui \
     SignIn.ui \
@@ -71,3 +73,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc

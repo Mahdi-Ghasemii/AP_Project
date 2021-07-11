@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>732</width>
-    <height>740</height>
+    <width>663</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>205</y>
+      <x>240</x>
+      <y>165</y>
       <width>151</width>
       <height>81</height>
      </rect>
@@ -30,7 +30,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Icons/egg.png</pixmap>
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/egg.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -39,8 +39,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>200</y>
+      <x>450</x>
+      <y>160</y>
       <width>151</width>
       <height>81</height>
      </rect>
@@ -53,7 +53,7 @@ background-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Icons/milk.png</pixmap>
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/milk.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -62,8 +62,8 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_28">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>350</y>
+      <x>450</x>
+      <y>310</y>
       <width>151</width>
       <height>91</height>
      </rect>
@@ -72,7 +72,7 @@ background-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Icons/Yonjeh.jpg</pixmap>
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/Yonjeh.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -81,8 +81,8 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_29">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>450</y>
+      <x>500</x>
+      <y>410</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -94,8 +94,8 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_32">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>290</y>
+      <x>80</x>
+      <y>250</y>
       <width>91</width>
       <height>20</height>
      </rect>
@@ -107,8 +107,8 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>290</y>
+      <x>510</x>
+      <y>250</y>
       <width>41</width>
       <height>20</height>
      </rect>
@@ -117,11 +117,11 @@ background-color: rgb(255, 255, 255);</string>
      <string>شیر :</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_33">
+   <widget class="QLabel" name="Wool_Available">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>290</y>
+      <x>60</x>
+      <y>250</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -130,11 +130,11 @@ background-color: rgb(255, 255, 255);</string>
      <string>0</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_30">
+   <widget class="QLabel" name="Yonjeh_Available">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>450</y>
+      <x>490</x>
+      <y>410</y>
       <width>16</width>
       <height>16</height>
      </rect>
@@ -143,11 +143,11 @@ background-color: rgb(255, 255, 255);</string>
      <string>0</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_14">
+   <widget class="QLabel" name="Milk_Available">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>290</y>
+      <x>500</x>
+      <y>250</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -159,8 +159,8 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>450</y>
+      <x>100</x>
+      <y>410</y>
       <width>31</width>
       <height>20</height>
      </rect>
@@ -169,11 +169,11 @@ background-color: rgb(255, 255, 255);</string>
      <string>بیل : </string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_13">
+   <widget class="QLabel" name="Egg_Availbale">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>280</y>
+      <x>290</x>
+      <y>240</y>
       <width>20</width>
       <height>41</height>
      </rect>
@@ -185,8 +185,8 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_31">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>200</y>
+      <x>30</x>
+      <y>160</y>
       <width>151</width>
       <height>81</height>
      </rect>
@@ -199,17 +199,17 @@ background-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Icons/Wool.png</pixmap>
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/Wool.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_15">
+   <widget class="QLabel" name="Bill_Available">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>450</y>
+      <x>80</x>
+      <y>410</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -221,8 +221,8 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>285</y>
+      <x>310</x>
+      <y>245</y>
       <width>55</width>
       <height>31</height>
      </rect>
@@ -234,8 +234,8 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>350</y>
+      <x>30</x>
+      <y>310</y>
       <width>151</width>
       <height>91</height>
      </rect>
@@ -248,7 +248,7 @@ background-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Icons/bill.png</pixmap>
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/bill.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -257,8 +257,8 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>350</y>
+      <x>240</x>
+      <y>310</y>
       <width>151</width>
       <height>91</height>
      </rect>
@@ -270,7 +270,7 @@ background-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Icons/mikh.png</pixmap>
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/mikh.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -279,11 +279,18 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_34">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>40</y>
+      <x>20</x>
+      <y>20</y>
       <width>611</width>
       <height>61</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(136, 0, 27);
@@ -293,11 +300,11 @@ color: rgb(255, 255, 255);</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;انبار&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_35">
+   <widget class="QLabel" name="Mikh_Available">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>450</y>
+      <x>290</x>
+      <y>410</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -309,8 +316,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_36">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>440</y>
+      <x>310</x>
+      <y>400</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -319,11 +326,11 @@ color: rgb(255, 255, 255);</string>
      <string>میخ :</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Return_to_Farm_pbn">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>550</y>
+      <x>350</x>
+      <y>460</y>
       <width>141</width>
       <height>61</height>
      </rect>
@@ -338,11 +345,11 @@ background-color: rgb(255, 208, 141);
      <string>بازگشت</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="Upgrade_Storage">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>550</y>
+      <x>130</x>
+      <y>460</y>
       <width>141</width>
       <height>61</height>
      </rect>
@@ -357,11 +364,11 @@ font-weight: bold;
      <string>ارتقاء</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_18">
+   <widget class="QLabel" name="Storage_Level">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>130</y>
+      <x>500</x>
+      <y>110</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -370,11 +377,11 @@ font-weight: bold;
      <string>0</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_20">
+   <widget class="QLabel" name="Storage_Capasity">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>130</y>
+      <x>280</x>
+      <y>110</y>
       <width>21</width>
       <height>21</height>
      </rect>
@@ -383,11 +390,11 @@ font-weight: bold;
      <string>0</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_16">
+   <widget class="QLabel" name="Occupied_Capasity">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>130</y>
+      <x>40</x>
+      <y>110</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -399,8 +406,8 @@ font-weight: bold;
    <widget class="QLabel" name="label_21">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>130</y>
+      <x>290</x>
+      <y>110</y>
       <width>81</width>
       <height>21</height>
      </rect>
@@ -412,9 +419,9 @@ font-weight: bold;
    <widget class="QLabel" name="label_19">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>130</y>
-      <width>81</width>
+      <x>510</x>
+      <y>110</y>
+      <width>71</width>
       <height>21</height>
      </rect>
     </property>
@@ -425,8 +432,8 @@ font-weight: bold;
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>130</y>
+      <x>70</x>
+      <y>110</y>
       <width>111</width>
       <height>20</height>
      </rect>
@@ -441,13 +448,15 @@ font-weight: bold;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>732</width>
+     <width>663</width>
      <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

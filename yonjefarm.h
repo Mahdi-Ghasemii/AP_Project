@@ -29,12 +29,19 @@ private slots:
        void plantingareawanted(int _area);
        void on_pushButton_3_clicked();
 
+       void on_upgradebutton_clicked();
+
 private:
     Ui::YonjeFarm *ui;
 
     time_t time_shokhm_zadan;
+<<<<<<< HEAD
       bool is_plantable;
       int areawanted;
+=======
+    bool is_plantable;
+
+>>>>>>> db269b9999aada6e9cfbd77eb2994121f5b8b7f3
 
 };
 

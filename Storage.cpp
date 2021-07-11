@@ -2,6 +2,7 @@
 #include "ui_Storage.h"
 #include <QMessageBox>
 #include <math.h>
+#include "Data.h"
 
 Storage::Storage(QWidget *parent) :
     QMainWindow(parent),
@@ -10,24 +11,38 @@ Storage::Storage(QWidget *parent) :
     ui->setupUi(this);
 
 
-    this->bill.Set_Type("bill");
-    this->mikh.Set_Type("mikh");
-    this->yonjeh.Set_Type("yonjeh");
-    this->egg.Set_Type("egg");
-    this->milk.Set_Type("milk");
-    this->pashm.Set_Type("pashm");
-    this->bill.Set_Type("bill");
+
 
     this->capasity = 5;
     this->yonjeh.Set_Number(1);
     this->mikh.Set_Number(1);
 
     this->time_add_milk = time(NULL);
+
+    //*******************************************************************
+    // Set 3 arguman of storage building
+
+    ui->Occupied_Capasity->setText(QString::number(this->occupied_capacity));
+    ui->Storage_Level->setText(QString::number(this->building_Level));
+    ui->Storage_Level->setText(QString::number(this->building_Level));
+
+
+    //*******************************************************************
+    // Set Number of available products in storage
+
+    ui->Milk_Available->setText(QString::number(this->milk.Get_Number()));
+    ui->Egg_Availbale->setText(QString::number(this->egg.Get_Number()));
+    ui->Wool_Available->setText(QString::number(this->pashm.Get_Number()));
+    ui->Yonjeh_Available->setText(QString::number(this->yonjeh.Get_Number()));
+    ui->Mikh_Available->setText(QString::number(this->mikh.Get_Number()));
+    ui->Bill_Available->setText(QString::number(this->bill.Get_Number()));
+
+
 }
 
 
 
-Product Storage::Get_bill ()
+Product& Storage::Get_bill ()
 {
     return this->bill;
 }
@@ -37,7 +52,7 @@ void Storage::Set_bill (Product _bill)
 }
 
 
-Product Storage::Get_mikh ()
+Product& Storage::Get_mikh ()
 {
     return this->mikh;
 }
@@ -47,7 +62,7 @@ void Storage::Set_Mikh (Product _mikh)
 }
 
 
-Product Storage::Get_yonjeh ()
+Product& Storage::Get_yonjeh ()
 {
     return this->yonjeh;
 }
@@ -57,7 +72,7 @@ void Storage::Set_Yonjeh (Product _yonjeh)
 }
 
 
-Product Storage::Get_egg ()
+Product& Storage::Get_egg ()
 {
     return this->egg;
 }
@@ -67,7 +82,7 @@ void Storage::Set_Egg (Product _egg)
 }
 
 
-Product Storage::Get_milk ()
+Product& Storage::Get_milk ()
 {
     return this->milk;
 }
@@ -77,7 +92,7 @@ void Storage::Set_Milk (Product _milk)
 }
 
 
-Product Storage::Get_pashm ()
+Product& Storage::Get_pashm ()
 {
     return this->pashm;
 }
@@ -86,48 +101,46 @@ void Storage::Set_Pashm (Product _pashm)
     this->pashm = _pashm;
 }
 
-
-
-void Storage::Increase_Capasity (int coin,int level)
-{
-
-    if(level<=this->building_Level){
-        //warning :QMessageBox()
-        return;
-    }
-
-    else if(!(this->mikh.Get_Number() >= this->building_Level && this->bill.Get_Number()-1 >= this->building_Level
-            && coin >= pow(this->building_Level,3) * 10)){
-
-        // Warning : QmessageBox()
-    }
-
-    else {
-        this->building_Level = round(this->building_Level *3 / 2);
-
-        //Information : Qmessagebox()
-    }
-
-}
-
-void Storage::Check_Storages_Product ()
-{
-
-}
-
 Storage::~Storage(){
     delete ui;
 }
 
-void Storage::on_Return_to_Farm_clicked()
+// Slots
+
+
+
+void Storage::on_Upgrade_Storage_clicked()
+{
+
+        if(Data::get_iterator()->get_level() <= this->building_Level){
+
+            QMessageBox::warning(this,"","سطح انبار نمی تواند از سطح بازیکن بیشتر شود.",QMessageBox::Ok);
+        }
+
+        else if(!(this->mikh.Get_Number() >= this->building_Level)){
+
+            QMessageBox::warning(this,"","تعداد ميخ براي ارتقا سيلو كافي نمي باشد .",QMessageBox::Ok);
+        }
+
+        else if(!(this->bill.Get_Number()-1 >= this->building_Level)){
+
+            QMessageBox::warning(this,"","تعداد بيل براي ارتقا سيلو كافي نمي باشد",QMessageBox::Ok);
+        }
+        else if(!(Data::get_iterator()->get_coin() >= pow(this->building_Level,3) * 10)){
+
+            QMessageBox::warning(this,"","تعداد سکه براي ارتقا سيلو كافي نمي باشد",QMessageBox::Ok);
+        }
+
+        else {
+            this->building_Level = round(this->building_Level *3 / 2);
+
+            QMessageBox::information(this,"","انبار با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+        }
+
+}
+
+void Storage::on_Return_to_Farm_pbn_clicked()
 {
     this->close();
 }
 
-
-void Storage::on_Increase_Capasity_clicked()
-{
-
-
-     //  Increase_Capasity();
-}
