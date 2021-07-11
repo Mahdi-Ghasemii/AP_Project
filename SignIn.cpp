@@ -21,7 +21,13 @@ SignIn::~SignIn()
 void SignIn::on_sign_up_pbn_clicked()
 {
     SignUp* su = new SignUp();
-    this->hide();
+    this->close();
     su->show();
+}
+
+
+void SignIn::on_sign_in_pbn_clicked()
+{
+
 }
 
