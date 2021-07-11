@@ -232,7 +232,7 @@ background-color: rgb(136, 0, 27);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Icons/Sheep.jpg</pixmap>
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/Sheep.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -240,6 +240,8 @@ background-color: rgb(136, 0, 27);</string>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

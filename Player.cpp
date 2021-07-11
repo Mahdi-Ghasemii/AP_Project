@@ -14,7 +14,7 @@ Player::Player(QWidget *parent) :
 
     this->level = 1;
     this->experience = 0;
-    this->coin = 0;
+    this->coin = 20;
 
     this->signUp_time = time(NULL);
 
@@ -111,7 +111,7 @@ void Player::set_farm(Farm _farm){
     farm = _farm;
 }
 
-Farm Player::get_farm(){
+Farm& Player::get_farm(){
     return farm;
 }
 

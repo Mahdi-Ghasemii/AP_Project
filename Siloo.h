@@ -23,7 +23,7 @@ public:
         explicit Siloo(QWidget *parent = nullptr);
         ~Siloo();
 
-        Product Get_gandom ();
+        Product& Get_gandom ();
         void Set_Gandom (Product _gandom);
 
 

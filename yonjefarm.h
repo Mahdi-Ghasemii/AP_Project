@@ -28,7 +28,7 @@ private:
     Ui::YonjeFarm *ui;
 
     time_t time_shokhm_zadan;
-      bool is_plantable;
+    bool is_plantable;
 
 
 };

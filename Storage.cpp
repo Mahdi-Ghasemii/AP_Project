@@ -2,6 +2,7 @@
 #include "ui_Storage.h"
 #include <QMessageBox>
 #include <math.h>
+#include "Data.h"
 
 Storage::Storage(QWidget *parent) :
     QMainWindow(parent),
@@ -10,13 +11,7 @@ Storage::Storage(QWidget *parent) :
     ui->setupUi(this);
 
 
-    this->bill.Set_Type("bill");
-    this->mikh.Set_Type("mikh");
-    this->yonjeh.Set_Type("yonjeh");
-    this->egg.Set_Type("egg");
-    this->milk.Set_Type("milk");
-    this->pashm.Set_Type("pashm");
-    this->bill.Set_Type("bill");
+
 
     this->capasity = 5;
     this->yonjeh.Set_Number(1);
@@ -47,7 +42,7 @@ Storage::Storage(QWidget *parent) :
 
 
 
-Product Storage::Get_bill ()
+Product& Storage::Get_bill ()
 {
     return this->bill;
 }
@@ -57,7 +52,7 @@ void Storage::Set_bill (Product _bill)
 }
 
 
-Product Storage::Get_mikh ()
+Product& Storage::Get_mikh ()
 {
     return this->mikh;
 }
@@ -67,7 +62,7 @@ void Storage::Set_Mikh (Product _mikh)
 }
 
 
-Product Storage::Get_yonjeh ()
+Product& Storage::Get_yonjeh ()
 {
     return this->yonjeh;
 }
@@ -77,7 +72,7 @@ void Storage::Set_Yonjeh (Product _yonjeh)
 }
 
 
-Product Storage::Get_egg ()
+Product& Storage::Get_egg ()
 {
     return this->egg;
 }
@@ -87,7 +82,7 @@ void Storage::Set_Egg (Product _egg)
 }
 
 
-Product Storage::Get_milk ()
+Product& Storage::Get_milk ()
 {
     return this->milk;
 }
@@ -97,7 +92,7 @@ void Storage::Set_Milk (Product _milk)
 }
 
 
-Product Storage::Get_pashm ()
+Product& Storage::Get_pashm ()
 {
     return this->pashm;
 }
@@ -114,26 +109,34 @@ Storage::~Storage(){
 
 
 
-void Storage::on_Upgrade_Storage_clicked(/*int coin , int level*/)
+void Storage::on_Upgrade_Storage_clicked()
 {
-    /*
-        if(level<=this->building_Level){
-            //warning :QMessageBox()
-            return;
+
+        if(Data::get_iterator()->get_level() <= this->building_Level){
+
+            QMessageBox::warning(this,"","سطح انبار نمی تواند از سطح بازیکن بیشتر شود.",QMessageBox::Ok);
         }
 
-        else if(!(this->mikh.Get_Number() >= this->building_Level && this->bill.Get_Number()-1 >= this->building_Level
-                && coin >= pow(this->building_Level,3) * 10)){
+        else if(!(this->mikh.Get_Number() >= this->building_Level)){
 
-            // Warning : QmessageBox()
+            QMessageBox::warning(this,"","تعداد ميخ براي ارتقا سيلو كافي نمي باشد .",QMessageBox::Ok);
+        }
+
+        else if(!(this->bill.Get_Number()-1 >= this->building_Level)){
+
+            QMessageBox::warning(this,"","تعداد بيل براي ارتقا سيلو كافي نمي باشد",QMessageBox::Ok);
+        }
+        else if(!(Data::get_iterator()->get_coin() >= pow(this->building_Level,3) * 10)){
+
+            QMessageBox::warning(this,"","تعداد سکه براي ارتقا سيلو كافي نمي باشد",QMessageBox::Ok);
         }
 
         else {
             this->building_Level = round(this->building_Level *3 / 2);
 
-            //Information : Qmessagebox()
+            QMessageBox::information(this,"","انبار با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
         }
-    */
+
 }
 
 void Storage::on_Return_to_Farm_pbn_clicked()

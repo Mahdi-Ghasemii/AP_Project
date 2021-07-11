@@ -60,7 +60,7 @@ background-color: rgb(255, 255, 255);</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Icons/wheat.png</pixmap>
+    <pixmap resource="resource.qrc">:/new/prefix1/Icons/wheat.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -170,6 +170,8 @@ color: rgb(170, 0, 0);
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

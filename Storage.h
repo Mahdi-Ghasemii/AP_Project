@@ -32,17 +32,17 @@ private:
        ~Storage();
 
 
-       Product Get_bill ();
+       Product& Get_bill ();
        void Set_bill (Product _bill);
-       Product Get_mikh ();
+       Product& Get_mikh ();
        void Set_Mikh (Product _mikh);
-       Product Get_yonjeh ();
+       Product& Get_yonjeh ();
        void Set_Yonjeh (Product _yonjeh);
-       Product Get_egg ();
+       Product& Get_egg ();
        void Set_Egg (Product _egg);
-       Product Get_milk ();
+       Product& Get_milk ();
        void Set_Milk (Product _milk);
-       Product Get_pashm ();
+       Product& Get_pashm ();
        void Set_Pashm (Product _pashm);
 
 

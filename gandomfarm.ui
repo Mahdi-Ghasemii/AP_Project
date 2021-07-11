@@ -49,8 +49,8 @@
     <string/>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>Icons/icons8-tree-planting-64.png</normaloff>Icons/icons8-tree-planting-64.png</iconset>
+    <iconset resource="resource.qrc">
+     <normaloff>:/new/prefix1/Icons/icons8-tree-planting-64.png</normaloff>:/new/prefix1/Icons/icons8-tree-planting-64.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -72,8 +72,8 @@
     <string/>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>Icons/icons8-upgrade-64.png</normaloff>Icons/icons8-upgrade-64.png</iconset>
+    <iconset resource="resource.qrc">
+     <normaloff>:/new/prefix1/Icons/icons8-upgrade-64.png</normaloff>:/new/prefix1/Icons/icons8-upgrade-64.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -121,8 +121,8 @@
     <string/>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>Icons/icons8-sickle-40.png</normaloff>Icons/icons8-sickle-40.png</iconset>
+    <iconset resource="resource.qrc">
+     <normaloff>:/new/prefix1/Icons/icons8-sickle-40.png</normaloff>:/new/prefix1/Icons/icons8-sickle-40.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -144,8 +144,8 @@
     <string/>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>Icons/icons8-back-arrow-64.png</normaloff>Icons/icons8-back-arrow-64.png</iconset>
+    <iconset resource="resource.qrc">
+     <normaloff>:/new/prefix1/Icons/icons8-back-arrow-64.png</normaloff>:/new/prefix1/Icons/icons8-back-arrow-64.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -155,6 +155,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

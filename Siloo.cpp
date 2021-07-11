@@ -10,7 +10,6 @@ Siloo::Siloo(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    this->gandom.Set_Type("gandom");
     this->gandom.Set_Number(1);
     this->capasity = 10;
 
@@ -20,7 +19,7 @@ Siloo::Siloo(QWidget *parent) :
 }
 
 
-Product Siloo::Get_gandom ()
+Product& Siloo::Get_gandom ()
 {
     return this->gandom;
 }
@@ -40,14 +39,19 @@ void Siloo::on_Upgrade_Siloo_clicked()
 {
 
 
-        if(!(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number() >= this->building_Level && Data::get_iterator()->get_coin() >= pow((this->building_Level*2),2))*100){
+        if(!(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number() >= this->building_Level*2)){
 
-            //QMessageBox::Warning("Not Enough Resources","");
+            QMessageBox::warning(this,"کمبود منابع","تعداد میخ ها برای ارتقا سیلو کافی نمی باشد .",QMessageBox::Ok);
+        }
+        else if(!( Data::get_iterator()->get_coin() >= pow((this->building_Level*2),2))*100){
+            QMessageBox::warning(this,"کمبود منابع","تعداد سکه ها برای ارتقا سیلو کافی نمی باشد",QMessageBox::Ok);
         }
 
         else {
             this->building_Level *= 2;
-           // QMessageBox::information("proccess was successfully","Siloo has upgraded succesfully",0);
+            QMessageBox::information(this,"","سیلو با موفقیت ارتقا پیدا کرد .",QMessageBox::Ok);
+
+            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + (this->building_Level * 2));
         }
 
 

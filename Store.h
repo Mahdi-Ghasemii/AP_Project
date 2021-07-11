@@ -38,11 +38,8 @@ private slots:
     void on_Sell_Sheep_pbn_clicked();
     void on_Buy_Chicken_pbn_clicked();
     void on_Sell_Chicken_pbn_clicked();
-    void on_Buy_Milk_pbn_clicked();
     void on_Sell_Milk_pbn_clicked();
-    void on_Buy_Wool_pbn_clicked();
     void on_Sell_Wool_pbn_clicked();
-    void on_Buy_Egg_pbn_clicked();
     void on_Sell_Egg_pbn_clicked();
     void on_Buy_Bill_pbn_clicked();
     void on_Sell_Bill_pbn_clicked();
