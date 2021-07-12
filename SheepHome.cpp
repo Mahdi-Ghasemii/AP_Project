@@ -1,5 +1,6 @@
 #include "SheepHome.h"
 #include "ui_SheepHome.h"
+#include "Data.h"
 
 SheepHome::SheepHome(QWidget *parent) :
     QMainWindow(parent),
