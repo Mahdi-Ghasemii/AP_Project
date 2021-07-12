@@ -6,20 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>401</width>
     <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/new/prefix1/Icons/yonjebackground.jpg);</string>
+  </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>10</y>
+     <x>10</x>
+     <y>20</y>
      <width>301</width>
-     <height>141</height>
+     <height>191</height>
     </rect>
    </property>
    <property name="text">
@@ -39,37 +42,33 @@
   <widget class="QLabel" name="area">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>170</y>
-     <width>41</width>
-     <height>31</height>
+     <x>200</x>
+     <y>241</y>
+     <width>61</width>
+     <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>مساحت</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>170</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="frame">
-    <bool>false</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="planting">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>220</y>
-     <width>81</width>
+     <x>320</x>
+     <y>80</y>
+     <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;کاشتن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="text">
     <string/>
@@ -88,11 +87,14 @@
   <widget class="QPushButton" name="upgradebutton">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>220</y>
-     <width>81</width>
+     <x>320</x>
+     <y>10</y>
+     <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ارتقا&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="text">
     <string/>
@@ -111,11 +113,14 @@
   <widget class="QPushButton" name="derokardan">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>220</y>
-     <width>81</width>
+     <x>320</x>
+     <y>150</y>
+     <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;درو کردن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="text">
     <string/>
@@ -131,14 +136,17 @@
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="shokhmzadan">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>320</x>
      <y>220</y>
-     <width>81</width>
+     <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;شخم زدن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="text">
     <string/>
@@ -158,10 +166,13 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
-     <width>61</width>
+     <y>220</y>
+     <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;بازگشت&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="text">
     <string/>
@@ -175,6 +186,19 @@
      <width>100</width>
      <height>100</height>
     </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="yonjearealbl">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>240</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

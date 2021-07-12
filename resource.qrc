@@ -23,5 +23,7 @@
         <file>Icons/wheat.png</file>
         <file>Icons/Wool.png</file>
         <file>Icons/Yonjeh.jpg</file>
+        <file>Icons/gandombackground.jpg</file>
+        <file>Icons/yonjebackground.jpg</file>
     </qresource>
 </RCC>
