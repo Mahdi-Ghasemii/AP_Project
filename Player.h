@@ -46,6 +46,7 @@ public:
     time_t get_signUp_time();
 
     Farm& get_farm();
+    void set_farm(Farm);
 
 private:
     Ui::Player *ui;
