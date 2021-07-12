@@ -3,6 +3,9 @@
 #include "ui_SignIn.h"
 #include "SignUp.h"
 #include "Player.h"
+#include "Data.h"
+#include <QVector>
+#include <fstream>
 
 
 
@@ -11,6 +14,19 @@ SignIn::SignIn(QWidget *parent) :
     ui(new Ui::SignIn)
 {
     ui->setupUi(this);
+
+    ifstream f("Players.txt");
+    if (f.is_open()) {
+        QVector<Player> players;
+        Player p;
+        while(!f.eof()) {
+            f.read((char*)&p, sizeof (p));
+            players.push_back(p);
+        }
+        f.close();
+        Data::set_players(players);
+    }
+
 }
 
 SignIn::~SignIn()

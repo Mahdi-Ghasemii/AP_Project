@@ -126,8 +126,12 @@ void Player::set_level(int _level){
     level = _level;
 }
 
+<<<<<<< HEAD
+int Player::get_level()const{
+=======
 >>>>>>> c3276557bcbf5916ef883f6b08881e841175b3fe
 int Player::get_level(){
+>>>>>>> d2e31fba5b8dd3f4b9c516f633efbb519b9cd101
     return level;
 }
 
@@ -135,7 +139,7 @@ void Player::set_experience(int _experience){
     experience = _experience;
 }
 
-int Player::get_experience(){
+int Player::get_experience()const{
     return experience;
 }
 
@@ -165,14 +169,6 @@ void Player::set_farm(Farm _farm){
 Farm& Player::get_farm(){
     return farm;
 }
-
-void write_on_file(){
-
-
-
-
-}
-
 
 
 
