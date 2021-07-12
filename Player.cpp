@@ -34,6 +34,53 @@ Player::~Player()
 void Player::set_name(QString _name)
 {
     name = _name;
+<<<<<<< HEAD
+}
+
+QString Player::get_name()
+{
+    return name;
+}
+
+void Player::set_username(QString _username)
+{
+    username = _username;
+}
+
+QString Player::get_username()
+{
+    return username;
+}
+
+void Player::set_password(QString _password)
+{
+    password = _password;
+}
+
+QString Player::get_password(){
+    return password;
+}
+
+void Player::set_email(QString){
+
+}
+string Player::get_email(){
+    return email;
+}
+
+void Player::set_coin(int _coin){
+    coin = _coin;
+}
+
+int Player::get_coin(){
+    return coin;
+}
+
+void Player::set_level(int _level){
+    level = _level;
+}
+
+=======
 }
 
 QString Player::get_name()
@@ -79,7 +126,12 @@ void Player::set_level(int _level){
     level = _level;
 }
 
+<<<<<<< HEAD
 int Player::get_level()const{
+=======
+>>>>>>> c3276557bcbf5916ef883f6b08881e841175b3fe
+int Player::get_level(){
+>>>>>>> d2e31fba5b8dd3f4b9c516f633efbb519b9cd101
     return level;
 }
 
@@ -107,6 +159,13 @@ time_t Player::get_signUp_time(){
     return signUp_time;
 }
 
+<<<<<<< HEAD
+void Player::set_farm(Farm _farm){
+    farm = _farm;
+}
+
+=======
+>>>>>>> c3276557bcbf5916ef883f6b08881e841175b3fe
 Farm& Player::get_farm(){
     return farm;
 }

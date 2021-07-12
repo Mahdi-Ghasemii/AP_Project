@@ -66,6 +66,8 @@ void Store::on_Buy_Gandom_pbn_clicked()
         Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+1);
         ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()));
 
+        Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity() + 1);
+
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +1);
 
 
@@ -91,6 +93,8 @@ void Store::on_Sell_Gandom_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-1);
         ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity() - 1);
 
          return ;
     }
@@ -125,7 +129,7 @@ void Store::on_Buy_Cow_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_cowHome().set_stock_animal(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()+1);
-        ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()));
+        ui->Num_Cow->setText(QString::number(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()));
 
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +10);
 
@@ -160,6 +164,8 @@ void Store::on_Sell_Cow_pbn_clicked()
         Data::get_iterator()->get_farm().get_cowHome().set_stock_animal(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()-1);
         ui->Num_Cow->setText(QString::number(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()));
 
+
+
         return ;
     }
 }
@@ -189,7 +195,7 @@ void Store::on_Buy_Sheep_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_sheepHome().set_stock_animal(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()+1);
-        ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()));
+        ui->Num_Sheep->setText(QString::number(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()));
 
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +15);
 
@@ -221,8 +227,9 @@ void Store::on_Sell_Sheep_pbn_clicked()
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 70);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
-        Data::get_iterator()->get_farm().get_cowHome().set_stock_animal(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()-1);
-        ui->Num_Cow->setText(QString::number(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()));
+        Data::get_iterator()->get_farm().get_sheepHome().set_stock_animal(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()-1);
+        ui->Num_Sheep->setText(QString::number(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()));
+
 
         return ;
     }
@@ -254,7 +261,7 @@ void Store::on_Buy_Chicken_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_chickenHome().set_stock_animal(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()+1);
-        ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()));
+        ui->Num_Chicken->setText(QString::number(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()));
 
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +5);
 
@@ -287,7 +294,7 @@ void Store::on_Sell_Chicken_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_chickenHome().set_stock_animal(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()-1);
-        ui->Num_Cow->setText(QString::number(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()));
+        ui->Num_Chicken->setText(QString::number(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()));
 
         return ;
     }
@@ -320,6 +327,8 @@ void Store::on_Buy_Yonjeh_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()+1);
         ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity() + 1);
 
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +2);
 
@@ -541,6 +550,3 @@ void Store::on_Sell_Mikh_pbn_clicked()
          return ;
     }
 }
-
-
-

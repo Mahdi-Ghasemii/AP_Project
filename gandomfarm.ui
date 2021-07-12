@@ -6,28 +6,35 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>402</width>
+    <height>312</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/new/prefix1/Icons/gandombackground.jpg);</string>
+  </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>20</x>
      <y>20</y>
-     <width>291</width>
-     <height>151</height>
+     <width>281</width>
+     <height>161</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>Icons/whaewt farm2.jpg</normaloff>Icons/whaewt farm2.jpg</iconset>
+     <normaloff>Icons/wheatfarm.jpg</normaloff>Icons/wheatfarm.jpg</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -36,14 +43,17 @@
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="plantingpbt">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>220</y>
+     <x>310</x>
+     <y>120</y>
      <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;کاشتن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="text">
     <string/>
@@ -59,14 +69,17 @@
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="upgradepbt">
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>220</y>
+     <y>20</y>
      <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ارتقا&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="text">
     <string/>
@@ -82,40 +95,36 @@
     </size>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>180</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="frame">
-    <bool>false</bool>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>180</y>
+     <x>210</x>
+     <y>230</y>
      <width>61</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>مساحت</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="derokardanpbt">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>310</x>
      <y>220</y>
      <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;درو کردن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="text">
     <string/>
@@ -131,14 +140,17 @@
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="Back">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>61</width>
+     <x>20</x>
+     <y>220</y>
+     <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;بازگشت&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="text">
     <string/>
@@ -152,6 +164,19 @@
      <width>100</width>
      <height>100</height>
     </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>240</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

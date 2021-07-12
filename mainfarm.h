@@ -7,7 +7,7 @@ class MainFarm
 protected:
     int area;
     time_t plantingdate;
-    int level;
+    int farm_level;
     bool isunderplantingvariable;
 
 public:

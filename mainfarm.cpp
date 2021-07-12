@@ -10,9 +10,9 @@ void MainFarm::set_planingdate(time_t _plantingdate){plantingdate=_plantingdate;
 
 time_t MainFarm::get_plantingdate(void){return plantingdate;}
 
-void MainFarm::set_level(int _level){level=_level;}
+void MainFarm::set_level(int _level){farm_level=_level;}
 
-int MainFarm::get_level(void){return level;}
+int MainFarm::get_level(void){return farm_level;}
 
 //bool isunderplanting(void){}
 

@@ -36,11 +36,22 @@ public:
 
 
 private slots:
-    void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
 
-    void on_pushButton_3_clicked();
+
+    void on_Storage_pbn_clicked();
+
+    void on_Siloo_pbn_clicked();
+
+    void on_YonjehFarm_pbn_clicked();
+
+    void on_GandomFarm_pbn_clicked();
+
+    void on_SheepHome_pbn_clicked();
+
+    void on_ChickenHome_pbn_clicked();
+
+    void on_CowHome_pbn_clicked();
 
 private:
     Ui::Farm *ui;

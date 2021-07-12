@@ -1,4 +1,4 @@
-﻿#include "Product.h"
+#include "Product.h"
 
 Product::Product ()
 {
@@ -15,17 +15,5 @@ void Product::Set_Number (int _number)
 {
     this->number = _number;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 

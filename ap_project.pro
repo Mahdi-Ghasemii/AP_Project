@@ -19,6 +19,7 @@ SOURCES += \
     SheepHome.cpp \
     SignIn.cpp \
     SignUp.cpp \
+    dialoggandomplanting.cpp \
     gandomfarm.cpp \
     main.cpp\
     Siloo.cpp\
@@ -46,6 +47,7 @@ HEADERS +=\
     Storage.h \
     Store.h \
     Product.h \
+    dialoggandomplanting.h \
     gandomfarm.h \
     mainfarm.h \
     yonjefarm.h \
@@ -63,6 +65,7 @@ FORMS += \
     Storage.ui \
     Siloo.ui \
     Store.ui \
+    dialoggandomplanting.ui \
     gandomfarm.ui \
     yonjefarm.ui \
 

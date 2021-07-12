@@ -44,20 +44,46 @@ SheepHome& Farm::get_sheepHome(){
     return sheepHome;
 }
 
-void Farm::on_pushButton_clicked()
+
+
+void Farm::on_Storage_pbn_clicked()
 {
-    store.show();
+   storage.show();
 }
 
 
-void Farm::on_pushButton_2_clicked()
-{
-    storage.show();
-}
-
-
-void Farm::on_pushButton_3_clicked()
+void Farm::on_Siloo_pbn_clicked()
 {
     siloo.show();
+}
+
+
+void Farm::on_YonjehFarm_pbn_clicked()
+{
+    yonjeFarm.show();
+}
+
+
+void Farm::on_GandomFarm_pbn_clicked()
+{
+    gandomFarm.show();
+}
+
+
+void Farm::on_SheepHome_pbn_clicked()
+{
+    sheepHome.show();
+}
+
+
+void Farm::on_ChickenHome_pbn_clicked()
+{
+    chickenHome.show();
+}
+
+
+void Farm::on_CowHome_pbn_clicked()
+{
+    cowHome.show();
 }
 
