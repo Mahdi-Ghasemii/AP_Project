@@ -14,42 +14,156 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>80</y>
+      <width>671</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/Farm.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>20</y>
-      <width>131</width>
+      <x>360</x>
+      <y>180</y>
+      <width>101</width>
       <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(102, 171, 26);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Storage-removebg-preview (3).png</normaloff>:/new/prefix1/Icons/Storage-removebg-preview (3).png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>150</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>240</y>
+      <width>93</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>Icons/Store.png</normaloff>Icons/Store.png</iconset>
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Siloo_Green.png</normaloff>:/new/prefix1/Icons/Siloo_Green.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>100000000</width>
-      <height>3000</height>
+      <width>100</width>
+      <height>150</height>
      </size>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>90</y>
-      <width>55</width>
-      <height>16</height>
+      <x>50</x>
+      <y>430</y>
+      <width>121</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="text">
-     <string>فروشگاه</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Shop.png</normaloff>:/new/prefix1/Icons/Shop.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>150</height>
+     </size>
     </property>
    </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>80</y>
+      <width>55</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/Coin2.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>100</y>
+      <width>16</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>270</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Icons/output-onlineimagetools.png</normaloff>Icons/output-onlineimagetools.png</iconset>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_3</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>pushButton_4</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -63,6 +177,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
