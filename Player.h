@@ -34,10 +34,10 @@ public:
     int get_coin();
 
     void set_level(int);
-    int get_level();
+    int get_level()const;
 
     void set_experience(int);
-    int get_experience();
+    int get_experience()const;
 
     void set_experience_required_for_levelUp(int);
     int get_experience_required_for_levelUp();
@@ -45,9 +45,8 @@ public:
     void set_signUp_time(time_t);
     time_t get_signUp_time();
 
-    Farm get_farm();
-
-    static void write_on_file();
+    Farm& get_farm();
+    void set_farm(Farm);
 
 private:
     Ui::Player *ui;
@@ -65,8 +64,4 @@ private:
 };
 
 #endif // PLAYER_H
-
-
-
-
 

@@ -1,8 +1,8 @@
 #include <QApplication>
 #include "Logo.h"
 #include "Data.h"
-QList<Player>::iterator Data::it;
-QList<Player> Data::players;
+QVector<Player>::iterator Data::it;
+QVector<Player> Data::players;
 
 int main(int argc, char *argv[])
 {

@@ -1,6 +1,6 @@
 #include "gandomfarm.h"
 #include "ui_gandomfarm.h"
-#include "dialoggandomplanting.h"
+
 #include "Data.h"
 #include <QString>
 #include <QMessageBox>
@@ -144,4 +144,3 @@ void GandomFarm::on_Back_clicked()
 {
       this->close();
 }
-

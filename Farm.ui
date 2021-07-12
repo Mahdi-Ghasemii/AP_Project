@@ -6,63 +6,276 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1000</width>
+    <height>666</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>20</y>
-      <width>131</width>
+      <x>0</x>
+      <y>-20</y>
+      <width>1000</width>
+      <height>666</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/Farm.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Storage_pbn">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>130</y>
+      <width>101</width>
       <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(102, 171, 26);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Storage-removebg-preview (3).png</normaloff>:/new/prefix1/Icons/Storage-removebg-preview (3).png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>150</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Siloo_pbn">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>230</y>
+      <width>93</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>Icons/Store.png</normaloff>Icons/Store.png</iconset>
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Siloo_Green.png</normaloff>:/new/prefix1/Icons/Siloo_Green.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>100000000</width>
-      <height>3000</height>
+      <width>100</width>
+      <height>150</height>
      </size>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>90</y>
+      <x>20</x>
+      <y>560</y>
+      <width>71</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(102, 171, 26);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Shop.png</normaloff>:/new/prefix1/Icons/Shop.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>75</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>10</y>
       <width>55</width>
-      <height>16</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>فروشگاه</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resource.qrc">:/new/prefix1/Icons/Coin2.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>30</y>
+      <width>16</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="YonjehFarm_pbn">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>200</y>
+      <width>151</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(102, 171, 26);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/YonjehFarm.jpg</normaloff>:/new/prefix1/Icons/YonjehFarm.jpg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>200</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="GandomFarm_pbn">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>310</y>
+      <width>141</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/GndomFarm.png</normaloff>:/new/prefix1/Icons/GndomFarm.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>200</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SheepHome_pbn">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>280</y>
+      <width>151</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Aghol.png</normaloff>:/new/prefix1/Icons/Aghol.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>200</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ChickenHome_pbn">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>350</y>
+      <width>141</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Chickenhome.png</normaloff>:/new/prefix1/Icons/Chickenhome.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>200</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CowHome_pbn">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>430</y>
+      <width>151</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Cow_Home.png</normaloff>:/new/prefix1/Icons/Cow_Home.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>200</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>Siloo_pbn</zorder>
+   <zorder>Storage_pbn</zorder>
+   <zorder>pushButton_3</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>YonjehFarm_pbn</zorder>
+   <zorder>GandomFarm_pbn</zorder>
+   <zorder>SheepHome_pbn</zorder>
+   <zorder>ChickenHome_pbn</zorder>
+   <zorder>CowHome_pbn</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

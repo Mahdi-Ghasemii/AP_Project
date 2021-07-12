@@ -69,8 +69,7 @@ private:
     bool isunderplantingvariable;
     ////////////////////////////
       bool is_plantable;
-      int areawanted;
-      int areawantedshokhm;
+
 
 
 

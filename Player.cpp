@@ -79,7 +79,7 @@ void Player::set_level(int _level){
     level = _level;
 }
 
-int Player::get_level(){
+int Player::get_level()const{
     return level;
 }
 
@@ -87,7 +87,7 @@ void Player::set_experience(int _experience){
     experience = _experience;
 }
 
-int Player::get_experience(){
+int Player::get_experience()const{
     return experience;
 }
 
@@ -107,17 +107,14 @@ time_t Player::get_signUp_time(){
     return signUp_time;
 }
 
+
+void Player::set_farm(Farm _farm){
+    farm = _farm;
+}
+
 Farm& Player::get_farm(){
     return farm;
 }
-
-void write_on_file(){
-
-
-
-
-}
-
 
 
 

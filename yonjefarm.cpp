@@ -1,7 +1,7 @@
 #include "yonjefarm.h"
 #include "ui_yonjefarm.h"
 #include <QPalette>
-#include "dialoggandomplanting.h"
+
 #include <QMessageBox>
 #include "Data.h"
 

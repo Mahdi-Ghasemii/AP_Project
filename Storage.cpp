@@ -17,6 +17,9 @@ Storage::Storage(QWidget *parent) :
     this->yonjeh.Set_Number(1);
     this->mikh.Set_Number(1);
 
+    this->occupied_capacity = 2;
+    this->building_Level = 1;
+
     this->time_add_milk = time(NULL);
 
     //*******************************************************************
@@ -28,7 +31,7 @@ Storage::Storage(QWidget *parent) :
 
 
     //*******************************************************************
-    // Set Number of available products in storage
+    // Set Number of available psroducts in storage
 
     ui->Milk_Available->setText(QString::number(this->milk.Get_Number()));
     ui->Egg_Availbale->setText(QString::number(this->egg.Get_Number()));
@@ -122,7 +125,7 @@ void Storage::on_Upgrade_Storage_clicked()
             QMessageBox::warning(this,"","تعداد ميخ براي ارتقا سيلو كافي نمي باشد .",QMessageBox::Ok);
         }
 
-        else if(!(this->bill.Get_Number()-1 >= this->building_Level)){
+        else if(!(this->bill.Get_Number() >= this->building_Level -1)){
 
             QMessageBox::warning(this,"","تعداد بيل براي ارتقا سيلو كافي نمي باشد",QMessageBox::Ok);
         }
@@ -133,6 +136,7 @@ void Storage::on_Upgrade_Storage_clicked()
 
         else {
             this->building_Level = round(this->building_Level *3 / 2);
+            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + this->building_Level * 3);
 
             QMessageBox::information(this,"","انبار با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
         }
