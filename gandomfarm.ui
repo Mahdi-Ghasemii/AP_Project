@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>402</width>
+    <height>312</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -43,7 +43,7 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="plantingpbt">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -69,7 +69,7 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="upgradepbt">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -98,8 +98,8 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>200</y>
+     <x>210</x>
+     <y>230</y>
      <width>61</width>
      <height>31</height>
     </rect>
@@ -114,7 +114,7 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
     <string>مساحت</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="derokardanpbt">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -140,10 +140,10 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="Back">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>220</y>
      <width>71</width>
      <height>61</height>
@@ -169,8 +169,8 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>210</y>
+     <x>110</x>
+     <y>240</y>
      <width>47</width>
      <height>13</height>
     </rect>

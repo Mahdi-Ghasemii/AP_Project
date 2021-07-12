@@ -55,6 +55,8 @@ private slots:
 
        void on_shokhmzadan_clicked();
 
+       void on_Back_clicked();
+
 private:
     Ui::YonjeFarm *ui;
 

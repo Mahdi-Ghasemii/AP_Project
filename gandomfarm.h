@@ -20,8 +20,8 @@ public:
 
 
     GandomFarm( int _area=5);
-       bool upgradegandomfarm(int &_nail ,int &_hoe,int &_coin,time_t &_date,int &_playerlevel,int &experience );
-       void planting(int plantingareawant);
+
+
 
 
     ~GandomFarm();
@@ -47,11 +47,21 @@ private slots:
 
        bool derokardan(void);
 
-       //void planting(int plantingareawant);
+       void planting(int plantingareawant);
 
        void upgrade();
    ////////////////////////////////////////////////////////////////////////
        void on_pushButton_4_clicked();
+
+       void on_upgradepbt_clicked();
+
+       void on_plantingpbt_clicked();
+
+       void on_derokardan_clicked();
+
+       void on_derokardanpbt_clicked();
+
+       void on_Back_clicked();
 
 private:
      int areawanted;

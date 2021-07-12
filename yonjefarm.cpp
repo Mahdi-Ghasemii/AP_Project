@@ -40,7 +40,7 @@ int YonjeFarm::get_level(void){return farm_level;}
 bool YonjeFarm::derokardan(void){}
 
 void YonjeFarm::planting(int plantingareawant){}
-
+// /////////////////////////////////////////////////////////////////////////////////////////////
 void YonjeFarm::upgrade(){
     if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=0){
         //if(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()>=(area*2)){
@@ -116,12 +116,6 @@ areawantedshokhm=_area;
 
 }
 
-// ///////////////////////////////////////////////////////////////////////////////
-void YonjeFarm::on_pushButton_3_clicked()
-{
-    this->close();
-}
-
 // ////////////////////////////////////////////////////////
 void YonjeFarm::on_upgradebutton_clicked()
 {
@@ -176,3 +170,9 @@ else {
 }
 
 }
+
+void YonjeFarm::on_Back_clicked()
+{
+    this->close();
+}
+
