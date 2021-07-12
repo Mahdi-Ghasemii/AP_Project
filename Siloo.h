@@ -31,6 +31,13 @@ public:
 private slots:
         void on_Return_to_Farm_clicked();
         void on_Upgrade_Siloo_clicked();
+
+        //  get signals from Farm class :
+
+        void Get_Signal_From_Farm(int _Num_Gandom);
+
+signals:
+        void Send_Signal_to_Farm(int _Num_Coin , int _Level , int _Experience);
 };
 
 #endif // SILOO_H

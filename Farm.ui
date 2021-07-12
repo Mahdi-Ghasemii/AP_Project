@@ -127,7 +127,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="Num_Coin">
     <property name="geometry">
      <rect>
       <x>910</x>
@@ -266,12 +266,12 @@
    <zorder>Storage_pbn</zorder>
    <zorder>pushButton_3</zorder>
    <zorder>label_3</zorder>
-   <zorder>label_4</zorder>
    <zorder>YonjehFarm_pbn</zorder>
    <zorder>GandomFarm_pbn</zorder>
    <zorder>SheepHome_pbn</zorder>
    <zorder>ChickenHome_pbn</zorder>
    <zorder>CowHome_pbn</zorder>
+   <zorder>Num_Coin</zorder>
   </widget>
  </widget>
  <resources>

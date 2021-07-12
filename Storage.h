@@ -52,6 +52,13 @@ private:
 private slots:
        void on_Upgrade_Storage_clicked();
        void on_Return_to_Farm_pbn_clicked();
+
+       //  get signals from Farm class :
+
+       void Get_Signal_From_Farm(int Num_Yonjeh ,int Num_Milk ,int Num_Mikh ,int Num_Bill ,int Num_Wool ,int Num_Egg);
+
+signals:
+       void Send_Signal_to_Farm(int Num_Coin , int _Level , int _Experience , int Num_Yonjeh ,int Num_Milk ,int Num_Mikh ,int Num_Bill ,int Num_Wool ,int Num_Egg);
 };
 
 #endif // STORAGE_H

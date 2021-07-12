@@ -87,3 +87,29 @@ void Farm::on_CowHome_pbn_clicked()
     cowHome.show();
 }
 
+void Farm::Get_Signal_From_Store(int _Num_Coin, int _Level, int _Experience)
+{
+    //ui->Num_Coin = _Num_Coin;
+
+    // set level and experience
+}
+
+void Farm::Get_Signal_From_Storage(int _Num_Coin, int _Level, int _Experience)
+{
+    //ui->Num_Coin = _Num_Coin;
+}
+
+void Farm::Get_Signal_From_Sillo(int _Num_Coin, int _Level, int _Experience)
+{
+    //ui->Num_Coin = _Num_Coin;
+
+    // set level and experience
+}
+
+
+
+
+
+// Defintion of Signals to comunicate with other classes
+
+
