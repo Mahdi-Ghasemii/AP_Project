@@ -29,8 +29,17 @@
 		<file>Icons/Siloo_Green.png</file>
 		<file>Icons/Shop.png</file>
 		<file>Icons/Coin2.png</file>
+		
+		<file>Icons/GndomFarm.png</file>
+		<file>Icons/YonjehFarm.jpg</file>
+		<file>Icons/Aghol.png</file>
+		<file>Icons/Chickenhome.png</file>
+		<file>Icons/Cow_Home.png</file>
 
-		Siloo_Green.png
+		Cow_Home.png
+
+
+
 
     </qresource>
 </RCC>
