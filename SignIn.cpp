@@ -15,7 +15,7 @@ SignIn::SignIn(QWidget *parent) :
     ui->setupUi(this);
 
     ifstream f("Players.txt");
-    if (f.is_open()) {
+    if (f.is_open() && Data::get_players().isEmpty()) {
         QVector<Player> players;
         Player p;
         while(!f.eof()) {

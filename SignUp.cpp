@@ -38,6 +38,7 @@ void SignUp::on_register_pbn_clicked()
     p.set_experience_required_for_levelUp(2 * p.get_experience() + 10);
     time_t t = time(NULL);
     p.set_signUp_time(t);
+    Data::get_players().push_back(p);
     ofstream f("Players.txt", ios::app);
     f.write((char*)&p, sizeof(p));
     f.close();
