@@ -27,9 +27,11 @@ public:
 private slots:
        void on_planting_clicked();
        void plantingareawanted(int _area);
+       void plantingareawantedshokhm(int _area);
        void on_pushButton_3_clicked();
        void on_upgradebutton_clicked();
        void set_area(int _area);
+   ////////////////////////////////////////////////////////////////////
        int getarea(void);
 
        void set_planingdate(time_t _plantingdate);
@@ -48,13 +50,17 @@ private slots:
 
        void upgrade();
 
+////////////////////////////////////////////////////////////////////////
        void on_derokardan_clicked();
+
+       void on_shokhmzadan_clicked();
 
 private:
     Ui::YonjeFarm *ui;
 
     time_t time_shokhm_zadan;
 
+    ////////////////////////////
     int area;
     time_t plantingdate;
     int farm_level;
@@ -62,10 +68,13 @@ private:
     ////////////////////////////
       bool is_plantable;
       int areawanted;
+      int areawantedshokhm;
+
 
 
 
 
 };
+
 
 #endif // YONJEFARM_H

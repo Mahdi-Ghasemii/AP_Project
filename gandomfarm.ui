@@ -13,14 +13,21 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/new/prefix1/Icons/gandombackground.jpg);</string>
+  </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>20</y>
-     <width>291</width>
+     <width>281</width>
      <height>161</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
    </property>
    <property name="text">
     <string/>

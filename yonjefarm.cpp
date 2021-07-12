@@ -1,13 +1,10 @@
 #include "yonjefarm.h"
 #include "ui_yonjefarm.h"
-<<<<<<< HEAD
 #include <QPalette>
 #include "dialoggandomplanting.h"
 #include <QMessageBox>
 #include "Data.h"
-=======
 
->>>>>>> c3276557bcbf5916ef883f6b08881e841175b3fe
 YonjeFarm::YonjeFarm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::YonjeFarm)
@@ -88,9 +85,11 @@ YonjeFarm::~YonjeFarm()
 {
     delete ui;
 }
-
+/////////////////////////////////////////////////////////////////////
 void YonjeFarm::on_planting_clicked()
 {
+
+   // //////////چک کند زمین شخم زده شده باشد و یک روز گذشته باشد///////////////////////////////////
     DialogGandomPlanting *d=new DialogGandomPlanting(this) ;
     connect(d,SIGNAL(plantingareawanting(int)),this,SLOT(plantingareawanted(int _area)));
     if(areawanted>area){
@@ -103,32 +102,39 @@ void YonjeFarm::on_planting_clicked()
     d->show();
     //now i should get gandomnum and decreas number of them.
 }
-
+// /////////////////////////////////////////////////////////////////////
 void YonjeFarm::plantingareawanted(int _area)
 {
     areawanted=_area;
 
 }
+// ///////////////////////////////////////////////////////////////////
+void YonjeFarm::plantingareawantedshokhm(int _area)
+{
 
+areawantedshokhm=_area;
 
+}
+
+// ///////////////////////////////////////////////////////////////////////////////
 void YonjeFarm::on_pushButton_3_clicked()
 {
     this->close();
 }
 
-
+// ////////////////////////////////////////////////////////
 void YonjeFarm::on_upgradebutton_clicked()
 {
 
 }
-
+// /////////////////////////////////////////////////////////////////
 
 void YonjeFarm::on_derokardan_clicked()
 {
-    ///
+    // /
 
-    ///
-    /// ////////////////چک کند د روز بعد کاش باشد
+    //  /
+    // / ////////////////چک کند چند روز  بعد کاش باشد
    if (//بله)
          1 ){
 
@@ -145,3 +151,28 @@ void YonjeFarm::on_derokardan_clicked()
    }
 }
 
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void YonjeFarm::on_shokhmzadan_clicked()
+{
+
+        DialogGandomPlanting *d=new DialogGandomPlanting(this) ;
+        connect(d,SIGNAL(plantingareawanting(int)),this,SLOT(plantingareawantedshokhm(int _area)));
+        if(areawantedshokhm>area){
+           QMessageBox::warning(this,"مساحت","مساحت شخم زدن مساوی بیش ترین مقدار (مساحت زمین). .",QMessageBox::Ok);
+            areawantedshokhm=area;
+          }
+
+if(Data::get_iterator()->get_coin()>=(areawantedshokhm*5)){
+      Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+areawantedshokhm);
+      if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+          Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+          Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+          //QMessageBox
+    }
+      // //////////حالا باید زمان شخم زدن ذخیری شود
+}
+else {
+    QMessageBox::warning(this,"مالی","سکه کافی ندارید. .",QMessageBox::Ok);
+}
+
+}

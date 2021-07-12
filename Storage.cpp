@@ -31,7 +31,7 @@ Storage::Storage(QWidget *parent) :
 
 
     //*******************************************************************
-    // Set Number of available products in storage
+    // Set Number of available psroducts in storage
 
     ui->Milk_Available->setText(QString::number(this->milk.Get_Number()));
     ui->Egg_Availbale->setText(QString::number(this->egg.Get_Number()));

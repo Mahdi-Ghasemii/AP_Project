@@ -33,7 +33,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Storage_pbn">
     <property name="geometry">
      <rect>
       <x>500</x>
@@ -59,7 +59,7 @@
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="Siloo_pbn">
     <property name="geometry">
      <rect>
       <x>660</x>
@@ -85,7 +85,7 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>20</x>
       <y>560</y>
       <width>71</width>
       <height>81</height>
@@ -111,8 +111,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>80</y>
+      <x>940</x>
+      <y>10</y>
       <width>55</width>
       <height>71</height>
      </rect>
@@ -130,8 +130,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>100</y>
+      <x>910</x>
+      <y>30</y>
       <width>16</width>
       <height>31</height>
      </rect>
@@ -143,12 +143,12 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="YonjehFarm_pbn">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>370</x>
       <y>200</y>
-      <width>141</width>
+      <width>151</width>
       <height>101</height>
      </rect>
     </property>
@@ -169,11 +169,11 @@
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="GandomFarm_pbn">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>320</y>
+      <x>530</x>
+      <y>310</y>
       <width>141</width>
       <height>101</height>
      </rect>
@@ -192,7 +192,7 @@
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="SheepHome_pbn">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -215,11 +215,11 @@
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="ChickenHome_pbn">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>340</y>
+      <x>330</x>
+      <y>350</y>
       <width>141</width>
       <height>101</height>
      </rect>
@@ -238,7 +238,7 @@
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QPushButton" name="CowHome_pbn">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -262,16 +262,16 @@
     </property>
    </widget>
    <zorder>label_2</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>pushButton</zorder>
+   <zorder>Siloo_pbn</zorder>
+   <zorder>Storage_pbn</zorder>
    <zorder>pushButton_3</zorder>
    <zorder>label_3</zorder>
    <zorder>label_4</zorder>
-   <zorder>pushButton_4</zorder>
-   <zorder>pushButton_5</zorder>
-   <zorder>pushButton_6</zorder>
-   <zorder>pushButton_7</zorder>
-   <zorder>pushButton_8</zorder>
+   <zorder>YonjehFarm_pbn</zorder>
+   <zorder>GandomFarm_pbn</zorder>
+   <zorder>SheepHome_pbn</zorder>
+   <zorder>ChickenHome_pbn</zorder>
+   <zorder>CowHome_pbn</zorder>
   </widget>
  </widget>
  <resources>
