@@ -15,10 +15,22 @@ class ChickenHome : public QMainWindow, public Habitat
 public:
     explicit ChickenHome(QWidget *parent = nullptr);
     ~ChickenHome();
-    void upgrade();
-    void feedeing();
-    void collect();
     void operator=(const ChickenHome&);
+
+private slots:
+    void on_upgrade_btn_clicked();
+
+    void on_feeding_btn_clicked();
+
+    void on_collect_btn_clicked();
+
+    void on_back_btn_clicked();
+
+    //  get signals from Farm class :
+    void Get_Signal_From_Farm();
+
+signals:
+    void Send_Signal_to_Farm();
 
 private:
     Ui::ChickenHome *ui;

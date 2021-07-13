@@ -61,6 +61,9 @@ signals:
     void Send_Signal_to_Storage();
     void Send_Signal_to_Siloo();
     void Send_Signal_to_Ranking();
+    void Send_Signal_to_SheepHome();
+    void Send_Signal_to_CowHome();
+    void Send_Signal_to_ChickenHome();
 
 private:
     Ui::Farm *ui;

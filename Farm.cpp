@@ -21,6 +21,14 @@ Farm::Farm(QWidget *parent) :
     connect(this, SIGNAL(Send_Signal_to_Siloo()),&store,SLOT(Get_Signal_From_Farm()));
     connect(this, SIGNAL(Send_Signal_to_Storage()),&store,SLOT(Get_Signal_From_Farm()));
     connect(this, SIGNAL(Send_Signal_to_Store()),&store,SLOT(Get_Signal_From_Farm()));
+
+    connect(&sheepHome, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
+    connect(&cowHome, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
+    connect(&chickenHome, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
+
+    connect(this, SIGNAL(Send_Signal_to_SheepHome()),&store,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_CowHome()),&store,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_ChickenHome()),&store,SLOT(Get_Signal_From_Farm()));
 }
 
 

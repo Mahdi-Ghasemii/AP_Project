@@ -14,7 +14,16 @@ SheepHome::~SheepHome()
     delete ui;
 }
 
-void SheepHome::upgrade(){
+void SheepHome::operator=(const SheepHome& p){
+    capacity=p.capacity;
+    stock_animal=p.stock_animal;
+    level_habitat=p.level_habitat;
+    feed_time=p.feed_time;
+    is_collected=p.is_collected;
+}
+
+void SheepHome::on_upgrade_btn_clicked()
+{
     if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=3){
         if(Data::get_iterator()->get_coin()>=50){
             if(Data::get_iterator()->get_level()>=7){
@@ -42,7 +51,8 @@ void SheepHome::upgrade(){
     }
 }
 
-void SheepHome::feedeing(){
+void SheepHome::on_feeding_btn_clicked()
+{
     if(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=stock_animal){
         if(difftime(feed_time,time(NULL))>10*24*3600){
             if (is_collected==true){
@@ -64,7 +74,8 @@ void SheepHome::feedeing(){
     }
 }
 
-void SheepHome::collect(){
+void SheepHome::on_collect_btn_clicked()
+{
     if(is_collected==false){
         if(difftime(feed_time,time(NULL))>10*24*3600){
             if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=stock_animal){
@@ -91,10 +102,7 @@ void SheepHome::collect(){
     }
 }
 
-void SheepHome::operator=(const SheepHome& p){
-    capacity=p.capacity;
-    stock_animal=p.stock_animal;
-    level_habitat=p.level_habitat;
-    feed_time=p.feed_time;
-    is_collected=p.is_collected;
+void SheepHome::on_back_btn_clicked()
+{
+    this->close();
 }
