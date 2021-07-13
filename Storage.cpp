@@ -26,7 +26,21 @@ Storage::Storage(QWidget *parent) :
 
 }
 
+void Storage::operator =(const Storage& temp){
 
+    this->bill = temp.bill;
+    this->mikh = temp.mikh;
+    this->milk = temp.milk;
+    this->yonjeh = temp.yonjeh;
+    this->egg = temp.egg;
+    this->pashm = temp.pashm;
+    this->time_add_milk = temp.time_add_milk;
+
+
+    this->capasity = temp.capasity;
+    this->building_Level = temp.building_Level;
+    this->occupied_capacity = temp.occupied_capacity;
+}
 
 Product& Storage::Get_bill ()
 {

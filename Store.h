@@ -18,8 +18,9 @@ private:
 
 public:
 
-
         explicit Store(QWidget *parent = nullptr);
+        void operator=(const Store& temp);
+
         ~Store();
 
 

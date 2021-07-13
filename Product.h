@@ -14,9 +14,11 @@ class Product
     public:
 
         Product ();
+        void operator=(const Product &temp);
 
         int Get_Number ();
         void Set_Number (int _Number);
+
 
 
 };

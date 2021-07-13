@@ -29,6 +29,8 @@ private:
    public:
 
        explicit Storage(QWidget *parent = nullptr);
+       void operator=(const Storage& temp);
+
        ~Storage();
 
 
