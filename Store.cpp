@@ -10,6 +10,9 @@ Store::Store(QWidget *parent) :
     ui->setupUi(this);
 
 
+}
+
+void Store::operator =(const Store& temp){
 
 
 }

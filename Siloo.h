@@ -21,6 +21,8 @@ private:
 public:
 
         explicit Siloo(QWidget *parent = nullptr);
+        void operator=(const Siloo& temp);
+
         ~Siloo();
 
         Product& Get_gandom ();

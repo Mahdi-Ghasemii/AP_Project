@@ -3,6 +3,7 @@
 #include "SignIn.h"
 #include "Data.h"
 #include <fstream>
+#include <QMessageBox>
 
 
 SignUp::SignUp(QWidget *parent) :
@@ -27,6 +28,21 @@ void SignUp::on_back_pbn_clicked()
 
 void SignUp::on_register_pbn_clicked()
 {
+    if (ui->nameLE->text().isEmpty() || ui->usernameLE->text().isEmpty() || ui->passLE->text().isEmpty() || ui->repassLE->text().isEmpty()
+            || ui->emailLE->text().isEmpty()) {
+        QMessageBox::warning(this, "تذکر", "همه فیلدها باید پر شوند!");
+        return;
+    }
+    for (int i = 0; i < Data::get_players().size(); i++) {
+        if (ui->usernameLE->text() == Data::get_players()[i].get_username()) {
+            QMessageBox::warning(this, "تذکر", "این نام کاربری قبلا استفاده شده است!");
+            return;
+        }
+    }
+    if (ui->passLE->text() != ui->repassLE->text()) {
+        QMessageBox::warning(this, "تذکر", "رمز عبور و تکرار آن یکسان نیست!");
+        return;
+    }
     Player p;
     p.set_name(ui->nameLE->text());
     p.set_username(ui->usernameLE->text());
@@ -42,8 +58,6 @@ void SignUp::on_register_pbn_clicked()
     ofstream f("Players.txt", ios::app);
     f.write((char*)&p, sizeof(p));
     f.close();
-    SignIn* si = new SignIn();
-    this->close();
-    si->show();
+    QMessageBox::information(this, "تکمیل ثبت نام", "ثبت نام شما با موفقیت انجام شد");
 }
 

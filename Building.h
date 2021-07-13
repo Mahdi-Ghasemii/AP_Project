@@ -12,7 +12,7 @@ class Building
     public:
 
         Building ();
-        Building (int _capacity,int _building_Level,int _occupied_capacity);
+        void operator=(const Building & temp);
 
         int GetCapasity ();
         void Set_Capacity (int _capasity);
@@ -22,6 +22,7 @@ class Building
 
         int Get_Occupied_Capacity ();
         void Set_Occupied_Capacity (int _OC);
+
 
 };
 

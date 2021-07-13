@@ -60,6 +60,7 @@ signals:
     void Send_Signal_to_Store();
     void Send_Signal_to_Storage();
     void Send_Signal_to_Siloo();
+    void Send_Signal_to_Ranking();
 
 private:
     Ui::Farm *ui;

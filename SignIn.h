@@ -2,6 +2,7 @@
 #define SIGNIN_H
 
 #include <QWidget>
+#include "Data.h"
 
 
 namespace Ui {

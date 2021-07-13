@@ -19,6 +19,14 @@ Siloo::Siloo(QWidget *parent) :
 
 }
 
+void Siloo::operator =(const Siloo& temp){
+
+    this->gandom = temp.gandom;
+
+    this->capasity = temp.capasity;
+    this->building_Level = temp.building_Level;
+    this->occupied_capacity = temp.occupied_capacity;
+}
 
 Product& Siloo::Get_gandom ()
 {
