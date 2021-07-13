@@ -22,10 +22,10 @@ Ranking::~Ranking()
 
 
 bool sort_players(const Player& p1, const Player& p2) {
-    if (p1.get_level() < p2.get_level())
+    if (p1.get_level() > p2.get_level())
         return true;
     if (p1.get_level() == p2.get_level())
-        if (p1.get_experience() < p2.get_experience())
+        if (p1.get_experience() > p2.get_experience())
             return true;
     return false;
 }
