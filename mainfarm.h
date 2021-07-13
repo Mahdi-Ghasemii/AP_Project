@@ -27,9 +27,9 @@ public:
 
     //bool isunderplanting(void){}
 
-    bool derokardan(void);
+   // bool derokardan(void);
 
-    void planting(int plantingareawant);
+    //void planting(int plantingareawant);
 
 };
 

@@ -17,10 +17,14 @@ Farm::Farm(QWidget *parent) :
     connect(&siloo, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&storage, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&store, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
+    connect(&gandomFarm, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
+    connect(&yonjeFarm, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
 
     connect(this, SIGNAL(Send_Signal_to_Siloo()),&store,SLOT(Get_Signal_From_Farm()));
     connect(this, SIGNAL(Send_Signal_to_Storage()),&store,SLOT(Get_Signal_From_Farm()));
     connect(this, SIGNAL(Send_Signal_to_Store()),&store,SLOT(Get_Signal_From_Farm()));
+
+
 }
 
 

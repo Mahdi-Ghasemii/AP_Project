@@ -61,6 +61,8 @@ signals:
     void Send_Signal_to_Storage();
     void Send_Signal_to_Siloo();
     void Send_Signal_to_Ranking();
+    void Send_Signal_to_Gandomfarm();
+    void Send_Signal_to_Yonjefarm();
 
 private:
     Ui::Farm *ui;

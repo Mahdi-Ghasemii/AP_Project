@@ -16,6 +16,6 @@ int MainFarm::get_level(void){return farm_level;}
 
 //bool isunderplanting(void){}
 
-bool MainFarm::derokardan(void){}
+//bool MainFarm::derokardan(void){}
 
-void MainFarm::planting(int plantingareawant){}
+//void MainFarm::planting(int plantingareawant){}

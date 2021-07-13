@@ -13,7 +13,14 @@ GandomFarm::GandomFarm(QWidget *parent,int _area):
 {
     area=_area;
     ui->setupUi(this);
-    ui->label_2->setText(QString::number(area));
+    ui->arealbl->setText(QString::number(area));
+}
+
+void GandomFarm::operator=(const GandomFarm&temp){
+    this->area = temp.area;
+    this->plantingdate = temp.plantingdate;
+    this->isunderplantingvariable=temp.isunderplantingvariable;
+    this->farm_level=temp.farm_level;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -140,4 +147,13 @@ void GandomFarm::on_derokardanpbt_clicked()
 void GandomFarm::on_Back_clicked()
 {
       this->close();
+}
+//Slote
+
+void GandomFarm::Get_Signal_From_Farm()
+{
+
+    ui->farmlevellbl->setText(QString::number(this->farm_level));
+    ui->arealbl->setText(QString::number(this->area));
+
 }

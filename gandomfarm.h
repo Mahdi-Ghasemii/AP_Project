@@ -15,18 +15,19 @@ class GandomFarm : public QWidget
 {
     Q_OBJECT
 
-public:
-    explicit GandomFarm(QWidget *parent = nullptr,int _area=5);
+private:
 
-    ~GandomFarm();
+     int area;
+     time_t plantingdate;
+     int farm_level;
+     bool isunderplantingvariable;
+     Ui::GandomFarm *ui;
 
-private slots:
-       void on_Back_clicked();
-       void on_derokardanpbt_clicked();
-       void on_upgradepbt_clicked();
-       void on_plantingpbt_clicked();
-///////////////////////////////////////////////////////////////
+
 public:
+       explicit GandomFarm(QWidget *parent = nullptr,int _area=5);
+       void operator=(const GandomFarm& temp);
+      ~GandomFarm();
        void set_area(int _area);
 
        int getarea(void);
@@ -47,16 +48,15 @@ public:
 
        void upgrade();
    ////////////////////////////////////////////////////////////////////////
-private:
+private slots:
+       void on_Back_clicked();
+       void on_derokardanpbt_clicked();
+       void on_upgradepbt_clicked();
+       void on_plantingpbt_clicked();
+       void Get_Signal_From_Farm();
 
-
-     ///////////////////
-     int area;
-     time_t plantingdate;
-     int farm_level;
-     bool isunderplantingvariable;
-     //////////////////////////
-    Ui::GandomFarm *ui;
+signals:
+       void Send_Signal_to_Farm();
 };
 
 #endif // GANDOMFARM_H

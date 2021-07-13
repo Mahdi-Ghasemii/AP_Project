@@ -13,6 +13,18 @@ YonjeFarm::YonjeFarm(QWidget *parent,int _area) :
     area=_area;
     ui->yonjearealbl->setText(QString::number(area));
 }
+
+
+void YonjeFarm::operator =(const YonjeFarm& temp)
+{
+    this->area = temp.area;
+    this->plantingdate = temp.plantingdate;
+    this->time_shokhm_zadan = temp.time_shokhm_zadan;
+    this->is_plantable = temp.is_plantable;
+    this->isunderplantingvariable=temp.isunderplantingvariable;
+    this->farm_level=temp.farm_level;
+
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void YonjeFarm:: set_area(int _area){area=_area;return;}
 
@@ -160,5 +172,14 @@ else {
 void YonjeFarm::on_Back_clicked()
 {
     this->close();
+}
+
+//slote
+void YonjeFarm::Get_Signal_From_Farm()
+{
+
+    ui->farmlevel->setText(QString::number(this->farm_level));
+    ui->yonjearealbl->setText(QString::number(this->area));
+
 }
 
