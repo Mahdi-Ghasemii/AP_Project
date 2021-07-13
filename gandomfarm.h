@@ -16,13 +16,7 @@ class GandomFarm : public QWidget
     Q_OBJECT
 
 public:
-    explicit GandomFarm(QWidget *parent = nullptr);
-
-
-    GandomFarm( int _area=5);
-
-
-
+    explicit GandomFarm(QWidget *parent = nullptr,int _area=5);
 
     ~GandomFarm();
 

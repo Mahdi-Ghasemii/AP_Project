@@ -13,14 +13,7 @@ class YonjeFarm : public QWidget
     Q_OBJECT
 
 public:
-    explicit YonjeFarm(QWidget *parent = nullptr);
-
-    YonjeFarm(int _area=4);
-
-       bool upgradeyonjefarm(int &_nail ,int &_hoe,int &_coin,time_t &_date,int &_playerlevel,int &experience );
-
-       void planting(int plantingareawant);
-
+    explicit YonjeFarm(QWidget *parent = nullptr,int _area=4);
 
     ~YonjeFarm();
 
