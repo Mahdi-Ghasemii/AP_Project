@@ -49,9 +49,8 @@ private slots:
 
     // Slots to comunicate with other classes
 
-    void Get_Signal_From_Store();
-    void Get_Signal_From_Storage();
-    void Get_Signal_From_Sillo();
+    void Show_Farm_Class();
+
 
 signals:
 
