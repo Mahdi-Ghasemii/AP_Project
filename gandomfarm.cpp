@@ -32,7 +32,7 @@ int GandomFarm::get_level(void){return farm_level;return 0;}
 
 //bool isunderplanting(void){}
 
-bool GandomFarm::derokardan(void){ return 0;}
+//bool GandomFarm::derokardan(void){ return 0;}
 
 //void GandomFarm::planting(int plantingareawant){ return ;}
 

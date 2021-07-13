@@ -16,15 +16,15 @@ public:
     explicit YonjeFarm(QWidget *parent = nullptr,int _area=4);
 
     ~YonjeFarm();
-
+// ////////////////////////////////////////////////////////////////
 private slots:
        void on_planting_clicked();
-       void plantingareawanted(int _area);
-       void plantingareawantedshokhm(int _area);
-       void on_pushButton_3_clicked();
        void on_upgradebutton_clicked();
-       void set_area(int _area);
+       void on_derokardan_clicked();
+       void on_shokhmzadan_clicked();
+       void on_Back_clicked();
    ////////////////////////////////////////////////////////////////////
+public:
        int getarea(void);
 
        void set_planingdate(time_t _plantingdate);
@@ -37,18 +37,12 @@ private slots:
 
        //bool isunderplanting(void){}
 
-       bool derokardan(void);
+       //bool derokardan(void);
 
-      // void planting(int plantingareawant);
-
-       void upgrade();
-
+       //void planting(int plantingareawant);
+       void set_area(int _area);
 ////////////////////////////////////////////////////////////////////////
-       void on_derokardan_clicked();
 
-       void on_shokhmzadan_clicked();
-
-       void on_Back_clicked();
 
 private:
     Ui::YonjeFarm *ui;
@@ -61,7 +55,7 @@ private:
     int farm_level;
     bool isunderplantingvariable;
     ////////////////////////////
-      bool is_plantable;
+     bool is_plantable;
 
 
 
