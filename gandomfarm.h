@@ -64,7 +64,7 @@ private slots:
        void on_Back_clicked();
 
 private:
-     int areawanted;
+
 
      ///////////////////
      int area;

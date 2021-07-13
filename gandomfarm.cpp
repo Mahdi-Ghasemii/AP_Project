@@ -1,7 +1,6 @@
 #include "gandomfarm.h"
 #include "ui_gandomfarm.h"
 
-#include "dialoggandomplanting.h"
 #include "Data.h"
 #include <QString>
 #include <QMessageBox>
@@ -38,7 +37,7 @@ int GandomFarm::get_level(void){return farm_level;}
 
 bool GandomFarm::derokardan(void){ return 0;}
 
-void GandomFarm::planting(int plantingareawant){ return ;}
+//void GandomFarm::planting(int plantingareawant){ return ;}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 //bool GandomFarm::upgradegandomfarm(int &_nail ,int &_hoe,int &_coin,time_t &_date,int &_playerlevel,int &experience ){}
@@ -51,10 +50,7 @@ GandomFarm::~GandomFarm()
     delete ui;
 }
 
-void GandomFarm::plantingareawanted(int _area)
-{
-    areawanted=_area;
-}
+
 
 // //////////////////////////////////////////////////////////////////////////////////////
 
@@ -70,19 +66,10 @@ void GandomFarm::on_plantingpbt_clicked()
                 break;
     }
 
-    DialogGandomPlanting *d =new DialogGandomPlanting(this);
-    connect(d,SIGNAL(plantingareawanting(int)),this,SLOT(plantingareawanted(int _area)));
-    if(areawanted>area){
-        QMessageBox msgBox;
-        msgBox.setText("invalid data( alfalfa farm area equal maximum)");
-        msgBox.exec();
-        areawanted=area;
-        d->show();
         Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()-area);
+        Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()+area);
+
      }
-    }
-
-
 }
 
 // /////////////////////////////////////////////////////////////////////////////////////////////
@@ -94,6 +81,7 @@ void GandomFarm::on_upgradepbt_clicked()
         if(Data::get_iterator()->get_coin()>=(5*area)){
                 Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-(5*area));
                 Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()-area);
+                Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()+area);
                 Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(3*area));
                 area*=2;
                  QMessageBox::information(this,"تبریک","ارتقای مزرعه گندم انجام شد. .",QMessageBox::Ok);
@@ -109,7 +97,7 @@ void GandomFarm::on_upgradepbt_clicked()
         }
     }
     else {
-        QMessageBox::warning(this,"کمبود منابع","میخ به اندازه کافی موجود میست. .",QMessageBox::Ok);
+        QMessageBox::warning(this,"کمبود منابع","بیل به اندازه کافی موجود میست. .",QMessageBox::Ok);
     }
 
    }
@@ -130,9 +118,11 @@ void GandomFarm::on_derokardanpbt_clicked()
     /// ////////////////چک کند د روز بعد کاش باشد
    if (//بله)
          1 ){
-      if(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()>=2*areawanted){
-    Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*areawanted);
+      if(Data::get_iterator()->get_farm().get_siloo().GetCapasity()-Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()>=2*area){
+    Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*area);
+    Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()-2*area);
     QMessageBox::warning(this,"موفقیت","درو شد. .",QMessageBox::Ok);
+    Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(  Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()+2*area);
    if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
        Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
