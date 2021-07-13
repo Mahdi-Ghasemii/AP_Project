@@ -36,7 +36,3 @@ void Habitat::set_feed_time(time_t _feed_time){
 time_t Habitat::get_feed_time(){
     return feed_time;
 }
-
-void Habitat::set_type(string _type){
-    type=_type;
-}

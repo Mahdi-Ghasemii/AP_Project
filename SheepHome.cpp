@@ -106,3 +106,8 @@ void SheepHome::on_back_btn_clicked()
 {
     this->close();
 }
+
+void SheepHome::Get_Signal_From_Farm()
+{
+
+}

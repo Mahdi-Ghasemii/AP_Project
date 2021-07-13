@@ -100,3 +100,8 @@ void CowHome::on_back_btn_clicked()
 {
     this->close();
 }
+
+void CowHome::Get_Signal_From_Farm()
+{
+
+}

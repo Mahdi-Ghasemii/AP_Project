@@ -17,6 +17,7 @@ public:
     explicit Player(QWidget *parent = nullptr);
     Player(const Player&);
     ~Player();
+    void operator=(const Player&);
 
     void set_name(QString);
     QString get_name();

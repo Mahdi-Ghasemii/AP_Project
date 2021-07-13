@@ -27,6 +27,15 @@ Player::Player(QWidget *parent) :
 }
 
 Player::Player(const Player& p){
+    operator=(p);
+}
+
+Player::~Player()
+{
+    delete ui;
+}
+
+void Player::operator=(const Player& p){
     name=p.name;
     username=p.username;
     password=p.password;
@@ -37,11 +46,6 @@ Player::Player(const Player& p){
     experience_required_for_levelUp=p.experience_required_for_levelUp;
     signUp_time=p.signUp_time;
     farm=p.farm;
-}
-
-Player::~Player()
-{
-    delete ui;
 }
 
 void Player::set_name(QString _name)

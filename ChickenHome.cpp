@@ -100,3 +100,8 @@ void ChickenHome::on_back_btn_clicked()
 {
     this->close();
 }
+
+void ChickenHome::Get_Signal_From_Farm()
+{
+
+}
