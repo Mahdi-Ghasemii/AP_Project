@@ -47,11 +47,17 @@ void SignIn::on_sign_in_pbn_clicked()
         return;
     }
     for (int i = 0; i < (Data::get_players()).size(); i++)
-        if (ui->usernameLE->text() == Data::get_players()[i].get_username())
+        if (ui->usernameLE->text() == Data::get_players()[i].get_username()) {
             if (ui->passLE->text() == Data::get_players()[i].get_password()) {
                 Data::set_iterator(Data::get_players().begin() + i);
                 Data::get_iterator()->get_farm().show();
                 return;
             }
+            else {
+                QMessageBox::warning(this, "تذکر", "رمز عبور اشتباه است!");
+                return;
+            }
+        }
+    QMessageBox::warning(this, "تذکر", "نام کاربری یافت نشد!");
 }
 

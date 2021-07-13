@@ -15,8 +15,16 @@ public:
     explicit Ranking(QWidget *parent = nullptr);
     ~Ranking();
 
+    void operator=(const Ranking&);
+
 private:
     Ui::Ranking *ui;
+
+public slots:
+    void show_ranking();
+
+signals:
+    void back_to_farm();
 };
 
 #endif // RANKING_H

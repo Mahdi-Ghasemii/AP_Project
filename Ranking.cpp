@@ -11,7 +11,6 @@ Ranking::Ranking(QWidget *parent) :
     ui(new Ui::Ranking)
 {
     ui->setupUi(this);
-    std::sort(Data::get_players().begin(), Data::get_players().end(), sort_players);
 
 }
 
@@ -28,4 +27,14 @@ bool sort_players(const Player& p1, const Player& p2) {
         if (p1.get_experience() > p2.get_experience())
             return true;
     return false;
+}
+
+
+void Ranking::show_ranking() {
+    std::sort(Data::get_players().begin(), Data::get_players().end(), sort_players);
+
+}
+
+void Ranking::operator=(const Ranking &) {
+
 }
