@@ -26,6 +26,19 @@ Player::Player(QWidget *parent) :
 
 }
 
+Player::Player(const Player& p){
+    name=p.name;
+    username=p.username;
+    password=p.password;
+    email=p.email;
+    coin=p.coin;
+    level=p.level;
+    experience=p.experience;
+    experience_required_for_levelUp=p.experience_required_for_levelUp;
+    signUp_time=p.signUp_time;
+    farm=p.farm;
+}
+
 Player::~Player()
 {
     delete ui;
@@ -107,22 +120,6 @@ time_t Player::get_signUp_time(){
     return signUp_time;
 }
 
-
-void Player::set_farm(Farm _farm){
-    farm = _farm;
-}
-
 Farm& Player::get_farm(){
     return farm;
 }
-
-
-
-
-
-
-
-
-
-
-

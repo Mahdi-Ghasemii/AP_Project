@@ -84,3 +84,11 @@ void CowHome::collect(){
         //QMessageBox
     }
 }
+
+void CowHome::operator=(const CowHome& p){
+    capacity=p.capacity;
+    stock_animal=p.stock_animal;
+    level_habitat=p.level_habitat;
+    feed_time=p.feed_time;
+    is_collected=p.is_collected;
+}

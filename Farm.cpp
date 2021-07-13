@@ -56,7 +56,17 @@ SheepHome& Farm::get_sheepHome(){
     return sheepHome;
 }
 
-
+void Farm::operator=(const Farm& p){
+    storage=p.storage;
+    store=p.store;
+    siloo=p.siloo;
+    ranking=p.ranking;
+    chickenHome=p.chickenHome;
+    cowHome=p.cowHome;
+    sheepHome=p.sheepHome;
+    yonjeFarm=p.yonjeFarm;
+    gandomFarm=p.gandomFarm;
+}
 
 void Farm::on_Storage_pbn_clicked()
 {

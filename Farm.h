@@ -32,7 +32,7 @@ public:
     ChickenHome& get_chickenHome();
     CowHome& get_cowHome();
     SheepHome& get_sheepHome();
-
+    void operator=(const Farm&);
 
 
 private slots:

@@ -18,7 +18,7 @@ public:
     void upgrade();
     void feedeing();
     void collect();
-
+    void operator=(const SheepHome&);
 private:
     Ui::SheepHome *ui;
 };

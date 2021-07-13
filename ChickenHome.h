@@ -18,6 +18,7 @@ public:
     void upgrade();
     void feedeing();
     void collect();
+    void operator=(const ChickenHome&);
 
 private:
     Ui::ChickenHome *ui;
