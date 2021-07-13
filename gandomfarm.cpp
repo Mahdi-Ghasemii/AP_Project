@@ -7,31 +7,28 @@
 
 
 
-GandomFarm::GandomFarm(QWidget *parent) :
+GandomFarm::GandomFarm(QWidget *parent,int _area):
     QWidget(parent),
     ui(new Ui::GandomFarm)
 {
+    area=_area;
     ui->setupUi(this);
-
+    ui->label_2->setText(QString::number(area));
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-GandomFarm::GandomFarm(int _area)
-{
-  area=_area;
-}
 void GandomFarm:: set_area(int _area){area=_area;}
 
 int GandomFarm:: getarea(void){return area;}
 
-void GandomFarm::set_planingdate(time_t _plantingdate){plantingdate=_plantingdate;}
+void GandomFarm::set_planingdate(time_t _plantingdate){plantingdate=_plantingdate;return ;}
 
 time_t GandomFarm::get_plantingdate(void){return plantingdate;}
 
-void GandomFarm::set_level(int _level){farm_level=_level;}
+void GandomFarm::set_level(int _level){farm_level=_level;return ;}
 
-int GandomFarm::get_level(void){return farm_level;}
+int GandomFarm::get_level(void){return farm_level;return 0;}
 
 //bool isunderplanting(void){}
 
