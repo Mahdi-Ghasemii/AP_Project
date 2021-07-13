@@ -12,7 +12,6 @@ using namespace std;
 class Habitat
 {
 protected:
-    string type;
     int capacity;
     int stock_animal;
     int level_habitat;
@@ -29,7 +28,6 @@ public:
     int get_level_habitat();
     void set_feed_time(time_t _feed_time);
     time_t get_feed_time();
-    void set_type(string _type);
 };
 
 #endif // HABITAT_H

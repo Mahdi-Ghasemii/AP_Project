@@ -32,7 +32,7 @@ public:
     ChickenHome& get_chickenHome();
     CowHome& get_cowHome();
     SheepHome& get_sheepHome();
-
+    void operator=(const Farm&);
 
 
 private slots:
@@ -61,8 +61,14 @@ signals:
     void Send_Signal_to_Storage();
     void Send_Signal_to_Siloo();
     void Send_Signal_to_Ranking();
+<<<<<<< HEAD
     void Send_Signal_to_Gandomfarm();
     void Send_Signal_to_Yonjefarm();
+=======
+    void Send_Signal_to_SheepHome();
+    void Send_Signal_to_CowHome();
+    void Send_Signal_to_ChickenHome();
+>>>>>>> 99d74c4395e11f1528097b138b590d96058daff3
 
 private:
     Ui::Farm *ui;

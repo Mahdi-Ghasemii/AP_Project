@@ -14,7 +14,16 @@ CowHome::~CowHome()
     delete ui;
 }
 
-void CowHome::upgrade(){
+void CowHome::operator=(const CowHome& p){
+    capacity=p.capacity;
+    stock_animal=p.stock_animal;
+    level_habitat=p.level_habitat;
+    feed_time=p.feed_time;
+    is_collected=p.is_collected;
+}
+
+void CowHome::on_upgrade_btn_clicked()
+{
     if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=2){
         if(Data::get_iterator()->get_coin()>=15){
             if(Data::get_iterator()->get_level()>=5){
@@ -42,7 +51,8 @@ void CowHome::upgrade(){
     }
 }
 
-void CowHome::feedeing(){
+void CowHome::on_feeding_btn_clicked()
+{
     if(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=2*stock_animal){
         if(difftime(feed_time,time(NULL))>3*24*3600){
             if (is_collected==true){
@@ -64,7 +74,8 @@ void CowHome::feedeing(){
     }
 }
 
-void CowHome::collect(){
+void CowHome::on_collect_btn_clicked()
+{
     if(is_collected==false){
         if(difftime(feed_time,time(NULL))>3*24*3600){
             if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=stock_animal){
@@ -83,4 +94,9 @@ void CowHome::collect(){
     else {
         //QMessageBox
     }
+}
+
+void CowHome::on_back_btn_clicked()
+{
+    this->close();
 }

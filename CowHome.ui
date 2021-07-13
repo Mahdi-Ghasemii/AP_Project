@@ -36,7 +36,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="upgrade_btn">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -60,7 +60,7 @@ color: rgb(170, 0, 0);</string>
      <string>ارتقا</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="feeding_btn">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -84,7 +84,7 @@ color: rgb(170, 0, 0);</string>
      <string>غذا دادن</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="collect_btn">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -108,7 +108,7 @@ color: rgb(170, 0, 0);</string>
      <string>دوشیدن شیر</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="back_btn">
     <property name="geometry">
      <rect>
       <x>250</x>
