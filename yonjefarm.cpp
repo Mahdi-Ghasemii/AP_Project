@@ -5,39 +5,30 @@
 #include <QMessageBox>
 #include "Data.h"
 
-YonjeFarm::YonjeFarm(QWidget *parent) :
+YonjeFarm::YonjeFarm(QWidget *parent,int _area) :
     QWidget(parent),
     ui(new Ui::YonjeFarm)
 {
     ui->setupUi(this);
-
-    QPixmap bkgnd("C:/Users/Arman/Desktop/ap/AP_Project/Icons/yonjebackground");
-       bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
-       QPalette palette;
-       palette.setBrush(QPalette::Window, bkgnd);
-       this->setPalette(palette);
-       ui->yonjearealbl->setText(QString::number(area));
+    area=_area;
+    ui->yonjearealbl->setText(QString::number(area));
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-YonjeFarm::YonjeFarm(int _area)
-{
-    area=_area;
-}
-void YonjeFarm:: set_area(int _area){area=_area;}
+void YonjeFarm:: set_area(int _area){area=_area;return;}
 
 int YonjeFarm:: getarea(void){return area;}
 
-void YonjeFarm::set_planingdate(time_t _plantingdate){plantingdate=_plantingdate;}
+void YonjeFarm::set_planingdate(time_t _plantingdate){plantingdate=_plantingdate;return ;}
 
 time_t YonjeFarm::get_plantingdate(void){return plantingdate;}
 
-void YonjeFarm::set_level(int _level){farm_level=_level;}
+void YonjeFarm::set_level(int _level){farm_level=_level;return ;}
 
 int YonjeFarm::get_level(void){return farm_level;}
 
 //bool isunderplanting(void){}
 
-bool YonjeFarm::derokardan(void){}
+//bool YonjeFarm::derokardan(void){}
 
 //void YonjeFarm::planting(int plantingareawant){}
 // /////////////////////////////////////////////////////////////////////////////////////////////
