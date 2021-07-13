@@ -17,7 +17,7 @@ public:
 
     static QVector<Player>::iterator& get_iterator(){ return it; }
 
-    static void set_players(QVector<Player> _players){ players=_players; }
+    static void set_players(QVector<Player>& _players){ players=_players; }
 
     static QVector<Player>& get_players() { return players; }
 

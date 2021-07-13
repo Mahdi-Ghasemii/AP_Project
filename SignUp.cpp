@@ -27,6 +27,7 @@ void SignUp::on_back_pbn_clicked()
 
 void SignUp::on_register_pbn_clicked()
 {
+    Data::get_players()[5].get_coin();
     Player p;
     p.set_name(ui->nameLE->text());
     p.set_username(ui->usernameLE->text());
