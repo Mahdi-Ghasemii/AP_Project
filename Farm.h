@@ -76,7 +76,7 @@ private:
     Storage storage;
     Store store;
     Siloo siloo;
-    static Ranking ranking;
+    Ranking ranking;
     ChickenHome chickenHome;
     CowHome cowHome;
     SheepHome sheepHome;

@@ -4,6 +4,7 @@
 #include "Player.h"
 #include <algorithm>
 
+
 bool sort_players(const Player&, const Player&);
 
 Ranking::Ranking(QWidget *parent) :

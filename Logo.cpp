@@ -1,7 +1,6 @@
 #include "Logo.h"
 #include "ui_Logo.h"
 #include "SignIn.h"
-#include <windows.h>
 
 
 Logo::Logo(QWidget *parent) :
@@ -9,7 +8,7 @@ Logo::Logo(QWidget *parent) :
     ui(new Ui::Logo)
 {
     ui->setupUi(this);
-    Sleep(3000);
+    _sleep(3000);
     this->close();
     SignIn* si = new SignIn();
     si->show();

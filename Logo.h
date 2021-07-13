@@ -2,6 +2,7 @@
 #define LOGO_H
 
 #include <QMainWindow>
+#include <windows.h>
 
 namespace Ui {
 class Logo;
