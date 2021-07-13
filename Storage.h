@@ -55,10 +55,10 @@ private slots:
 
        //  get signals from Farm class :
 
-       void Get_Signal_From_Farm(int Num_Yonjeh ,int Num_Milk ,int Num_Mikh ,int Num_Bill ,int Num_Wool ,int Num_Egg);
+       void Get_Signal_From_Farm();
 
 signals:
-       void Send_Signal_to_Farm(int Num_Coin , int _Level , int _Experience , int Num_Yonjeh ,int Num_Milk ,int Num_Mikh ,int Num_Bill ,int Num_Wool ,int Num_Egg);
+       void Send_Signal_to_Farm();
 };
 
 #endif // STORAGE_H

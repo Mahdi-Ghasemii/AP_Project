@@ -46,10 +46,10 @@ private slots:
     void on_Buy_Mikh_pbn_clicked();
     void on_Sell_Mikh_pbn_clicked();
 
-    void Get_Signal_From_Farm(int _Num_Coin,int _Level , int _Experience ,int Num_Gandom,int Num_Yonjeh ,int Num_Milk ,int Num_Mikh ,int Num_Bill ,int Num_Wool ,int Num_Egg);
+    void Get_Signal_From_Farm();
 
 signals:
-    void Send_Signal_to_Farm(int _Num_Coin , int _Level , int _Experience ,int Num_Gandom,int Num_Yonjeh ,int Num_Milk ,int Num_Mikh ,int Num_Bill ,int Num_Wool ,int Num_Egg);
+    void Send_Signal_to_Farm();
 };
 
 #endif // STORE_H

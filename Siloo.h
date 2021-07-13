@@ -34,10 +34,10 @@ private slots:
 
         //  get signals from Farm class :
 
-        void Get_Signal_From_Farm(int _Num_Gandom);
+        void Get_Signal_From_Farm();
 
 signals:
-        void Send_Signal_to_Farm(int _Num_Coin , int _Level , int _Experience);
+        void Send_Signal_to_Farm();
 };
 
 #endif // SILOO_H
