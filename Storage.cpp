@@ -148,3 +148,25 @@ void Storage::on_Return_to_Farm_pbn_clicked()
     this->close();
 }
 
+void Storage::Get_Signal_From_Farm()
+{
+
+    //*******************************************************************
+    // Set 3 arguman of storage building
+
+    ui->Occupied_Capasity->setText(QString::number(this->occupied_capacity));
+    ui->Storage_Level->setText(QString::number(this->building_Level));
+    ui->Storage_Level->setText(QString::number(this->building_Level));
+
+
+    //*******************************************************************
+    // Set Number of available psroducts in storage
+
+    ui->Milk_Available->setText(QString::number(this->milk.Get_Number()));
+    ui->Egg_Availbale->setText(QString::number(this->egg.Get_Number()));
+    ui->Wool_Available->setText(QString::number(this->pashm.Get_Number()));
+    ui->Yonjeh_Available->setText(QString::number(this->yonjeh.Get_Number()));
+    ui->Mikh_Available->setText(QString::number(this->mikh.Get_Number()));
+    ui->Bill_Available->setText(QString::number(this->bill.Get_Number()));
+}
+

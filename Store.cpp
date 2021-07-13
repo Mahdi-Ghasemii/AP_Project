@@ -10,23 +10,7 @@ Store::Store(QWidget *parent) :
     ui->setupUi(this);
 
 
-    ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
-    // set storages product
-    ui->Num_Bill->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()));
-    ui->Num_Egg->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_egg().Get_Number()));
-    ui->Num_Mikh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()));
-    ui->Num_Milk->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()));
-    ui->Num_Wool->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()));
-    ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()));
-
-    // set siloos product
-    ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()));
-
-    // set Habitats animal
-    ui->Num_Sheep->setText(QString::number(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()));
-    ui->Num_Cow->setText(QString::number(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()));
-    ui->Num_Chicken->setText(QString::number(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()));
 
 }
 
@@ -549,4 +533,27 @@ void Store::on_Sell_Mikh_pbn_clicked()
 
          return ;
     }
+}
+
+void Store::Get_Signal_From_Farm()
+{
+
+
+    ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
+
+    // set storages product
+    ui->Num_Bill->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()));
+    ui->Num_Egg->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_egg().Get_Number()));
+    ui->Num_Mikh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()));
+    ui->Num_Milk->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()));
+    ui->Num_Wool->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()));
+    ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()));
+
+    // set siloos product
+    ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()));
+
+    // set Habitats animal
+    ui->Num_Sheep->setText(QString::number(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()));
+    ui->Num_Cow->setText(QString::number(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()));
+    ui->Num_Chicken->setText(QString::number(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()));
 }

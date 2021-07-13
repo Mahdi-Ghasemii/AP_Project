@@ -15,9 +15,7 @@ Siloo::Siloo(QWidget *parent) :
     this->occupied_capacity = 1;
     this->building_Level = 1;
 
-    ui->Siloo_Capacity->setText(QString::number(this->capasity));
-    ui->Gandom_Available->setText(QString::number(this->occupied_capacity));
-    ui->Siloo_Level->setText(QString::number(this->building_Level));
+
 }
 
 
@@ -60,6 +58,14 @@ void Siloo::on_Upgrade_Siloo_clicked()
         }
 
 
+}
+
+void Siloo::Get_Signal_From_Farm()
+{
+
+    ui->Siloo_Capacity->setText(QString::number(this->capasity));
+    ui->Gandom_Available->setText(QString::number(this->occupied_capacity));
+    ui->Siloo_Level->setText(QString::number(this->building_Level));
 }
 
 void Siloo::on_Return_to_Farm_clicked()
