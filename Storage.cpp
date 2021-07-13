@@ -22,28 +22,25 @@ Storage::Storage(QWidget *parent) :
 
     this->time_add_milk = time(NULL);
 
-    //*******************************************************************
-    // Set 3 arguman of storage building
-
-    ui->Occupied_Capasity->setText(QString::number(this->occupied_capacity));
-    ui->Storage_Level->setText(QString::number(this->building_Level));
-    ui->Storage_Level->setText(QString::number(this->building_Level));
-
-
-    //*******************************************************************
-    // Set Number of available psroducts in storage
-
-    ui->Milk_Available->setText(QString::number(this->milk.Get_Number()));
-    ui->Egg_Availbale->setText(QString::number(this->egg.Get_Number()));
-    ui->Wool_Available->setText(QString::number(this->pashm.Get_Number()));
-    ui->Yonjeh_Available->setText(QString::number(this->yonjeh.Get_Number()));
-    ui->Mikh_Available->setText(QString::number(this->mikh.Get_Number()));
-    ui->Bill_Available->setText(QString::number(this->bill.Get_Number()));
 
 
 }
 
+void Storage::operator =(const Storage& temp){
 
+    this->bill = temp.bill;
+    this->mikh = temp.mikh;
+    this->milk = temp.milk;
+    this->yonjeh = temp.yonjeh;
+    this->egg = temp.egg;
+    this->pashm = temp.pashm;
+    this->time_add_milk = temp.time_add_milk;
+
+
+    this->capasity = temp.capasity;
+    this->building_Level = temp.building_Level;
+    this->occupied_capacity = temp.occupied_capacity;
+}
 
 Product& Storage::Get_bill ()
 {
@@ -146,5 +143,27 @@ void Storage::on_Upgrade_Storage_clicked()
 void Storage::on_Return_to_Farm_pbn_clicked()
 {
     this->close();
+}
+
+void Storage::Get_Signal_From_Farm()
+{
+
+    //*******************************************************************
+    // Set 3 arguman of storage building
+
+    ui->Occupied_Capasity->setText(QString::number(this->occupied_capacity));
+    ui->Storage_Level->setText(QString::number(this->building_Level));
+    ui->Storage_Level->setText(QString::number(this->building_Level));
+
+
+    //*******************************************************************
+    // Set Number of available psroducts in storage
+
+    ui->Milk_Available->setText(QString::number(this->milk.Get_Number()));
+    ui->Egg_Availbale->setText(QString::number(this->egg.Get_Number()));
+    ui->Wool_Available->setText(QString::number(this->pashm.Get_Number()));
+    ui->Yonjeh_Available->setText(QString::number(this->yonjeh.Get_Number()));
+    ui->Mikh_Available->setText(QString::number(this->mikh.Get_Number()));
+    ui->Bill_Available->setText(QString::number(this->bill.Get_Number()));
 }
 

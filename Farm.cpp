@@ -3,14 +3,26 @@
 #include "Storage.h"
 #include "Store.h"
 #include "Siloo.h"
-
+#include "Data.h"
 
 Farm::Farm(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Farm)
 {
     ui->setupUi(this);
+
+
+    // write connects here :
+
+    connect(&siloo, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
+    connect(&storage, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
+    connect(&store, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
+
+    connect(this, SIGNAL(Send_Signal_to_Siloo()),&store,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_Storage()),&store,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_Store()),&store,SLOT(Get_Signal_From_Farm()));
 }
+
 
 Farm::~Farm(){
     delete ui;
@@ -86,4 +98,23 @@ void Farm::on_CowHome_pbn_clicked()
 {
     cowHome.show();
 }
+
+
+// Defintion of slot , when farm class has shown
+
+
+void Farm::Show_Farm_Class()
+{
+
+    ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
+}
+
+
+
+
+
+
+
+
+
 

@@ -29,6 +29,8 @@ private:
    public:
 
        explicit Storage(QWidget *parent = nullptr);
+       void operator=(const Storage& temp);
+
        ~Storage();
 
 
@@ -52,6 +54,13 @@ private:
 private slots:
        void on_Upgrade_Storage_clicked();
        void on_Return_to_Farm_pbn_clicked();
+
+       //  get signals from Farm class :
+
+       void Get_Signal_From_Farm();
+
+signals:
+       void Send_Signal_to_Farm();
 };
 
 #endif // STORAGE_H

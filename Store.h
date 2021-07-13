@@ -18,8 +18,9 @@ private:
 
 public:
 
-
         explicit Store(QWidget *parent = nullptr);
+        void operator=(const Store& temp);
+
         ~Store();
 
 
@@ -45,6 +46,11 @@ private slots:
     void on_Sell_Bill_pbn_clicked();
     void on_Buy_Mikh_pbn_clicked();
     void on_Sell_Mikh_pbn_clicked();
+
+    void Get_Signal_From_Farm();
+
+signals:
+    void Send_Signal_to_Farm();
 };
 
 #endif // STORE_H

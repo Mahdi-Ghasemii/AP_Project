@@ -40,18 +40,26 @@ private slots:
 
 
     void on_Storage_pbn_clicked();
-
     void on_Siloo_pbn_clicked();
-
     void on_YonjehFarm_pbn_clicked();
-
     void on_GandomFarm_pbn_clicked();
-
     void on_SheepHome_pbn_clicked();
-
     void on_ChickenHome_pbn_clicked();
-
     void on_CowHome_pbn_clicked();
+
+    // Slots to comunicate with other classes
+
+    void Show_Farm_Class();
+
+
+signals:
+
+
+    // Signals to comunicate with other classes
+
+    void Send_Signal_to_Store();
+    void Send_Signal_to_Storage();
+    void Send_Signal_to_Siloo();
 
 private:
     Ui::Farm *ui;

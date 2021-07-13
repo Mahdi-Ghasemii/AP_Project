@@ -6,11 +6,11 @@ Building::Building ()
     this->building_Level = 0;
     this->occupied_capacity = 0;
 }
-Building::Building (int _capacity, int _BulidingLevel,int _occupied_capacity)
+void Building::operator=(const Building& temp)
 {
-    this->capasity = _capacity;
-    this->building_Level = _BulidingLevel;
-    this->occupied_capacity = _occupied_capacity;
+    this->capasity = temp.capasity;
+    this->building_Level = temp.building_Level;
+    this->occupied_capacity = temp.occupied_capacity;
 }
 
 int Building::GetCapasity ()
