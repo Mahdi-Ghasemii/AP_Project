@@ -21,10 +21,12 @@ public:
     ~GandomFarm();
 
 private slots:
-       void on_pushButton_2_clicked();
-       void plantingareawanted(int _area);
-       void on_pushButton_5_clicked();
+       void on_Back_clicked();
+       void on_derokardanpbt_clicked();
+       void on_upgradepbt_clicked();
+       void on_plantingpbt_clicked();
 ///////////////////////////////////////////////////////////////
+public:
        void set_area(int _area);
 
        int getarea(void);
@@ -39,24 +41,12 @@ private slots:
 
        //bool isunderplanting(void){}
 
-       bool derokardan(void);
+      // bool derokardan(void);
 
        void planting(int plantingareawant);
 
        void upgrade();
    ////////////////////////////////////////////////////////////////////////
-       void on_pushButton_4_clicked();
-
-       void on_upgradepbt_clicked();
-
-       void on_plantingpbt_clicked();
-
-       void on_derokardan_clicked();
-
-       void on_derokardanpbt_clicked();
-
-       void on_Back_clicked();
-
 private:
 
 

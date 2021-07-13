@@ -35,15 +35,6 @@ int YonjeFarm::get_level(void){return farm_level;}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//bool YonjeFarm::upgradeyonjefarm(int &_nail ,int &_hoe,int &_coin,time_t &_date,int &_playerlevel,int &experience ){}
-
-//void YonjeFarm:: planting(int plantingareawant){}
-
-
-
-
-
-
 YonjeFarm::~YonjeFarm()
 {
     delete ui;
