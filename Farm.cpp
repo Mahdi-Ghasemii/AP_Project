@@ -23,8 +23,8 @@ Farm::Farm(QWidget *parent) :
     connect(this, SIGNAL(Send_Signal_to_Siloo()),&store,SLOT(Get_Signal_From_Farm()));
     connect(this, SIGNAL(Send_Signal_to_Storage()),&store,SLOT(Get_Signal_From_Farm()));
     connect(this, SIGNAL(Send_Signal_to_Store()),&store,SLOT(Get_Signal_From_Farm()));
-    connect(this, SIGNAL(Send_Signal_to_Gandomfarm),&store,SLOT(Get_Signal_From_Farm()));
-    connect(this, SIGNAL(Send_Signal_to_Yonjefarm),&store,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_Gandomfarm()),&store,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_Yonjefarm()),&store,SLOT(Get_Signal_From_Farm()));
 
 
 

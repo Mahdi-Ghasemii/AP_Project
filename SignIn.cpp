@@ -43,7 +43,7 @@ void SignIn::on_sign_up_pbn_clicked()
 void SignIn::on_sign_in_pbn_clicked()
 {
     if (ui->usernameLE->text().isEmpty() || ui->passLE->text().isEmpty()) {
-       // QMessageBox::warning(this, "تذکر", "نام کاربری و رمز عبور نمی تواند خالی باشد!");
+        QMessageBox::warning(this, "تذکر", "نام کاربری و رمز عبور نمی تواند خالی باشد!");
         return;
     }
     for (int i = 0; i < (Data::get_players()).size(); i++)
@@ -54,10 +54,10 @@ void SignIn::on_sign_in_pbn_clicked()
                 return;
             }
             else {
-         //       QMessageBox::warning(this, "تذکر", "رمز عبور اشتباه است!");
+                QMessageBox::warning(this, "تذکر", "رمز عبور اشتباه است!");
                 return;
             }
         }
-    //QMessageBox::warning(this, "تذکر", "نام کاربری یافت نشد!");
+    QMessageBox::warning(this, "تذکر", "نام کاربری یافت نشد!");
 }
 
