@@ -13,7 +13,7 @@ SignIn::SignIn(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ifstream f("Players.txt");
+  /*  ifstream f("Players.txt");
     if (f.is_open() && Data::get_players().isEmpty()) {
         QVector<Player> players;
         Player p;
@@ -24,7 +24,7 @@ SignIn::SignIn(QWidget *parent) :
         f.close();
         Data::set_players(players);
     }
-
+*/
 }
 
 SignIn::~SignIn()

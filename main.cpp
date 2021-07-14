@@ -13,5 +13,18 @@ int main(int argc, char *argv[])
     Logo logo;
     logo.show();
 
+    Player p;
+
+    p.set_name("Mahdi");
+    p.set_username("Mahdi");
+    p.set_password("Mahdi");
+
+
+    Data::set_iterator(&p);
+
+    p.get_farm().show();
+
+
+
     return a.exec();
 }

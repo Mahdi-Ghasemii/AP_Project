@@ -102,7 +102,7 @@ void Storage::Set_Pashm (Product _pashm)
 }
 
 Storage::~Storage(){
-    delete ui;
+   // delete ui;
 }
 
 // Slots

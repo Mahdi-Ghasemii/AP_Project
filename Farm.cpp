@@ -20,11 +20,11 @@ Farm::Farm(QWidget *parent) :
     connect(&gandomFarm, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&yonjeFarm, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
 
-    connect(this, SIGNAL(Send_Signal_to_Siloo()),&store,SLOT(Get_Signal_From_Farm()));
-    connect(this, SIGNAL(Send_Signal_to_Storage()),&store,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_Siloo()),&siloo,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_Storage()),&storage,SLOT(Get_Signal_From_Farm()));
     connect(this, SIGNAL(Send_Signal_to_Store()),&store,SLOT(Get_Signal_From_Farm()));
-    connect(this, SIGNAL(Send_Signal_to_Gandomfarm),&store,SLOT(Get_Signal_From_Farm()));
-    connect(this, SIGNAL(Send_Signal_to_Yonjefarm),&store,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_Gandomfarm),&gandomFarm,SLOT(Get_Signal_From_Farm()));
+    connect(this, SIGNAL(Send_Signal_to_Yonjefarm),&yonjeFarm,SLOT(Get_Signal_From_Farm()));
 
 
 
@@ -41,7 +41,7 @@ Farm::Farm(QWidget *parent) :
 
 
 Farm::~Farm(){
-    delete ui;
+    //delete ui;
 }
 
 Storage& Farm::get_storage(){
@@ -86,42 +86,55 @@ void Farm::operator=(const Farm& p){
 
 void Farm::on_Storage_pbn_clicked()
 {
+
+    emit Send_Signal_to_Storage();
    storage.show();
 }
 
 
 void Farm::on_Siloo_pbn_clicked()
 {
+    emit Send_Signal_to_Siloo();
     siloo.show();
 }
 
 
 void Farm::on_YonjehFarm_pbn_clicked()
 {
+
+    emit Send_Signal_to_Yonjefarm();
     yonjeFarm.show();
 }
 
 
 void Farm::on_GandomFarm_pbn_clicked()
 {
+
+    emit Send_Signal_to_Gandomfarm();;
     gandomFarm.show();
 }
 
 
 void Farm::on_SheepHome_pbn_clicked()
 {
+
+    emit Send_Signal_to_SheepHome();
     sheepHome.show();
 }
 
 
 void Farm::on_ChickenHome_pbn_clicked()
 {
+
+    emit Send_Signal_to_ChickenHome();
     chickenHome.show();
 }
 
 
 void Farm::on_CowHome_pbn_clicked()
 {
+
+    emit Send_Signal_to_CowHome();
     cowHome.show();
 }
 
@@ -139,8 +152,11 @@ void Farm::Show_Farm_Class()
 
 
 
+void Farm::on_pushButton_3_clicked()
+{
 
+   emit Send_Signal_to_Store();
 
-
-
+    store.show();
+}
 

@@ -32,7 +32,7 @@ Player::Player(const Player& p){
 
 Player::~Player()
 {
-    delete ui;
+  //  delete ui;
 }
 
 void Player::operator=(const Player& p){

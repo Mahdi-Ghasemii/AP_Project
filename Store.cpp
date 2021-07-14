@@ -19,7 +19,7 @@ void Store::operator =(const Store& temp){
 
 
 Store::~Store(){
-    delete ui;
+   // delete ui;
 }
 
 
@@ -78,8 +78,8 @@ void Store::on_Sell_Gandom_pbn_clicked()
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 2);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
-        Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-1);
-        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()));
+        Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()-1);
+        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()));
 
         Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity() - 1);
 

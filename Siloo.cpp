@@ -39,7 +39,7 @@ void Siloo::Set_Gandom (Product _gandom)
 }
 
 Siloo::~Siloo(){
-    delete ui;
+  //  delete ui;
 }
 
 // Slots
