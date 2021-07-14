@@ -155,7 +155,7 @@ void Storage::Get_Signal_From_Farm()
 
     ui->Occupied_Capasity->setText(QString::number(this->occupied_capacity));
     ui->Storage_Level->setText(QString::number(this->building_Level));
-    ui->Storage_Level->setText(QString::number(this->building_Level));
+    ui->Storage_Capasity->setText(QString::number(this->capasity));
 
 
     //*******************************************************************
