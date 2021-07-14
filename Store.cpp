@@ -28,6 +28,7 @@ Store::~Store(){
 
 void Store::on_Return_to_Farm_clicked()
 {
+    emit Send_Signal_to_Farm();
     this->close();
 }
 

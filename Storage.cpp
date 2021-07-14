@@ -142,6 +142,8 @@ void Storage::on_Upgrade_Storage_clicked()
 
 void Storage::on_Return_to_Farm_pbn_clicked()
 {
+
+    emit Send_Signal_to_Farm();
     this->close();
 }
 
