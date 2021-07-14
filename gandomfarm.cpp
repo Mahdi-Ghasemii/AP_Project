@@ -1,18 +1,28 @@
 #include "gandomfarm.h"
 #include "ui_gandomfarm.h"
-
+#include <QPalette>
 #include "Data.h"
 #include <QString>
 #include <QMessageBox>
 
 
 
-GandomFarm::GandomFarm(QWidget *parent,int _area):
+GandomFarm::GandomFarm(QWidget *parent,int _area,int _farm_level,bool _is_underplanting):
     QWidget(parent),
     ui(new Ui::GandomFarm)
 {
     area=_area;
+    area=_area;
+    farm_level=_farm_level;
+    isunderplantingvariable = _is_underplanting;
+
     ui->setupUi(this);
+    QPixmap bkgnd(":/new/prefix1/Icons/gandombackground.jpg");
+       bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
+       QPalette palette;
+       palette.setBrush(QPalette::Window, bkgnd);
+       this->setPalette(palette);
+    ui->arealbl->setText(QString::number(area));
     ui->arealbl->setText(QString::number(area));
 }
 
@@ -69,9 +79,12 @@ void GandomFarm::on_plantingpbt_clicked()
                 QMessageBox::warning(this,"تاریخ","زمین زیر کشت است. .",QMessageBox::Ok);
                 break;
     }
-
+        if(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()>=area){
+            QMessageBox::warning(this,"عدم موجودی","گندم به اندازه نیاز ذر انبار وجود ندارد. .",QMessageBox::Ok);
+            break;
+        }
         Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()-area);
-        Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()+area);
+        Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()-area);
 
      }
 }
@@ -84,8 +97,9 @@ void GandomFarm::on_upgradepbt_clicked()
      if(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()>=(area)){
         if(Data::get_iterator()->get_coin()>=(5*area)){
                 Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-(5*area));
+
                 Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()-area);
-                Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()+area);
+                Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-area);
                 Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(3*area));
                 area*=2;
                  QMessageBox::information(this,"تبریک","ارتقای مزرعه گندم انجام شد. .",QMessageBox::Ok);
@@ -119,12 +133,12 @@ void GandomFarm::on_derokardanpbt_clicked()
     ///
 
     ///
-    /// ////////////////چک کند د روز بعد کاش باشد
+    // / ////////////////چک کند د روز بعد کاش باشد
    if (//بله)
          1 ){
       if(Data::get_iterator()->get_farm().get_siloo().GetCapasity()-Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()>=2*area){
     Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*area);
-    Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()-2*area);
+
     QMessageBox::warning(this,"موفقیت","درو شد. .",QMessageBox::Ok);
     Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(  Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()+2*area);
    if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
@@ -146,7 +160,8 @@ void GandomFarm::on_derokardanpbt_clicked()
 
 void GandomFarm::on_Back_clicked()
 {
-      this->close();
+    emit Send_Signal_to_Farm();
+    this->close();
 }
 //Slote
 
