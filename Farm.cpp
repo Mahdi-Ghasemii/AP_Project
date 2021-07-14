@@ -88,7 +88,7 @@ void Farm::on_Storage_pbn_clicked()
 {
 
     emit Send_Signal_to_Storage();
-   storage.show();
+    storage.show();
 }
 
 
@@ -151,4 +151,12 @@ void Farm::Show_Farm_Class()
 
 
 
+
+
+void Farm::on_pushButton_3_clicked()
+{
+
+    emit Send_Signal_to_Store();
+    store.show();
+}
 
