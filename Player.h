@@ -20,19 +20,19 @@ public:
     void operator=(const Player&);
 
     void set_name(QString);
-    QString get_name();
+    QString get_name()const;
 
     void set_username(QString);
-    QString get_username();
+    QString get_username()const;
 
     void set_password(QString);
-    QString get_password();
+    QString get_password()const;
 
     void set_email(QString);
-    QString get_email();
+    QString get_email()const;
 
     void set_coin(int);
-    int get_coin();
+    int get_coin()const;
 
     void set_level(int);
     int get_level()const;
@@ -41,10 +41,10 @@ public:
     int get_experience()const;
 
     void set_experience_required_for_levelUp(int);
-    int get_experience_required_for_levelUp();
+    int get_experience_required_for_levelUp()const;
 
     void set_signUp_time(time_t);
-    time_t get_signUp_time();
+    time_t get_signUp_time()const;
 
     Farm& get_farm();
 

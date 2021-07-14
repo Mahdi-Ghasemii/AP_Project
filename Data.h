@@ -4,6 +4,9 @@
 #include <QVector>
 #include "Player.h"
 #include <fstream>
+#include <iostream>
+
+using namespace std;
 
 
 class Data

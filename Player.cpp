@@ -36,16 +36,16 @@ Player::~Player()
 }
 
 void Player::operator=(const Player& p){
-    name=p.name;
-    username=p.username;
-    password=p.password;
-    email=p.email;
-    coin=p.coin;
-    level=p.level;
-    experience=p.experience;
-    experience_required_for_levelUp=p.experience_required_for_levelUp;
-    signUp_time=p.signUp_time;
-    farm=p.farm;
+    name = p.get_name();
+    username = p.get_username();
+    password = p.get_password();
+    email = p.get_email();
+    coin = p.get_coin();
+    level = p.get_level();
+    experience = p.get_experience();
+    experience_required_for_levelUp = p.get_experience_required_for_levelUp();
+    signUp_time = p.get_signUp_time();
+    //farm = p.get_farm();
 }
 
 void Player::set_name(QString _name)
@@ -53,7 +53,7 @@ void Player::set_name(QString _name)
     name = _name;
 }
 
-QString Player::get_name()
+QString Player::get_name()const
 {
     return name;
 }
@@ -63,7 +63,7 @@ void Player::set_username(QString _username)
     username = _username;
 }
 
-QString Player::get_username()
+QString Player::get_username()const
 {
     return username;
 }
@@ -73,14 +73,14 @@ void Player::set_password(QString _password)
     password = _password;
 }
 
-QString Player::get_password(){
+QString Player::get_password()const{
     return password;
 }
 
 void Player::set_email(QString){
 
 }
-QString Player::get_email(){
+QString Player::get_email()const{
     return email;
 }
 
@@ -88,7 +88,7 @@ void Player::set_coin(int _coin){
     coin = _coin;
 }
 
-int Player::get_coin(){
+int Player::get_coin()const{
     return coin;
 }
 
@@ -112,7 +112,7 @@ void Player::set_experience_required_for_levelUp(int _e){
     experience_required_for_levelUp = _e;
 }
 
-int Player::get_experience_required_for_levelUp(){
+int Player::get_experience_required_for_levelUp()const{
     return experience_required_for_levelUp;
 }
 
@@ -120,7 +120,7 @@ void Player::set_signUp_time(time_t _signUp_time){
     signUp_time = _signUp_time;
 }
 
-time_t Player::get_signUp_time(){
+time_t Player::get_signUp_time()const{
     return signUp_time;
 }
 

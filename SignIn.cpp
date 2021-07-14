@@ -3,8 +3,10 @@
 #include "SignUp.h"
 #include <QVector>
 #include <fstream>
+#include <iostream>
 #include <QMessageBox>
 
+using namespace std;
 
 
 SignIn::SignIn(QWidget *parent) :
@@ -17,10 +19,10 @@ SignIn::SignIn(QWidget *parent) :
     if (f.is_open() && Data::get_players().isEmpty()) {
         QVector<Player> players;
         Player p;
-        while(!f.eof()) {
-            f.read((char*)&p, sizeof (p));
-            players.push_back(p);
-        }
+        //while(!f.eof()) {
+            //f.read((char*)&p, sizeof (p));
+            players.append(p);
+        //}
         f.close();
         Data::set_players(players);
     }
