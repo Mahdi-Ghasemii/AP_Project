@@ -25,7 +25,7 @@ private:
 
 
 public:
-       explicit GandomFarm(QWidget *parent = nullptr,int _area=5);
+       explicit GandomFarm(QWidget *parent = nullptr,int _area=5,int _farm_level=1,bool _is_underplanting=false);
        void operator=(const GandomFarm& temp);
       ~GandomFarm();
        void set_area(int _area);

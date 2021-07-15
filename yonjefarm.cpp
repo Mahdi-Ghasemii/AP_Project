@@ -1,17 +1,84 @@
 #include "yonjefarm.h"
 #include "ui_yonjefarm.h"
 #include <QPalette>
-
+#include <QPalette>
 #include <QMessageBox>
 #include "Data.h"
 
-YonjeFarm::YonjeFarm(QWidget *parent,int _area) :
+bool YonjeFarm::isbuilt(void){
+
+// if (should check tarikh
+ if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=1){
+     if(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()>=1){
+     if(Data::get_iterator()->get_coin()>=15){
+         if(Data::get_iterator()->get_level()>=3){
+             Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()-1);
+             Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-1);
+             Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()-1);
+             Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-1);
+             Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-15);
+             Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+6);
+
+            QMessageBox::information(this,"تبریک","زمین یونجه ساخته شد. .",QMessageBox::Ok);
+             if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                 Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+                 Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+                 QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
+             }
+         }
+         else {
+              QMessageBox::information(this,"کمبود منابع","سطح کاربر کافی نمیباشد. .",QMessageBox::Ok);
+              return false;
+
+         }
+     }
+     else {
+          QMessageBox::information(this,"کمبود منابع","سکه کافی نمیباشد. .",QMessageBox::Ok);
+          return false;
+
+     }
+ }
+
+ else{
+        QMessageBox::information(this,"کمبود منابع","تعداد بیل کافی نمیباشد. .",QMessageBox::Ok);
+        return false;
+
+     }
+ }
+ else {
+     QMessageBox::information(this,"کمبود منابع","تعداد میخ کافی نمیباشد. .",QMessageBox::Ok);
+     return false;
+
+ }
+
+
+is_biulted=true;
+return true;
+  }
+
+YonjeFarm::YonjeFarm(QWidget *parent,int _area,int _farm_level,bool _is_plantable,bool _is_underplanting) :
     QWidget(parent),
     ui(new Ui::YonjeFarm)
 {
     ui->setupUi(this);
     area=_area;
-    ui->yonjearealbl->setText(QString::number(area));
+    farm_level=_farm_level;
+    is_plantable=_is_plantable;
+    isunderplantingvariable=_is_underplanting;
+
+    QPixmap bkgnd(":/new/prefix1/Icons/yonjebackground.jpg");
+       bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
+       QPalette palette;
+       palette.setBrush(QPalette::Window, bkgnd);
+       this->setPalette(palette);
+       ui->yonjearealbl->setText(QString::number(area));
+
+       if(is_biulted==false){
+           bool b=isbuilt();
+           if(b==false){
+               this->close();
+           }
+       }
 }
 
 
@@ -25,6 +92,9 @@ void YonjeFarm::operator =(const YonjeFarm& temp)
     this->farm_level=temp.farm_level;
 
 }
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void YonjeFarm:: set_area(int _area){area=_area;return;}
 
@@ -71,16 +141,21 @@ void YonjeFarm::on_planting_clicked()
         QMessageBox::warning(this,"کمبود ضروریات","زمین شخم زده نشده است . .",QMessageBox::Ok);
         break;
        }
+        if (Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>area){
         Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-area);
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-area);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(2*area));
-         QMessageBox::information(this,"توجه","کشت انجام شد. .",QMessageBox::Ok);
+         QMessageBox::information(this,"توجه","کاشت یونجه انجام شد. .",QMessageBox::Ok);
         if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
             Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
             Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-             QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
+            QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
         }
      }
+        else{
+            QMessageBox::warning(this,"عدم موجودی","یونجه به اندازه در انبار موجود نمیباشد. .",QMessageBox::Ok);
+        }
+    }
 }
 // /////////////////////////////////////////////////////////////////////
 
@@ -92,14 +167,18 @@ void YonjeFarm::on_upgradebutton_clicked()
     if(Data::get_iterator()->get_level()>=4){
      if(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()>=(2*area)){
         if(Data::get_iterator()->get_coin()>=(5*area)){
+            //decreas coin
                 Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-(5*area));
+                //decreas bill
                 Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number( Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()-2*area);
-
-                Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()-2*area);
+                //increas occupied capacity
                 Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-2*area);
+                //increas experienc
                 Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(3*area));
+                //increas arae
                 area*=2;
                  QMessageBox::information(this,"تبریک","ارتقای مزرعه یونجه انجام شد. .",QMessageBox::Ok);
+
                 if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
                     Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
                     Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
@@ -133,7 +212,7 @@ void YonjeFarm::on_derokardan_clicked()
       if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=2*area){
     Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*area);
     Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()+2*area);
-    QMessageBox::warning(this,"موفقیت","درو شد. .",QMessageBox::Ok);
+    QMessageBox::warning(this,"تبریک","زمین یونحه با موفقیت دروشد. .",QMessageBox::Ok);
     Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(2*area));
    if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
@@ -155,7 +234,15 @@ void YonjeFarm::on_derokardan_clicked()
 void YonjeFarm::on_shokhmzadan_clicked()
 {
 if(Data::get_iterator()->get_coin()>=(area*5)){
+
+    Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-area*5);
+     // decreas coin
       Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+area);
+      // increas yonjenum
+      // Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()+2*area);
+       //message for derokardan
+       QMessageBox::information(this,"تبریک","باموفقیت مزرعه یونجه شخم زده شد. .",QMessageBox::Ok);
+       // chec is it possible to levelupuser
       if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
           Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
           Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
@@ -171,6 +258,7 @@ else {
 
 void YonjeFarm::on_Back_clicked()
 {
+    emit Send_Signal_to_Farm();
     this->close();
 }
 
