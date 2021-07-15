@@ -142,6 +142,8 @@ void Storage::on_Upgrade_Storage_clicked()
 
 void Storage::on_Return_to_Farm_pbn_clicked()
 {
+
+    emit Send_Signal_to_Farm();
     this->close();
 }
 
@@ -153,7 +155,7 @@ void Storage::Get_Signal_From_Farm()
 
     ui->Occupied_Capasity->setText(QString::number(this->occupied_capacity));
     ui->Storage_Level->setText(QString::number(this->building_Level));
-    ui->Storage_Level->setText(QString::number(this->building_Level));
+    ui->Storage_Capasity->setText(QString::number(this->capasity));
 
 
     //*******************************************************************

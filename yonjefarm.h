@@ -22,9 +22,11 @@ private:
     int farm_level;
     bool isunderplantingvariable;
     bool is_plantable;
+    bool is_biulted;
     // /////////////////////////////////////////////////////////////
 public:
-    explicit YonjeFarm(QWidget *parent = nullptr,int _area=4);
+    bool isbuilt(void);
+    explicit YonjeFarm(QWidget *parent = nullptr,int _area=4,int _farm_level=1,bool _is_plantable=false,bool is_underplanting=false);
     void operator=(const YonjeFarm& temp);
     ~YonjeFarm();
 

@@ -19,7 +19,7 @@ void Store::operator =(const Store& temp){
 
 
 Store::~Store(){
-    delete ui;
+   // delete ui;
 }
 
 
@@ -28,6 +28,8 @@ Store::~Store(){
 
 void Store::on_Return_to_Farm_clicked()
 {
+    emit Send_Signal_to_Farm();
+
     this->close();
 }
 
@@ -78,8 +80,8 @@ void Store::on_Sell_Gandom_pbn_clicked()
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 2);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
-        Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-1);
-        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()));
+        Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()-1);
+        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()));
 
         Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity() - 1);
 
@@ -315,7 +317,7 @@ void Store::on_Buy_Yonjeh_pbn_clicked()
         Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()+1);
         ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()));
 
-        Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity() + 1);
+        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() + 1);
 
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +2);
 
@@ -346,7 +348,9 @@ void Store::on_Sell_Yonjeh_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-1);
-        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()));
+        ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
 
          return ;
     }
@@ -370,7 +374,9 @@ void Store::on_Sell_Milk_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_storage().Get_milk().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()-1);
-        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()));
+        ui->Num_Milk->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
 
          return ;
     }
@@ -397,7 +403,9 @@ void Store::on_Sell_Wool_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_storage().Get_pashm().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()-1);
-        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()));
+        ui->Num_Wool->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
 
          return ;
     }
@@ -425,8 +433,10 @@ void Store::on_Sell_Egg_pbn_clicked()
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 8);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
-        Data::get_iterator()->get_farm().get_storage().Get_pashm().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()-1);
-        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()));
+        Data::get_iterator()->get_farm().get_storage().Get_egg().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_egg().Get_Number()-1);
+        ui->Num_Egg->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_egg().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
 
          return ;
     }
@@ -453,7 +463,9 @@ void Store::on_Buy_Bill_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()+1);
-        ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()));
+        ui->Num_Bill->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() + 1);
 
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +8);
 
@@ -479,7 +491,9 @@ void Store::on_Sell_Bill_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()-1);
-        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()));
+        ui->Num_Bill->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
 
          return ;
     }
@@ -506,7 +520,9 @@ void Store::on_Buy_Mikh_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()+1);
-        ui->Num_Yonjeh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()));
+        ui->Num_Mikh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() + 1);
 
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +4);
 
@@ -532,7 +548,9 @@ void Store::on_Sell_Mikh_pbn_clicked()
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
         Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()-1);
-        ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()));
+        ui->Num_Mikh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()));
+
+        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
 
          return ;
     }

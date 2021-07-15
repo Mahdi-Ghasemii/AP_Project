@@ -54,6 +54,8 @@ private slots:
     void Show_Farm_Class();
 
 
+    void on_pushButton_3_clicked();
+
 signals:
 
 

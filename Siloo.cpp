@@ -79,6 +79,7 @@ void Siloo::Get_Signal_From_Farm()
 
 void Siloo::on_Return_to_Farm_clicked()
 {
+    emit Send_Signal_to_Farm();
     this->close();
 }
 
