@@ -20,7 +20,7 @@ Storage::Storage(QWidget *parent) :
     this->occupied_capacity = 2;
     this->building_Level = 1;
 
-    this->time_add_milk = time(NULL);
+    this->time_add_milk = 0;
 
 
 

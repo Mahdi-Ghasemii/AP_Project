@@ -141,6 +141,9 @@ void Farm::Show_Farm_Class()
 {
 
     ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
+    ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
+    ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
+    ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
 }
 
 
