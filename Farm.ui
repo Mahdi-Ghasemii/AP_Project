@@ -136,6 +136,13 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -334,7 +341,7 @@
      <rect>
       <x>550</x>
       <y>30</y>
-      <width>16</width>
+      <width>31</width>
       <height>16</height>
      </rect>
     </property>

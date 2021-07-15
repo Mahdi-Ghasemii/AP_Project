@@ -135,6 +135,12 @@ void Storage::on_Upgrade_Storage_clicked()
             this->building_Level = round(this->building_Level *3 / 2);
             Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + this->building_Level * 3);
 
+            if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
+                Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+
+                Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
+
+            }
             QMessageBox::information(this,"","انبار با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
         }
 

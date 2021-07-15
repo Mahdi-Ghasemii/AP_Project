@@ -14,6 +14,11 @@ Farm::Farm(QWidget *parent) :
 
     // write connects here :
 
+    ui->Num_Coin->setText(QString::number(20));
+    ui->_Level->setText(QString::number(1));
+    ui->_Experience->setText(QString::number(0));
+    ui->_Max_Experience->setText(QString::number(10));
+
     connect(&siloo, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&storage, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&store, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
@@ -144,6 +149,10 @@ void Farm::Show_Farm_Class()
     ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
     ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
     ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
+
+    int a = Data::get_iterator()->get_experience()*100;
+    a /= Data::get_iterator()->get_experience_required_for_levelUp();
+    ui->progressBar->setValue(a);
 }
 
 

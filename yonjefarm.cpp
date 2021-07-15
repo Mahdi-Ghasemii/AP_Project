@@ -74,10 +74,10 @@ YonjeFarm::YonjeFarm(QWidget *parent,int _area,int _farm_level,bool _is_plantabl
        ui->yonjearealbl->setText(QString::number(area));
 
        if(is_biulted==false){
-           bool b=isbuilt();
+         /*  bool b=isbuilt();
            if(b==false){
                this->close();
-           }
+           }*/
        }
 }
 

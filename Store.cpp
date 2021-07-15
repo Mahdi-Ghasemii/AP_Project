@@ -33,6 +33,20 @@ void Store::on_Return_to_Farm_clicked()
     this->close();
 }
 
+void Store::Add_Experience_and_Check_Level(int _e){
+
+    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +_e);
+
+    if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
+        Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+
+        Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
+
+    }
+
+}
+
+
 void Store::on_Buy_Gandom_pbn_clicked()
 {
 
@@ -57,8 +71,8 @@ void Store::on_Buy_Gandom_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity() + 1);
 
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +1);
 
+        Add_Experience_and_Check_Level(1);
 
          return ;
 
@@ -84,6 +98,8 @@ void Store::on_Sell_Gandom_pbn_clicked()
         ui->Num_Gandom->setText(QString::number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()));
 
         Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity() - 1);
+
+        Add_Experience_and_Check_Level(6);
 
          return ;
     }
@@ -120,7 +136,7 @@ void Store::on_Buy_Cow_pbn_clicked()
         Data::get_iterator()->get_farm().get_cowHome().set_stock_animal(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()+1);
         ui->Num_Cow->setText(QString::number(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()));
 
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +10);
+        Add_Experience_and_Check_Level(10);
 
 
          return ;
@@ -153,6 +169,7 @@ void Store::on_Sell_Cow_pbn_clicked()
         Data::get_iterator()->get_farm().get_cowHome().set_stock_animal(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()-1);
         ui->Num_Cow->setText(QString::number(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()));
 
+        Add_Experience_and_Check_Level(6);
 
 
         return ;
@@ -186,7 +203,7 @@ void Store::on_Buy_Sheep_pbn_clicked()
         Data::get_iterator()->get_farm().get_sheepHome().set_stock_animal(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()+1);
         ui->Num_Sheep->setText(QString::number(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()));
 
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +15);
+        Add_Experience_and_Check_Level(15);
 
 
          return ;
@@ -218,6 +235,8 @@ void Store::on_Sell_Sheep_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_sheepHome().set_stock_animal(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()-1);
         ui->Num_Sheep->setText(QString::number(Data::get_iterator()->get_farm().get_sheepHome().get_stock_animal()));
+
+        Add_Experience_and_Check_Level(6);
 
 
         return ;
@@ -252,7 +271,7 @@ void Store::on_Buy_Chicken_pbn_clicked()
         Data::get_iterator()->get_farm().get_chickenHome().set_stock_animal(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()+1);
         ui->Num_Chicken->setText(QString::number(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()));
 
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +5);
+        Add_Experience_and_Check_Level(5);
 
 
          return ;
@@ -284,6 +303,8 @@ void Store::on_Sell_Chicken_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_chickenHome().set_stock_animal(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()-1);
         ui->Num_Chicken->setText(QString::number(Data::get_iterator()->get_farm().get_chickenHome().get_stock_animal()));
+
+        Add_Experience_and_Check_Level(6);
 
         return ;
     }
@@ -319,7 +340,7 @@ void Store::on_Buy_Yonjeh_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() + 1);
 
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +2);
+        Add_Experience_and_Check_Level(2);
 
 
          return ;
@@ -352,6 +373,8 @@ void Store::on_Sell_Yonjeh_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
 
+        Add_Experience_and_Check_Level(6);
+
          return ;
     }
 }
@@ -377,6 +400,8 @@ void Store::on_Sell_Milk_pbn_clicked()
         ui->Num_Milk->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()));
 
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
+
+        Add_Experience_and_Check_Level(6);
 
          return ;
     }
@@ -407,11 +432,11 @@ void Store::on_Sell_Wool_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
 
+        Add_Experience_and_Check_Level(6);
+
          return ;
     }
 }
-
-
 
 
 
@@ -437,6 +462,8 @@ void Store::on_Sell_Egg_pbn_clicked()
         ui->Num_Egg->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_egg().Get_Number()));
 
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
+
+        Add_Experience_and_Check_Level(6);
 
          return ;
     }
@@ -467,7 +494,7 @@ void Store::on_Buy_Bill_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() + 1);
 
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +8);
+        Add_Experience_and_Check_Level(8);
 
 
          return ;
@@ -494,6 +521,8 @@ void Store::on_Sell_Bill_pbn_clicked()
         ui->Num_Bill->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()));
 
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
+
+        Add_Experience_and_Check_Level(6);
 
          return ;
     }
@@ -524,7 +553,7 @@ void Store::on_Buy_Mikh_pbn_clicked()
 
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() + 1);
 
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() +4);
+        Add_Experience_and_Check_Level(4);
 
 
          return ;
@@ -551,6 +580,8 @@ void Store::on_Sell_Mikh_pbn_clicked()
         ui->Num_Mikh->setText(QString::number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()));
 
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - 1);
+
+        Add_Experience_and_Check_Level(6);
 
          return ;
     }
