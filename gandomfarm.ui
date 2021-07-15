@@ -68,6 +68,15 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
      <height>200</height>
     </size>
    </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="upgradepbt">
    <property name="geometry">
@@ -93,6 +102,9 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
      <width>200</width>
      <height>200</height>
     </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -139,6 +151,9 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
      <height>200</height>
     </size>
    </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="Back">
    <property name="geometry">
@@ -164,6 +179,9 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
      <width>100</width>
      <height>100</height>
     </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="arealbl">

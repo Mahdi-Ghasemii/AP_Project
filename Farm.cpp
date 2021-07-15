@@ -121,6 +121,16 @@ void Farm::on_Siloo_pbn_clicked()
 
 void Farm::on_YonjehFarm_pbn_clicked()
 {
+    if(Data::get_iterator()->get_level()<3){
+        QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 3 باشد");
+        return;
+    }
+    if(yonjeFarm.get_is_build()==false){
+        Builting* p=new Builting(this);
+        p->show();
+        connect(p,SIGNAL(Send_Signal_to_Farm(QString)),this,SLOT(get_signal_from_builting_for_YonjeFarm(QString)));
+        return;
+    }
     emit Send_Signal_to_Yonjefarm();
     yonjeFarm.show();
 }
@@ -224,6 +234,13 @@ void Farm::get_signal_from_builting_for_cowHome(QString str){
 void Farm::get_signal_from_builting_for_sheepHome(QString str){
     if(str=="yes")
         sheepHome.build();
+    else
+        return;
+}
+//i am hereeeeee?????????
+void Farm::get_signal_from_builting_for_YonjeFarm(QString str){
+    if(str=="yes")
+        yonjeFarm.build();
     else
         return;
 }
