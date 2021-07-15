@@ -357,20 +357,3 @@ void MyThread::Set_Plow_YonjehFarm(time_t t){
 time_t MyThread::Get_Plow_YonjehFarm(){
     return Plow_YonjehFarm;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
