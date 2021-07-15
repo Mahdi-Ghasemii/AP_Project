@@ -12,6 +12,7 @@ ChickenHome::ChickenHome(QWidget *parent) :
     level_habitat=1;
     feed_time=0;
     is_collected=true;
+    is_build=false;
 }
 
 ChickenHome::~ChickenHome()
@@ -27,6 +28,20 @@ void ChickenHome::operator=(const ChickenHome& p){
     is_collected=p.is_collected;
 }
 
+void ChickenHome::build(){
+    //aya morghdari be tazegi shoroo be kar karde?
+        if(Data::get_iterator()->get_coin()>=10){
+            if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=2){
+                //set date
+                QMessageBox::information(this," ","ساختن مرغداری با موفقیت آغاز شد");
+            }
+            else
+                QMessageBox::warning(this,"تذکر","میخ به اندازه کافی موجود نمی باشد");
+        }
+        else
+            QMessageBox::warning(this,"تذکر","سکه به اندازه کافی موجود نمی باشد");
+}
+
 void ChickenHome::on_upgrade_btn_clicked()
 {
     if(Data::get_iterator()->get_level()>=3){
@@ -39,24 +54,24 @@ void ChickenHome::on_upgrade_btn_clicked()
                 level_habitat++;
                 ui->capacity_lbl->setText(QString::number(capacity));
                 ui->level_lbl->setText(QString::number(level_habitat));
-                QMessageBox::information(this,"","ارتقا با موفقیت انجام شد");
+                QMessageBox::information(this," ","ارتقا با موفقیت انجام شد");
                 if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
                     Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
                     Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
                     QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
                 }
             }
-            else {
+            else
                 QMessageBox::warning(this,"تذکر","میخ به اندازه کافی موجود نمی باشد");
-            }
+
         }
-        else {
+        else
             QMessageBox::warning(this,"تذکر","سکه به اندازه کافی موجود نمی باشد");
-        }
+
     }
-    else {
+    else
         QMessageBox::warning(this,"تذکر","سطح شما برای ارتقا باید حداقل 3 باشد");
-    }
+
 }
 
 void ChickenHome::on_feeding_btn_clicked()
@@ -68,23 +83,29 @@ void ChickenHome::on_feeding_btn_clicked()
                     Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()-stock_animal);
                     is_collected=false;
                     feed_time=time(NULL);
+                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+stock_animal);
                     QMessageBox::information(this," ","غذا دادن با موفقیت انجام شد");
+                    if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+                        Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+                        QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
+                    }
                 }
-                else {
+                else
                     QMessageBox::warning(this,"تذکر","شما هنوز تخم مرغ‌ها را جمع آوری نکرده‌اید");
-                }
+
             }
-            else {
+            else
                 QMessageBox::warning(this,"تذکر","شما به تازگی به مرغ‌ها غذا داده‌اید");
-            }
+
         }
-        else {
+        else
             QMessageBox::warning(this,"تذکر","گندم به مقدار کافی در سیلو موجود نمی باشد");
-        }
+
     }
-    else {
+    else
         QMessageBox::warning(this,"تذکر","حیوانی در مرغداری موجود نمی باشد");
-    }
+
 }
 
 void ChickenHome::on_collect_btn_clicked()
@@ -95,19 +116,25 @@ void ChickenHome::on_collect_btn_clicked()
                 is_collected=true;
                 Data::get_iterator()->get_farm().get_storage().Get_egg().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_egg().Get_Number()+stock_animal);
                 Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_egg().Get_Number()+stock_animal);
+                Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+2*stock_animal);
                 QMessageBox::information(this," ","برداشت تخم مرغ‌ با موفقیت انجام شد");
+                if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+                    Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+                    QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
+                }
             }
-            else {
-                QMessageBox::warning(this,"تذکر","تخم مرغ‌ها به تازگی برداشت شده‌اند");
-            }
+            else
+                QMessageBox::warning(this,"تذکر","لطفا ابتدا به مرغ‌ها غذا دهید");
+
         }
-        else {
+        else
             QMessageBox::warning(this,"تذکر","شما امکان برداشت تخم مرغ‌‌ را ندارید زیرا به تازگی به مرغ‌ها غذا داده‌اید");
-        }
+
     }
-    else {
+    else
         QMessageBox::warning(this,"تذکر","فضا به مقدار کافی در انبار موجود نمی باشد");
-    }
+
 }
 
 void ChickenHome::on_back_btn_clicked()

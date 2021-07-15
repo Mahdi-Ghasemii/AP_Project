@@ -38,9 +38,9 @@ public:
 
 
 private slots:
-
-
-
+    void get_signal_from_builting_for_chickenHome(QString);
+    void get_signal_from_builting_for_cowHome(QString);
+    void get_signal_from_builting_for_sheepHome(QString);
     void on_Storage_pbn_clicked();
     void on_Siloo_pbn_clicked();
     void on_YonjehFarm_pbn_clicked();
