@@ -41,7 +41,7 @@ Farm::Farm(QWidget *parent) :
 
 
 Farm::~Farm(){
-    delete ui;
+    //delete ui;
 }
 
 Storage& Farm::get_storage(){
@@ -70,6 +70,16 @@ CowHome& Farm::get_cowHome(){
 
 SheepHome& Farm::get_sheepHome(){
     return sheepHome;
+}
+
+YonjeFarm &Farm::get_yonjeFarm()
+{
+    return yonjeFarm;
+}
+
+GandomFarm &Farm::get_gandomFarm()
+{
+    return gandomFarm;
 }
 
 void Farm::operator=(const Farm& p){

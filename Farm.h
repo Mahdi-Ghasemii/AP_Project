@@ -32,6 +32,8 @@ public:
     ChickenHome& get_chickenHome();
     CowHome& get_cowHome();
     SheepHome& get_sheepHome();
+    YonjeFarm& get_yonjeFarm();
+    GandomFarm& get_gandomFarm();
     void operator=(const Farm&);
 
 

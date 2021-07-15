@@ -32,7 +32,7 @@ Player::Player(const Player& p){
 
 Player::~Player()
 {
-    delete ui;
+    //delete ui;
 }
 
 void Player::operator=(const Player& p){
@@ -77,8 +77,8 @@ QString Player::get_password()const{
     return password;
 }
 
-void Player::set_email(QString){
-
+void Player::set_email(QString _email){
+    email = _email;
 }
 QString Player::get_email()const{
     return email;

@@ -3,12 +3,7 @@
 #include "Data.h"
 #include "SignIn.h"
 
-#define DEBUG
-#ifdef DEBUG
-#include <QVector>
-#endif
 
-//#include <windows.h>
 QVector<Player>::iterator Data::it;
 QVector<Player> Data::players;
 //Ranking Farm::ranking;
@@ -17,11 +12,7 @@ QVector<Player> Data::players;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-#ifdef DEBUG
-    QVector<Player> v;
-    Player p;
-    v.append(p);
-#endif
+
     Logo logo;
     logo.show();
     _sleep(3000);

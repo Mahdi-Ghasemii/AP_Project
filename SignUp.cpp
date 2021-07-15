@@ -3,7 +3,6 @@
 #include "SignIn.h"
 #include "Data.h"
 #include <fstream>
-#include <iostream>
 #include <QMessageBox>
 
 using namespace std;
@@ -58,8 +57,52 @@ void SignUp::on_register_pbn_clicked()
     time_t t = time(NULL);
     p.set_signUp_time(t);
     Data::get_players().append(p);
-    ofstream f("Players.txt", ios::app);
-    f.write((char*)&p, sizeof(p));
+
+    QFile f("Players.json");
+    f.open(QIODevice::ReadOnly);
+    QJsonDocument d = QJsonDocument::fromJson(f.readAll());
+    f.close();
+    QJsonObject o = d.object();
+    QJsonObject temp;
+    temp["Name"] = p.get_name();
+    temp["Username"] = p.get_username();
+    temp["Password"] = p.get_password();
+    temp["Email"] = p.get_email();
+    temp["Coin"] = p.get_coin();
+    temp["Level"] = p.get_level();
+    temp["Experience"] = p.get_experience();
+    temp["Experience required for levelUp"] = p.get_experience_required_for_levelUp();
+    //temp["SignUp time]
+    temp["Mikh number"] = 1;
+    temp["Bill number"] = 0;
+    temp["Yonjeh number"] = 1;
+    temp["Egg number"] = 0;
+    temp["Milk number"] = 0;
+    temp["Pashm number"] = 0;
+    temp["Storage capacity"] = 5;
+    temp["Storage level"] = 1;
+    temp["Storage occupied capacity"] = 2;
+    temp["Gandom number"] = 1;
+    temp["Siloo capacity"] = 10;
+    temp["Siloo level"] = 1;
+    temp["Siloo occupied capacity"] = 1;
+    temp["ChickenHome capacity"] = 0;
+    temp["ChickenHome level"] = 1;
+    temp["ChickenHome stock"] = 0;
+    temp["CowHome capacity"] = 0;
+    temp["CowHome level"] = 1;
+    temp["CowHome stock"] = 0;
+    temp["SheepHome capacity"] = 0;
+    temp["SheepHome level"] = 1;
+    temp["SheepHome stock"] = 0;
+    temp["GandomFarm area"] = 5;
+    temp["GandomFarm level"] = 1;
+    temp["YonjehFarm area"] = 4;
+    temp["YonjehFarm level"] = 1;
+    o[p.get_username()] = temp;
+    d.setObject(o);
+    f.open(QIODevice::WriteOnly);
+    f.write(d.toJson());
     f.close();
     QMessageBox::information(this, "تکمیل ثبت نام", "ثبت نام شما با موفقیت انجام شد");
 }
