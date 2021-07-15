@@ -111,6 +111,9 @@ void Farm::on_Siloo_pbn_clicked()
 
 void Farm::on_YonjehFarm_pbn_clicked()
 {
+    if(Data::get_iterator()->get_level()<2){
+        QMessageBox::information(this,"تذکر","سطح شما باید حداقل 3 باشد. .",QMessageBox::Ok);
+    }
     emit Send_Signal_to_Yonjefarm();
     yonjeFarm.show();
 }
