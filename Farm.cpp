@@ -139,7 +139,7 @@ void Farm::on_SheepHome_pbn_clicked()
         QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 6 باشد");
         return;
     }
-    if(chickenHome.get_is_build()==false){
+    if(sheepHome.get_is_build()==false){
         Builting* p=new Builting(this);
         p->show();
         connect(p,SIGNAL(Send_Signal_to_Farm(QString)),this,SLOT(get_signal_from_builting_for_sheepHome(QString)));
@@ -173,7 +173,7 @@ void Farm::on_CowHome_pbn_clicked()
         QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 4 باشد");
         return;
     }
-    if(chickenHome.get_is_build()==false){
+    if(cowHome.get_is_build()==false){
         Builting* p=new Builting(this);
         p->show();
         connect(p,SIGNAL(Send_Signal_to_Farm(QString)),this,SLOT(get_signal_from_builting_for_cowHome(QString)));
