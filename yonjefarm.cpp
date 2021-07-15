@@ -144,7 +144,7 @@ void YonjeFarm::on_planting_clicked()
         QMessageBox::warning(this,"کمبود ضروریات","زمین شخم زده نشده است . .",QMessageBox::Ok);
         break;
        }
-        if (Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>area){
+        if (Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=area){
         Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-area);
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-area);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(2*area));
