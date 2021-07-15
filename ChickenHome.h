@@ -16,6 +16,7 @@ public:
     explicit ChickenHome(QWidget *parent = nullptr);
     ~ChickenHome();
     void operator=(const ChickenHome&);
+    void build();
 
 private slots:
     void on_upgrade_btn_clicked();

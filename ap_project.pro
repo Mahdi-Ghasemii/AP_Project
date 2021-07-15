@@ -15,6 +15,7 @@ SOURCES += \
     Farm.cpp \
     Habitat.cpp \
     Logo.cpp \
+    MyThread.cpp \
     Player.cpp \
     Ranking.cpp \
     SheepHome.cpp \
@@ -38,6 +39,7 @@ HEADERS +=\
     Farm.h \
     Habitat.h \
     Logo.h \
+    MyThread.h \
     Player.h \
     Ranking.h \
     SheepHome.h \

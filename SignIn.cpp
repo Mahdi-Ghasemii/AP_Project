@@ -95,6 +95,9 @@ void SignIn::on_sign_in_pbn_clicked()
             if (ui->passLE->text() == Data::get_players()[i].get_password()) {
                 Data::set_iterator(Data::get_players().begin() + i);
                 this->close();
+
+                Data::get_iterator()->get_farm().Get_MyThread().set_first_SizeofMilk(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number());
+                Data::get_iterator()->get_farm().Get_MyThread().start();
                 Data::get_iterator()->get_farm().show();
                 return;
             }

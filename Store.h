@@ -28,6 +28,7 @@ public:
 private slots:
 
     void on_Return_to_Farm_clicked();
+    void Add_Experience_and_Check_Level(int _e);
 
     void on_Buy_Gandom_pbn_clicked();
     void on_Sell_Gandom_pbn_clicked();

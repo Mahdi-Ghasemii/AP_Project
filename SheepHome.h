@@ -16,6 +16,7 @@ public:
     explicit SheepHome(QWidget *parent = nullptr);
     ~SheepHome();
     void operator=(const SheepHome&);
+    void build();
 
 private slots:
     void on_upgrade_btn_clicked();

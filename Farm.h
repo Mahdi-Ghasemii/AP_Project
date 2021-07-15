@@ -12,6 +12,7 @@
 #include "ChickenHome.h"
 #include "CowHome.h"
 #include "SheepHome.h"
+#include "MyThread.h"
 
 namespace Ui {
 class Farm;
@@ -23,6 +24,7 @@ class Farm : public QMainWindow
 
 public:
     explicit Farm(QWidget *parent = nullptr);
+    void operator=(const Farm&);
     ~Farm();
 
     Storage& get_storage();
@@ -34,13 +36,14 @@ public:
     SheepHome& get_sheepHome();
     YonjeFarm& get_yonjeFarm();
     GandomFarm& get_gandomFarm();
-    void operator=(const Farm&);
+
+    MyThread& Get_MyThread();
 
 
 private slots:
-
-
-
+    void get_signal_from_builting_for_chickenHome(QString);
+    void get_signal_from_builting_for_cowHome(QString);
+    void get_signal_from_builting_for_sheepHome(QString);
     void on_Storage_pbn_clicked();
     void on_Siloo_pbn_clicked();
     void on_YonjehFarm_pbn_clicked();
@@ -86,6 +89,7 @@ private:
     SheepHome sheepHome;
     YonjeFarm yonjeFarm;
     GandomFarm gandomFarm;
+    MyThread myThread;
 };
 
 #endif // FARM_H

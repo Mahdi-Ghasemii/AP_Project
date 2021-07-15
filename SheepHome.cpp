@@ -12,6 +12,7 @@ SheepHome::SheepHome(QWidget *parent) :
     level_habitat=1;
     feed_time=0;
     is_collected=true;
+    is_build=false;
 }
 
 SheepHome::~SheepHome()
@@ -25,6 +26,24 @@ void SheepHome::operator=(const SheepHome& p){
     level_habitat=p.level_habitat;
     feed_time=p.feed_time;
     is_collected=p.is_collected;
+}
+
+void SheepHome::build(){
+    //aya morghdari be tazegi shoroo be kar karde?
+        if(Data::get_iterator()->get_coin()>=50){
+            if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=4){
+                if(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()>=2){
+                    //set date
+                    QMessageBox::information(this," ","ساختن آغل با موفقیت آغاز شد");
+                }
+                else
+                    QMessageBox::warning(this,"تذکر","بیل به اندازه کافی موجود نمی باشد");
+            }
+            else
+                QMessageBox::warning(this,"تذکر","میخ به اندازه کافی موجود نمی باشد");
+        }
+        else
+            QMessageBox::warning(this,"تذکر","سکه به اندازه کافی موجود نمی باشد");
 }
 
 void SheepHome::on_upgrade_btn_clicked()
@@ -68,7 +87,13 @@ void SheepHome::on_feeding_btn_clicked()
                     Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-stock_animal);
                     is_collected=false;
                     feed_time=time(NULL);
+                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+7*stock_animal);
                     QMessageBox::information(this," ","غذا دادن با موفقیت انجام شد");
+                    if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+                        Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+                        QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
+                    }
                 }
                 else {
                     QMessageBox::warning(this,"تذکر","شما هنوز پشم‌ها را نچیده‌اید");
@@ -97,10 +122,16 @@ void SheepHome::on_collect_btn_clicked()
                     Data::get_iterator()->get_farm().get_storage().Get_pashm().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()+stock_animal);
                     Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()+stock_animal);
                     Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-10*stock_animal);
+                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+9*stock_animal);
                     QMessageBox::information(this," ","چیدن پشم با موفقیت انجام شد");
+                    if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+                        Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+                        QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
+                    }
                 }
                 else {
-                    QMessageBox::warning(this,"تذکر","پشم‌ها به تازگی چیده شده‌اند");
+                    QMessageBox::warning(this,"تذکر","لطفا ابتدا به گوسفند‌ها غذا دهید");
                 }
             }
             else {
