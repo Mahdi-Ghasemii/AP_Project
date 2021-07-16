@@ -147,7 +147,11 @@ void Farm::on_GandomFarm_pbn_clicked()
 void Farm::on_SheepHome_pbn_clicked()
 {
     if(Data::get_iterator()->get_level()<6){
-        QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 6 باشد");
+        QMessageBox::warning(this,"تذکر","برای دسترسی به این مکان سطح شما باید حداقل 6 باشد");
+        return;
+    }
+    if(sheepHome.get_is_build()==false&&myThread.Get_build_SheepHome()!=0){
+        QMessageBox::warning(this,"تذکر","آغل در حال ساخته شدن است");
         return;
     }
     if(sheepHome.get_is_build()==false){
@@ -164,7 +168,11 @@ void Farm::on_SheepHome_pbn_clicked()
 void Farm::on_ChickenHome_pbn_clicked()
 {
     if(Data::get_iterator()->get_level()<2){
-        QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 2 باشد");
+        QMessageBox::warning(this,"تذکر","برای دسترسی به این مکان سطح شما باید حداقل 2 باشد");
+        return;
+    }
+    if(chickenHome.get_is_build()==false&&myThread.Get_build_ChickenHome()!=0){
+        QMessageBox::warning(this,"تذکر","مرغداری در حال ساخته شدن است");
         return;
     }
     if(chickenHome.get_is_build()==false){
@@ -181,7 +189,11 @@ void Farm::on_ChickenHome_pbn_clicked()
 void Farm::on_CowHome_pbn_clicked()
 {
     if(Data::get_iterator()->get_level()<4){
-        QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 4 باشد");
+        QMessageBox::warning(this,"تذکر","برای دسترسی به این مکان سطح شما باید حداقل 4 باشد");
+        return;
+    }
+    if(cowHome.get_is_build()==false&&myThread.Get_build_CowHome()!=0){
+        QMessageBox::warning(this,"تذکر","'گاوداری در حال ساخته شدن است");
         return;
     }
     if(cowHome.get_is_build()==false){

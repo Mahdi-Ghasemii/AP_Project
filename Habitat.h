@@ -16,7 +16,6 @@ protected:
     int stock_animal;
     int level_habitat;
     time_t feed_time;
-    bool is_collected;
     bool is_build;
 
 public:
