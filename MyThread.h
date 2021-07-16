@@ -46,16 +46,27 @@ public:
 
 
     // Arsalan functions:
+    void Set_planting_Gandomfarm(time_t t);
+    time_t Get_planting_Gandomfarm();
+
     void Set_upgrade_Gandomfarm(time_t t);
     time_t Get_upgrade_Gandomfarm();
+    // ////////////////////////////////////
+    void Set_planting_YonjeFarm(time_t t);
+    time_t Get_planting_YonjeFarm();
+
     void Set_Collect_from_GandomFarm(time_t t);
     time_t Get_Collect_from_GandomFarm();
+
     void Set_upgrade_Yonjehfarm(time_t t);
     time_t Get_upgrade_Yonjehfarm();
+
     void Set_Collect_from_YonjehFarm(time_t t);
     time_t Get_Collect_from_YonjehFarm();
+
     void Set_Build_YonjehFarm(time_t t);
     time_t Get_Build_YonjehFarm();
+
     void Set_Plow_YonjehFarm(time_t t);
     time_t Get_Plow_YonjehFarm();
 
@@ -88,8 +99,10 @@ private:
     // GandomFarm :
     time_t upgrade_Gandomfarm;
     time_t Collect_from_GandomFarm;
+    time_t Planting_from_GandomFarm;
 
     // YonjehFarm :
+    time_t Planting_from_YonjeFarm;
     time_t upgrade_Yonjehfarm;
     time_t Collect_from_YonjehFarm;
     time_t Build_YonjehFarm;
