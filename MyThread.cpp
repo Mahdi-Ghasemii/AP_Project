@@ -349,7 +349,15 @@ time_t MyThread::Get_upgrade_Siloo(){
 }
 
 void MyThread::Push_Back_on_buy_Milk(time_t t){
-     buy_Milk.push_back(t);
+    buy_Milk.push_back(t);
+}
+
+time_t MyThread::Set_Buy_Milk(int index)
+{
+    if(index < buy_Milk.size()){
+        return buy_Milk[index];
+    }
+    else return 0;
 }
 
 
