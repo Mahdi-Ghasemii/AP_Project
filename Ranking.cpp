@@ -33,11 +33,7 @@ bool sort_players(const Player& p1, const Player& p2) {
 void Ranking::Get_Signal_From_Farm() {
     std::sort(Data::get_players().begin(), Data::get_players().end(), sort_players);
     setWindowTitle("رتبه بندی");
-    QPixmap qpm("C:/Users/TAD BIR RAYANEH/Desktop/test files for ap project/tree-blur-background_11317-16.png");
-    qpm = qpm.scaled(this->size(), Qt::IgnoreAspectRatio);
-    QPalette qp;
-    qp.setBrush(QPalette::Window, qpm);
-    this->setPalette(qp);
+
     design();
 
 }

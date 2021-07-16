@@ -13,22 +13,52 @@
   <property name="windowTitle">
    <string>Hey Day</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QWidget" name="verticalWidget" native="true">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>180</y>
-      <width>55</width>
-      <height>16</height>
+      <x>10</x>
+      <y>39</y>
+      <width>671</width>
+      <height>381</height>
      </rect>
     </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
+    <widget class="QLabel" name="lbl_gif">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>0</y>
+       <width>511</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>240</y>
+       <width>180</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>لطفا کمی صبر کنید...</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

@@ -2,6 +2,9 @@
 #define LOGO_H
 
 #include <QMainWindow>
+#include <QTimer>
+#include <QMovie>
+#include <QLabel>
 
 namespace Ui {
 class Logo;
@@ -17,6 +20,15 @@ public:
 
 private:
     Ui::Logo *ui;
+    QTimer* t1;
+    QTimer* t2;
+    int timer;
+
+private slots:
+    void logo_show();
+
+    void set_text();
+
 };
 
 #endif // LOGO_H
