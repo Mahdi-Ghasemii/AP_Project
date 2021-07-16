@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include <math.h>
 #include "Data.h"
-
+#include <QDebug>
 Storage::Storage(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Storage)
@@ -20,7 +20,7 @@ Storage::Storage(QWidget *parent) :
     this->occupied_capacity = 2;
     this->building_Level = 1;
 
-    this->time_add_milk = time(NULL);
+    this->time_add_milk = 0;
 
 
 
@@ -111,31 +111,46 @@ Storage::~Storage(){
 
 void Storage::on_Upgrade_Storage_clicked()
 {
+        if(Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_Storage() !=0 ){
+            QMessageBox::warning(this,"","شما قبلا درخواست ارتقا داده اید !.",QMessageBox::Ok);
+            return;
+        }
 
-        if(Data::get_iterator()->get_level() <= this->building_Level){
+        if(Data::get_iterator()->get_level() < this->building_Level){
 
             QMessageBox::warning(this,"","سطح انبار نمی تواند از سطح بازیکن بیشتر شود.",QMessageBox::Ok);
+            return;
         }
 
         else if(!(this->mikh.Get_Number() >= this->building_Level)){
 
-            QMessageBox::warning(this,"","تعداد ميخ براي ارتقا سيلو كافي نمي باشد .",QMessageBox::Ok);
+            QMessageBox::warning(this,"","تعداد ميخ براي ارتقا انبار كافي نمي باشد .",QMessageBox::Ok);
+            return;
         }
 
         else if(!(this->bill.Get_Number() >= this->building_Level -1)){
 
-            QMessageBox::warning(this,"","تعداد بيل براي ارتقا سيلو كافي نمي باشد",QMessageBox::Ok);
+            QMessageBox::warning(this,"","تعداد بيل براي ارتقا انبار كافي نمي باشد",QMessageBox::Ok);
+            return;
         }
         else if(!(Data::get_iterator()->get_coin() >= pow(this->building_Level,3) * 10)){
 
             QMessageBox::warning(this,"","تعداد سکه براي ارتقا سيلو كافي نمي باشد",QMessageBox::Ok);
+            return;
         }
 
         else {
-            this->building_Level = round(this->building_Level *3 / 2);
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + this->building_Level * 3);
 
-            QMessageBox::information(this,"","انبار با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+            QMessageBox::information(this,"","درخواست شما برای ارتقا انبار با موفقیت ثبت شد.",QMessageBox::Ok);
+
+            this->mikh.Set_Number(this->mikh.Get_Number() - this->building_Level);
+            this->bill.Set_Number(this->bill.Get_Number() - (this->building_Level -1));
+            Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() - pow(this->building_Level,3) * 10);
+
+            time_t now = time(NULL);
+            Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Storage(now);
+            qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_Storage();
+            return;
         }
 
 }

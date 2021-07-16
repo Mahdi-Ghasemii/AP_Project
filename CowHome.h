@@ -16,6 +16,7 @@ public:
     explicit CowHome(QWidget *parent = nullptr);
     ~CowHome();
     void operator=(const CowHome&);
+    void build();
 
 private slots:
     void on_upgrade_btn_clicked();

@@ -12,6 +12,7 @@ CowHome::CowHome(QWidget *parent) :
     level_habitat=1;
     feed_time=0;
     is_collected=true;
+    is_build=false;
 }
 
 CowHome::~CowHome()
@@ -25,6 +26,24 @@ void CowHome::operator=(const CowHome& p){
     level_habitat=p.level_habitat;
     feed_time=p.feed_time;
     is_collected=p.is_collected;
+}
+
+void CowHome::build(){
+    //aya morghdari be tazegi shoroo be kar karde?
+        if(Data::get_iterator()->get_coin()>=20){
+            if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=3){
+                if(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()>=1){
+                    //set date
+                    QMessageBox::information(this," ","ساختن گاوداری با موفقیت آغاز شد");
+                }
+                else
+                    QMessageBox::warning(this,"تذکر","بیل به اندازه کافی موجود نمی باشد");
+            }
+            else
+                QMessageBox::warning(this,"تذکر","میخ به اندازه کافی موجود نمی باشد");
+        }
+        else
+            QMessageBox::warning(this,"تذکر","سکه به اندازه کافی موجود نمی باشد");
 }
 
 void CowHome::on_upgrade_btn_clicked()
@@ -68,7 +87,13 @@ void CowHome::on_feeding_btn_clicked()
                     Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-2*stock_animal);
                     is_collected=false;
                     feed_time=time(NULL);
+                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+3*stock_animal);
                     QMessageBox::information(this," ","غذا دادن با موفقیت انجام شد");
+                    if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+                        Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+                        QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
+                    }
                 }
                 else {
                     QMessageBox::warning(this,"تذکر","شما هنوز شیرها را ندوشیده‌اید");
@@ -96,10 +121,16 @@ void CowHome::on_collect_btn_clicked()
                 is_collected=true;
                 Data::get_iterator()->get_farm().get_storage().Get_milk().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()+stock_animal);
                 Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()+stock_animal);
+                Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+5*stock_animal);
                 QMessageBox::information(this," ","برداشت شیر با موفقیت انجام شد");
+                if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+                    Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+                    QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
+                }
             }
             else {
-                QMessageBox::warning(this,"تذکر","شیرها به تازگی برداشت شده‌اند");
+                QMessageBox::warning(this,"تذکر","لطفا ابتدا به گاوها غذا دهید");
             }
         }
         else {

@@ -2,8 +2,6 @@
 #include "ui_Ranking.h"
 #include "Data.h"
 #include "Player.h"
-#include <QVBoxLayout>
-#include <QLabel>
 
 
 bool sort_players(const Player&, const Player&);
@@ -50,9 +48,6 @@ void Ranking::operator=(const Ranking &) {
 
 void Ranking::design()
 {
-    QVBoxLayout* mainlayout = new QVBoxLayout(this);
-
-    QLabel* lbl = new QLabel("رتبه بندی");
 
     QTableWidget* table = new QTableWidget(this);
     table->setRowCount(Data::get_players().size());
@@ -99,9 +94,6 @@ void Ranking::design()
     }
 
 
-    mainlayout->addWidget(lbl);
-    mainlayout->addWidget(table);
 
-    this->setLayout(mainlayout);
     this->setCentralWidget(table);
 }

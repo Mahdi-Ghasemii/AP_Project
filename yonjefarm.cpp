@@ -5,7 +5,8 @@
 #include <QMessageBox>
 #include "Data.h"
 
-bool YonjeFarm::isbuilt(void){
+void YonjeFarm::build(void){
+
 
 // if (should check tarikh
  if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=1){
@@ -18,7 +19,9 @@ bool YonjeFarm::isbuilt(void){
              Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-1);
              Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-15);
              Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+6);
+              //set date;
 
+             return ;
             QMessageBox::information(this,"تبریک","زمین یونجه ساخته شد. .",QMessageBox::Ok);
              if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
                  Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
@@ -28,32 +31,31 @@ bool YonjeFarm::isbuilt(void){
          }
          else {
               QMessageBox::information(this,"کمبود منابع","سطح کاربر کافی نمیباشد. .",QMessageBox::Ok);
-              return false;
+              return ;
 
          }
      }
      else {
           QMessageBox::information(this,"کمبود منابع","سکه کافی نمیباشد. .",QMessageBox::Ok);
-          return false;
+          return ;
 
      }
  }
 
  else{
         QMessageBox::information(this,"کمبود منابع","تعداد بیل کافی نمیباشد. .",QMessageBox::Ok);
-        return false;
+        return ;
 
      }
  }
  else {
      QMessageBox::information(this,"کمبود منابع","تعداد میخ کافی نمیباشد. .",QMessageBox::Ok);
-     return false;
+     return ;
 
  }
 
 
-is_biulted=true;
-return true;
+
   }
 
 YonjeFarm::YonjeFarm(QWidget *parent,int _area,int _farm_level,bool _is_plantable,bool _is_underplanting) :
@@ -72,6 +74,7 @@ YonjeFarm::YonjeFarm(QWidget *parent,int _area,int _farm_level,bool _is_plantabl
        palette.setBrush(QPalette::Window, bkgnd);
        this->setPalette(palette);
        ui->yonjearealbl->setText(QString::number(area));
+
 
 //       if(is_biulted==false){
 //           bool b=isbuilt();
@@ -108,6 +111,14 @@ void YonjeFarm::set_level(int _level){farm_level=_level;return ;}
 
 int YonjeFarm::get_level(void){return farm_level;}
 
+bool YonjeFarm::get_is_build(){
+    return is_biuld;
+}
+
+void YonjeFarm::set_is_build(bool _is_build){
+    is_biuld=_is_build;
+}
+
 //bool isunderplanting(void){}
 
 //bool YonjeFarm::derokardan(void){}
@@ -141,7 +152,7 @@ void YonjeFarm::on_planting_clicked()
         QMessageBox::warning(this,"کمبود ضروریات","زمین شخم زده نشده است . .",QMessageBox::Ok);
         break;
        }
-        if (Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>area){
+        if (Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=area){
         Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-area);
         Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-area);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(2*area));

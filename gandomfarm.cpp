@@ -79,13 +79,14 @@ void GandomFarm::on_plantingpbt_clicked()
                 QMessageBox::warning(this,"تاریخ","زمین زیر کشت است. .",QMessageBox::Ok);
                 break;
     }
-        if(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()>=area){
+        if(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()<area){
             QMessageBox::warning(this,"عدم موجودی","گندم به اندازه نیاز ذر انبار وجود ندارد. .",QMessageBox::Ok);
             break;
         }
         Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()-area);
         Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()-area);
-
+        QMessageBox::warning(this,"تبریک","زمین با موفقیت به زیر کشت رفت. .",QMessageBox::Ok);
+        break;
      }
 }
 

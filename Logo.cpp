@@ -1,5 +1,6 @@
 #include "Logo.h"
 #include "ui_Logo.h"
+#include <QMovie>
 
 
 Logo::Logo(QWidget *parent) :
@@ -7,6 +8,8 @@ Logo::Logo(QWidget *parent) :
     ui(new Ui::Logo)
 {
     ui->setupUi(this);
+
+
 }
 
 Logo::~Logo()
