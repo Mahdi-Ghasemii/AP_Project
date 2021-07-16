@@ -25,7 +25,7 @@ public:
     void Set_upgrade_Siloo(time_t t);
     time_t Get_upgrade_Siloo();
     void Push_Back_on_buy_Milk(time_t t);
-    time_t Set_Buy_Milk(int index);
+    time_t Get_Buy_Milk(int index);
 
 
     // Aref functions :
