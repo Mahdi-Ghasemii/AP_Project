@@ -11,7 +11,6 @@ ChickenHome::ChickenHome(QWidget *parent) :
     stock_animal=0;
     level_habitat=1;
     feed_time=0;
-    is_collected=true;
     is_build=false;
 }
 
@@ -25,52 +24,48 @@ void ChickenHome::operator=(const ChickenHome& p){
     stock_animal=p.stock_animal;
     level_habitat=p.level_habitat;
     feed_time=p.feed_time;
-    is_collected=p.is_collected;
+    is_build=p.is_build;
 }
 
 void ChickenHome::build(){
-    //aya morghdari be tazegi shoroo be kar karde?
-        if(Data::get_iterator()->get_coin()>=10){
-            if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=2){
-                //set date
-                QMessageBox::information(this," ","ساختن مرغداری با موفقیت آغاز شد");
-            }
-            else
-                QMessageBox::warning(this,"تذکر","میخ به اندازه کافی موجود نمی باشد");
+    if(Data::get_iterator()->get_coin()>=10){
+        if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=2){
+            Data::get_iterator()->get_farm().Get_MyThread().Set_build_ChickenHome(time(NULL));
+            Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-10);
+            Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()-2);
+            QMessageBox::information(this," ","ساختن مرغداری با موفقیت آغاز شد");
         }
         else
-            QMessageBox::warning(this,"تذکر","سکه به اندازه کافی موجود نمی باشد");
+            QMessageBox::warning(this,"تذکر","میخ به اندازه کافی موجود نمی باشد");
+    }
+    else
+        QMessageBox::warning(this,"تذکر","سکه به اندازه کافی موجود نمی باشد");
 }
 
 void ChickenHome::on_upgrade_btn_clicked()
 {
-    if(Data::get_iterator()->get_level()>=3){
-        if(Data::get_iterator()->get_coin()>=10){
-            if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>0){
-                Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()-1);
-                Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-10);
-                Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+5);
-                capacity*=2;
-                level_habitat++;
-                ui->capacity_lbl->setText(QString::number(capacity));
-                ui->level_lbl->setText(QString::number(level_habitat));
-                QMessageBox::information(this," ","ارتقا با موفقیت انجام شد");
-                if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
-                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-                    Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-                    QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
+    if(Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_ChickenHome()==0){
+        if(Data::get_iterator()->get_level()>=3){
+            if(Data::get_iterator()->get_coin()>=10){
+                if(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()>=1){
+                    Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()-1);
+                    Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-10);
+                    Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_ChickenHome(time(NULL));
+                    QMessageBox::information(this," ","فرایند ارتقای مرغداری با موفقیت آغاز شد");
                 }
+                else
+                    QMessageBox::warning(this,"تذکر","میخ به اندازه کافی موجود نمی باشد");
+
             }
             else
-                QMessageBox::warning(this,"تذکر","میخ به اندازه کافی موجود نمی باشد");
+                QMessageBox::warning(this,"تذکر","سکه به اندازه کافی موجود نمی باشد");
 
         }
         else
-            QMessageBox::warning(this,"تذکر","سکه به اندازه کافی موجود نمی باشد");
-
+            QMessageBox::warning(this,"تذکر","سطح شما برای ارتقا باید حداقل 3 باشد");
     }
     else
-        QMessageBox::warning(this,"تذکر","سطح شما برای ارتقا باید حداقل 3 باشد");
+        QMessageBox::warning(this,"تذکر","مرغداری در حال ارتقا یافتن است");
 
 }
 
@@ -78,10 +73,9 @@ void ChickenHome::on_feeding_btn_clicked()
 {
     if(stock_animal!=0){
         if(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number() >=stock_animal){
-            if(difftime(time(NULL),feed_time)>2*24*3600){
-                if (is_collected==true){
+            if(time(NULL)-feed_time>=2*24*3600){
+                if (feed_time==0){
                     Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()-stock_animal);
-                    is_collected=false;
                     feed_time=time(NULL);
                     Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+stock_animal);
                     QMessageBox::information(this," ","غذا دادن با موفقیت انجام شد");
@@ -111,9 +105,9 @@ void ChickenHome::on_feeding_btn_clicked()
 void ChickenHome::on_collect_btn_clicked()
 {
     if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=stock_animal){
-        if(difftime(time(NULL),feed_time)>2*24*3600){
-            if(is_collected==false){
-                is_collected=true;
+        if(time(NULL)-feed_time>2*24*3600){
+            if(feed_time!=0){
+                feed_time=0;
                 Data::get_iterator()->get_farm().get_storage().Get_egg().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_egg().Get_Number()+stock_animal);
                 Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_egg().Get_Number()+stock_animal);
                 Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+2*stock_animal);

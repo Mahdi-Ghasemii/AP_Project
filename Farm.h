@@ -62,6 +62,10 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_clicked();
+
+    void On_ExitAction_triggred();
+
 signals:
 
 
@@ -78,6 +82,8 @@ signals:
     void Send_Signal_to_SheepHome();
     void Send_Signal_to_CowHome();
     void Send_Signal_to_ChickenHome();
+
+
 
 
 private:

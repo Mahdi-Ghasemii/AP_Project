@@ -81,6 +81,10 @@ void Siloo::on_Upgrade_Siloo_clicked()
             Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() - pow((this->building_Level*2),2)*100);
             QMessageBox::information(this,"","درخواست شما برای ارتقا سیلو با موفقیت ثبت شد.",QMessageBox::Ok);
 
+            ui->Siloo_Capacity->setText(QString::number(this->capasity));
+            ui->Gandom_Available->setText(QString::number(this->occupied_capacity));
+            ui->Siloo_Level->setText(QString::number(this->building_Level));
+
             time_t now = time(NULL);
             Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Siloo(now);
 

@@ -1,13 +1,21 @@
 #ifndef RANKING_H
 #define RANKING_H
 
-#include <QWidget>
+#include <QMainWindow>
+#include <algorithm>
+#include <QTableWidget>
+#include <QTableWidgetItem>
+#include <QHeaderView>
+#include <QString>
+#include <QPixmap>
+#include <QPalette>
+
 
 namespace Ui {
 class Ranking;
 }
 
-class Ranking : public QWidget
+class Ranking : public QMainWindow
 {
     Q_OBJECT
 
@@ -20,11 +28,13 @@ public:
 private:
     Ui::Ranking *ui;
 
+    void design();
+
 public slots:
-    void show_ranking();
+    void Get_Signal_From_Farm();
 
 signals:
-    void back_to_farm();
+    void Send_Signal_to_Farm();
 };
 
 #endif // RANKING_H

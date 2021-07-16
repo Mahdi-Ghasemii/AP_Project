@@ -81,6 +81,14 @@ YonjeFarm::YonjeFarm(QWidget *parent,int _area,int _farm_level,bool _is_plantabl
        palette.setBrush(QPalette::Window, bkgnd);
        this->setPalette(palette);
        ui->yonjearealbl->setText(QString::number(area));
+
+
+//       if(is_biulted==false){
+//           bool b=isbuilt();
+//           if(b==false){
+//               this->close();
+//           }
+//       }
 }
 
 

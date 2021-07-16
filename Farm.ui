@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>-20</y>
+      <y>0</y>
       <width>1000</width>
       <height>666</height>
      </rect>
@@ -268,6 +268,19 @@
      </size>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>90</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>رتبه بندی</string>
+    </property>
+   </widget>
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
@@ -360,6 +373,7 @@
    <zorder>ChickenHome_pbn</zorder>
    <zorder>CowHome_pbn</zorder>
    <zorder>Num_Coin</zorder>
+   <zorder>pushButton</zorder>
    <zorder>progressBar</zorder>
    <zorder>label</zorder>
    <zorder>_Level</zorder>
@@ -367,6 +381,28 @@
    <zorder>label_6</zorder>
    <zorder>_Max_Experience</zorder>
   </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>منو</string>
+    </property>
+    <addaction name="ExitAction"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="ExitAction">
+   <property name="text">
+    <string>خروج</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="resource.qrc"/>
