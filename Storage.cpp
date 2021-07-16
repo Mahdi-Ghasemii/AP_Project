@@ -147,6 +147,15 @@ void Storage::on_Upgrade_Storage_clicked()
             this->bill.Set_Number(this->bill.Get_Number() - (this->building_Level -1));
             Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() - pow(this->building_Level,3) * 10);
 
+
+
+            ui->Occupied_Capasity->setText(QString::number(this->occupied_capacity));
+            ui->Storage_Capasity->setText(QString::number(this->capasity));
+
+
+
+            ui->Mikh_Available->setText(QString::number(this->mikh.Get_Number()));
+            ui->Bill_Available->setText(QString::number(this->bill.Get_Number()));
             time_t now = time(NULL);
             Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Storage(now);
             qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_Storage();
