@@ -70,30 +70,35 @@ GandomFarm::~GandomFarm()
 
 void GandomFarm::on_plantingpbt_clicked()
 {
-    int i=0;
-    for (i=0;i<1;i++){
-        if(i//for check that is under planting چک کردن برای زیر کشت نبودن//)
-                )
-        {
 
-                QMessageBox::warning(this,"تاریخ","زمین زیر کشت است. .",QMessageBox::Ok);
-                break;
+
+    if(Data::get_iterator()->get_farm().Get_MyThread().Get_planting_Gandomfarm() !=0 ){
+        QMessageBox::warning(this,"تاریخ","زمین زیر کشت است. .",QMessageBox::Ok);
+        return ;
     }
+
+
         if(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()<area){
             QMessageBox::warning(this,"عدم موجودی","گندم به اندازه نیاز ذر انبار وجود ندارد. .",QMessageBox::Ok);
-            break;
+            return ;
         }
         Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()-area);
         Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()-area);
         QMessageBox::warning(this,"تبریک","زمین با موفقیت به زیر کشت رفت. .",QMessageBox::Ok);
-        break;
+        time_t now = time(NULL);
+        Data::get_iterator()->get_farm().Get_MyThread().Set_planting_Gandomfarm(now);
+        qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_planting_Gandomfarm();
+        return;
      }
-}
+
 
 // /////////////////////////////////////////////////////////////////////////////////////////////
 void GandomFarm::on_upgradepbt_clicked()
 {
-    // چک کردن زمان دورئز الزامی است
+    if(Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_Gandomfarm() !=0 ){
+        QMessageBox::warning(this,"تذکر","شما قبلا درخواست ارتقا داده اید !.",QMessageBox::Ok);
+        return;
+    }
     if(Data::get_iterator()->get_level()>=2){
      if(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()>=(area)){
         if(Data::get_iterator()->get_coin()>=(5*area)){
@@ -101,14 +106,18 @@ void GandomFarm::on_upgradepbt_clicked()
 
                 Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number()-area);
                 Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-area);
-                Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(3*area));
-                area*=2;
-                 QMessageBox::information(this,"تبریک","ارتقای مزرعه گندم انجام شد. .",QMessageBox::Ok);
-                if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
-                    Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-                    Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-                     QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
-                }
+              //  Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(3*area));
+               // area*=2;
+                // set time
+                time_t now = time(NULL);
+                Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Gandomfarm(now);
+                qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_Gandomfarm();
+                 //QMessageBox::information(this,"تبریک","ارتقای مزرعه گندم انجام شد. .",QMessageBox::Ok);
+                //if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+                  //  Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+                   // Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+                   //  QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
+               // }
 
         }
         else {
@@ -131,33 +140,32 @@ void GandomFarm::on_upgradepbt_clicked()
 
 void GandomFarm::on_derokardanpbt_clicked()
 {
-    ///
+    if(Data::get_iterator()->get_farm().Get_MyThread().Get_Collect_from_GandomFarm() !=0 ){
+        QMessageBox::warning(this,"تاریخ","زمین آماده برداشت نیست. .",QMessageBox::Ok);
+        return;
+    }
+    if(Data::get_iterator()->get_farm().Get_MyThread().Get_planting_Gandomfarm() ==0 ){
+        QMessageBox::warning(this,"تاریخ","هنوز محصولی کاشت نشده. .",QMessageBox::Ok);
+        return ;
+    }
 
-    ///
-    // / ////////////////چک کند د روز بعد کاش باشد
-   if (//بله)
-         1 ){
-      if(Data::get_iterator()->get_farm().get_siloo().GetCapasity()-Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()>=2*area){
-    Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*area);
-
-    QMessageBox::warning(this,"موفقیت","درو شد. .",QMessageBox::Ok);
-    Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(  Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()+2*area);
-   if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
-       Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-       Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-       QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
-     }
-   }
-   else {
-       QMessageBox::warning(this,"ظرفیت ","سیلو ظرفیت ندارد. .",QMessageBox::Ok);
-   }
-   }
-      else {
-       QMessageBox::warning(this,"تاریخ","زمین آماده برداشت نیست. .",QMessageBox::Ok);
-
-      }
+       //QMessageBox::information(this,"","عملیات درو کردن آغاز شد. ",QMessageBox::Ok);
+     // if(Data::get_iterator()->get_farm().get_siloo().GetCapasity()-Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()>=2*area){
+   // Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*area);
+    //time_t now = time(NULL);
+  //  Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Gandomfarm(now);
+  //  QMessageBox::warning(this,"موفقیت","درو شد. .",QMessageBox::Ok);
+  // Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(  Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()+2*area);
+   //if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+     //  Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+     //  Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+     //  QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
+    // }
+   //}
+  // else {
+   //    QMessageBox::warning(this,"ظرفیت ","سیلو ظرفیت ندارد. .",QMessageBox::Ok);
+   //}
 }
-
 
 void GandomFarm::on_Back_clicked()
 {

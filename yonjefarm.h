@@ -3,6 +3,7 @@
 #include <ctime>
 #include <QWidget>
 #include "mainfarm.h"
+#include "MyThread.h"
 
 namespace Ui {
 class YonjeFarm;
@@ -41,7 +42,8 @@ public:
      void set_level(int _level);
 
      int get_level(void);
-
+     bool get_is_plantable(void);
+     void set_is_plantable(bool _is_plantable);
      //bool isunderplanting(void){}
 
      //bool derokardan(void);
