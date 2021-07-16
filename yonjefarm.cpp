@@ -26,7 +26,7 @@ void YonjeFarm::build(void){
               //set date;
              time_t now = time(NULL);
              Data::get_iterator()->get_farm().Get_MyThread().Set_Build_YonjehFarm(now);
-
+             qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_Build_YonjehFarm();
             //QMessageBox::information(this,"تبریک","زمین یونجه ساخته شد. .",QMessageBox::Ok);
             // if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
               //   Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
@@ -164,6 +164,7 @@ void YonjeFarm::on_planting_clicked()
        // Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(2*area));
         time_t now = time(NULL);
         Data::get_iterator()->get_farm().Get_MyThread().Set_planting_YonjeFarm(now);
+        qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_planting_YonjeFarm();
         is_plantable=false;
          //QMessageBox::information(this,"توجه","کاشت یونجه انجام شد. .",QMessageBox::Ok);
        // if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
@@ -200,6 +201,7 @@ void YonjeFarm::on_upgradebutton_clicked()
                 //time setting
                 time_t now = time(NULL);
                 Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Yonjehfarm(now);
+                qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_Yonjehfarm();
                  //QMessageBox::information(this,"تبریک","ارتقای مزرعه یونجه انجام شد. .",QMessageBox::Ok);
 
                // if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
@@ -284,6 +286,7 @@ if(Data::get_iterator()->get_coin()>=(area*5)){
       // time setting
       time_t now = time(NULL);
       Data::get_iterator()->get_farm().Get_MyThread().Set_Plow_YonjehFarm(now);
+      qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_Plow_YonjehFarm();
 }
 else {
     QMessageBox::warning(this,"مالی","سکه کافی ندارید. .",QMessageBox::Ok);

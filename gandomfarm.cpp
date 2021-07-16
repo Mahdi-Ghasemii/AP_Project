@@ -87,6 +87,7 @@ void GandomFarm::on_plantingpbt_clicked()
         QMessageBox::warning(this,"تبریک","زمین با موفقیت به زیر کشت رفت. .",QMessageBox::Ok);
         time_t now = time(NULL);
         Data::get_iterator()->get_farm().Get_MyThread().Set_planting_Gandomfarm(now);
+        qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_planting_Gandomfarm();
         return;
      }
 
@@ -110,6 +111,7 @@ void GandomFarm::on_upgradepbt_clicked()
                 // set time
                 time_t now = time(NULL);
                 Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Gandomfarm(now);
+                qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_Gandomfarm();
                  //QMessageBox::information(this,"تبریک","ارتقای مزرعه گندم انجام شد. .",QMessageBox::Ok);
                 //if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
                   //  Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
