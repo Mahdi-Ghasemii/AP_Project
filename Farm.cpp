@@ -26,7 +26,8 @@ Farm::Farm(QWidget *parent) :
     connect(this, SIGNAL(Send_Signal_to_Gandomfarm()),&gandomFarm,SLOT(Get_Signal_From_Farm()));
     connect(this, SIGNAL(Send_Signal_to_Yonjefarm()),&yonjeFarm,SLOT(Get_Signal_From_Farm()));
 
-
+    connect(&ranking, SIGNAL(Send_Signal_to_Farm()), this, SLOT(Show_Farm_Class()));
+    connect(this, SIGNAL(Send_Signal_to_Ranking()), &ranking, SLOT(Get_Signal_From_Farm()));
 
 
     connect(&sheepHome, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
@@ -168,5 +169,12 @@ void Farm::on_pushButton_3_clicked()
 
     emit Send_Signal_to_Store();
     store.show();
+}
+
+
+void Farm::on_pushButton_clicked()
+{
+    emit Send_Signal_to_Ranking();
+    ranking.show();
 }
 
