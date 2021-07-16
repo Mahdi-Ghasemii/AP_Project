@@ -5,6 +5,7 @@
 #include <time.h>
 #include <QVector>
 
+
 class MyThread : public QThread
 {
 public:

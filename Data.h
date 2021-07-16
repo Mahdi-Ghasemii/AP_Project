@@ -31,8 +31,9 @@ public:
 
     static void write_on_file() {
         QFile f("Players.json");
-        f.open(QIODevice::ReadWrite);
+        f.open(QIODevice::ReadOnly);
         QJsonDocument d = QJsonDocument::fromJson(f.readAll());
+        f.close();
         QJsonObject o = d.object();
         QJsonObject temp = o[get_iterator()->get_username()].toObject();
         temp["Name"] = get_iterator()->get_name();
@@ -43,7 +44,27 @@ public:
         temp["Level"] = get_iterator()->get_level();
         temp["Experience"] = get_iterator()->get_experience();
         temp["Experience required for levelUp"] = get_iterator()->get_experience_required_for_levelUp();
-        //temp["SignUp time]
+        temp["SignUp time"] = get_iterator()->get_signUp_time();
+        temp["upgrade_Storage time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Storage();
+        temp["upgrade_Siloo time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Siloo();
+        //temp[buy_Milk]
+        temp["upgrade_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_ChickenHome();
+        temp["build_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_ChickenHome();
+        temp["collect_Eggs time"] = get_iterator()->get_farm().Get_MyThread().Get_collect_Eggs();
+        temp["upgrade_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_CowHome();
+        temp["build_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_CowHome();
+        temp["collect_Milks time"] = get_iterator()->get_farm().Get_MyThread().Get_collect_Milks();
+        temp["upgrade_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_SheepHome();
+        temp["build_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_SheepHome();
+        temp["correction_Sheeps time"] = get_iterator()->get_farm().Get_MyThread().Get_correction_Sheeps();
+        temp["upgrade_Gandomfarm time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Gandomfarm();
+        temp["Collect_from_GandomFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Collect_from_GandomFarm();
+        temp["Planting_from_GandomFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_planting_Gandomfarm();
+        temp["Planting_from_YonjeFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_planting_YonjeFarm();
+        temp["upgrade_Yonjehfarm time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Yonjehfarm();
+        temp["Collect_from_YonjehFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Collect_from_YonjehFarm();
+        temp["Build_YonjehFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Build_YonjehFarm();
+        temp["Plow_YonjehFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Plow_YonjehFarm();
         temp["Mikh number"] = get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
         temp["Bill number"] = get_iterator()->get_farm().get_storage().Get_bill().Get_Number();
         temp["Yonjeh number"] = get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number();
@@ -72,6 +93,7 @@ public:
         temp["YonjehFarm level"] = get_iterator()->get_farm().get_yonjeFarm().get_level();
         o[get_iterator()->get_username()] = temp;
         d.setObject(o);
+        f.open(QIODevice::WriteOnly);
         f.write(d.toJson());
         f.close();
     }

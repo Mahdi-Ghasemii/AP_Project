@@ -5,6 +5,8 @@
 #include "Siloo.h"
 #include "Data.h"
 #include "Builting.h"
+#include <QMessageBox>
+#include <QKeySequence>
 Farm::Farm(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Farm)
@@ -18,6 +20,7 @@ Farm::Farm(QWidget *parent) :
     ui->_Level->setText(QString::number(1));
     ui->_Experience->setText(QString::number(0));
     ui->_Max_Experience->setText(QString::number(10));
+    ui->ExitAction->setShortcut(QKeySequence(Qt::ALT | Qt::Key_F4));
 
     connect(&siloo, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&storage, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
@@ -240,7 +243,9 @@ void Farm::on_pushButton_clicked()
 
 void Farm::On_ExitAction_triggred()
 {
-    qDebug() << "MMMMMMMMMM";
+    Data::write_on_file();
+    this->close();
+    QMessageBox::information(nullptr, "اتمام بازی", "به امید دیدار!");
 }
 
 void Farm::get_signal_from_builting_for_chickenHome(QString str){

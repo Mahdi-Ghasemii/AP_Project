@@ -37,7 +37,27 @@ SignIn::SignIn(QWidget *parent) :
             p.set_level(temp["Level"].toInt());
             p.set_experience(temp["Experience"].toInt());
             p.set_experience_required_for_levelUp(temp["Experience required for levelUp"].toInt());
-            //p.set_signUp_time(temp["SignUp time"].toString());
+            p.set_signUp_time(temp["SignUp time"].toInt());
+            p.get_farm().Get_MyThread().Set_upgrade_Storage(temp["upgrade_Storage time"].toInt());
+            p.get_farm().Get_MyThread().Set_upgrade_Siloo(temp["upgrade_Siloo time"].toInt());
+            //temp[buy_Milk]
+             p.get_farm().Get_MyThread().Set_upgrade_ChickenHome(temp["upgrade_ChickenHome time"].toInt());
+            p.get_farm().Get_MyThread().Set_build_ChickenHome(temp["build_ChickenHome time"].toInt());
+            p.get_farm().Get_MyThread().Set_collect_Eggs(temp["collect_Eggs time"].toInt());
+            p.get_farm().Get_MyThread().Set_upgrade_CowHome(temp["upgrade_CowHome time"].toInt());
+            p.get_farm().Get_MyThread().Set_build_CowHome(temp["build_CowHome time"].toInt());
+            p.get_farm().Get_MyThread().Set_collect_Milks(temp["collect_Milks time"].toInt());
+            p.get_farm().Get_MyThread().Set_upgrade_SheepHome(temp["upgrade_SheepHome time"].toInt());
+            p.get_farm().Get_MyThread().Set_build_SheepHome(temp["build_SheepHome time"].toInt());
+            p.get_farm().Get_MyThread().Set_correction_Sheeps(temp["correction_Sheeps time"].toInt());
+            p.get_farm().Get_MyThread().Set_upgrade_Gandomfarm(temp["upgrade_Gandomfarm time"].toInt());
+            p.get_farm().Get_MyThread().Set_Collect_from_GandomFarm(temp["Collect_from_GandomFarm time"].toInt());
+            p.get_farm().Get_MyThread().Set_planting_Gandomfarm(temp["Planting_from_GandomFarm time"].toInt());
+            p.get_farm().Get_MyThread().Set_planting_YonjeFarm(temp["Planting_from_YonjeFarm time"].toInt());
+            p.get_farm().Get_MyThread().Set_upgrade_Yonjehfarm(temp["upgrade_Yonjehfarm time"].toInt());
+            p.get_farm().Get_MyThread().Set_Collect_from_YonjehFarm(temp["Collect_from_YonjehFarm time"].toInt());
+            p.get_farm().Get_MyThread().Set_Build_YonjehFarm(temp["Build_YonjehFarm time"].toInt());
+            p.get_farm().Get_MyThread().Set_Plow_YonjehFarm(temp["Plow_YonjehFarm time"].toInt());
             p.get_farm().get_storage().Get_mikh().Set_Number(temp["Mikh number"].toInt());
             p.get_farm().get_storage().Get_bill().Set_Number(temp["Bill number"].toInt());
             p.get_farm().get_storage().Get_yonjeh().Set_Number(temp["Yonjeh number"].toInt());

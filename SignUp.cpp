@@ -72,7 +72,27 @@ void SignUp::on_register_pbn_clicked()
     temp["Level"] = p.get_level();
     temp["Experience"] = p.get_experience();
     temp["Experience required for levelUp"] = p.get_experience_required_for_levelUp();
-    //temp["SignUp time]
+    temp["SignUp time"] = p.get_signUp_time();
+    temp["upgrade_Storage time"] = 0;
+    temp["upgrade_Siloo time"] = 0;
+    //temp[buy_Milk]
+    temp["upgrade_ChickenHome time"] = 0;
+    temp["build_ChickenHome time"] = 0;
+    temp["collect_Eggs time"] = 0;
+    temp["upgrade_CowHome time"] = 0;
+    temp["build_CowHome time"] = 0;
+    temp["collect_Milks time"] = 0;
+    temp["upgrade_SheepHome time"] = 0;
+    temp["build_SheepHome time"] = 0;
+    temp["correction_Sheeps time"] = 0;
+    temp["upgrade_Gandomfarm time"] = 0;
+    temp["Collect_from_GandomFarm time"] = 0;
+    temp["Planting_from_GandomFarm time"] = 0;
+    temp["Planting_from_YonjeFarm time"] = 0;
+    temp["upgrade_Yonjehfarm time"] = 0;
+    temp["Collect_from_YonjehFarm time"] = 0;
+    temp["Build_YonjehFarm time"] = 0;
+    temp["Plow_YonjehFarm time"] = 0;
     temp["Mikh number"] = 1;
     temp["Bill number"] = 0;
     temp["Yonjeh number"] = 1;

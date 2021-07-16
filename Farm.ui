@@ -42,6 +42,12 @@
       <height>91</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>انبار</string>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(102, 171, 26);</string>
     </property>
@@ -68,6 +74,12 @@
       <height>101</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>سیلو</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -90,6 +102,12 @@
       <width>71</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>فروشگاه</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(102, 171, 26);</string>
@@ -159,6 +177,12 @@
       <height>91</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>زمین یونجه</string>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(102, 171, 26);</string>
     </property>
@@ -185,6 +209,12 @@
       <height>101</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>زمین گندم</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -207,6 +237,12 @@
       <width>151</width>
       <height>101</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>آغل</string>
     </property>
     <property name="text">
      <string/>
@@ -231,6 +267,12 @@
       <height>101</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>مرغ داری</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -253,6 +295,15 @@
       <width>151</width>
       <height>101</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>گاوداری</string>
+    </property>
+    <property name="statusTip">
+     <string/>
     </property>
     <property name="text">
      <string/>
@@ -387,8 +438,24 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>26</height>
+     <height>29</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
@@ -401,6 +468,9 @@
   <action name="ExitAction">
    <property name="text">
     <string>خروج</string>
+   </property>
+   <property name="shortcut">
+    <string/>
    </property>
   </action>
  </widget>

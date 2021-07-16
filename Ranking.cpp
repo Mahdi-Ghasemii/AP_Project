@@ -45,6 +45,8 @@ void Ranking::operator=(const Ranking &) {
 void Ranking::design()
 {
 
+    //QFont
+
     QTableWidget* table = new QTableWidget(this);
     table->setRowCount(Data::get_players().size());
     table->setColumnCount(4);
