@@ -29,14 +29,6 @@ int Habitat::get_level_habitat(){
     return level_habitat;
 }
 
-void Habitat::set_feed_time(time_t _feed_time){
-    feed_time=_feed_time;
-}
-
-time_t Habitat::get_feed_time(){
-    return feed_time;
-}
-
 bool Habitat::get_is_build(){
     return is_build;
 }

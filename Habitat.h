@@ -15,7 +15,6 @@ protected:
     int capacity;
     int stock_animal;
     int level_habitat;
-    time_t feed_time;
     bool is_build;
 
 public:
@@ -26,10 +25,8 @@ public:
     int get_stock_animal();
     void set_level_habitat(int _level_habitat);
     int get_level_habitat();
-    void set_feed_time(time_t _feed_time);
     bool get_is_build();
     void set_is_build(bool _is_build);
-    time_t get_feed_time();
 };
 
 #endif // HABITAT_H

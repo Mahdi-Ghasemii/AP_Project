@@ -4,20 +4,21 @@
 MyThread::MyThread()
 {
 
-    time_login = 0;
+    time_login = time(NULL);
+    last_time_set=time(NULL);
     upgrade_Storage = 0;
     upgrade_Siloo = 0;
 
 
     upgrade_ChickenHome = 0;
     build_ChickenHome = 0;
-    collect_Eggs = 0;
+    feed_time_chicken = 0;
     upgrade_CowHome = 0;
     build_CowHome = 0;
-    collect_Milks = 0;
+    feed_time_cow = 0;
     upgrade_SheepHome = 0;
     build_SheepHome = 0;
-    correction_Sheeps = 0;
+    feed_time_sheep = 0;
     upgrade_Gandomfarm = 0;
     Collect_from_GandomFarm = 0;
     upgrade_Yonjehfarm = 0;
@@ -34,6 +35,7 @@ MyThread::MyThread()
 void MyThread::operator=(const MyThread& temp){
 
     time_login = temp.time_login;
+    last_time_set=temp.last_time_set;
     upgrade_Storage = temp.upgrade_Storage;
     upgrade_Siloo = temp.upgrade_Siloo;
 
@@ -44,13 +46,13 @@ void MyThread::operator=(const MyThread& temp){
     }
     upgrade_ChickenHome = temp.upgrade_ChickenHome;
     build_ChickenHome = temp.build_ChickenHome;
-    collect_Eggs = temp.collect_Eggs;
+    feed_time_chicken = temp.feed_time_chicken;
     upgrade_CowHome = temp.upgrade_CowHome;
     build_CowHome = temp.build_CowHome;
-    collect_Milks = temp.collect_Milks;
+    feed_time_cow = temp.feed_time_cow;
     upgrade_SheepHome = temp.upgrade_SheepHome;
     build_SheepHome = temp.build_SheepHome;
-    correction_Sheeps = temp.correction_Sheeps;
+    feed_time_sheep = temp.feed_time_sheep;
     upgrade_Gandomfarm = temp.upgrade_Gandomfarm;
     Collect_from_GandomFarm = temp.upgrade_Gandomfarm;
     upgrade_Yonjehfarm = temp.upgrade_Gandomfarm;
@@ -74,12 +76,12 @@ void MyThread::run()
     int number = 0;
 
    // qDebug() <<"Mahdi Ghasemi";
-    if(time_login != 0 && now - time_login >= 3600*24){
-        number = (now - time_login)/(3600*24);
+    if(last_time_set != 0 && now - last_time_set >= 3600*24){
+        number = (now - last_time_set)/(3600*24);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+number);
         Data::get_iterator()->set_level(Data::get_iterator()->get_level()+number);
 
-        time_login += number* 3600*24;
+        last_time_set += number* 3600*24;
     }
     if(upgrade_Storage != 0 && now - upgrade_Storage >= 5*3600*24){
 
@@ -322,6 +324,14 @@ time_t MyThread::Get_time_login(){
     return time_login;
 }
 
+void MyThread::Set_last_time_set(time_t t){
+    last_time_set = t;
+}
+
+time_t MyThread::Get_last_time_set(){
+    return last_time_set;
+}
+
 void MyThread::Set_upgrade_Storage(time_t t){
      upgrade_Storage = t;
 }
@@ -360,12 +370,12 @@ time_t MyThread::Get_build_ChickenHome(){
     return build_ChickenHome;
 }
 
-void MyThread::Set_collect_Eggs(time_t t){
-     collect_Eggs = t;
+void MyThread::Set_feed_time_chicken(time_t t){
+     feed_time_chicken = t;
 }
 
-time_t MyThread::Get_collect_Eggs(){
-    return collect_Eggs;
+time_t MyThread::Get_feed_time_chicken(){
+    return feed_time_chicken;
 }
 
 void MyThread::Set_upgrade_CowHome(time_t t){
@@ -384,12 +394,12 @@ time_t MyThread::Get_build_CowHome(){
     return build_CowHome;
 }
 
-void MyThread::Set_collect_Milks(time_t t){
-     collect_Milks = t;
+void MyThread::Set_feed_time_cow(time_t t){
+     feed_time_cow = t;
 }
 
-time_t MyThread::Get_collect_Milks(){
-    return collect_Milks;
+time_t MyThread::Get_feed_time_cow(){
+    return feed_time_cow;
 }
 
 void MyThread::Set_upgrade_SheepHome(time_t t){
@@ -408,12 +418,12 @@ time_t MyThread::Get_build_SheepHome(){
     return build_SheepHome;
 }
 
-void MyThread::Set_correction_Sheeps(time_t t){
-    correction_Sheeps = t;
+void MyThread::Set_feed_time_sheep(time_t t){
+    feed_time_sheep = t;
 }
 
-time_t MyThread::Get_correction_Sheeps(){
-    return correction_Sheeps;
+time_t MyThread::Get_feed_time_sheep(){
+    return feed_time_sheep;
 }
 
 
