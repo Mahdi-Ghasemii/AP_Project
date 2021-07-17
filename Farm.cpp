@@ -39,6 +39,7 @@ Farm::Farm(QWidget *parent) :
     connect(&ranking, SIGNAL(Send_Signal_to_Farm()), this, SLOT(Show_Farm_Class()));
     connect(this, SIGNAL(Send_Signal_to_Ranking()), &ranking, SLOT(Get_Signal_From_Farm()));
 
+    connect(this,SIGNAL(Send_Signal_to_Player()), Data::get_iterator(), SLOT(Get_Signal_From_Farm()));
 
     connect(&sheepHome, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&cowHome, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
@@ -288,7 +289,10 @@ void Farm::On_ExitAction_triggred()
 
 void Farm::On_ProfileAction_triggred()
 {
-    Data::get_iterator()->show();
+    emit Send_Signal_to_Player();
+//    (*(Data::get_iterator())).show();
+    Player p;
+    p.show();
 }
 
 

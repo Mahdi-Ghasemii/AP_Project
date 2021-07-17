@@ -61,6 +61,8 @@ private:
     int experience_required_for_levelUp;
     time_t signUp_time;
     Farm farm;
+
+
 };
 
 #endif // PLAYER_H
