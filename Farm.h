@@ -57,7 +57,6 @@ private slots:
 
     // Slots to comunicate with other classes
 
-    void Show_Farm_Class();
 
 
     void on_pushButton_3_clicked();
@@ -65,7 +64,10 @@ private slots:
     void on_pushButton_clicked();
 
     void On_ExitAction_triggred();
+    void On_ProfileAction_triggred();
 
+public slots:
+    void Show_Farm_Class();
 signals:
 
 

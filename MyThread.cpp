@@ -79,8 +79,13 @@ void MyThread::run()
     if(last_time_set != 0 && now - last_time_set >= 3600*24){
         number = (now - last_time_set)/(3600*24);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+number);
-        Data::get_iterator()->set_level(Data::get_iterator()->get_level()+number);
 
+        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
+            Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+
+            Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
+
+        }
         last_time_set += number* 3600*24;
     }
     if(upgrade_Storage != 0 && now - upgrade_Storage >= 5*3600*24){
@@ -349,7 +354,15 @@ time_t MyThread::Get_upgrade_Siloo(){
 }
 
 void MyThread::Push_Back_on_buy_Milk(time_t t){
-     buy_Milk.push_back(t);
+    buy_Milk.push_back(t);
+}
+
+time_t MyThread::Get_Buy_Milk(int index)
+{
+    if(index < buy_Milk.size()){
+        return buy_Milk[index];
+    }
+    else return 0;
 }
 
 

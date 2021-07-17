@@ -51,6 +51,7 @@ public:
         temp["buy_Milk time"] =
         temp["upgrade_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_ChickenHome();
         temp["build_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_ChickenHome();
+<<<<<<< HEAD
         temp["feed_time_chicken"] = get_iterator()->get_farm().Get_MyThread().Get_feed_time_chicken();
         temp["upgrade_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_CowHome();
         temp["build_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_CowHome();
@@ -58,6 +59,15 @@ public:
         temp["upgrade_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_SheepHome();
         temp["build_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_SheepHome();
         temp["feed_time_sheep"] = get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep();
+=======
+//        temp["collect_Eggs time"] = get_iterator()->get_farm().Get_MyThread().Get_collect_Eggs();
+        temp["upgrade_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_CowHome();
+        temp["build_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_CowHome();
+//        temp["collect_Milks time"] = get_iterator()->get_farm().Get_MyThread().Get_collect_Milks();
+        temp["upgrade_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_SheepHome();
+        temp["build_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_SheepHome();
+//        temp["correction_Sheeps time"] = get_iterator()->get_farm().Get_MyThread().Get_correction_Sheeps();
+>>>>>>> dfece75b22c82686724028383e3efd401364e1ad
         temp["upgrade_Gandomfarm time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Gandomfarm();
         temp["Collect_from_GandomFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Collect_from_GandomFarm();
         temp["Planting_from_GandomFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_planting_Gandomfarm();

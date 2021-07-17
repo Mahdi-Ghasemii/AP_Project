@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>زمين بازي</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_2">
@@ -351,11 +351,21 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>520</x>
       <y>70</y>
-      <width>31</width>
-      <height>20</height>
+      <width>51</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>سطح</string>
@@ -364,11 +374,21 @@
    <widget class="QLabel" name="_Level">
     <property name="geometry">
      <rect>
-      <x>510</x>
+      <x>490</x>
       <y>70</y>
-      <width>16</width>
-      <height>21</height>
+      <width>31</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>0</string>
@@ -413,6 +433,52 @@
      <string>0</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(170, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>روز گذشته</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DaysLeft">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>20</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(170, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>Siloo_pbn</zorder>
    <zorder>Storage_pbn</zorder>
@@ -431,6 +497,8 @@
    <zorder>_Experience</zorder>
    <zorder>label_6</zorder>
    <zorder>_Max_Experience</zorder>
+   <zorder>label_4</zorder>
+   <zorder>DaysLeft</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -462,6 +530,7 @@
      <string>منو</string>
     </property>
     <addaction name="ExitAction"/>
+    <addaction name="ProfileAction"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -471,6 +540,11 @@
    </property>
    <property name="shortcut">
     <string/>
+   </property>
+  </action>
+  <action name="ProfileAction">
+   <property name="text">
+    <string>پروفايل</string>
    </property>
   </action>
  </widget>

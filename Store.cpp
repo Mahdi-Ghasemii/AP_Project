@@ -61,7 +61,7 @@ void Store::on_Buy_Gandom_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()- 3);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -89,7 +89,7 @@ void Store::on_Sell_Gandom_pbn_clicked()
     }
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 2);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -128,7 +128,7 @@ void Store::on_Buy_Cow_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()- 70);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -161,7 +161,7 @@ void Store::on_Sell_Cow_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 50);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -195,7 +195,7 @@ void Store::on_Buy_Sheep_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()- 80);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -228,7 +228,7 @@ void Store::on_Sell_Sheep_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 70);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -263,7 +263,7 @@ void Store::on_Buy_Chicken_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()- 20);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -296,7 +296,7 @@ void Store::on_Sell_Chicken_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 15);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -330,7 +330,7 @@ void Store::on_Buy_Yonjeh_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()- 6);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -363,7 +363,7 @@ void Store::on_Sell_Yonjeh_pbn_clicked()
     }
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 4);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -391,7 +391,7 @@ void Store::on_Sell_Milk_pbn_clicked()
     }
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 12);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -422,7 +422,7 @@ void Store::on_Sell_Wool_pbn_clicked()
     }
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 23);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -453,7 +453,7 @@ void Store::on_Sell_Egg_pbn_clicked()
     }
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 8);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -484,7 +484,7 @@ void Store::on_Buy_Bill_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()- 50);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -512,7 +512,7 @@ void Store::on_Sell_Bill_pbn_clicked()
     }
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 30);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -543,7 +543,7 @@ void Store::on_Buy_Mikh_pbn_clicked()
 
     else {
 
-        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()- 30);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
@@ -571,7 +571,7 @@ void Store::on_Sell_Mikh_pbn_clicked()
     }
     else {
 
-        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
+//        QMessageBox::information(this,"","جنس مورد نظر با موفقیت فروخته شد.",QMessageBox::Ok);
 
         Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() + 20);
         ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));

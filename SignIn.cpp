@@ -44,6 +44,7 @@ SignIn::SignIn(QWidget *parent) :
             //temp[buy_Milk]
              p.get_farm().Get_MyThread().Set_upgrade_ChickenHome(temp["upgrade_ChickenHome time"].toInt());
             p.get_farm().Get_MyThread().Set_build_ChickenHome(temp["build_ChickenHome time"].toInt());
+<<<<<<< HEAD
             p.get_farm().Get_MyThread().Set_feed_time_chicken(temp["feed_time_chicken"].toInt());
             p.get_farm().Get_MyThread().Set_upgrade_CowHome(temp["upgrade_CowHome time"].toInt());
             p.get_farm().Get_MyThread().Set_build_CowHome(temp["build_CowHome time"].toInt());
@@ -51,6 +52,15 @@ SignIn::SignIn(QWidget *parent) :
             p.get_farm().Get_MyThread().Set_upgrade_SheepHome(temp["upgrade_SheepHome time"].toInt());
             p.get_farm().Get_MyThread().Set_build_SheepHome(temp["build_SheepHome time"].toInt());
             p.get_farm().Get_MyThread().Set_feed_time_sheep(temp["feed_time_sheep"].toInt());
+=======
+//            p.get_farm().Get_MyThread().Set_collect_Eggs(temp["collect_Eggs time"].toInt());
+            p.get_farm().Get_MyThread().Set_upgrade_CowHome(temp["upgrade_CowHome time"].toInt());
+            p.get_farm().Get_MyThread().Set_build_CowHome(temp["build_CowHome time"].toInt());
+//            p.get_farm().Get_MyThread().Set_collect_Milks(temp["collect_Milks time"].toInt());
+            p.get_farm().Get_MyThread().Set_upgrade_SheepHome(temp["upgrade_SheepHome time"].toInt());
+            p.get_farm().Get_MyThread().Set_build_SheepHome(temp["build_SheepHome time"].toInt());
+//            p.get_farm().Get_MyThread().Set_correction_Sheeps(temp["correction_Sheeps time"].toInt());
+>>>>>>> dfece75b22c82686724028383e3efd401364e1ad
             p.get_farm().Get_MyThread().Set_upgrade_Gandomfarm(temp["upgrade_Gandomfarm time"].toInt());
             p.get_farm().Get_MyThread().Set_Collect_from_GandomFarm(temp["Collect_from_GandomFarm time"].toInt());
             p.get_farm().Get_MyThread().Set_planting_Gandomfarm(temp["Planting_from_GandomFarm time"].toInt());
@@ -119,6 +129,8 @@ void SignIn::on_sign_in_pbn_clicked()
 
                 Data::get_iterator()->get_farm().Get_MyThread().set_first_SizeofMilk(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number());
                 Data::get_iterator()->get_farm().Get_MyThread().start();
+
+                Data::get_iterator()->get_farm().Show_Farm_Class();
                 Data::get_iterator()->get_farm().show();
                 return;
             }

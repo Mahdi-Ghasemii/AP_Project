@@ -47,6 +47,7 @@ Farm::Farm(QWidget *parent) :
     connect(this, SIGNAL(Send_Signal_to_ChickenHome()),&chickenHome,SLOT(Get_Signal_From_Farm()));
 
     connect(ui->ExitAction , SIGNAL(triggered()) , this ,SLOT(On_ExitAction_triggred()));
+    connect(ui->ProfileAction , SIGNAL(triggered()) , this ,SLOT(On_ProfileAction_triggred()));
 }
 
 
@@ -221,7 +222,7 @@ void Farm::Show_Farm_Class()
     ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
     ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
     ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
-
+    ui->DaysLeft->setText(QString::number(Data::get_iterator()->get_farm().Get_MyThread().Get_time_login()));
     int a = Data::get_iterator()->get_experience()*100;
     a /= Data::get_iterator()->get_experience_required_for_levelUp();
     ui->progressBar->setValue(a);
@@ -229,6 +230,11 @@ void Farm::Show_Farm_Class()
 
 void Farm::on_pushButton_3_clicked()
 {
+
+    if(Data::get_iterator()->get_level() < 2){
+
+         QMessageBox::information(this," !تذكر","براي دسترسي به فروشگاه ، سطح شما حداقل بايد 2 باشد!.",QMessageBox::Ok);
+    }
 
     emit Send_Signal_to_Store();
     store.show();
@@ -246,6 +252,11 @@ void Farm::On_ExitAction_triggred()
     Data::write_on_file();
     this->close();
     QMessageBox::information(nullptr, "اتمام بازی", "به امید دیدار!");
+}
+
+void Farm::On_ProfileAction_triggred()
+{
+    Data::get_iterator()->show();
 }
 
 void Farm::get_signal_from_builting_for_chickenHome(QString str){
