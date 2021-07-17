@@ -222,7 +222,9 @@ void Farm::Show_Farm_Class()
     ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
     ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
     ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
-    ui->DaysLeft->setText(QString::number(Data::get_iterator()->get_farm().Get_MyThread().Get_time_login()));
+
+    time_t now = time(NULL);
+    ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
     int a = Data::get_iterator()->get_experience()*100;
     a /= Data::get_iterator()->get_experience_required_for_levelUp();
     ui->progressBar->setValue(a);
@@ -234,6 +236,7 @@ void Farm::on_pushButton_3_clicked()
     if(Data::get_iterator()->get_level() < 2){
 
          QMessageBox::information(this," !تذكر","براي دسترسي به فروشگاه ، سطح شما حداقل بايد 2 باشد!.",QMessageBox::Ok);
+         return;
     }
 
     emit Send_Signal_to_Store();
