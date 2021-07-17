@@ -41,10 +41,11 @@ SignIn::SignIn(QWidget *parent) :
             p.get_farm().Get_MyThread().Set_last_time_set(temp["last_time_set"].toInt());
             p.get_farm().Get_MyThread().Set_upgrade_Storage(temp["upgrade_Storage time"].toInt());
             p.get_farm().Get_MyThread().Set_upgrade_Siloo(temp["upgrade_Siloo time"].toInt());
-            //temp[buy_Milk]
-             p.get_farm().Get_MyThread().Set_upgrade_ChickenHome(temp["upgrade_ChickenHome time"].toInt());
+            QJsonArray arr = temp["buy_Milk time"].toArray();
+            for (int i = 0; i < arr.size(); i++)
+                p.get_farm().Get_MyThread().Push_Back_on_buy_Milk(arr[i].toInt());
+            p.get_farm().Get_MyThread().Set_upgrade_ChickenHome(temp["upgrade_ChickenHome time"].toInt());
             p.get_farm().Get_MyThread().Set_build_ChickenHome(temp["build_ChickenHome time"].toInt());
-<<<<<<< HEAD
             p.get_farm().Get_MyThread().Set_feed_time_chicken(temp["feed_time_chicken"].toInt());
             p.get_farm().Get_MyThread().Set_upgrade_CowHome(temp["upgrade_CowHome time"].toInt());
             p.get_farm().Get_MyThread().Set_build_CowHome(temp["build_CowHome time"].toInt());
@@ -52,15 +53,6 @@ SignIn::SignIn(QWidget *parent) :
             p.get_farm().Get_MyThread().Set_upgrade_SheepHome(temp["upgrade_SheepHome time"].toInt());
             p.get_farm().Get_MyThread().Set_build_SheepHome(temp["build_SheepHome time"].toInt());
             p.get_farm().Get_MyThread().Set_feed_time_sheep(temp["feed_time_sheep"].toInt());
-=======
-//            p.get_farm().Get_MyThread().Set_collect_Eggs(temp["collect_Eggs time"].toInt());
-            p.get_farm().Get_MyThread().Set_upgrade_CowHome(temp["upgrade_CowHome time"].toInt());
-            p.get_farm().Get_MyThread().Set_build_CowHome(temp["build_CowHome time"].toInt());
-//            p.get_farm().Get_MyThread().Set_collect_Milks(temp["collect_Milks time"].toInt());
-            p.get_farm().Get_MyThread().Set_upgrade_SheepHome(temp["upgrade_SheepHome time"].toInt());
-            p.get_farm().Get_MyThread().Set_build_SheepHome(temp["build_SheepHome time"].toInt());
-//            p.get_farm().Get_MyThread().Set_correction_Sheeps(temp["correction_Sheeps time"].toInt());
->>>>>>> dfece75b22c82686724028383e3efd401364e1ad
             p.get_farm().Get_MyThread().Set_upgrade_Gandomfarm(temp["upgrade_Gandomfarm time"].toInt());
             p.get_farm().Get_MyThread().Set_Collect_from_GandomFarm(temp["Collect_from_GandomFarm time"].toInt());
             p.get_farm().Get_MyThread().Set_planting_Gandomfarm(temp["Planting_from_GandomFarm time"].toInt());

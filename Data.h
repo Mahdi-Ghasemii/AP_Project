@@ -8,6 +8,7 @@
 #include <QFile>
 #include <QJsonObject>
 #include <QJsonDocument>
+#include <QJsonArray>
 
 
 using namespace std;
@@ -48,10 +49,13 @@ public:
         temp["last_time_set"] = get_iterator()->get_farm().Get_MyThread().Get_last_time_set();
         temp["upgrade_Storage time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Storage();
         temp["upgrade_Siloo time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Siloo();
-        temp["buy_Milk time"] =
+        QJsonArray arr;
+        for (int i = 0; i < get_iterator()->get_farm().Get_MyThread().Get_Buy_Milk().size(); i++) {
+            arr.push_back(get_iterator()->get_farm().Get_MyThread().Get_Buy_Milk()[i]);
+        }
+        temp["buy_Milk time"] = arr;
         temp["upgrade_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_ChickenHome();
         temp["build_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_ChickenHome();
-<<<<<<< HEAD
         temp["feed_time_chicken"] = get_iterator()->get_farm().Get_MyThread().Get_feed_time_chicken();
         temp["upgrade_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_CowHome();
         temp["build_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_CowHome();
@@ -59,15 +63,6 @@ public:
         temp["upgrade_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_SheepHome();
         temp["build_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_SheepHome();
         temp["feed_time_sheep"] = get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep();
-=======
-//        temp["collect_Eggs time"] = get_iterator()->get_farm().Get_MyThread().Get_collect_Eggs();
-        temp["upgrade_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_CowHome();
-        temp["build_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_CowHome();
-//        temp["collect_Milks time"] = get_iterator()->get_farm().Get_MyThread().Get_collect_Milks();
-        temp["upgrade_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_SheepHome();
-        temp["build_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_SheepHome();
-//        temp["correction_Sheeps time"] = get_iterator()->get_farm().Get_MyThread().Get_correction_Sheeps();
->>>>>>> dfece75b22c82686724028383e3efd401364e1ad
         temp["upgrade_Gandomfarm time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Gandomfarm();
         temp["Collect_from_GandomFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Collect_from_GandomFarm();
         temp["Planting_from_GandomFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_planting_Gandomfarm();
