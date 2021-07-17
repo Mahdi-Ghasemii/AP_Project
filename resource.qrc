@@ -36,6 +36,10 @@
         <file>Icons/kargar.png</file>
         <file>Icons/gandombackground.jpg</file>
         <file>Icons/yonjebackground.jpg</file>
+        <file>Icons/Ranking.png</file>
+        <file>Icons/Egg1.png</file>
+        <file>Icons/Milk (2).png</file>
+        <file>Icons/Mikh1.png</file>
     </qresource>
     <qresource prefix="/background">
         <file>backgrounds/92-Picture-Blur-Nature-500x281.png</file>

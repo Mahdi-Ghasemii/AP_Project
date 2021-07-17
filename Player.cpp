@@ -17,11 +17,10 @@ Player::Player(QWidget *parent) :
     this->experience = 0;
     this->coin = 20;
 
-    this->signUp_time = time(NULL);
 
     ui->Experience_lbl->setText(QString::number(this->experience));
     ui->Name_lbl->setText(this->name);
-    ui->Num_Coins_lbl->setText(QString::number(this->coin));
+//    ui->Num_Coins_lbl->setText(QString::number(this->coin));
     ui->UserName_lbl->setText(this->username);
     ui->Level_lbl->setText(QString::number(this->level));
 
@@ -37,16 +36,15 @@ Player::~Player()
 }
 
 void Player::operator=(const Player& p){
-    name = p.get_name();
-    username = p.get_username();
-    password = p.get_password();
-    email = p.get_email();
-    coin = p.get_coin();
-    level = p.get_level();
-    experience = p.get_experience();
-    experience_required_for_levelUp = p.get_experience_required_for_levelUp();
-    signUp_time = p.get_signUp_time();
-    //farm = p.get_farm();
+    name = p.name;
+    username = p.username;
+    password = p.password;
+    email = p.email;
+    coin = p.coin;
+    level = p.level;
+    experience = p.experience;
+    experience_required_for_levelUp = p.experience_required_for_levelUp;
+    farm = p.farm;
 }
 
 void Player::set_name(QString _name)
@@ -117,13 +115,7 @@ int Player::get_experience_required_for_levelUp()const{
     return experience_required_for_levelUp;
 }
 
-void Player::set_signUp_time(time_t _signUp_time){
-    signUp_time = _signUp_time;
-}
 
-time_t Player::get_signUp_time()const{
-    return signUp_time;
-}
 
 Farm& Player::get_farm(){
     return farm;

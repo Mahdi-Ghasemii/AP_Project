@@ -22,7 +22,6 @@ private:
        Product egg;
        Product milk;
        Product pashm;
-       time_t time_add_milk;
 
        Ui::Storage *ui;
 

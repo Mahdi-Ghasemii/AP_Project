@@ -4,7 +4,7 @@
 MyThread::MyThread()
 {
 
-    time_login = time(NULL);
+    time_login = 0;
     last_time_set=time(NULL);
     upgrade_Storage = 0;
     upgrade_Siloo = 0;

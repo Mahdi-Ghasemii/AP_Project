@@ -40,7 +40,7 @@ void Store::Add_Experience_and_Check_Level(int _e){
     if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
         Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
 
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
+        QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
 
         Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
 
@@ -114,7 +114,7 @@ void Store::on_Buy_Cow_pbn_clicked()
 {
 
     if(Data::get_iterator()->get_level() < 4){
-        QMessageBox::warning(this,"","اين مرحله هنوز براي شما قفل است . .",QMessageBox::Ok);
+        QMessageBox::warning(this,"","حداقل سطح مورد نیاز برای خرید گاو ، 4 می باشد . .",QMessageBox::Ok);
         return ;
     }
 
@@ -152,7 +152,7 @@ void Store::on_Sell_Cow_pbn_clicked()
 {
 
     if(Data::get_iterator()->get_level() < 4){
-        QMessageBox::warning(this,"","اين مرحله هنوز براي شما قفل است . .",QMessageBox::Ok);
+        QMessageBox::warning(this,"","حداقل سطح مورد نیاز برای فروش گاو ، 4 می باشد . .",QMessageBox::Ok);
         return ;
     }
     else if(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal() < 1){

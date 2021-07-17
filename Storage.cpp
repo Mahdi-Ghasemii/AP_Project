@@ -18,7 +18,6 @@ Storage::Storage(QWidget *parent) :
     this->occupied_capacity = 2;
     this->building_Level = 1;
 
-    this->time_add_milk = 0;
 
     if(capasity == 8){
         qDebug()<<"8 M" ;
@@ -41,14 +40,12 @@ void Storage::operator=(const Storage& temp){
     this->yonjeh = temp.yonjeh;
     this->egg = temp.egg;
     this->pashm = temp.pashm;
-    this->time_add_milk = temp.time_add_milk;
 
 
     this->capasity = temp.capasity;
     this->building_Level = temp.building_Level;
     this->occupied_capacity = temp.occupied_capacity;
 
-    qDebug()<<"In storage constructor :" << Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
 
 }
 
