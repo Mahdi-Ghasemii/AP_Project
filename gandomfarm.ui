@@ -14,7 +14,11 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/new/prefix1/Icons/gandombackground.jpg);</string>
+   <string notr="true">background-image: url(:/new/prefix1/Icons/gandombackground.jpg);
+QPushButton:hover#plantingpbt
+{
+   background-color:white;
+}</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
@@ -55,6 +59,12 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;کاشتن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover
+{
+   background-color:rgb(255, 200, 10);
+}</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -89,6 +99,12 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
    </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ارتقا&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover
+{
+   background-color:rgb(255, 200, 10);
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -138,6 +154,12 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;درو کردن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover
+{
+   background-color:rgb(255, 200, 10);
+}</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -166,6 +188,12 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
    </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;بازگشت&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover
+{
+   background-color:rgb(255, 200, 10);
+}</string>
    </property>
    <property name="text">
     <string/>

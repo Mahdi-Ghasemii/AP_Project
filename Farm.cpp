@@ -22,6 +22,8 @@ Farm::Farm(QWidget *parent) :
     ui->_Max_Experience->setText(QString::number(10));
     ui->ExitAction->setShortcut(QKeySequence(Qt::ALT | Qt::Key_F4));
 
+    setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
+
     connect(&siloo, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&storage, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&store, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
@@ -48,6 +50,24 @@ Farm::Farm(QWidget *parent) :
 
     connect(ui->ExitAction , SIGNAL(triggered()) , this ,SLOT(On_ExitAction_triggred()));
     connect(ui->ProfileAction , SIGNAL(triggered()) , this ,SLOT(On_ProfileAction_triggred()));
+
+
+    // write connects here :
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_time_login()),this,SLOT(Set_UI_Attributes1_for_set_time_login()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_Storage()),this,SLOT(Set_UI_Attributes_for_upgrade_storage()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_Siloo()),this,SLOT(Set_UI_Attributes1_for_upgrade_siloo()));
+
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_ChickenHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_chickenHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_CowHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_cowHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_SheepHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_sheepHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_ChickenHome()),this,SLOT(Set_UI_Attributes1_for_build_chickenHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_CowHome()),this,SLOT(Set_UI_Attributes1_for_build_cowHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_SheepHome()),this,SLOT(Set_UI_Attributes1_for_build_sheepHome()));
+
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_yonjeFarm()),this,SLOT(Set_UI_Attributes1_for_build_yonjeFarm()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_yonjeFarm()),this,SLOT(Set_UI_Attributes1_for_upgrade_yonjeFarm()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_gandomFarm()),this,SLOT(Set_UI_Attributes1_for_upgrade_gandomFarm()));
+
 }
 
 
@@ -98,6 +118,7 @@ MyThread &Farm::Get_MyThread()
     return myThread;
 }
 
+
 void Farm::operator=(const Farm& p){
     storage=p.storage;
     store=p.store;
@@ -113,7 +134,12 @@ void Farm::operator=(const Farm& p){
 void Farm::on_Storage_pbn_clicked()
 {
 
+    qDebug()<<"Mikh Number :" << Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
+
     emit Send_Signal_to_Storage();
+
+    qDebug()<<"Mikh Number :" << Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
+
     storage.show();
 }
 
@@ -227,6 +253,8 @@ void Farm::Show_Farm_Class()
     ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
     int a = Data::get_iterator()->get_experience()*100;
     a /= Data::get_iterator()->get_experience_required_for_levelUp();
+
+    qDebug() << a;
     ui->progressBar->setValue(a);
 }
 
@@ -253,6 +281,7 @@ void Farm::on_pushButton_clicked()
 void Farm::On_ExitAction_triggred()
 {
     Data::write_on_file();
+
     this->close();
     QMessageBox::information(nullptr, "اتمام بازی", "به امید دیدار!");
 }
@@ -261,6 +290,7 @@ void Farm::On_ProfileAction_triggred()
 {
     Data::get_iterator()->show();
 }
+
 
 void Farm::get_signal_from_builting_for_chickenHome(QString str){
     if(str=="yes")
@@ -289,3 +319,117 @@ void Farm::get_signal_from_builting_for_YonjeFarm(QString str){
     else
         return;
 }
+
+
+void Farm::Global_Func_to_Set_ui_Attributes()
+{
+    ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
+    if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
+        Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+        QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
+
+        Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
+    }
+    ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
+    ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
+    ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
+
+    time_t now = time(NULL);
+    ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
+    int a = Data::get_iterator()->get_experience()*100;
+    a /= Data::get_iterator()->get_experience_required_for_levelUp();
+    ui->progressBar->setValue(a);
+
+}
+
+
+// write slots here
+
+void Farm::Set_UI_Attributes1_for_set_time_login()
+{
+   Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes_for_upgrade_storage()
+{
+    QMessageBox::information(this,"","انبار با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_siloo()
+{
+    QMessageBox::information(this,"","سیلو با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_build_chickenHome()
+{
+    QMessageBox::information(this,"تبریک","مرغداری با موفقیت ساخته شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_build_cowHome()
+{
+    QMessageBox::information(this,"تبریک","گاوداری با موفقیت ساخته شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_build_sheepHome()
+{
+    QMessageBox::information(this,"تبریک","آغل با موفقیت ساخته شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_chickenHome()
+{
+    QMessageBox::information(this,"تبریک","مرغداری با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_cowHome()
+{
+    QMessageBox::information(this,"تبریک","گاوداری با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_sheepHome()
+{
+    QMessageBox::information(this,"تبریک","آغل با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_gandomFarm()
+{
+    QMessageBox::information(this,"تبریک","مزرعه گندم با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_yonjeFarm()
+{
+    QMessageBox::information(this,"تبریک","مزرعه یونجه با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_build_yonjeFarm()
+{
+    QMessageBox::information(this,"تبریک","مزرعه یونجه با موفقیت ساخته شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+void Farm::Set_UI_Attributes1_for_plow_yonjeFarm()
+{
+    QMessageBox::information(this,"تبریک","مزرعه یونجه با درو شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+

@@ -70,6 +70,12 @@
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;کاشتن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover
+{
+   background-color:rgb(200, 132, 24);
+}</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -98,6 +104,12 @@
    </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ارتقا&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover
+{
+   background-color:rgb(200, 132, 24);
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -129,7 +141,10 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;درو کردن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(176, 0, 81);</string>
+    <string notr="true">QPushButton:hover
+{
+   background-color:rgb(200, 132, 24);
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -160,6 +175,12 @@
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;شخم زدن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover
+{
+   background-color:rgb(200, 132, 24);
+}</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -188,6 +209,12 @@
    </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;بازگشت&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover
+{
+   background-color:rgb(200, 132, 24);
+}</string>
    </property>
    <property name="text">
     <string/>
