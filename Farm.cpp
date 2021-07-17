@@ -130,7 +130,12 @@ void Farm::operator=(const Farm& p){
 void Farm::on_Storage_pbn_clicked()
 {
 
+    qDebug()<<"Mikh Number :" << Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
+
     emit Send_Signal_to_Storage();
+
+    qDebug()<<"Mikh Number :" << Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
+
     storage.show();
 }
 
@@ -323,6 +328,7 @@ void Farm::Global_Func_to_Set_ui_Attributes()
     }
     ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
     ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
+    ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
     time_t now = time(NULL);
     ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));

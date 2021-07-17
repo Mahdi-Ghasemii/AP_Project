@@ -13,20 +13,27 @@ Storage::Storage(QWidget *parent) :
 
 
 
-    this->capasity = 5;
     this->yonjeh.Set_Number(1);
-    this->mikh.Set_Number(1);
 
     this->occupied_capacity = 2;
     this->building_Level = 1;
 
     this->time_add_milk = 0;
 
+    if(capasity == 8){
+        qDebug()<<"8 M" ;
 
+    }
+    if(capasity == 5){
+        qDebug()<<"5 M" ;
+
+    }
+    this->mikh.Set_Number(1);
+    this->capasity = 5;
 
 }
 
-void Storage::operator =(const Storage& temp){
+void Storage::operator=(const Storage& temp){
 
     this->bill = temp.bill;
     this->mikh = temp.mikh;
@@ -40,6 +47,14 @@ void Storage::operator =(const Storage& temp){
     this->capasity = temp.capasity;
     this->building_Level = temp.building_Level;
     this->occupied_capacity = temp.occupied_capacity;
+
+    qDebug()<<"In storage constructor :" << Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
+
+}
+
+Storage::Storage(const Storage &temp)
+{
+    this->operator=(temp);
 }
 
 Product& Storage::Get_bill ()
