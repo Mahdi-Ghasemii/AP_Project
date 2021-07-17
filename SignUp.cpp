@@ -56,6 +56,7 @@ void SignUp::on_register_pbn_clicked()
     p.set_experience_required_for_levelUp(2 * p.get_experience() + 10);
     time_t t = time(NULL);
     p.set_signUp_time(t);
+    p.get_farm().Get_MyThread().Set_time_login(t);
     Data::get_players().append(p);
 
     QFile f("Players.json");

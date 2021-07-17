@@ -45,7 +45,7 @@ public:
         temp["Level"] = get_iterator()->get_level();
         temp["Experience"] = get_iterator()->get_experience();
         temp["Experience required for levelUp"] = get_iterator()->get_experience_required_for_levelUp();
-        temp["SignUp time"] = get_iterator()->get_signUp_time();
+        temp["SignUp time"] = get_iterator()->get_farm().Get_MyThread().Get_time_login();
         temp["last_time_set"] = get_iterator()->get_farm().Get_MyThread().Get_last_time_set();
         temp["upgrade_Storage time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Storage();
         temp["upgrade_Siloo time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Siloo();

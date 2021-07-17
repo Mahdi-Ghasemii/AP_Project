@@ -37,7 +37,7 @@ SignIn::SignIn(QWidget *parent) :
             p.set_level(temp["Level"].toInt());
             p.set_experience(temp["Experience"].toInt());
             p.set_experience_required_for_levelUp(temp["Experience required for levelUp"].toInt());
-            p.set_signUp_time(temp["SignUp time"].toInt());
+            p.get_farm().Get_MyThread().Set_time_login(temp["SignUp time"].toInt());
             p.get_farm().Get_MyThread().Set_last_time_set(temp["last_time_set"].toInt());
             p.get_farm().Get_MyThread().Set_upgrade_Storage(temp["upgrade_Storage time"].toInt());
             p.get_farm().Get_MyThread().Set_upgrade_Siloo(temp["upgrade_Siloo time"].toInt());
