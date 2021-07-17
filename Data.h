@@ -54,6 +54,11 @@ public:
             arr.push_back(get_iterator()->get_farm().Get_MyThread().Get_Buy_Milk()[i]);
         }
         temp["buy_Milk time"] = arr;
+        temp["ChickenHome is build"] = get_iterator()->get_farm().get_chickenHome().get_is_build();
+        temp["CowHome is build"] = get_iterator()->get_farm().get_cowHome().get_is_build();
+        temp["SheepHome is build"] = get_iterator()->get_farm().get_sheepHome().get_is_build();
+        temp["YonjehFarm is build"] = get_iterator()->get_farm().get_yonjeFarm().get_is_build();
+        temp["YonjehFarm is plantable"] = get_iterator()->get_farm().get_yonjeFarm().get_is_plantable();
         temp["upgrade_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_ChickenHome();
         temp["build_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_ChickenHome();
         temp["feed_time_chicken"] = get_iterator()->get_farm().Get_MyThread().Get_feed_time_chicken();

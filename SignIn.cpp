@@ -13,7 +13,9 @@ SignIn::SignIn(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QPixmap qpm(":/background/backgrounds/92-Picture-Blur-Nature-500x281.png");
+    setFixedSize(358, 333);
+
+    QPixmap qpm(":/background/backgrounds/istockphoto-520123098-612x612.png");
     qpm = qpm.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette qp;
     qp.setBrush(QPalette::Window, qpm);
@@ -44,6 +46,11 @@ SignIn::SignIn(QWidget *parent) :
             QJsonArray arr = temp["buy_Milk time"].toArray();
             for (int i = 0; i < arr.size(); i++)
                 p.get_farm().Get_MyThread().Push_Back_on_buy_Milk(arr[i].toInt());
+            p.get_farm().get_chickenHome().set_is_build(temp["ChickenHome is build"].toBool());
+            p.get_farm().get_cowHome().set_is_build(temp["CowHome is build"].toBool());
+            p.get_farm().get_sheepHome().set_is_build(temp["SheepHome is build"].toBool());
+            p.get_farm().get_yonjeFarm().set_is_build(temp["YonjehFarm is build"].toBool());
+            p.get_farm().get_yonjeFarm().set_is_plantable(temp["YonjehFarm is plantable"].toBool());
             p.get_farm().Get_MyThread().Set_upgrade_ChickenHome(temp["upgrade_ChickenHome time"].toInt());
             p.get_farm().Get_MyThread().Set_build_ChickenHome(temp["build_ChickenHome time"].toInt());
             p.get_farm().Get_MyThread().Set_feed_time_chicken(temp["feed_time_chicken"].toInt());

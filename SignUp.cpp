@@ -4,6 +4,8 @@
 #include "Data.h"
 #include <fstream>
 #include <QMessageBox>
+#include <QPixmap>
+#include <QPalette>
 
 using namespace std;
 
@@ -13,6 +15,14 @@ SignUp::SignUp(QWidget *parent) :
     ui(new Ui::SignUp)
 {
     ui->setupUi(this);
+
+    setFixedSize(300, 358);
+
+    QPixmap qpm(":/background/backgrounds/istockphoto-1127237731-612x612 (1).png");
+    qpm = qpm.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette qp;
+    qp.setBrush(QPalette::Window, qpm);
+    this->setPalette(qp);
 }
 
 SignUp::~SignUp()
@@ -78,6 +88,11 @@ void SignUp::on_register_pbn_clicked()
     temp["upgrade_Storage time"] = 0;
     temp["upgrade_Siloo time"] = 0;
     temp["buy_Milk time"] = 0;
+    temp["ChickenHome is build"] = false;
+    temp["CowHome is build"] = false;
+    temp["SheepHome is build"] = false;
+    temp["YonjehFarm is build"] = false;
+    temp["YonjehFarm is plantable"] = false;
     temp["upgrade_ChickenHome time"] = 0;
     temp["build_ChickenHome time"] = 0;
     temp["feed_time_chicken"] = 0;
