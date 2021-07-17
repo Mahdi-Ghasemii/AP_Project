@@ -88,6 +88,11 @@ signals:
     void Send_Signal_to_Farm_for_Build_CowHome();
     void Send_Signal_to_Farm_for_Build_SheepHome();
 
+    void Send_Signal_to_Farm_for_Upgrade_yonjeFarm();
+    void Send_Signal_to_Farm_for_Build_yonjeFarm();
+    void Send_Signal_to_Farm_for_Upgrade_gandomFarm();
+    void Send_Signal_to_Farm_for_plow_yonjeFarm();
+
 private:
 
     time_t time_login;

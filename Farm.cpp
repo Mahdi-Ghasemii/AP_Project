@@ -64,6 +64,10 @@ Farm::Farm(QWidget *parent) :
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_CowHome()),this,SLOT(Set_UI_Attributes1_for_build_cowHome()));
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_SheepHome()),this,SLOT(Set_UI_Attributes1_for_build_sheepHome()));
 
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_yonjeFarm()),this,SLOT(Set_UI_Attributes1_for_build_yonjeFarm()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_yonjeFarm()),this,SLOT(Set_UI_Attributes1_for_upgrade_yonjeFarm()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_gandomFarm()),this,SLOT(Set_UI_Attributes1_for_upgrade_gandomFarm()));
+
 }
 
 
@@ -395,3 +399,31 @@ void Farm::Set_UI_Attributes1_for_upgrade_sheepHome()
 
     Global_Func_to_Set_ui_Attributes();
 }
+
+void Farm::Set_UI_Attributes1_for_upgrade_gandomFarm()
+{
+    QMessageBox::information(this,"تبریک","مزرعه گندم با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_yonjeFarm()
+{
+    QMessageBox::information(this,"تبریک","مزرعه یونجه با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_build_yonjeFarm()
+{
+    QMessageBox::information(this,"تبریک","مزرعه یونجه با موفقیت ساخته شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+void Farm::Set_UI_Attributes1_for_plow_yonjeFarm()
+{
+    QMessageBox::information(this,"تبریک","مزرعه یونجه با درو شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+

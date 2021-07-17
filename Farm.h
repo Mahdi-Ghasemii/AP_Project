@@ -81,6 +81,12 @@ public slots:
     void Set_UI_Attributes1_for_build_cowHome();
     void Set_UI_Attributes1_for_build_sheepHome();
 
+    void Set_UI_Attributes1_for_build_yonjeFarm();
+    void Set_UI_Attributes1_for_upgrade_yonjeFarm();
+    void Set_UI_Attributes1_for_upgrade_gandomFarm();
+    void Set_UI_Attributes1_for_plow_yonjeFarm();
+
+
 
 
 

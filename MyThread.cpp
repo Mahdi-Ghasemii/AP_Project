@@ -178,96 +178,85 @@ void MyThread::run()
         emit Send_Signal_to_Farm_for_Build_SheepHome();
     }
     //Arsalan///////
-    //build //
+    //build ///
     if(Build_YonjehFarm != 0 && now - Build_YonjehFarm >= 3*3600*24){
-        QMessageBox::information(nullptr,"تبریک","زمین یونجه با موفقیت ساخته شد",QMessageBox::Ok);
+        //QMessageBox::information(nullptr,"تبریک","زمین یونجه با موفقیت ساخته شد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_yonjeFarm().set_is_build(true);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+6);
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-        }
-       // Data::get_iterator()->get_farm().get_yonjeFarm().set_is_build(true);
+        emit Send_Signal_to_Farm_for_Build_yonjeFarm();
         Build_YonjehFarm = 0;
     }
+
+
+
     //upgrade
     if(upgrade_Yonjehfarm != 0 && now - upgrade_Yonjehfarm >= 3*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تبریک","مزرعه گندم با موفقیت ارتقا یافت",QMessageBox::Ok);
+       // QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تبریک","مزرعه گندم با موفقیت ارتقا یافت",QMessageBox::Ok);
+         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+3*Data::get_iterator()->get_farm().get_yonjeFarm().getarea());
         Data::get_iterator()->get_farm().get_yonjeFarm().set_area(Data::get_iterator()->get_farm().get_yonjeFarm().getarea() *2);
-
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+3*Data::get_iterator()->get_farm().get_yonjeFarm().getarea());
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-        }
+        Data::get_iterator()->get_farm().get_yonjeFarm().set_level(Data::get_iterator()->get_farm().get_yonjeFarm().get_level() +1);
         upgrade_Yonjehfarm = 0;
+        emit Send_Signal_to_Farm_for_Upgrade_yonjeFarm();
     }
     if(upgrade_Gandomfarm!=0 && now - upgrade_Gandomfarm >= 2*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm().get_gandomFarm(),"تبریک","مزرعه گندم با موفقیت ارتقا یافت",QMessageBox::Ok);
+       // QMessageBox::information(&Data::get_iterator()->get_farm().get_gandomFarm(),"تبریک","مزرعه گندم با موفقیت ارتقا یافت",QMessageBox::Ok);
+        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+3*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
         Data::get_iterator()->get_farm().get_gandomFarm().set_area(Data::get_iterator()->get_farm().get_gandomFarm().getarea() *2);
-
-         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+3*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-        }
+        Data::get_iterator()->get_farm().get_gandomFarm().set_level(Data::get_iterator()->get_farm().get_gandomFarm().get_level() +1);
         upgrade_Gandomfarm = 0;
+        emit Send_Signal_to_Farm_for_Upgrade_gandomFarm();
     }
+
+
 
     //derokardan(collect)//
-    if(Planting_from_GandomFarm!=0 && now - Planting_from_GandomFarm>= 2*3600*24){
+   // if(Planting_from_GandomFarm!=0 && now - Planting_from_GandomFarm>= 2*3600*24){
 
-        if(Data::get_iterator()->get_farm().get_siloo().GetCapasity()-Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()>=2*Data::get_iterator()->get_farm().get_gandomFarm().getarea()){
-        Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()+2*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
-        Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
-        QMessageBox::information(&Data::get_iterator()->get_farm().get_gandomFarm(),"تبریک","مزرعه گندم با موفقیت درو شد",QMessageBox::Ok);
+     //   if(Data::get_iterator()->get_farm().get_siloo().GetCapasity()-Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()>=2*Data::get_iterator()->get_farm().get_gandomFarm().getarea()){
+     //   Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()+2*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
+     //   Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
+      //  QMessageBox::information(&Data::get_iterator()->get_farm().get_gandomFarm(),"تبریک","مزرعه گندم با موفقیت درو شد",QMessageBox::Ok);
 
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+1*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
-       if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-           Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-           Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-           QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-       }
-      Planting_from_GandomFarm = 0;
-        }
-        else{
-               QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تذکر","سیلو ظرفیت ندارد",QMessageBox::Ok);
-    }
-        }
+     //   Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+1*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
+     //  if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
+     //      Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+     //      Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+      //     QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
+      // }
+     // Planting_from_GandomFarm = 0;
+        //}
+      //  else{
+           //    QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تذکر","سیلو ظرفیت ندارد",QMessageBox::Ok);
+   // }
+      //  }
 
-    if( Planting_from_YonjeFarm !=0&& now - Planting_from_YonjeFarm>= 4*3600*24){
+   // if( Planting_from_YonjeFarm !=0&& now - Planting_from_YonjeFarm>= 4*3600*24){
 
-        if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=2*Data::get_iterator()->get_farm().get_yonjeFarm().getarea()){
-        Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()+2*Data::get_iterator()->get_farm().get_yonjeFarm().getarea());
-        Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()+2*Data::get_iterator()->get_farm().get_yonjeFarm().getarea());
-        QMessageBox::information(&Data::get_iterator()->get_farm().get_gandomFarm(),"تبریک","مزرعه یونجه با موفقیت درو شد",QMessageBox::Ok);
+      //  if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=2*Data::get_iterator()->get_farm().get_yonjeFarm().getarea()){
+      //  Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()+2*Data::get_iterator()->get_farm().get_yonjeFarm().getarea());
+       // Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()+2*Data::get_iterator()->get_farm().get_yonjeFarm().getarea());
+       // QMessageBox::information(&Data::get_iterator()->get_farm().get_gandomFarm(),"تبریک","مزرعه یونجه با موفقیت درو شد",QMessageBox::Ok);
 
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+1*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
-       if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-           Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-           Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-           QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-       }
-       Planting_from_YonjeFarm = 0;
-        }
-        else{
-               QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تذکر","سیلو ظرفیت ندارد",QMessageBox::Ok);
-    }
-        }
+       // Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+1*Data::get_iterator()->get_farm().get_gandomFarm().getarea());
+       //if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
+         //  Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+         //  Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+         //  QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
+      // }
+       //Planting_from_YonjeFarm = 0;
+       // }
+       // else{
+          //     QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تذکر","سیلو ظرفیت ندارد",QMessageBox::Ok);
+    //}
+     //   }
     //shokhmzaminyonje(plow)//
+
     if(Plow_YonjehFarm!=0 && now - Plow_YonjehFarm>= 1*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تبریک","مزرعه یونجه با موفقیت شخم زده شد",QMessageBox::Ok);
+        //QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تبریک","مزرعه یونجه با موفقیت شخم زده شد",QMessageBox::Ok);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+1*Data::get_iterator()->get_farm().get_yonjeFarm().getarea());
-       if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-           Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-           Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-           QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-       }
-       Plow_YonjehFarm = 0;
-       Data::get_iterator()->get_farm().get_yonjeFarm().set_is_plantable(true);
+        Data::get_iterator()->get_farm().get_yonjeFarm().set_is_plantable(true);
+        Plow_YonjehFarm = 0;
+        emit Send_Signal_to_Farm_for_plow_yonjeFarm();
         }
 
 
