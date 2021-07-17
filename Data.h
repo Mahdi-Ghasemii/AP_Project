@@ -66,6 +66,10 @@ public:
         temp["Build_YonjehFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Build_YonjehFarm();
         temp["Plow_YonjehFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Plow_YonjehFarm();
         temp["Mikh number"] = get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
+
+        qDebug() << "AAA" << get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
+
+
         temp["Bill number"] = get_iterator()->get_farm().get_storage().Get_bill().Get_Number();
         temp["Yonjeh number"] = get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number();
         temp["Egg number"] = get_iterator()->get_farm().get_storage().Get_egg().Get_Number();

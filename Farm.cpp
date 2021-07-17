@@ -22,6 +22,8 @@ Farm::Farm(QWidget *parent) :
     ui->_Max_Experience->setText(QString::number(10));
     ui->ExitAction->setShortcut(QKeySequence(Qt::ALT | Qt::Key_F4));
 
+    setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
+
     connect(&siloo, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&storage, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&store, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
@@ -96,6 +98,22 @@ GandomFarm &Farm::get_gandomFarm()
 MyThread &Farm::Get_MyThread()
 {
     return myThread;
+}
+
+void Farm::Set_UI_Attributes()
+{
+    ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
+    ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
+    ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
+    ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
+
+    time_t now = time(NULL);
+    ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
+    int a = Data::get_iterator()->get_experience()*100;
+    a /= Data::get_iterator()->get_experience_required_for_levelUp();
+
+    qDebug() << a << "Mahdi" <<a;
+    ui->progressBar->setValue(a);
 }
 
 void Farm::operator=(const Farm& p){
@@ -227,6 +245,8 @@ void Farm::Show_Farm_Class()
     ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
     int a = Data::get_iterator()->get_experience()*100;
     a /= Data::get_iterator()->get_experience_required_for_levelUp();
+
+    qDebug() << a;
     ui->progressBar->setValue(a);
 }
 
@@ -253,6 +273,7 @@ void Farm::on_pushButton_clicked()
 void Farm::On_ExitAction_triggred()
 {
     Data::write_on_file();
+
     this->close();
     QMessageBox::information(nullptr, "اتمام بازی", "به امید دیدار!");
 }

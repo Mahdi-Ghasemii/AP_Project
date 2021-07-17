@@ -39,6 +39,8 @@ public:
 
     MyThread& Get_MyThread();
 
+    void Set_UI_Attributes();
+
 
 private slots:
 

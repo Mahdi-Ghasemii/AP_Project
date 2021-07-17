@@ -86,19 +86,24 @@ void MyThread::run()
             Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
 
         }
+
+        Data::get_iterator()->get_farm().Set_UI_Attributes();
         last_time_set += number* 3600*24;
     }
     if(upgrade_Storage != 0 && now - upgrade_Storage >= 5*3600*24){
 
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"","انبار با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
+        QMessageBox::information(nullptr,"","انبار با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
         qDebug() << "Aref";
         Data::get_iterator()->get_farm().get_storage().Set_Capacity(round(Data::get_iterator()->get_farm().get_storage().GetCapasity() *3 / 2)+1);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() * 3);
-
+        Data::get_iterator()->get_farm().get_storage().Set_Bulding_Level(Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() + 1);
         if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
             Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
 
             Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
+
+            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
+
 
         }
         upgrade_Storage = 0;
@@ -108,13 +113,15 @@ void MyThread::run()
 
     if(upgrade_Siloo != 0 && now - upgrade_Siloo >= 4*3600*24){
 
-        QMessageBox::information(&Data::get_iterator()->get_farm().get_siloo(),"","سیلو با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
+        QMessageBox::information(&Data::get_iterator()->get_farm(),"","سیلو با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
 
         Data::get_iterator()->get_farm().get_storage().Set_Capacity(Data::get_iterator()->get_farm().get_storage().GetCapasity() *2);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() * 2);
+        Data::get_iterator()->get_farm().get_siloo().Set_Bulding_Level(Data::get_iterator()->get_farm().get_siloo().Get_Buliding_Level() + 1);
 
         if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
             Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
 
             Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
 

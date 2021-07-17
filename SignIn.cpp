@@ -3,7 +3,7 @@
 #include "SignUp.h"
 #include <fstream>
 #include <QMessageBox>
-
+#include <QDebug>
 using namespace std;
 
 
@@ -59,6 +59,9 @@ SignIn::SignIn(QWidget *parent) :
             p.get_farm().Get_MyThread().Set_Build_YonjehFarm(temp["Build_YonjehFarm time"].toInt());
             p.get_farm().Get_MyThread().Set_Plow_YonjehFarm(temp["Plow_YonjehFarm time"].toInt());
             p.get_farm().get_storage().Get_mikh().Set_Number(temp["Mikh number"].toInt());
+
+            qDebug() << "QQQ" << p.get_farm().get_storage().Get_mikh().Get_Number();
+
             p.get_farm().get_storage().Get_bill().Set_Number(temp["Bill number"].toInt());
             p.get_farm().get_storage().Get_yonjeh().Set_Number(temp["Yonjeh number"].toInt());
             p.get_farm().get_storage().Get_egg().Set_Number(temp["Egg number"].toInt());
