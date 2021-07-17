@@ -2,6 +2,7 @@
 #include "ui_Ranking.h"
 #include "Data.h"
 #include "Player.h"
+#include <QString>
 
 
 bool sort_players(const Player&, const Player&);
@@ -31,7 +32,13 @@ bool sort_players(const Player& p1, const Player& p2) {
 
 
 void Ranking::Get_Signal_From_Farm() {
+    QString uname = Data::get_iterator()->get_username();
     std::sort(Data::get_players().begin(), Data::get_players().end(), sort_players);
+    for (int i = 0; i < Data::get_players().size(); i++) {
+        if (uname == Data::get_players()[i].get_username()) {
+            Data::set_iterator(Data::get_players().begin() + i);
+        }
+    }
     setWindowTitle("رتبه بندی");
 
     design();

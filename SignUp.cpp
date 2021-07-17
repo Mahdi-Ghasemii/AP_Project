@@ -56,6 +56,7 @@ void SignUp::on_register_pbn_clicked()
     p.set_experience_required_for_levelUp(2 * p.get_experience() + 10);
     time_t t = time(NULL);
     p.set_signUp_time(t);
+    p.get_farm().Get_MyThread().Set_time_login(t);
     Data::get_players().append(p);
 
     QFile f("Players.json");
@@ -73,18 +74,19 @@ void SignUp::on_register_pbn_clicked()
     temp["Experience"] = p.get_experience();
     temp["Experience required for levelUp"] = p.get_experience_required_for_levelUp();
     temp["SignUp time"] = p.get_signUp_time();
+    temp["last_time_set"] = p.get_signUp_time();
     temp["upgrade_Storage time"] = 0;
     temp["upgrade_Siloo time"] = 0;
-    //temp[buy_Milk]
+    temp["buy_Milk time"] = 0;
     temp["upgrade_ChickenHome time"] = 0;
     temp["build_ChickenHome time"] = 0;
-    temp["collect_Eggs time"] = 0;
+    temp["feed_time_chicken"] = 0;
     temp["upgrade_CowHome time"] = 0;
     temp["build_CowHome time"] = 0;
-    temp["collect_Milks time"] = 0;
+    temp["feed_time_cow"] = 0;
     temp["upgrade_SheepHome time"] = 0;
     temp["build_SheepHome time"] = 0;
-    temp["correction_Sheeps time"] = 0;
+    temp["feed_time_sheep"] = 0;
     temp["upgrade_Gandomfarm time"] = 0;
     temp["Collect_from_GandomFarm time"] = 0;
     temp["Planting_from_GandomFarm time"] = 0;
