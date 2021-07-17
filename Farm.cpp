@@ -50,6 +50,12 @@ Farm::Farm(QWidget *parent) :
 
     connect(ui->ExitAction , SIGNAL(triggered()) , this ,SLOT(On_ExitAction_triggred()));
     connect(ui->ProfileAction , SIGNAL(triggered()) , this ,SLOT(On_ProfileAction_triggred()));
+
+
+    // write connects here :
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_time_login()),this,SLOT(Set_UI_Attributes1_for_set_time_login()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_Storage()),this,SLOT(Set_UI_Attributes_for_upgrade_storage()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_Siloo()),this,SLOT(Set_UI_Attributes1_for_upgrade_siloo()));
 }
 
 
@@ -100,21 +106,6 @@ MyThread &Farm::Get_MyThread()
     return myThread;
 }
 
-void Farm::Set_UI_Attributes()
-{
-    ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
-    ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
-    ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
-    ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
-
-    time_t now = time(NULL);
-    ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
-    int a = Data::get_iterator()->get_experience()*100;
-    a /= Data::get_iterator()->get_experience_required_for_levelUp();
-
-    qDebug() << a << "Mahdi" <<a;
-    ui->progressBar->setValue(a);
-}
 
 void Farm::operator=(const Farm& p){
     storage=p.storage;
@@ -283,6 +274,7 @@ void Farm::On_ProfileAction_triggred()
     Data::get_iterator()->show();
 }
 
+
 void Farm::get_signal_from_builting_for_chickenHome(QString str){
     if(str=="yes")
         chickenHome.build();
@@ -309,4 +301,47 @@ void Farm::get_signal_from_builting_for_YonjeFarm(QString str){
         yonjeFarm.build();
     else
         return;
+}
+
+
+void Farm::Global_Func_to_Set_ui_Attributes()
+{
+    ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
+    if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
+        Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+        QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
+
+        Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
+    }
+    ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
+    ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
+
+    time_t now = time(NULL);
+    ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
+    int a = Data::get_iterator()->get_experience()*100;
+    a /= Data::get_iterator()->get_experience_required_for_levelUp();
+    ui->progressBar->setValue(a);
+
+}
+
+
+// write slots here
+
+void Farm::Set_UI_Attributes1_for_set_time_login()
+{
+   Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes_for_upgrade_storage()
+{
+    QMessageBox::information(this,"","انبار با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_siloo()
+{
+    QMessageBox::information(this,"","سیلو با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
 }
