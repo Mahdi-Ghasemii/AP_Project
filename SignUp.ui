@@ -94,6 +94,9 @@
     <property name="bottomMargin">
      <number>0</number>
     </property>
+    <item row="0" column="0">
+     <widget class="QLineEdit" name="nameLE"/>
+    </item>
     <item row="0" column="1">
      <widget class="QLabel" name="label_2">
       <property name="font">
@@ -105,6 +108,13 @@
       </property>
       <property name="text">
        <string>نام</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLineEdit" name="usernameLE">
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
       </property>
      </widget>
     </item>
@@ -122,6 +132,13 @@
       </property>
      </widget>
     </item>
+    <item row="2" column="0">
+     <widget class="QLineEdit" name="passLE">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+    </item>
     <item row="2" column="1">
      <widget class="QLabel" name="label_4">
       <property name="font">
@@ -133,6 +150,13 @@
       </property>
       <property name="text">
        <string>رمز عبور</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLineEdit" name="repassLE">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
@@ -150,6 +174,9 @@
       </property>
      </widget>
     </item>
+    <item row="4" column="0">
+     <widget class="QLineEdit" name="emailLE"/>
+    </item>
     <item row="4" column="1">
      <widget class="QLabel" name="label_6">
       <property name="font">
@@ -163,33 +190,6 @@
        <string>ایمیل</string>
       </property>
      </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLineEdit" name="nameLE"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLineEdit" name="usernameLE">
-      <property name="echoMode">
-       <enum>QLineEdit::Normal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLineEdit" name="passLE">
-      <property name="echoMode">
-       <enum>QLineEdit::Password</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLineEdit" name="repassLE">
-      <property name="echoMode">
-       <enum>QLineEdit::Password</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLineEdit" name="emailLE"/>
     </item>
    </layout>
   </widget>
@@ -244,6 +244,19 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources>

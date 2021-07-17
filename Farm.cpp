@@ -328,10 +328,11 @@ void Farm::Global_Func_to_Set_ui_Attributes()
 {
     ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
     if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-        Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
 
         while(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
         Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
+        Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+
         }
         ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
         ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));

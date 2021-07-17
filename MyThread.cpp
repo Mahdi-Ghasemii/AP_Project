@@ -91,7 +91,6 @@ void MyThread::run()
     if(upgrade_Storage != 0 && now - upgrade_Storage >= 5*3600*24){
 
         //QMessageBox::information(nullptr,"","انبار با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
-        qDebug() << "Aref";
 
         Data::get_iterator()->get_farm().get_storage().Set_Capacity(round(Data::get_iterator()->get_farm().get_storage().GetCapasity() *3 / 2)+1);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() * 3);
@@ -119,6 +118,7 @@ void MyThread::run()
 
         if (now - buy_Milk[i] >= 10 * 24 *3600 ){
             Data::get_iterator()->get_farm().get_storage().Get_milk().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()-1);
+            buy_Milk.erase(buy_Milk.begin()+i);
         }
     }
 
