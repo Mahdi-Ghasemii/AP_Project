@@ -357,12 +357,9 @@ void MyThread::Push_Back_on_buy_Milk(time_t t){
     buy_Milk.push_back(t);
 }
 
-time_t MyThread::Get_Buy_Milk(int index)
+QVector<time_t>& MyThread::Get_Buy_Milk()
 {
-    if(index < buy_Milk.size()){
-        return buy_Milk[index];
-    }
-    else return 0;
+    return buy_Milk;
 }
 
 
