@@ -236,6 +236,7 @@ void Farm::on_pushButton_3_clicked()
     if(Data::get_iterator()->get_level() < 2){
 
          QMessageBox::information(this," !تذكر","براي دسترسي به فروشگاه ، سطح شما حداقل بايد 2 باشد!.",QMessageBox::Ok);
+         return;
     }
 
     emit Send_Signal_to_Store();
