@@ -42,8 +42,7 @@ void Ranking::Get_Signal_From_Farm() {
         }
     }
     setWindowTitle("رتبه بندی");
-    qDebug() << Data::get_players()[3].get_experience();
-    qDebug() << Data::get_players()[3].get_username();
+
     design();
 
 }

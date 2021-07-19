@@ -3,7 +3,6 @@
 #include "SignUp.h"
 #include <fstream>
 #include <QMessageBox>
-#include <QDebug>
 using namespace std;
 
 
