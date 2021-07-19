@@ -108,8 +108,6 @@ signals:
     void Send_Signal_to_CowHome();
     void Send_Signal_to_ChickenHome();
 
-    void Send_Signal_to_Player();
-
 
 private:
     Ui::Farm *ui;

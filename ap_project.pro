@@ -17,6 +17,7 @@ SOURCES += \
     Logo.cpp \
     MyThread.cpp \
     Player.cpp \
+    Profile.cpp \
     Ranking.cpp \
     SheepHome.cpp \
     SignIn.cpp \
@@ -41,6 +42,7 @@ HEADERS +=\
     Logo.h \
     MyThread.h \
     Player.h \
+    Profile.h \
     Ranking.h \
     SheepHome.h \
     SignIn.h \
@@ -61,6 +63,7 @@ FORMS += \
     Farm.ui \
     Logo.ui \
     Player.ui \
+    Profile.ui \
     Ranking.ui \
     SheepHome.ui \
     SignIn.ui \
