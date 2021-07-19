@@ -57,6 +57,10 @@
   <property name="windowTitle">
    <string>صفحه ورود</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/new/prefix1/Icons/WindowIcon.jpg</normaloff>:/new/prefix1/Icons/WindowIcon.jpg</iconset>
+  </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
@@ -207,9 +211,12 @@
        <bold>true</bold>
       </font>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,1,2">
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
       <property name="spacing">
-       <number>0</number>
+       <number>10</number>
       </property>
       <property name="leftMargin">
        <number>50</number>
@@ -237,24 +244,6 @@
         </property>
         <property name="text">
          <string>ثبت نام</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="or_label">
-        <property name="font">
-         <font>
-          <family>MS Shell Dlg 2</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>یا</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
@@ -292,6 +281,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

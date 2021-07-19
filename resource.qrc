@@ -38,6 +38,7 @@
         <file>Icons/Egg1.png</file>
         <file>Icons/Milk (2).png</file>
         <file>Icons/Mikh1.png</file>
+        <file>Icons/WindowIcon.jpg</file>
     </qresource>
     <qresource prefix="/background">
         <file>backgrounds/92-Picture-Blur-Nature-500x281.png</file>
