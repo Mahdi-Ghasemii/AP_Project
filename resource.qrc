@@ -47,4 +47,5 @@
         <file>backgrounds/istockphoto-1127237731-612x612 (1).png</file>
         <file>backgrounds/istockphoto-520123098-612x612.png</file>
     </qresource>
+    <qresource prefix="/sound"/>
 </RCC>
