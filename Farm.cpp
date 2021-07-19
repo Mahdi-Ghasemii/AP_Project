@@ -157,6 +157,10 @@ void Farm::on_YonjehFarm_pbn_clicked()
         QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 3 باشد");
         return;
     }
+    if(yonjeFarm.get_is_build()==false&&myThread.Get_Build_YonjehFarm()!=0){
+        QMessageBox::warning(this,"تذکر","زمین یونجه در حال ساخته شدن است");
+        return;
+    }
     if(yonjeFarm.get_is_build()==false){
         Builting* p=new Builting(this);
         p->show();

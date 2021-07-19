@@ -29,7 +29,7 @@ public:
     void build(void);
     bool get_is_build();
     void set_is_build(bool _is_build);
-    explicit YonjeFarm(QWidget *parent = nullptr,int _area=4,int _farm_level=1,bool _is_plantable=false,bool is_underplanting=false);
+    explicit YonjeFarm(QWidget *parent = nullptr,int _area=4,int _farm_level=1,bool _is_plantable=false,bool is_underplanting=false,bool _is_biuld=false);
     void operator=(const YonjeFarm& temp);
     ~YonjeFarm();
 

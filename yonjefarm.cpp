@@ -26,7 +26,7 @@ void YonjeFarm::build(void){
               //set date;
              time_t now = time(NULL);
              Data::get_iterator()->get_farm().Get_MyThread().Set_Build_YonjehFarm(now);
-             qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_Build_YonjehFarm();
+             //qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_Build_YonjehFarm();
 
          }
          else {
@@ -60,7 +60,7 @@ void YonjeFarm::build(void){
 }
 
 
-YonjeFarm::YonjeFarm(QWidget *parent,int _area,int _farm_level,bool _is_plantable,bool _is_underplanting) :
+YonjeFarm::YonjeFarm(QWidget *parent,int _area,int _farm_level,bool _is_plantable,bool _is_underplanting,bool _is_build) :
     QWidget(parent),
     ui(new Ui::YonjeFarm)
 {
@@ -68,6 +68,7 @@ YonjeFarm::YonjeFarm(QWidget *parent,int _area,int _farm_level,bool _is_plantabl
     area=_area;
     farm_level=_farm_level;
     is_plantable=_is_plantable;
+    is_biuld=_is_build;
     isunderplantingvariable=_is_underplanting;
     setFixedSize(407, 294);
     QPixmap bkgnd(":/new/prefix1/Icons/yonjebackground.jpg");
@@ -159,14 +160,29 @@ void YonjeFarm::on_planting_clicked()
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(2*area));
         time_t now = time(NULL);
         Data::get_iterator()->get_farm().Get_MyThread().Set_planting_YonjeFarm(now);
-        //qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_planting_YonjeFarm();
+
         is_plantable=false;
         QMessageBox::information(this,"توجه","کاشت زمین یونجه با موفقیت انجام شد. .",QMessageBox::Ok);
-       // if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
-        //   Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-        //    Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-        //    QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
-        //}
+        if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
+          Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+          Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+          Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+           if(Data::get_iterator()->get_level()==2)
+               QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به مرغداری, مرغ و تخم‌مرغ داده شده است . . .:)",QMessageBox::Ok);
+
+           else if(Data::get_iterator()->get_level()==3)
+               QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به زمین یونجه و یونجه داده شده است . . .:)",QMessageBox::Ok);
+
+           else if(Data::get_iterator()->get_level()==4)
+               QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به گاوداری, گاو و شیر داده شده است . . .:)",QMessageBox::Ok);
+
+           else if(Data::get_iterator()->get_level()==6)
+               QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به آغل, گوسفند و پشم گوسفند داده شده است . . .:)",QMessageBox::Ok);
+
+           else
+               QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
+       }
+
      }
         else{
             QMessageBox::information(this,"تذکر","به تعداد مورد نظر یونجه در انبار موجود نیست. .",QMessageBox::Ok);
@@ -225,16 +241,31 @@ void YonjeFarm::on_derokardan_clicked()
     if(Data::get_iterator()->get_farm().Get_MyThread().Get_planting_YonjeFarm()!=0 && now - Data::get_iterator()->get_farm().Get_MyThread().Get_planting_YonjeFarm()>= 4*3600*24){
           if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=2*area){
           Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()+2*area);
-          QMessageBox::warning(this,"موفقیت","درو شد. .",QMessageBox::Ok);
+          QMessageBox::information(this,"با موفقیت ","درو شد  .",QMessageBox::Ok);
           Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(  Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()+2*area);
 
           Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+2*area);
 
-
           if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
-          Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-          Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-          QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
+            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
+            Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
+             if(Data::get_iterator()->get_level()==2)
+                 QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به مرغداری, مرغ و تخم‌مرغ داده شده است . . .:)",QMessageBox::Ok);
+
+             else if(Data::get_iterator()->get_level()==3)
+                 QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به زمین یونجه و یونجه داده شده است . . .:)",QMessageBox::Ok);
+
+             else if(Data::get_iterator()->get_level()==4)
+                 QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به گاوداری, گاو و شیر داده شده است . . .:)",QMessageBox::Ok);
+
+             else if(Data::get_iterator()->get_level()==6)
+                 QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به آغل, گوسفند و پشم گوسفند داده شده است . . .:)",QMessageBox::Ok);
+
+             else
+                 QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
+
+
         }
           Data::get_iterator()->get_farm().Get_MyThread().Set_planting_YonjeFarm(0);
           return;
@@ -246,40 +277,7 @@ void YonjeFarm::on_derokardan_clicked()
     else {
         QMessageBox::warning(this,"تاریخ","زمین هنوز آماده برداشت نیست. .",QMessageBox::Ok);
     }
-      // QMessageBox::information(this,"","عملیات درو کردن آغاز شد. ",QMessageBox::Ok);
-     // if(Data::get_iterator()->get_farm().get_siloo().GetCapasity()-Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()>=2*area){
-   // Data::get_iterator()->get_farm().get_siloo().Get_gandom().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*area);
-    //time_t now = time(NULL);
-  //  Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Gandomfarm(now);
-  //  QMessageBox::warning(this,"موفقیت","درو شد. .",QMessageBox::Ok);
-  // Data::get_iterator()->get_farm().get_siloo().Set_Occupied_Capacity(  Data::get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity()+2*area);
-   //if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
-     //  Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-     //  Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-     //  QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
-    // }
-   //}
-  // else {
-   //    QMessageBox::warning(this,"ظرفیت ","سیلو ظرفیت ندارد. .",QMessageBox::Ok);
-   //}
 
-     // if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=2*area){
-   // Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number()+2*area);
-    //Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()+2*area);
-    //QMessageBox::warning(this,"تبریک","زمین یونحه با موفقیت دروشد. .",QMessageBox::Ok);
-    //set time
-    //time_t now = time(NULL);
-    //Data::get_iterator()->get_farm().Get_MyThread().Set_Collect_from_YonjehFarm(now);
-    //Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+(2*area));
-   //if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
-       //Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-      // Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-      // QMessageBox::information(this,"تبریک","ارتقای سطح کاربر انجام شد. .",QMessageBox::Ok);
-     //}
-  // }
-   //else {
-   //    QMessageBox::warning(this,"ظرفیت ","انبار ظرفیت ندارد. .",QMessageBox::Ok);
-   //}
 }
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -287,23 +285,31 @@ void YonjeFarm::on_shokhmzadan_clicked()
 {
 
     if(Data::get_iterator()->get_farm().Get_MyThread().Get_Plow_YonjehFarm() !=0 ){
-        QMessageBox::warning(this,"","شما قبلا زمین را شخم زده اید !.",QMessageBox::Ok);
+        QMessageBox::warning(this,"","زمین در حال شخم زدن است  !",QMessageBox::Ok);
         return;
     }
     if(Data::get_iterator()->get_farm().Get_MyThread().Get_planting_YonjeFarm() !=0 ){
         QMessageBox::warning(this,"","زمین زیر کشت است .",QMessageBox::Ok);
         return ;
      }
+    if(is_plantable==true){
+        QMessageBox::warning(this,"","شما قبلا زمین یونجه را شخم زده اید .",QMessageBox::Ok);
+        return;
+    }
 if(Data::get_iterator()->get_coin()>=(area*5)){
 
     Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-area*5);
       // time setting
       time_t now = time(NULL);
       Data::get_iterator()->get_farm().Get_MyThread().Set_Plow_YonjehFarm(now);
-      qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_Plow_YonjehFarm();
+     // qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_Plow_YonjehFarm();
+      QMessageBox::warning(this,""," شخم زدن زمین یونجه آغاز شد  !",QMessageBox::Ok);
+      is_plantable=true;
+      return ;
 }
 else {
     QMessageBox::warning(this,"","سکه کافی ندارید. ",QMessageBox::Ok);
+    return ;
 }
 
 }
