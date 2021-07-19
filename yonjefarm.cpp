@@ -153,6 +153,10 @@ void YonjeFarm::on_planting_clicked()
         QMessageBox::warning(this,"","زمین شخم زده نشده است!!!. .",QMessageBox::Ok);
         return ;
     }
+    if(is_plantable==true ){
+        QMessageBox::warning(this,"","زمین شخم زده نشده است!!!. .",QMessageBox::Ok);
+        return ;
+    }
 
         if (Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=area){
         Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-area);
@@ -304,7 +308,7 @@ if(Data::get_iterator()->get_coin()>=(area*5)){
       Data::get_iterator()->get_farm().Get_MyThread().Set_Plow_YonjehFarm(now);
      // qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_Plow_YonjehFarm();
       QMessageBox::warning(this,""," شخم زدن زمین یونجه آغاز شد  !",QMessageBox::Ok);
-      is_plantable=true;
+      //is_plantable=true;
       return ;
 }
 else {

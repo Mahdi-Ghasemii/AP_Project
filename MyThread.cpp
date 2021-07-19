@@ -256,6 +256,7 @@ void MyThread::run()
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+1*Data::get_iterator()->get_farm().get_yonjeFarm().getarea());
         Data::get_iterator()->get_farm().get_yonjeFarm().set_is_plantable(true);
         Plow_YonjehFarm = 0;
+
         emit Send_Signal_to_Farm_for_plow_yonjeFarm();
         }
 
