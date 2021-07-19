@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>934</width>
-    <height>591</height>
+    <height>602</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -119,7 +119,8 @@ font-weight: bold;
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>خرید (70)</string>
@@ -722,7 +723,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>خرید (80)</string>
@@ -741,7 +743,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (50)</string>
@@ -760,7 +763,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (70)</string>
@@ -779,7 +783,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>خرید (20)</string>
@@ -798,7 +803,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (15)</string>
@@ -817,7 +823,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>خرید (30)</string>
@@ -836,7 +843,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (20)</string>
@@ -855,7 +863,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (4)</string>
@@ -874,7 +883,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>خرید (6)</string>
@@ -893,7 +903,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>خرید (3)</string>
@@ -912,7 +923,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (2)</string>
@@ -931,7 +943,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (8)</string>
@@ -950,7 +963,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (23)</string>
@@ -969,7 +983,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>خرید (50)</string>
@@ -988,7 +1003,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (30)</string>
@@ -1007,7 +1023,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>فروش (12)</string>
@@ -1099,10 +1116,8 @@ background-color: rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(177, 0, 0);
-background-color: rgb(255, 208, 141);
-font-weight: bold;
-</string>
+    <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
    </property>
    <property name="text">
     <string>بازگشت</string>

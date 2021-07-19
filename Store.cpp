@@ -197,7 +197,7 @@ void Store::on_Sell_Cow_pbn_clicked()
 void Store::on_Buy_Sheep_pbn_clicked()
 {
 
-    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+    if(Data::get_iterator()->get_farm().get_sheepHome().get_is_build() != 0){
         QMessageBox::warning(this,"تذکر","آغل هنوز ساخته نشده است . . .",QMessageBox::Ok);
         return ;
     }
@@ -241,7 +241,7 @@ void Store::on_Buy_Sheep_pbn_clicked()
 void Store::on_Sell_Sheep_pbn_clicked()
 {
 
-    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+    if(Data::get_iterator()->get_farm().get_sheepHome().get_is_build() == 0){
         QMessageBox::warning(this,"تذکر","آغل هنوز ساخته نشده است . . .",QMessageBox::Ok);
         return ;
     }
@@ -279,7 +279,7 @@ void Store::on_Sell_Sheep_pbn_clicked()
 void Store::on_Buy_Chicken_pbn_clicked()
 {
 
-    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+    if(Data::get_iterator()->get_farm().get_chickenHome().get_is_build() == 0){
         QMessageBox::warning(this,"تذکر","مرغ داری هنوز ساخته نشده است . . .",QMessageBox::Ok);
         return ;
     }
@@ -322,7 +322,7 @@ void Store::on_Buy_Chicken_pbn_clicked()
 void Store::on_Sell_Chicken_pbn_clicked()
 {
 
-    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+    if(Data::get_iterator()->get_farm().get_chickenHome().get_is_build() == 0){
         QMessageBox::warning(this,"تذکر","مرغ داری هنوز ساخته نشده است . . .",QMessageBox::Ok);
         return ;
     }

@@ -440,10 +440,8 @@ background-color: rgb(255, 255, 255);</string>
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(177, 0, 0);
-background-color: rgb(255, 208, 141);
-    font-weight: bold;
-</string>
+     <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
     </property>
     <property name="text">
      <string>بازگشت</string>
@@ -469,10 +467,8 @@ background-color: rgb(255, 208, 141);
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(177, 0, 0);
-background-color: rgb(255, 208, 141);
-font-weight: bold;
-</string>
+     <string notr="true">background-color: rgb(255, 194, 158);
+color: rgb(170, 0, 0);</string>
     </property>
     <property name="text">
      <string>ارتقاء</string>

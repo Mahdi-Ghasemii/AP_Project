@@ -257,9 +257,9 @@ background-color: rgb(136, 0, 27);</string>
    <widget class="QLabel" name="stockanimal_lbl">
     <property name="geometry">
      <rect>
-      <x>59</x>
+      <x>50</x>
       <y>310</y>
-      <width>20</width>
+      <width>21</width>
       <height>21</height>
      </rect>
     </property>
@@ -279,9 +279,9 @@ background-color: rgb(136, 0, 27);</string>
    <widget class="QLabel" name="capacity_lbl">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>56</x>
       <y>270</y>
-      <width>16</width>
+      <width>20</width>
       <height>20</height>
      </rect>
     </property>
@@ -301,9 +301,9 @@ background-color: rgb(136, 0, 27);</string>
    <widget class="QLabel" name="level_lbl">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>56</x>
       <y>290</y>
-      <width>16</width>
+      <width>20</width>
       <height>21</height>
      </rect>
     </property>

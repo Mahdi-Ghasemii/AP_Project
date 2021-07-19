@@ -95,7 +95,7 @@ void MyThread::run()
 
         Data::get_iterator()->get_farm().get_storage().Set_Capacity(round(Data::get_iterator()->get_farm().get_storage().GetCapasity() *3 / 2)+1);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() * 3);
-        Data::get_iterator()->get_farm().get_storage().Set_Bulding_Level(Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() + 1);        
+        Data::get_iterator()->get_farm().get_storage().Set_Bulding_Level(Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() + 1);
         emit Send_Signal_to_Farm_for_Upgrade_Storage();
         upgrade_Storage = 0;
 
@@ -106,8 +106,8 @@ void MyThread::run()
 
 //        QMessageBox::information(&Data::get_iterator()->get_farm(),"","سیلو با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
 
-        Data::get_iterator()->get_farm().get_storage().Set_Capacity(Data::get_iterator()->get_farm().get_storage().GetCapasity() *2);
-        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() * 2);
+        Data::get_iterator()->get_farm().get_siloo().Set_Capacity(Data::get_iterator()->get_farm().get_siloo().GetCapasity() *2);
+        Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + Data::get_iterator()->get_farm().get_siloo().Get_Buliding_Level() * 2);
         Data::get_iterator()->get_farm().get_siloo().Set_Bulding_Level(Data::get_iterator()->get_farm().get_siloo().Get_Buliding_Level() + 1);
 
         upgrade_Siloo = 0;

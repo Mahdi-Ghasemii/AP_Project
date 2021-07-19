@@ -77,7 +77,7 @@ void Siloo::on_Upgrade_Siloo_clicked()
             Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number() - (this->building_Level*2));
 
             Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number() - (this->building_Level-2));
-
+            Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity() - ((building_Level*3) - 2));
             Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() - pow((this->building_Level*2),2)*100);
             QMessageBox::information(this,"","درخواست شما برای ارتقا سیلو با موفقیت ثبت شد.",QMessageBox::Ok);
 
@@ -97,9 +97,12 @@ void Siloo::on_Upgrade_Siloo_clicked()
 void Siloo::Get_Signal_From_Farm()
 {
 
+    occupied_capacity = gandom.Get_Number();
     ui->Siloo_Capacity->setText(QString::number(this->capasity));
     ui->Gandom_Available->setText(QString::number(this->occupied_capacity));
     ui->Siloo_Level->setText(QString::number(this->building_Level));
+
+
 }
 
 void Siloo::on_Return_to_Farm_clicked()

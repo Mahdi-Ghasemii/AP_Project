@@ -79,7 +79,7 @@ void SheepHome::on_feeding_btn_clicked()
 {
     if(stock_animal!=0){
         if(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=stock_animal){
-            if(time(NULL),Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
+            if(time(NULL)-Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
                 if (Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()==0){
                     Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-stock_animal);
                     Data::get_iterator()->get_farm().Get_MyThread().Set_feed_time_sheep(time(NULL));
@@ -88,7 +88,21 @@ void SheepHome::on_feeding_btn_clicked()
                     if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
                         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
                         Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-                        QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
+
+                        if(Data::get_iterator()->get_level()==2)
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به مرغداری, مرغ و تخم‌مرغ داده شده است . . .:)",QMessageBox::Ok);
+
+                        else if(Data::get_iterator()->get_level()==3)
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به زمین یونجه و یونجه داده شده است . . .:)",QMessageBox::Ok);
+
+                        else if(Data::get_iterator()->get_level()==4)
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به گاوداری, گاو و شیر داده شده است . . .:)",QMessageBox::Ok);
+
+                        else if(Data::get_iterator()->get_level()==6)
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به آغل, گوسفند و پشم گوسفند داده شده است . . .:)",QMessageBox::Ok);
+
+                        else
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
                     }
                 }
                 else {
@@ -112,7 +126,7 @@ void SheepHome::on_collect_btn_clicked()
 {
     if(Data::get_iterator()->get_coin()>=10*stock_animal){
         if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=stock_animal){
-            if(time(NULL),Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
+            if(time(NULL)-Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
                 if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()!=0){
                     Data::get_iterator()->get_farm().Get_MyThread().Set_feed_time_sheep(0);
                     Data::get_iterator()->get_farm().get_storage().Get_pashm().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()+stock_animal);
@@ -123,7 +137,21 @@ void SheepHome::on_collect_btn_clicked()
                     if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
                         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
                         Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-                        QMessageBox::information(this," ","سطح شما با موفقیت افزایش یافت");
+
+                        if(Data::get_iterator()->get_level()==2)
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به مرغداری, مرغ و تخم‌مرغ داده شده است . . .:)",QMessageBox::Ok);
+
+                        else if(Data::get_iterator()->get_level()==3)
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به زمین یونجه و یونجه داده شده است . . .:)",QMessageBox::Ok);
+
+                        else if(Data::get_iterator()->get_level()==4)
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به گاوداری, گاو و شیر داده شده است . . .:)",QMessageBox::Ok);
+
+                        else if(Data::get_iterator()->get_level()==6)
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد, در این سطح به شما اجازه دسترسی به آغل, گوسفند و پشم گوسفند داده شده است . . .:)",QMessageBox::Ok);
+
+                        else
+                            QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
                     }
                 }
                 else {

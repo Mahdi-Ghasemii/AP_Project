@@ -18,8 +18,7 @@
     <normaloff>:/new/prefix1/Icons/WindowIcon.jpg</normaloff>:/new/prefix1/Icons/WindowIcon.jpg</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(136, 0, 27);</string>
+   <string notr="true">background-color: rgb(8, 255, 90);</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
  </widget>
