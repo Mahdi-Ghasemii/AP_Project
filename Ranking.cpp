@@ -3,6 +3,7 @@
 #include "Data.h"
 #include "Player.h"
 #include <QString>
+#include <QDebug>
 
 
 bool sort_players(const Player&, const Player&);
@@ -37,10 +38,12 @@ void Ranking::Get_Signal_From_Farm() {
     for (int i = 0; i < Data::get_players().size(); i++) {
         if (uname == Data::get_players()[i].get_username()) {
             Data::set_iterator(Data::get_players().begin() + i);
+            break;
         }
     }
     setWindowTitle("رتبه بندی");
-
+    qDebug() << Data::get_players()[3].get_experience();
+    qDebug() << Data::get_players()[3].get_username();
     design();
 
 }
