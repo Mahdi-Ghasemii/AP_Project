@@ -15,7 +15,7 @@ GandomFarm::GandomFarm(QWidget *parent,int _area,int _farm_level,bool _is_underp
     area=_area;
     farm_level=_farm_level;
     isunderplantingvariable = _is_underplanting;
-
+    setFixedSize(402, 312);
     ui->setupUi(this);
     QPixmap bkgnd(":/new/prefix1/Icons/gandombackground.jpg");
        bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);

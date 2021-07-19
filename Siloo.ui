@@ -99,6 +99,9 @@ background-color: rgb(255, 255, 255);</string>
      <bold>true</bold>
     </font>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">font-weight: bold;
 background-color: rgb(255, 208, 141);
@@ -168,6 +171,9 @@ color: rgb(170, 0, 0);
      <weight>75</weight>
      <bold>true</bold>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">font-weight: bold;

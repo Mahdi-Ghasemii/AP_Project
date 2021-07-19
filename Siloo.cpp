@@ -9,7 +9,7 @@ Siloo::Siloo(QWidget *parent) :
     ui(new Ui::Siloo)
 {
     ui->setupUi(this);
-
+    setFixedSize(410, 295);
     this->gandom.Set_Number(1);
     this->capasity = 10;
     this->occupied_capacity = 1;

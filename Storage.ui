@@ -16,6 +16,9 @@
     <bold>false</bold>
    </font>
   </property>
+  <property name="cursor">
+   <cursorShape>PointingHandCursor</cursorShape>
+  </property>
   <property name="windowTitle">
    <string>انبار</string>
   </property>
@@ -429,6 +432,9 @@ background-color: rgb(255, 255, 255);</string>
       <bold>true</bold>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(177, 0, 0);
 background-color: rgb(255, 208, 141);
@@ -454,6 +460,9 @@ background-color: rgb(255, 208, 141);
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(177, 0, 0);

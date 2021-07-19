@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>زمین گندم</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/new/prefix1/Icons/gandombackground.jpg);
@@ -56,6 +56,9 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;کاشتن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
@@ -96,6 +99,9 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
      <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ارتقا&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -151,6 +157,9 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;درو کردن&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
@@ -185,6 +194,9 @@ background-image: url(:/new/prefix1/Icons/whaewt farm2.jpg);</string>
      <width>71</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;بازگشت&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
