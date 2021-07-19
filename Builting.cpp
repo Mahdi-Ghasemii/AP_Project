@@ -6,6 +6,7 @@ Builting::Builting(QWidget *parent) :
     ui(new Ui::Builting)
 {
     ui->setupUi(this);
+    setFixedSize(442, 192);
 }
 
 Builting::~Builting()
