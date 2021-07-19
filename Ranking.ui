@@ -13,11 +13,17 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/new/prefix1/Icons/WindowIcon.jpg</normaloff>:/new/prefix1/Icons/WindowIcon.jpg</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(8, 255, 90);</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
