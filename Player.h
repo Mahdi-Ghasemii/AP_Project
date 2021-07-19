@@ -43,9 +43,6 @@ public:
     void set_experience_required_for_levelUp(int);
     int get_experience_required_for_levelUp()const;
 
-    void set_signUp_time(time_t);
-    time_t get_signUp_time()const;
-
     Farm& get_farm();
 
 private:
@@ -59,7 +56,7 @@ private:
     int level;
     int experience;
     int experience_required_for_levelUp;
-    time_t signUp_time;
+//    time_t signUp_time;
     Farm farm;
 
 

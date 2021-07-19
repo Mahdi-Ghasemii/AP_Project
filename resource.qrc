@@ -15,18 +15,16 @@
         <file>Icons/mikh.png</file>
         <file>Icons/milk.png</file>
         <file>Icons/Sheep.jpg</file>
-        <file>Icons/Siloo.jpg</file>
-        <file>Icons/Storage.JPEG</file>
-        <file>Icons/Storage2.png</file>
         <file>Icons/Store.png</file>
         <file>Icons/whaewt farm2.jpg</file>
         <file>Icons/wheat.png</file>
         <file>Icons/Wool.png</file>
         <file>Icons/Yonjeh.jpg</file>
         <file>Icons/Farm.jpg</file>
-        <file>Icons/Storage-removebg-preview (3).png</file>
-        <file>Icons/Siloo_Green.png</file>
-        <file>Icons/Shop.png</file>
+        <file>Icons/Storage.png</file>
+        <file>Icons/Siloo.png</file>
+        <file>Icons/Shop1.png</file>
+        <file>Icons/Shop2.png</file>
         <file>Icons/Coin2.png</file>
         <file>Icons/GndomFarm.png</file>
         <file>Icons/YonjehFarm.jpg</file>
@@ -36,6 +34,10 @@
         <file>Icons/kargar.png</file>
         <file>Icons/gandombackground.jpg</file>
         <file>Icons/yonjebackground.jpg</file>
+        <file>Icons/Ranking.png</file>
+        <file>Icons/Egg1.png</file>
+        <file>Icons/Milk (2).png</file>
+        <file>Icons/Mikh1.png</file>
     </qresource>
     <qresource prefix="/background">
         <file>backgrounds/92-Picture-Blur-Nature-500x281.png</file>

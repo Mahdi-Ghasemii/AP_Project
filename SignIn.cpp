@@ -96,6 +96,7 @@ SignIn::SignIn(QWidget *parent) :
             p.get_farm().get_yonjeFarm().set_level(temp["YonjehFarm level"].toInt());
             Data::get_players().append(p);
 
+            qDebug() <<"time :::" << time(NULL);
         }
     }
     f.close();

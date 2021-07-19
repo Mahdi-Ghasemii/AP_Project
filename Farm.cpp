@@ -26,6 +26,8 @@ Farm::Farm(QWidget *parent) :
 
     setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
 
+    this->setFixedSize(1000,666);
+
     connect(&siloo, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&storage, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&store, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
@@ -130,6 +132,7 @@ void Farm::operator=(const Farm& p){
     sheepHome=p.sheepHome;
     yonjeFarm=p.yonjeFarm;
     gandomFarm=p.gandomFarm;
+    myThread=p.myThread;
 }
 
 void Farm::on_Storage_pbn_clicked()
@@ -264,7 +267,7 @@ void Farm::on_pushButton_3_clicked()
 
     if(Data::get_iterator()->get_level() < 2){
 
-         QMessageBox::information(this," !تذكر","براي دسترسي به فروشگاه ، سطح شما حداقل بايد 2 باشد!.",QMessageBox::Ok);
+         QMessageBox::warning(this," !تذكر","براي دسترسي به فروشگاه ، سطح شما حداقل بايد 2 باشد!.",QMessageBox::Ok);
          return;
     }
 

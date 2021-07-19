@@ -40,7 +40,7 @@ void Store::Add_Experience_and_Check_Level(int _e){
     if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
         Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
 
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
+        QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
 
         Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
 
@@ -113,8 +113,12 @@ void Store::on_Sell_Gandom_pbn_clicked()
 void Store::on_Buy_Cow_pbn_clicked()
 {
 
-    if(Data::get_iterator()->get_level() < 4){
-        QMessageBox::warning(this,"","اين مرحله هنوز براي شما قفل است . .",QMessageBox::Ok);
+    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+        QMessageBox::warning(this,"تذکر","گاو داری هنوز ساخته نشده است . . .",QMessageBox::Ok);
+        return ;
+    }
+    else if(Data::get_iterator()->get_level() < 4){
+        QMessageBox::warning(this,"","حداقل سطح مورد نیاز برای خرید گاو ، 4 می باشد . .",QMessageBox::Ok);
         return ;
     }
 
@@ -151,8 +155,12 @@ void Store::on_Buy_Cow_pbn_clicked()
 void Store::on_Sell_Cow_pbn_clicked()
 {
 
-    if(Data::get_iterator()->get_level() < 4){
-        QMessageBox::warning(this,"","اين مرحله هنوز براي شما قفل است . .",QMessageBox::Ok);
+    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+        QMessageBox::warning(this,"تذکر","گاو داری هنوز ساخته نشده است . . .",QMessageBox::Ok);
+        return ;
+    }
+    else if(Data::get_iterator()->get_level() < 4){
+        QMessageBox::warning(this,"","حداقل سطح مورد نیاز برای فروش گاو ، 4 می باشد . .",QMessageBox::Ok);
         return ;
     }
     else if(Data::get_iterator()->get_farm().get_cowHome().get_stock_animal() < 1){
@@ -182,7 +190,11 @@ void Store::on_Sell_Cow_pbn_clicked()
 void Store::on_Buy_Sheep_pbn_clicked()
 {
 
-    if(Data::get_iterator()->get_level() < 6){
+    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+        QMessageBox::warning(this,"تذکر","آغل هنوز ساخته نشده است . . .",QMessageBox::Ok);
+        return ;
+    }
+    else if(Data::get_iterator()->get_level() < 6){
         QMessageBox::warning(this,"","اين مرحله هنوز براي شما قفل است . .",QMessageBox::Ok);
         return ;
     }
@@ -218,7 +230,11 @@ void Store::on_Buy_Sheep_pbn_clicked()
 void Store::on_Sell_Sheep_pbn_clicked()
 {
 
-    if(Data::get_iterator()->get_level() < 6){
+    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+        QMessageBox::warning(this,"تذکر","آغل هنوز ساخته نشده است . . .",QMessageBox::Ok);
+        return ;
+    }
+    else if(Data::get_iterator()->get_level() < 6){
         QMessageBox::warning(this,"","اين مرحله هنوز براي شما قفل است . .",QMessageBox::Ok);
         return ;
     }
@@ -249,7 +265,11 @@ void Store::on_Sell_Sheep_pbn_clicked()
 void Store::on_Buy_Chicken_pbn_clicked()
 {
 
-    if(Data::get_iterator()->get_level() < 2){
+    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+        QMessageBox::warning(this,"تذکر","مرغ داری هنوز ساخته نشده است . . .",QMessageBox::Ok);
+        return ;
+    }
+    else if(Data::get_iterator()->get_level() < 2){
         QMessageBox::warning(this,"","اين مرحله هنوز براي شما قفل است . .",QMessageBox::Ok);
         return ;
     }
@@ -285,6 +305,10 @@ void Store::on_Buy_Chicken_pbn_clicked()
 void Store::on_Sell_Chicken_pbn_clicked()
 {
 
+    if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
+        QMessageBox::warning(this,"تذکر","مرغ داری هنوز ساخته نشده است . . .",QMessageBox::Ok);
+        return ;
+    }
     if(Data::get_iterator()->get_level() < 2){
         QMessageBox::warning(this,"","اين مرحله هنوز براي شما قفل است . .",QMessageBox::Ok);
         return ;

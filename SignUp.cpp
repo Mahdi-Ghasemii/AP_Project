@@ -64,9 +64,7 @@ void SignUp::on_register_pbn_clicked()
     p.set_level(1);
     p.set_experience(0);
     p.set_experience_required_for_levelUp(2 * p.get_experience() + 10);
-    time_t t = time(NULL);
-    p.set_signUp_time(t);
-    p.get_farm().Get_MyThread().Set_time_login(t);
+    p.get_farm().Get_MyThread().Set_time_login(time(NULL));
     Data::get_players().append(p);
 
     QFile f("Players.json");
@@ -83,8 +81,8 @@ void SignUp::on_register_pbn_clicked()
     temp["Level"] = p.get_level();
     temp["Experience"] = p.get_experience();
     temp["Experience required for levelUp"] = p.get_experience_required_for_levelUp();
-    temp["SignUp time"] = p.get_signUp_time();
-    temp["last_time_set"] = p.get_signUp_time();
+    temp["SignUp time"] = p.get_farm().Get_MyThread().Get_time_login();
+    temp["last_time_set"] = p.get_farm().Get_MyThread().Get_last_time_set();
     temp["upgrade_Storage time"] = 0;
     temp["upgrade_Siloo time"] = 0;
     temp["buy_Milk time"] = 0;
@@ -142,5 +140,6 @@ void SignUp::on_register_pbn_clicked()
     f.write(d.toJson());
     f.close();
     QMessageBox::information(this, "تکمیل ثبت نام", "ثبت نام شما با موفقیت انجام شد");
+
 }
 
