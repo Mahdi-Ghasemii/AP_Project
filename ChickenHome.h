@@ -27,7 +27,7 @@ private slots:
 
     void on_back_btn_clicked();
 
-    //  get signals from Farm class :
+    // get signals from Farm class :
     void Get_Signal_From_Farm();
 
 signals:
