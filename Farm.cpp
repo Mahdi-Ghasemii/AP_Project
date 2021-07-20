@@ -70,6 +70,7 @@ Farm::Farm(QWidget *parent) :
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_yonjeFarm()),this,SLOT(Set_UI_Attributes1_for_build_yonjeFarm()));
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_yonjeFarm()),this,SLOT(Set_UI_Attributes1_for_upgrade_yonjeFarm()));
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_gandomFarm()),this,SLOT(Set_UI_Attributes1_for_upgrade_gandomFarm()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_plow_yonjeFarm()),this,SLOT(Set_UI_Attributes1_for_plow_yonjeFarm()));
 
 }
 
@@ -451,6 +452,6 @@ void Farm::Set_UI_Attributes1_for_plow_yonjeFarm()
 {
     Global_Func_to_Set_ui_Attributes();
 
-    QMessageBox::information(this,"تبریک","مزرعه یونجه با درو شد",QMessageBox::Ok);
+    QMessageBox::information(this,"تبریک","مزرعه یونجه با موفقیت شخم زده شد",QMessageBox::Ok);
 }
 

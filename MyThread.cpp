@@ -56,11 +56,11 @@ void MyThread::operator=(const MyThread& temp){
     build_SheepHome = temp.build_SheepHome;
     feed_time_sheep = temp.feed_time_sheep;
     upgrade_Gandomfarm = temp.upgrade_Gandomfarm;
-    Collect_from_GandomFarm = temp.upgrade_Gandomfarm;
-    upgrade_Yonjehfarm = temp.upgrade_Gandomfarm;
-    Collect_from_YonjehFarm = temp.upgrade_Gandomfarm;
-    Build_YonjehFarm = temp.upgrade_Gandomfarm;
-    Plow_YonjehFarm = temp.upgrade_Gandomfarm;
+    Collect_from_GandomFarm = temp.Collect_from_GandomFarm;
+    upgrade_Yonjehfarm = temp.upgrade_Yonjehfarm;
+    Collect_from_YonjehFarm = temp.Collect_from_YonjehFarm;
+    Build_YonjehFarm = temp.Build_YonjehFarm;
+    Plow_YonjehFarm = temp.Plow_YonjehFarm;
     // // // //
     Planting_from_GandomFarm = temp.Planting_from_GandomFarm;
     Planting_from_YonjeFarm = temp.Planting_from_YonjeFarm;
@@ -252,7 +252,7 @@ void MyThread::run()
     //shokhmzaminyonje(plow)//
 
     if(Plow_YonjehFarm!=0 && now - Plow_YonjehFarm>= 1*3600*24){
-     QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تبریک","مزرعه یونجه با موفقیت شخم زده شد",QMessageBox::Ok);
+       // QMessageBox::information(&Data::get_iterator()->get_farm().get_yonjeFarm(),"تبریک","مزرعه یونجه با موفقیت شخم زده شد",QMessageBox::Ok);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+1*Data::get_iterator()->get_farm().get_yonjeFarm().getarea());
         Data::get_iterator()->get_farm().get_yonjeFarm().set_is_plantable(true);
         Plow_YonjehFarm = 0;

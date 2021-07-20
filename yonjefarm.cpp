@@ -26,6 +26,7 @@ void YonjeFarm::build(void){
               //set date;
              time_t now = time(NULL);
              Data::get_iterator()->get_farm().Get_MyThread().Set_Build_YonjehFarm(now);
+             QMessageBox::information(this," ","ساختن مزرعه یونجه با موفقیت آغاز شد");
              //qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_Build_YonjehFarm();
 
          }
@@ -144,7 +145,7 @@ YonjeFarm::~YonjeFarm()
 /////////////////////////////////////////////////////////////////////
 void YonjeFarm::on_planting_clicked()
 {
-
+    //_sleep(1000);
     if(Data::get_iterator()->get_farm().Get_MyThread().Get_planting_YonjeFarm() !=0 ){
         QMessageBox::warning(this,"تاریخ","زمین زیر کشت است. .",QMessageBox::Ok);
         return ;
@@ -153,7 +154,7 @@ void YonjeFarm::on_planting_clicked()
         QMessageBox::warning(this,"","زمین شخم زده نشده است!!!. .",QMessageBox::Ok);
         return ;
     }
-    if(is_plantable==true ){
+    if(is_plantable==false ){
         QMessageBox::warning(this,"","زمین شخم زده نشده است!!!. .",QMessageBox::Ok);
         return ;
     }
