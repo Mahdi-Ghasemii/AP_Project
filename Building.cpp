@@ -1,5 +1,6 @@
 ﻿#include "Building.h"
 
+
 Building::Building ()
 {
     this->capasity = 0;

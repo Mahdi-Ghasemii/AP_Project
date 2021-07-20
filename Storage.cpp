@@ -4,6 +4,7 @@
 #include <math.h>
 #include "Data.h"
 #include <QDebug>
+
 Storage::Storage(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Storage)

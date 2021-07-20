@@ -12,7 +12,6 @@
         <file>Icons/icons8-sickle-40.png</file>
         <file>Icons/icons8-tree-planting-64.png</file>
         <file>Icons/icons8-upgrade-64.png</file>
-        <file>Icons/mikh.png</file>
         <file>Icons/milk.png</file>
         <file>Icons/Sheep.jpg</file>
         <file>Icons/Store.png</file>
@@ -39,13 +38,11 @@
         <file>Icons/Milk (2).png</file>
         <file>Icons/Mikh1.png</file>
         <file>Icons/WindowIcon.jpg</file>
-		<file>Icons/store.jpg</file>
+        <file>Icons/store.jpg</file>
     </qresource>
     <qresource prefix="/background">
-        <file>backgrounds/92-Picture-Blur-Nature-500x281.png</file>
         <file>backgrounds/giphy (2).gif</file>
         <file>backgrounds/istockphoto-520123098-612x612.png</file>
         <file>backgrounds/istockphoto-1127237731-612x612 (1).png</file>
     </qresource>
-    <qresource prefix="/sound"/>
 </RCC>

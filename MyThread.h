@@ -6,6 +6,7 @@
 #include <QVector>
 
 
+
 class MyThread : public QThread
 {
     Q_OBJECT

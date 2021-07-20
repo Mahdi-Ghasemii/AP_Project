@@ -5,6 +5,7 @@
 #include "Product.h"
 #include <QMainWindow>
 
+
 namespace Ui {
 class Store;
 }

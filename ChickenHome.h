@@ -35,6 +35,7 @@ signals:
 
 private:
     Ui::ChickenHome *ui;
+
 };
 
 #endif // CHICKENHOME_H

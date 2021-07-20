@@ -1,6 +1,7 @@
 #include "Builting.h"
 #include "ui_Builting.h"
 
+
 Builting::Builting(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Builting)

@@ -12,6 +12,7 @@ namespace Ui {
 class GandomFarm;
 }
 
+
 class GandomFarm : public QWidget
 {
     Q_OBJECT

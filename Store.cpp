@@ -3,6 +3,7 @@
 #include "Data.h"
 #include <QString>
 
+
 Store::Store(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Store)

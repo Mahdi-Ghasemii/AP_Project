@@ -6,6 +6,7 @@
 #include <QDebug>
 
 
+
 bool sort_players(const Player&, const Player&);
 
 Ranking::Ranking(QWidget *parent) :

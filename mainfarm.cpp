@@ -1,6 +1,7 @@
 #include "mainfarm.h"
 
 
+
 MainFarm::MainFarm(){ }
 void MainFarm:: set_area(int _area){area=_area;}
 

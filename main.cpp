@@ -6,7 +6,6 @@
 //#include <mmsystem.h>
 
 
-
 QVector<Player>::iterator Data::it;
 QVector<Player> Data::players;
 

@@ -25,6 +25,7 @@ signals:
 
 private:
     Ui::Builting *ui;
+
 };
 
 #endif // BUILTING_H

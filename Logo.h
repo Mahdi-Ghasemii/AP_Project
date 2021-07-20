@@ -10,6 +10,7 @@ namespace Ui {
 class Logo;
 }
 
+
 class Logo : public QMainWindow
 {
     Q_OBJECT

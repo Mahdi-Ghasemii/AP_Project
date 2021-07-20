@@ -6,7 +6,6 @@
 #include <QMessageBox>
 
 
-
 GandomFarm::GandomFarm(QWidget *parent,int _area,int _farm_level,bool _is_underplanting):
     QWidget(parent),
     ui(new Ui::GandomFarm)

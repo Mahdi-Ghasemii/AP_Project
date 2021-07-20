@@ -11,6 +11,7 @@
 #include <QPalette>
 
 
+
 namespace Ui {
 class Ranking;
 }

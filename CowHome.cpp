@@ -2,6 +2,7 @@
 #include "ui_CowHome.h"
 #include "Data.h"
 #include <QDebug>
+
 CowHome::CowHome(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::CowHome)

@@ -2,7 +2,6 @@
 #include "ui_Logo.h"
 #include "SignIn.h"
 
-
 Logo::Logo(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Logo)

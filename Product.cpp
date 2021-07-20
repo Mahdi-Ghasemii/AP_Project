@@ -1,5 +1,6 @@
 #include "Product.h"
 
+
 Product::Product ()
 {
     this->number = 0;

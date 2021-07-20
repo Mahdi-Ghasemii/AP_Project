@@ -10,6 +10,7 @@ namespace Ui {
 class Siloo;
 }
 
+
 class Siloo : public QMainWindow ,public Building
 {
     Q_OBJECT

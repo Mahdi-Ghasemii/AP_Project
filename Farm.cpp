@@ -8,6 +8,7 @@
 #include "Profile.h"
 #include <QMessageBox>
 #include <QKeySequence>
+
 Farm::Farm(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Farm)

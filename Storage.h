@@ -10,6 +10,7 @@ namespace Ui {
 class Storage;
 }
 
+
 class Storage : public QMainWindow , public Building
 {
     Q_OBJECT

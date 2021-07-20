@@ -10,6 +10,7 @@ namespace Ui {
 class SignUp;
 }
 
+
 class SignUp : public QWidget
 {
     Q_OBJECT

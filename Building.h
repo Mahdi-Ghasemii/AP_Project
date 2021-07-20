@@ -23,7 +23,6 @@ class Building
         int Get_Occupied_Capacity ();
         void Set_Occupied_Capacity (int _OC);
 
-
 };
 
 #endif // BUILDING_H

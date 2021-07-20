@@ -16,6 +16,7 @@ using namespace std;
 
 class Data
 {
+
 private:
     static QVector<Player>::iterator it;
     static QVector<Player> players;

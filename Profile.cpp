@@ -2,6 +2,7 @@
 #include "ui_Profile.h"
 #include "Data.h"
 
+
 Profile::Profile(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Profile)

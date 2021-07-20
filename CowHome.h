@@ -35,6 +35,7 @@ signals:
 
 private:
     Ui::CowHome *ui;
+
 };
 
 #endif // COWHOME_H
