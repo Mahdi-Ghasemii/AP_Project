@@ -2,6 +2,9 @@
 #define SIGNUP_H
 
 #include <QWidget>
+#include <QFile>
+#include <QJsonObject>
+#include <QJsonDocument>
 
 namespace Ui {
 class SignUp;

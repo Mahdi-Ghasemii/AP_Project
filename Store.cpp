@@ -12,7 +12,7 @@ Store::Store(QWidget *parent) :
 
 }
 
-void Store::operator =(const Store& temp){
+void Store::operator =(const Store&){
 
 
 }

@@ -10,9 +10,6 @@ Logo::Logo(QWidget *parent) :
     ui->setupUi(this);
 
 
-    QMovie* movie = new QMovie(":/new/prefix1/Logo.gif");
-    ui->label->setMovie(movie);
-    movie->start();
 }
 
 Logo::~Logo()

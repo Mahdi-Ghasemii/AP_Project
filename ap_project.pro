@@ -1,21 +1,21 @@
 QT       += core gui
 
-CONFIG += c++11
-CONFIG += mobility
-MOBILITY += multimedia
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+CONFIG += c++11
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Builting.cpp \
     ChickenHome.cpp \
     CowHome.cpp \
     Farm.cpp \
     Habitat.cpp \
     Logo.cpp \
+    MyThread.cpp \
     Player.cpp \
     Ranking.cpp \
     SheepHome.cpp \
@@ -31,15 +31,15 @@ SOURCES += \
     mainfarm.cpp \
     yonjefarm.cpp \
 
-
-
 HEADERS +=\
+    Builting.h \
     ChickenHome.h \
     CowHome.h \
     Data.h \
     Farm.h \
     Habitat.h \
     Logo.h \
+    MyThread.h \
     Player.h \
     Ranking.h \
     SheepHome.h \
@@ -55,6 +55,7 @@ HEADERS +=\
     yonjefarm.h \
 
 FORMS += \
+    Builting.ui \
     ChickenHome.ui \
     CowHome.ui \
     Farm.ui \

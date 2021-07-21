@@ -12,6 +12,7 @@
 #include "ChickenHome.h"
 #include "CowHome.h"
 #include "SheepHome.h"
+#include "MyThread.h"
 
 namespace Ui {
 class Farm;
@@ -23,6 +24,7 @@ class Farm : public QMainWindow
 
 public:
     explicit Farm(QWidget *parent = nullptr);
+    void operator=(const Farm&);
     ~Farm();
 
     Storage& get_storage();
@@ -32,7 +34,10 @@ public:
     ChickenHome& get_chickenHome();
     CowHome& get_cowHome();
     SheepHome& get_sheepHome();
-    void operator=(const Farm&);
+    YonjeFarm& get_yonjeFarm();
+    GandomFarm& get_gandomFarm();
+
+    MyThread& Get_MyThread();
 
 
 private slots:
@@ -84,6 +89,7 @@ private:
     SheepHome sheepHome;
     YonjeFarm yonjeFarm;
     GandomFarm gandomFarm;
+    MyThread myThread;
 };
 
 #endif // FARM_H

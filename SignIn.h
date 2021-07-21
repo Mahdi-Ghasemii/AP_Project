@@ -3,6 +3,9 @@
 
 #include <QWidget>
 #include "Data.h"
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QFile>
 
 
 namespace Ui {

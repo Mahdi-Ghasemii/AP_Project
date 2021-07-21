@@ -3,7 +3,7 @@
 #include <QString>
 #include "Data.h"
 #include <QMessageBox>
-
+#include <time.h>
 Siloo::Siloo(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Siloo)
@@ -47,23 +47,44 @@ Siloo::~Siloo(){
 void Siloo::on_Upgrade_Siloo_clicked()
 {
 
+        if(Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_Siloo() !=0 ){
+            QMessageBox::warning(this,"","شما قبلا درخواست ارتقا داده اید !.",QMessageBox::Ok);
+            return;
+        }
 
-        if(!(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number() >= this->building_Level*2)){
+        else if(Data::get_iterator()->get_level() > 1 && Data::get_iterator()->get_level() <= this->building_Level){
+
+             QMessageBox::warning(this,"","حداکثر سطح انبار رعایت نشده است.",QMessageBox::Ok);
+             return;
+         }
+
+       else  if(!(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number() >= this->building_Level*2)){
 
             QMessageBox::warning(this,"کمبود منابع","تعداد میخ ها برای ارتقا سیلو کافی نمی باشد .",QMessageBox::Ok);
+            return;
         }
-        else if(!( Data::get_iterator()->get_coin() >= pow((this->building_Level*2),2))*100){
+        else if(!(Data::get_iterator()->get_coin() >= pow((this->building_Level*2),2))*100){
             QMessageBox::warning(this,"کمبود منابع","تعداد سکه ها برای ارتقا سیلو کافی نمی باشد",QMessageBox::Ok);
+            return;
         }
-        else if(!( Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number() >= this->building_Level-2)){
+        else if(!(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number() >= this->building_Level-2)){
             QMessageBox::warning(this,"کمبود منابع","تعداد بیل ها برای ارتقا سیلو کافی نمی باشد",QMessageBox::Ok);
+            return;
         }
 
         else {
-            this->building_Level *= 2;
-            QMessageBox::information(this,"","سیلو با موفقیت ارتقا پیدا کرد .",QMessageBox::Ok);
 
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + (this->building_Level * 2));
+            Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number() - (this->building_Level*2));
+
+            Data::get_iterator()->get_farm().get_storage().Get_bill().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_bill().Get_Number() - (this->building_Level-2));
+
+            Data::get_iterator()->set_coin(Data::get_iterator()->get_coin() - pow((this->building_Level*2),2)*100);
+            QMessageBox::information(this,"","درخواست شما برای ارتقا سیلو با موفقیت ثبت شد.",QMessageBox::Ok);
+
+            time_t now = time(NULL);
+            Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Siloo(now);
+
+            return;
         }
 
 
