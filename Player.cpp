@@ -7,6 +7,7 @@ Player::Player(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
     this->name = "";
     this->username = "";
     this->password = "";

@@ -79,8 +79,13 @@ void MyThread::run()
     if(last_time_set != 0 && now - last_time_set >= 3600*24){
         number = (now - last_time_set)/(3600*24);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+number);
-        Data::get_iterator()->set_level(Data::get_iterator()->get_level()+number);
 
+        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
+            Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
+
+            Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
+
+        }
         last_time_set += number* 3600*24;
     }
     if(upgrade_Storage != 0 && now - upgrade_Storage >= 5*3600*24){
