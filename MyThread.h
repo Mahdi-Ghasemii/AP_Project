@@ -17,6 +17,8 @@ public:
     // my functions :
     void Set_time_login(time_t t);
     time_t Get_time_login();
+    void Set_last_time_set(time_t t);
+    time_t Get_last_time_set();
     void Set_upgrade_Storage(time_t t);
     time_t Get_upgrade_Storage();
     void Set_upgrade_Siloo(time_t t);
@@ -29,20 +31,20 @@ public:
     time_t Get_upgrade_ChickenHome();
     void Set_build_ChickenHome(time_t t);
     time_t Get_build_ChickenHome();
-    void Set_collect_Eggs(time_t t);
-    time_t Get_collect_Eggs();
+    void Set_feed_time_chicken(time_t t);
+    time_t Get_feed_time_chicken();
     void Set_upgrade_CowHome(time_t t);
     time_t Get_upgrade_CowHome();
     void Set_build_CowHome(time_t t);
     time_t Get_build_CowHome();
-    void Set_collect_Milks(time_t t);
-    time_t Get_collect_Milks();
+    void Set_feed_time_cow(time_t t);
+    time_t Get_feed_time_cow();
     void Set_upgrade_SheepHome(time_t t);
     time_t Get_upgrade_SheepHome();
     void Set_build_SheepHome(time_t t);
     time_t Get_build_SheepHome();
-    void Set_correction_Sheeps(time_t t);
-    time_t Get_correction_Sheeps();
+    void Set_feed_time_sheep(time_t t);
+    time_t Get_feed_time_sheep();
 
 
     // Arsalan functions:
@@ -76,6 +78,7 @@ public:
 private:
 
     time_t time_login;
+    time_t last_time_set;
     //  Storage & siloo
     time_t upgrade_Storage;
     time_t upgrade_Siloo;
@@ -84,15 +87,15 @@ private:
     // ChickenHome classes :
     time_t upgrade_ChickenHome;
     time_t build_ChickenHome;
-    time_t collect_Eggs;
+    time_t feed_time_chicken;
     // CowHome classes :
     time_t upgrade_CowHome;
     time_t build_CowHome;
-    time_t collect_Milks;
+    time_t feed_time_cow;
     // SheepHome classes :
     time_t upgrade_SheepHome;
     time_t build_SheepHome;
-    time_t correction_Sheeps;
+    time_t feed_time_sheep;
 
     // YonjehFarm & GandomFarm :
 

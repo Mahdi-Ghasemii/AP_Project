@@ -10,7 +10,6 @@ CowHome::CowHome(QWidget *parent) :
     capacity=2;
     stock_animal=0;
     level_habitat=1;
-    feed_time=0;
     is_build=false;
 }
 
@@ -23,7 +22,6 @@ void CowHome::operator=(const CowHome& p){
     capacity=p.capacity;
     stock_animal=p.stock_animal;
     level_habitat=p.level_habitat;
-    feed_time=p.feed_time;
     is_build=p.is_build;
 }
 
@@ -73,10 +71,10 @@ void CowHome::on_feeding_btn_clicked()
 {
     if(stock_animal!=0){
         if(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=2*stock_animal){
-            if(time(NULL),feed_time>3*24*3600){
-                if (feed_time==0){
+            if(time(NULL),Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow()>3*24*3600){
+                if (Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow()==0){
                     Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-2*stock_animal);
-                    feed_time=time(NULL);
+                    Data::get_iterator()->get_farm().Get_MyThread().Set_feed_time_cow(time(NULL));
                     Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+3*stock_animal);
                     QMessageBox::information(this," ","غذا دادن با موفقیت انجام شد");
                     if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
@@ -106,9 +104,9 @@ void CowHome::on_feeding_btn_clicked()
 void CowHome::on_collect_btn_clicked()
 {
     if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=stock_animal){
-        if(time(NULL),feed_time>3*24*3600){
-            if(feed_time!=0){
-                feed_time=0;
+        if(time(NULL)-Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow()>3*24*3600){
+            if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow()!=0){
+                Data::get_iterator()->get_farm().Get_MyThread().Set_feed_time_cow(0);
                 Data::get_iterator()->get_farm().get_storage().Get_milk().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()+stock_animal);
                 Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()+stock_animal);
                 Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+5*stock_animal);

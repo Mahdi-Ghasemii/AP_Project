@@ -10,7 +10,6 @@ SheepHome::SheepHome(QWidget *parent) :
     capacity=2;
     stock_animal=0;
     level_habitat=1;
-    feed_time=0;
     is_build=false;
 }
 
@@ -23,7 +22,6 @@ void SheepHome::operator=(const SheepHome& p){
     capacity=p.capacity;
     stock_animal=p.stock_animal;
     level_habitat=p.level_habitat;
-    feed_time=p.feed_time;
     is_build=p.is_build;
 }
 
@@ -78,10 +76,10 @@ void SheepHome::on_feeding_btn_clicked()
 {
     if(stock_animal!=0){
         if(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=stock_animal){
-            if(time(NULL),feed_time>10*24*3600){
-                if (feed_time==0){
+            if(time(NULL),Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
+                if (Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()==0){
                     Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-stock_animal);
-                    feed_time=time(NULL);
+                    Data::get_iterator()->get_farm().Get_MyThread().Set_feed_time_sheep(time(NULL));
                     Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+7*stock_animal);
                     QMessageBox::information(this," ","غذا دادن با موفقیت انجام شد");
                     if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
@@ -111,9 +109,9 @@ void SheepHome::on_collect_btn_clicked()
 {
     if(Data::get_iterator()->get_coin()>=10*stock_animal){
         if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=stock_animal){
-            if(time(NULL),feed_time>10*24*3600){
-                if(feed_time!=0){
-                    feed_time=0;
+            if(time(NULL),Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
+                if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()!=0){
+                    Data::get_iterator()->get_farm().Get_MyThread().Set_feed_time_sheep(0);
                     Data::get_iterator()->get_farm().get_storage().Get_pashm().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()+stock_animal);
                     Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()+stock_animal);
                     Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-10*stock_animal);
