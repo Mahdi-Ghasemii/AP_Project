@@ -196,7 +196,7 @@ time_t MyThread::Get_collect_Eggs(){
 }
 
 void MyThread::Set_upgrade_CowHome(time_t t){
-
+    upgrade_CowHome = t;
 }
 
 time_t MyThread::Get_upgrade_CowHome(){
@@ -208,7 +208,7 @@ void MyThread::Set_build_CowHome(time_t t){
 }
 
 time_t MyThread::Get_build_CowHome(){
-    return collect_Eggs;
+    return build_CowHome;
 }
 
 void MyThread::Set_collect_Milks(time_t t){
