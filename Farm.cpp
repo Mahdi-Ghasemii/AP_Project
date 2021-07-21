@@ -4,7 +4,7 @@
 #include "Store.h"
 #include "Siloo.h"
 #include "Data.h"
-
+#include "Builting.h"
 Farm::Farm(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Farm)
@@ -135,6 +135,16 @@ void Farm::on_GandomFarm_pbn_clicked()
 
 void Farm::on_SheepHome_pbn_clicked()
 {
+    if(Data::get_iterator()->get_level()<6){
+        QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 6 باشد");
+        return;
+    }
+    if(chickenHome.get_is_build()==false){
+        Builting* p=new Builting(this);
+        p->show();
+        connect(p,SIGNAL(Send_Signal_to_Farm(QString)),this,SLOT(get_signal_from_builting_for_sheepHome(QString)));
+        return;
+    }
     emit Send_Signal_to_SheepHome();
     sheepHome.show();
 }
@@ -142,6 +152,16 @@ void Farm::on_SheepHome_pbn_clicked()
 
 void Farm::on_ChickenHome_pbn_clicked()
 {
+    if(Data::get_iterator()->get_level()<2){
+        QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 2 باشد");
+        return;
+    }
+    if(chickenHome.get_is_build()==false){
+        Builting* p=new Builting(this);
+        p->show();
+        connect(p,SIGNAL(Send_Signal_to_Farm(QString)),this,SLOT(get_signal_from_builting_for_chickenHome(QString)));
+        return;
+    }
     emit Send_Signal_to_ChickenHome();
     chickenHome.show();
 }
@@ -149,6 +169,16 @@ void Farm::on_ChickenHome_pbn_clicked()
 
 void Farm::on_CowHome_pbn_clicked()
 {
+    if(Data::get_iterator()->get_level()<4){
+        QMessageBox::warning(this,"تذکر","سطح شما باید حداقل 4 باشد");
+        return;
+    }
+    if(chickenHome.get_is_build()==false){
+        Builting* p=new Builting(this);
+        p->show();
+        connect(p,SIGNAL(Send_Signal_to_Farm(QString)),this,SLOT(get_signal_from_builting_for_cowHome(QString)));
+        return;
+    }
     emit Send_Signal_to_CowHome();
     cowHome.show();
 }
@@ -170,16 +200,6 @@ void Farm::Show_Farm_Class()
     ui->progressBar->setValue(a);
 }
 
-
-
-
-
-
-
-
-
-
-
 void Farm::on_pushButton_3_clicked()
 {
 
@@ -187,3 +207,23 @@ void Farm::on_pushButton_3_clicked()
     store.show();
 }
 
+void Farm::get_signal_from_builting_for_chickenHome(QString str){
+    if(str=="yes")
+        chickenHome.build();
+    else
+        return;
+}
+
+void Farm::get_signal_from_builting_for_cowHome(QString str){
+    if(str=="yes")
+        cowHome.build();
+    else
+        return;
+}
+
+void Farm::get_signal_from_builting_for_sheepHome(QString str){
+    if(str=="yes")
+        sheepHome.build();
+    else
+        return;
+}

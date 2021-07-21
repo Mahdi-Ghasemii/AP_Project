@@ -36,3 +36,11 @@ void Habitat::set_feed_time(time_t _feed_time){
 time_t Habitat::get_feed_time(){
     return feed_time;
 }
+
+bool Habitat::get_is_build(){
+    return is_build;
+}
+
+void Habitat::set_is_build(bool _is_build){
+    is_build=_is_build;
+}
