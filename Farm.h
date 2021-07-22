@@ -41,6 +41,9 @@ public:
 
 
 private slots:
+
+    void get_signal_from_builting_for_YonjeFarm(QString);
+
     void get_signal_from_builting_for_chickenHome(QString);
     void get_signal_from_builting_for_cowHome(QString);
     void get_signal_from_builting_for_sheepHome(QString);
@@ -58,6 +61,8 @@ private slots:
 
 
     void on_pushButton_3_clicked();
+
+    void on_pushButton_clicked();
 
 signals:
 

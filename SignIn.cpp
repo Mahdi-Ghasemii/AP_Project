@@ -13,7 +13,7 @@ SignIn::SignIn(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QPixmap qpm("C:/Users/TAD BIR RAYANEH/Desktop/test files for ap project/92-Picture-Blur-Nature-500x281.png");
+    QPixmap qpm(":/background/backgrounds/92-Picture-Blur-Nature-500x281.png");
     qpm = qpm.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette qp;
     qp.setBrush(QPalette::Window, qpm);
@@ -21,7 +21,7 @@ SignIn::SignIn(QWidget *parent) :
 
     QFile f("Players.json");
     f.open(QIODevice::ReadOnly);
-    if (f.isOpen()) {
+    if (f.isOpen() && Data::get_players().isEmpty()) {
         QJsonDocument d = QJsonDocument::fromJson(f.readAll());
         QJsonObject o = d.object();
         QJsonObject temp;
