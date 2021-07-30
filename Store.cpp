@@ -8,7 +8,7 @@ Store::Store(QWidget *parent) :
     ui(new Ui::Store)
 {
     ui->setupUi(this);
-
+    setFixedSize(934, 578);
 
 }
 

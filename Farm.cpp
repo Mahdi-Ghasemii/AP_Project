@@ -5,6 +5,7 @@
 #include "Siloo.h"
 #include "Data.h"
 #include "Builting.h"
+#include "Profile.h"
 #include <QMessageBox>
 #include <QKeySequence>
 Farm::Farm(QWidget *parent) :
@@ -21,6 +22,7 @@ Farm::Farm(QWidget *parent) :
     ui->_Experience->setText(QString::number(0));
     ui->_Max_Experience->setText(QString::number(10));
     ui->ExitAction->setShortcut(QKeySequence(Qt::ALT | Qt::Key_F4));
+    ui->ProfileAction->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_P));
 
     setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
 
@@ -40,7 +42,6 @@ Farm::Farm(QWidget *parent) :
 
     connect(&ranking, SIGNAL(Send_Signal_to_Farm()), this, SLOT(Show_Farm_Class()));
     connect(this, SIGNAL(Send_Signal_to_Ranking()), &ranking, SLOT(Get_Signal_From_Farm()));
-
 
     connect(&sheepHome, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
     connect(&cowHome, SIGNAL(Send_Signal_to_Farm()),this,SLOT(Show_Farm_Class()));
@@ -131,6 +132,7 @@ void Farm::operator=(const Farm& p){
     sheepHome=p.sheepHome;
     yonjeFarm=p.yonjeFarm;
     gandomFarm=p.gandomFarm;
+    myThread=p.myThread;
 }
 
 void Farm::on_Storage_pbn_clicked()
@@ -285,7 +287,8 @@ void Farm::On_ExitAction_triggred()
 
 void Farm::On_ProfileAction_triggred()
 {
-    Data::get_iterator()->show();
+    Profile* p = new Profile;
+    p->show();
 }
 
 

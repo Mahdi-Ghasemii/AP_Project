@@ -11,6 +11,7 @@ ChickenHome::ChickenHome(QWidget *parent) :
     stock_animal=0;
     level_habitat=1;
     is_build=false;
+    setFixedSize(403, 339);
 }
 
 ChickenHome::~ChickenHome()

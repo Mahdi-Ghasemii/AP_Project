@@ -69,7 +69,7 @@ YonjeFarm::YonjeFarm(QWidget *parent,int _area,int _farm_level,bool _is_plantabl
     farm_level=_farm_level;
     is_plantable=_is_plantable;
     isunderplantingvariable=_is_underplanting;
-
+    setFixedSize(407, 294);
     QPixmap bkgnd(":/new/prefix1/Icons/yonjebackground.jpg");
        bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
        QPalette palette;

@@ -10,7 +10,7 @@ Storage::Storage(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
+    setFixedSize(508, 457);
 
 
     this->yonjeh.Set_Number(1);

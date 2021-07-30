@@ -109,8 +109,6 @@ signals:
     void Send_Signal_to_ChickenHome();
 
 
-
-
 private:
     Ui::Farm *ui;
 

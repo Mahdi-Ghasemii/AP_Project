@@ -43,7 +43,7 @@ void MyThread::operator=(const MyThread& temp){
 
     buy_Milk.resize(temp.buy_Milk.size());
 
-    for(int i = 0;i< Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number();i++){
+    for(int i = 0;i< temp.buy_Milk.size();i++){
         buy_Milk[i] = temp.buy_Milk[i];
     }
     upgrade_ChickenHome = temp.upgrade_ChickenHome;
