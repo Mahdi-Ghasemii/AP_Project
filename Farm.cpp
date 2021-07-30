@@ -135,12 +135,8 @@ void Farm::operator=(const Farm& p){
 
 void Farm::on_Storage_pbn_clicked()
 {
-
-    qDebug()<<"Mikh Number :" << Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
-
     emit Send_Signal_to_Storage();
 
-    qDebug()<<"Mikh Number :" << Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
 
     storage.show();
 }
@@ -256,7 +252,6 @@ void Farm::Show_Farm_Class()
     int a = Data::get_iterator()->get_experience()*100;
     a /= Data::get_iterator()->get_experience_required_for_levelUp();
 
-    qDebug() << a;
     ui->progressBar->setValue(a);
 }
 
@@ -328,12 +323,11 @@ void Farm::Global_Func_to_Set_ui_Attributes()
     ui->_Experience->setText(QString::number(Data::get_iterator()->get_experience()));
     if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
         Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
-        QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
-
         Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
+        ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
+        ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
+        QMessageBox::information(this,"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
     }
-    ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
-    ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
     ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
     time_t now = time(NULL);
