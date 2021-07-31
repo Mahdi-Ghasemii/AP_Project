@@ -43,6 +43,7 @@ Farm::Farm(QWidget *parent) :
     connect(this, SIGNAL(Send_Signal_to_CowHome()),&cowHome,SLOT(Get_Signal_From_Farm()));
     connect(this, SIGNAL(Send_Signal_to_ChickenHome()),&chickenHome,SLOT(Get_Signal_From_Farm()));
 
+    connect(ui->ExitAction , SIGNAL(triggered()) , this ,SLOT(On_ExitAction_triggred()));
 }
 
 
@@ -223,6 +224,11 @@ void Farm::on_pushButton_clicked()
 {
     emit Send_Signal_to_Ranking();
     ranking.show();
+}
+
+void Farm::On_ExitAction_triggred()
+{
+    qDebug() << "MMMMMMMMMM";
 }
 
 void Farm::get_signal_from_builting_for_chickenHome(QString str){

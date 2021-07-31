@@ -66,9 +66,9 @@ void MyThread::run()
     time_t now = time(NULL);
     int number = 0;
 
-    qDebug() <<"Mahdi Ghasemi";
+   // qDebug() <<"Mahdi Ghasemi";
     if(time_login != 0 && now - time_login >= 3600*24){
-        number = (now - time_login)/3600*24;
+        number = (now - time_login)/(3600*24);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+number);
         Data::get_iterator()->set_level(Data::get_iterator()->get_level()+number);
 
@@ -78,7 +78,7 @@ void MyThread::run()
 
         QMessageBox::information(&Data::get_iterator()->get_farm(),"","انبار با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
         qDebug() << "Aref";
-        Data::get_iterator()->get_farm().get_storage().Set_Capacity(round(Data::get_iterator()->get_farm().get_storage().GetCapasity() *3 / 2));
+        Data::get_iterator()->get_farm().get_storage().Set_Capacity(round(Data::get_iterator()->get_farm().get_storage().GetCapasity() *3 / 2)+1);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() * 3);
 
         if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
