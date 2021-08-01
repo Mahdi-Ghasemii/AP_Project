@@ -21,7 +21,7 @@ Farm::Farm(QWidget *parent) :
     ui->_Level->setText(QString::number(1));
     ui->_Experience->setText(QString::number(0));
     ui->_Max_Experience->setText(QString::number(10));
-    ui->ExitAction->setShortcut(QKeySequence(Qt::ALT | Qt::Key_F4));
+    ui->ExitAction->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_E));
     ui->ProfileAction->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_P));
 
     setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
@@ -280,7 +280,8 @@ void Farm::on_pushButton_clicked()
 void Farm::On_ExitAction_triggred()
 {
     Data::write_on_file();
-
+    qDebug() << Data::get_players()[3].get_experience();
+    qDebug() << Data::get_players()[3].get_username();
     this->close();
     QMessageBox::information(nullptr, "اتمام بازی", "به امید دیدار!");
 }
