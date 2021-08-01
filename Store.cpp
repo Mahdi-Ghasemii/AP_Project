@@ -112,7 +112,6 @@ void Store::on_Sell_Gandom_pbn_clicked()
 
 void Store::on_Buy_Cow_pbn_clicked()
 {
-
     if(Data::get_iterator()->get_farm().get_cowHome().get_is_build() == 0){
         QMessageBox::warning(this,"تذکر","گاو داری هنوز ساخته نشده است . . .",QMessageBox::Ok);
         return ;
@@ -122,11 +121,15 @@ void Store::on_Buy_Cow_pbn_clicked()
         return ;
     }
 
-
     else if(Data::get_iterator()->get_coin() < 70){
-        QMessageBox::warning(this,"تذکر","تعداد سکه برای خرید یونجه کافی نمی باشد .",QMessageBox::Ok);
+        QMessageBox::warning(this,"تذکر","تعداد سکه برای خرید گاو کافی نمی باشد .",QMessageBox::Ok);
         return ;
     }
+    else if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow() != 0){
+        QMessageBox::warning(this,"تذکر","در هنگام غذا خوردن گاو ها ، امکان خرید گاو وجود ندارد     . . .",QMessageBox::Ok);
+        return ;
+    }
+
     else if(Data::get_iterator()->get_farm().get_cowHome().get_capacity() <= Data::get_iterator()->get_farm().get_cowHome().get_stock_animal()){
         QMessageBox::warning(this,"تذکر","ظرفیت گاوداری برای نگه داری گاو کافی نمی باشد .",QMessageBox::Ok);
         return ;
@@ -168,6 +171,10 @@ void Store::on_Sell_Cow_pbn_clicked()
         return ;
     }
 
+    else if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow() != 0){
+        QMessageBox::warning(this,"تذکر","در هنگام غذا خوردن گاو ها ، امکان خرید گاو وجود ندارد     . . .",QMessageBox::Ok);
+        return ;
+    }
 
     else {
 
@@ -206,6 +213,10 @@ void Store::on_Buy_Sheep_pbn_clicked()
         QMessageBox::warning(this,"تذکر","ظرفیت آغل برای نگه داری گوسفند کافی نمی باشد .",QMessageBox::Ok);
         return ;
     }
+    else if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep() != 0){
+        QMessageBox::warning(this,"تذکر","در هنگام غذا خوردن گوسفند ها ، امکان خرید گوسفند وجود ندارد     . . .",QMessageBox::Ok);
+        return ;
+    }
 
     else {
 
@@ -242,7 +253,10 @@ void Store::on_Sell_Sheep_pbn_clicked()
         QMessageBox::warning(this,"تذکر","تعداد گوسفند های موجود در آغل کافی نمی باشد .",QMessageBox::Ok);
         return ;
     }
-
+    else if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep() != 0){
+        QMessageBox::warning(this,"تذکر","در هنگام غذا خوردن گوسفند ها ، امکان خرید گوسفند وجود ندارد     . . .",QMessageBox::Ok);
+        return ;
+    }
 
     else {
 
@@ -282,7 +296,10 @@ void Store::on_Buy_Chicken_pbn_clicked()
         QMessageBox::warning(this,"تذکر","ظرفیت مرغداری برای نگه داری مرغ کافی نمی باشد .",QMessageBox::Ok);
         return ;
     }
-
+    else if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_chicken() != 0){
+        QMessageBox::warning(this,"تذکر","در هنگام غذا خوردن مرغ ها ، امکان خرید مرغ وجود ندارد     . . .",QMessageBox::Ok);
+        return ;
+    }
     else {
 
 //        QMessageBox::information(this,"","خرید با موفقیت انجام شد.",QMessageBox::Ok);
@@ -318,7 +335,10 @@ void Store::on_Sell_Chicken_pbn_clicked()
         QMessageBox::warning(this,"تذکر","تعداد مرغ های موجود در مرغداری کافی نمی باشد .",QMessageBox::Ok);
         return ;
     }
-
+    else if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_chicken() != 0){
+        QMessageBox::warning(this,"تذکر","در هنگام غذا خوردن مرغ ها ، امکان خرید مرغ وجود ندارد     . . .",QMessageBox::Ok);
+        return ;
+    }
 
     else {
 

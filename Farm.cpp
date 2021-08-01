@@ -249,8 +249,8 @@ void Farm::Show_Farm_Class()
     ui->_Max_Experience->setText(QString::number(Data::get_iterator()->get_experience_required_for_levelUp()));
     ui->_Level->setText(QString::number(Data::get_iterator()->get_level()));
 
-    time_t now = time(NULL);
-    ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
+//    time_t now = time(NULL);
+//    ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
     int a = Data::get_iterator()->get_experience()*100;
     a /= Data::get_iterator()->get_experience_required_for_levelUp();
 
@@ -333,8 +333,8 @@ void Farm::Global_Func_to_Set_ui_Attributes()
     }
     ui->Num_Coin->setText(QString::number(Data::get_iterator()->get_coin()));
 
-    time_t now = time(NULL);
-    ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
+//    time_t now = time(NULL);
+//    ui->DaysLeft->setText(QString::number(((now - Data::get_iterator()->get_farm().Get_MyThread().Get_time_login())/(3600*24))));
     int a = Data::get_iterator()->get_experience()*100;
     a /= Data::get_iterator()->get_experience_required_for_levelUp();
     ui->progressBar->setValue(a);
