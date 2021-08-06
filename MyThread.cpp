@@ -27,7 +27,7 @@ MyThread::MyThread()
 }
 
 
-void MyThread::operator =(const MyThread& temp){
+void MyThread::operator=(const MyThread& temp){
 
     time_login = temp.time_login;
     upgrade_Storage = temp.upgrade_Storage;
@@ -62,6 +62,7 @@ void MyThread::operator =(const MyThread& temp){
 void MyThread::run()
 {
 
+    forever{
     time_t now = time(NULL);
     int number = 0;
 
@@ -75,8 +76,8 @@ void MyThread::run()
     }
     if(upgrade_Storage != 0 && now - upgrade_Storage >= 5*3600*24){
 
-        QMessageBox::information(&Data::get_iterator()->get_farm().get_storage(),"","انبار با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
-
+        QMessageBox::information(&Data::get_iterator()->get_farm(),"","انبار با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
+        qDebug() << "Aref";
         Data::get_iterator()->get_farm().get_storage().Set_Capacity(round(Data::get_iterator()->get_farm().get_storage().GetCapasity() *3 / 2));
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() * 3);
 
@@ -123,7 +124,7 @@ void MyThread::run()
 
 
 
-
+}
 
 }
 
