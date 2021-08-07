@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>صفحه ثبت نام</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/new/prefix1/Icons/WindowIcon.jpg</normaloff>:/new/prefix1/Icons/WindowIcon.jpg</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true"/>
   </property>
@@ -242,6 +246,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
