@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>-20</y>
       <width>1000</width>
       <height>666</height>
      </rect>
@@ -56,7 +56,7 @@
     </property>
     <property name="icon">
      <iconset resource="resource.qrc">
-      <normaloff>:/new/prefix1/Icons/Storage-removebg-preview (3).png</normaloff>:/new/prefix1/Icons/Storage-removebg-preview (3).png</iconset>
+      <normaloff>:/new/prefix1/Icons/Storage.png</normaloff>:/new/prefix1/Icons/Storage.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -64,13 +64,16 @@
       <height>150</height>
      </size>
     </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="Siloo_pbn">
     <property name="geometry">
      <rect>
-      <x>670</x>
+      <x>680</x>
       <y>230</y>
-      <width>93</width>
+      <width>91</width>
       <height>101</height>
      </rect>
     </property>
@@ -85,7 +88,7 @@
     </property>
     <property name="icon">
      <iconset resource="resource.qrc">
-      <normaloff>:/new/prefix1/Icons/Siloo_Green.png</normaloff>:/new/prefix1/Icons/Siloo_Green.png</iconset>
+      <normaloff>:/new/prefix1/Icons/Siloo.png</normaloff>:/new/prefix1/Icons/Siloo.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -93,14 +96,17 @@
       <height>150</height>
      </size>
     </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>560</y>
-      <width>71</width>
-      <height>81</height>
+      <x>0</x>
+      <y>530</y>
+      <width>111</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="cursor">
@@ -117,13 +123,16 @@
     </property>
     <property name="icon">
      <iconset resource="resource.qrc">
-      <normaloff>:/new/prefix1/Icons/Shop.png</normaloff>:/new/prefix1/Icons/Shop.png</iconset>
+      <normaloff>:/new/prefix1/Icons/Shop1.png</normaloff>:/new/prefix1/Icons/Shop1.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>75</width>
+      <width>200</width>
       <height>100</height>
      </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -148,9 +157,9 @@
    <widget class="QLabel" name="Num_Coin">
     <property name="geometry">
      <rect>
-      <x>910</x>
+      <x>890</x>
       <y>30</y>
-      <width>16</width>
+      <width>41</width>
       <height>31</height>
      </rect>
     </property>
@@ -172,7 +181,7 @@
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>210</y>
+      <y>200</y>
       <width>141</width>
       <height>91</height>
      </rect>
@@ -203,8 +212,8 @@
    <widget class="QPushButton" name="GandomFarm_pbn">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>310</y>
+      <x>540</x>
+      <y>320</y>
       <width>141</width>
       <height>101</height>
      </rect>
@@ -232,9 +241,9 @@
    <widget class="QPushButton" name="SheepHome_pbn">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>280</y>
-      <width>151</width>
+      <x>200</x>
+      <y>270</y>
+      <width>181</width>
       <height>101</height>
      </rect>
     </property>
@@ -257,14 +266,17 @@
       <height>100</height>
      </size>
     </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="ChickenHome_pbn">
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>350</y>
+      <y>330</y>
       <width>141</width>
-      <height>101</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="cursor">
@@ -286,13 +298,16 @@
       <height>100</height>
      </size>
     </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="CowHome_pbn">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>430</y>
-      <width>151</width>
+      <x>440</x>
+      <y>410</y>
+      <width>161</width>
       <height>101</height>
      </rect>
     </property>
@@ -318,6 +333,9 @@
       <height>100</height>
      </size>
     </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -328,12 +346,18 @@
       <height>91</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;رتبه بندی&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
     <property name="text">
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>../../Downloads/Ranking.png</normaloff>../../Downloads/Ranking.png</iconset>
+     <iconset resource="resource.qrc">
+      <normaloff>:/new/prefix1/Icons/Ranking.png</normaloff>:/new/prefix1/Icons/Ranking.png</iconset>
     </property>
     <property name="iconSize">
      <size>
