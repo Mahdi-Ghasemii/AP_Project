@@ -131,6 +131,7 @@ void Farm::operator=(const Farm& p){
     sheepHome=p.sheepHome;
     yonjeFarm=p.yonjeFarm;
     gandomFarm=p.gandomFarm;
+    myThread=p.myThread;
 }
 
 void Farm::on_Storage_pbn_clicked()
