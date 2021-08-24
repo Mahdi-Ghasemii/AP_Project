@@ -113,6 +113,9 @@ void CowHome::on_collect_btn_clicked()
                 Data::get_iterator()->get_farm().get_storage().Get_milk().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()+stock_animal);
                 Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_milk().Get_Number()+stock_animal);
                 Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+5*stock_animal);
+                for(int i=0;i<stock_animal;i++){
+                    Data::get_iterator()->get_farm().Get_MyThread().Push_Back_on_buy_Milk(time(NULL));
+                }
                 QMessageBox::information(this," ","برداشت شیر با موفقیت انجام شد");
                 if(Data::get_iterator()->get_experience()>=Data::get_iterator()->get_experience_required_for_levelUp()){
                     Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
