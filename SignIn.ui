@@ -207,9 +207,12 @@
        <bold>true</bold>
       </font>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,1,2">
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
       <property name="spacing">
-       <number>0</number>
+       <number>10</number>
       </property>
       <property name="leftMargin">
        <number>50</number>
@@ -237,24 +240,6 @@
         </property>
         <property name="text">
          <string>ثبت نام</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="or_label">
-        <property name="font">
-         <font>
-          <family>MS Shell Dlg 2</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>یا</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
