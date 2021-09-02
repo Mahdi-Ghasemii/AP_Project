@@ -280,8 +280,7 @@ void Farm::on_pushButton_clicked()
 void Farm::On_ExitAction_triggred()
 {
     Data::write_on_file();
-    qDebug() << Data::get_players()[3].get_experience();
-    qDebug() << Data::get_players()[3].get_username();
+
     this->close();
     QMessageBox::information(nullptr, "اتمام بازی", "به امید دیدار!");
 }
