@@ -40,6 +40,8 @@ void Store::Add_Experience_and_Check_Level(int _e){
     if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
         Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
 
+        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
+
         Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
 
     }

@@ -40,6 +40,7 @@ public:
     MyThread& Get_MyThread();
 
 
+
 private slots:
 
     void get_signal_from_builting_for_YonjeFarm(QString);
@@ -67,6 +68,16 @@ private slots:
     void On_ProfileAction_triggred();
 
 public slots:
+
+    void Global_Func_to_Set_ui_Attributes();
+    void Set_UI_Attributes1_for_set_time_login();
+    void Set_UI_Attributes_for_upgrade_storage();
+    void Set_UI_Attributes1_for_upgrade_siloo();
+
+
+
+
+
     void Show_Farm_Class();
 signals:
 

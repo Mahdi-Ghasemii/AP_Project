@@ -8,6 +8,7 @@
 
 class MyThread : public QThread
 {
+    Q_OBJECT
 public:
     MyThread();
     void operator=(const MyThread& temp);
@@ -74,7 +75,11 @@ public:
     void Set_Plow_YonjehFarm(time_t t);
     time_t Get_Plow_YonjehFarm();
 
+signals:
 
+    void Send_Signal_to_Farm_for_time_login();
+    void Send_Signal_to_Farm_for_Upgrade_Storage();
+    void Send_Signal_to_Farm_for_Upgrade_Siloo();
 
 
 private:
