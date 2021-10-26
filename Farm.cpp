@@ -59,7 +59,7 @@ Farm::Farm(QWidget *parent) :
 
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_ChickenHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_chickenHome()));
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_CowHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_cowHome()));
-    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_sheepHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_sheepHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_SheepHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_sheepHome()));
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_ChickenHome()),this,SLOT(Set_UI_Attributes1_for_build_chickenHome()));
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_CowHome()),this,SLOT(Set_UI_Attributes1_for_build_cowHome()));
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_SheepHome()),this,SLOT(Set_UI_Attributes1_for_build_sheepHome()));
