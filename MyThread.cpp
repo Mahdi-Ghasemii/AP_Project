@@ -95,17 +95,7 @@ void MyThread::run()
 
         Data::get_iterator()->get_farm().get_storage().Set_Capacity(round(Data::get_iterator()->get_farm().get_storage().GetCapasity() *3 / 2)+1);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience() + Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() * 3);
-        Data::get_iterator()->get_farm().get_storage().Set_Bulding_Level(Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() + 1);
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_level(Data::get_iterator()->get_level()+1);
-
-            Data::get_iterator()->set_experience_required_for_levelUp(Data::get_iterator()->get_experience_required_for_levelUp()*2+10);
-
-           // QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما افزایش پیدا کرد . . .:)",QMessageBox::Ok);
-
-
-        }
-
+        Data::get_iterator()->get_farm().get_storage().Set_Bulding_Level(Data::get_iterator()->get_farm().get_storage().Get_Buliding_Level() + 1);        
         emit Send_Signal_to_Farm_for_Upgrade_Storage();
         upgrade_Storage = 0;
 
@@ -135,81 +125,57 @@ void MyThread::run()
 
     // Aref
     if(upgrade_CowHome != 0 && now - upgrade_CowHome >= 5*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","گاوداری با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+        //QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","گاوداری با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_cowHome().set_capacity(Data::get_iterator()->get_farm().get_cowHome().get_level_habitat() +1);
         Data::get_iterator()->get_farm().get_cowHome().set_level_habitat(Data::get_iterator()->get_farm().get_cowHome().get_capacity() *2);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+6);
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-        }
         upgrade_CowHome = 0;
+        emit Send_Signal_to_Farm_for_Upgrade_CowHome();
     }
 
     if(upgrade_ChickenHome != 0 && now - upgrade_ChickenHome >= 3*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","مرغداری با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+        //QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","مرغداری با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_chickenHome().set_capacity(Data::get_iterator()->get_farm().get_chickenHome().get_capacity() *2);
         Data::get_iterator()->get_farm().get_chickenHome().set_level_habitat(Data::get_iterator()->get_farm().get_chickenHome().get_level_habitat() +1);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+5);
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-        }
         upgrade_ChickenHome = 0;
+        emit Send_Signal_to_Farm_for_Upgrade_ChickenHome();
     }
 
     if(upgrade_SheepHome != 0 && now - upgrade_SheepHome >= 9*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","آغل با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+        //QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","آغل با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_sheepHome().set_capacity(Data::get_iterator()->get_farm().get_sheepHome().get_capacity() *2);
         Data::get_iterator()->get_farm().get_sheepHome().set_level_habitat(Data::get_iterator()->get_farm().get_sheepHome().get_level_habitat() +1);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+15);
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-        }
         upgrade_SheepHome = 0;
+        emit Send_Signal_to_Farm_for_Upgrade_SheepHome();
     }
 
     if(build_CowHome != 0 && now - build_CowHome >= 5*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","گاوداری با موفقیت ساخته شد",QMessageBox::Ok);
+        //QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","گاوداری با موفقیت ساخته شد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_cowHome().set_is_build(true);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+10);
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-        }
         build_CowHome = 0;
+        emit Send_Signal_to_Farm_for_Build_CowHome();
     }
 
 
 
 
     if(build_ChickenHome != 0 && now - build_ChickenHome >= 3*3600*24){
-        QMessageBox::information(nullptr,"تبریک","مرغداری با موفقیت ساخته شد",QMessageBox::Ok);
+        //QMessageBox::information(nullptr,"تبریک","مرغداری با موفقیت ساخته شد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_chickenHome().set_is_build(true);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+5);
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-        }
         build_ChickenHome = 0;
+        emit Send_Signal_to_Farm_for_Build_ChickenHome();
     }
 
     if(build_SheepHome != 0 && now - build_SheepHome >= 10*3600*24){
-        QMessageBox::information(nullptr,"تبریک","آغل با موفقیت ساخته شد",QMessageBox::Ok);
+        //QMessageBox::information(nullptr,"تبریک","آغل با موفقیت ساخته شد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_sheepHome().set_is_build(true);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+20);
-        if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
-            Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()-Data::get_iterator()->get_experience_required_for_levelUp());
-            Data::get_iterator()->set_experience_required_for_levelUp(2*Data::get_iterator()->get_experience_required_for_levelUp()+10);
-            QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","سطح شما با موفقیت افزایش یافت");
-        }
         build_SheepHome = 0;
+        emit Send_Signal_to_Farm_for_Build_SheepHome();
     }
     //Arsalan///////
     //build //

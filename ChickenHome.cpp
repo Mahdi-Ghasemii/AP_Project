@@ -50,6 +50,7 @@ void ChickenHome::on_upgrade_btn_clicked()
                     Data::get_iterator()->get_farm().get_storage().Get_mikh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_mikh().Get_Number()-1);
                     Data::get_iterator()->set_coin(Data::get_iterator()->get_coin()-10);
                     Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_ChickenHome(time(NULL));
+                    Data::get_iterator()->get_farm().get_storage().Set_Occupied_Capacity(Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()-1);
                     QMessageBox::information(this," ","فرایند ارتقای مرغداری با موفقیت آغاز شد");
                 }
                 else

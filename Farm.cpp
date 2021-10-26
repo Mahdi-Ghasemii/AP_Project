@@ -56,6 +56,14 @@ Farm::Farm(QWidget *parent) :
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_time_login()),this,SLOT(Set_UI_Attributes1_for_set_time_login()));
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_Storage()),this,SLOT(Set_UI_Attributes_for_upgrade_storage()));
     connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_Siloo()),this,SLOT(Set_UI_Attributes1_for_upgrade_siloo()));
+
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_ChickenHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_chickenHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_CowHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_cowHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Upgrade_sheepHome()),this,SLOT(Set_UI_Attributes1_for_upgrade_sheepHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_ChickenHome()),this,SLOT(Set_UI_Attributes1_for_build_chickenHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_CowHome()),this,SLOT(Set_UI_Attributes1_for_build_cowHome()));
+    connect(&myThread,SIGNAL(Send_Signal_to_Farm_for_Build_SheepHome()),this,SLOT(Set_UI_Attributes1_for_build_sheepHome()));
+
 }
 
 
@@ -342,6 +350,48 @@ void Farm::Set_UI_Attributes_for_upgrade_storage()
 void Farm::Set_UI_Attributes1_for_upgrade_siloo()
 {
     QMessageBox::information(this,"","سیلو با موفقیت ارتقا پیدا کرد .:)",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_build_chickenHome()
+{
+    QMessageBox::information(this,"تبریک","مرغداری با موفقیت ساخته شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_build_cowHome()
+{
+    QMessageBox::information(this,"تبریک","گاوداری با موفقیت ساخته شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_build_sheepHome()
+{
+    QMessageBox::information(this,"تبریک","آغل با موفقیت ساخته شد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_chickenHome()
+{
+    QMessageBox::information(this,"تبریک","مرغداری با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_cowHome()
+{
+    QMessageBox::information(this,"تبریک","گاوداری با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
+
+    Global_Func_to_Set_ui_Attributes();
+}
+
+void Farm::Set_UI_Attributes1_for_upgrade_sheepHome()
+{
+    QMessageBox::information(this,"تبریک","آغل با موفقیت ارتقا پیدا کرد",QMessageBox::Ok);
 
     Global_Func_to_Set_ui_Attributes();
 }

@@ -74,6 +74,12 @@ public slots:
     void Set_UI_Attributes_for_upgrade_storage();
     void Set_UI_Attributes1_for_upgrade_siloo();
 
+    void Set_UI_Attributes1_for_upgrade_chickenHome();
+    void Set_UI_Attributes1_for_upgrade_cowHome();
+    void Set_UI_Attributes1_for_upgrade_sheepHome();
+    void Set_UI_Attributes1_for_build_chickenHome();
+    void Set_UI_Attributes1_for_build_cowHome();
+    void Set_UI_Attributes1_for_build_sheepHome();
 
 
 
