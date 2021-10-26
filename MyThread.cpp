@@ -188,7 +188,7 @@ void MyThread::run()
 
 
     if(build_ChickenHome != 0 && now - build_ChickenHome >= 3*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","مرغداری با موفقیت ساخته شد",QMessageBox::Ok);
+        QMessageBox::information(nullptr,"تبریک","مرغداری با موفقیت ساخته شد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_chickenHome().set_is_build(true);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+5);
         if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
@@ -200,7 +200,7 @@ void MyThread::run()
     }
 
     if(build_SheepHome != 0 && now - build_SheepHome >= 10*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","آغل با موفقیت ساخته شد",QMessageBox::Ok);
+        QMessageBox::information(nullptr,"تبریک","آغل با موفقیت ساخته شد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_sheepHome().set_is_build(true);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+20);
         if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
@@ -213,7 +213,7 @@ void MyThread::run()
     //Arsalan///////
     //build //
     if(Build_YonjehFarm != 0 && now - Build_YonjehFarm >= 3*3600*24){
-        QMessageBox::information(&Data::get_iterator()->get_farm(),"تبریک","زمین یونجه با موفقیت ساخته شد",QMessageBox::Ok);
+        QMessageBox::information(nullptr,"تبریک","زمین یونجه با موفقیت ساخته شد",QMessageBox::Ok);
         Data::get_iterator()->get_farm().get_yonjeFarm().set_is_build(true);
         Data::get_iterator()->set_experience(Data::get_iterator()->get_experience()+6);
         if(Data::get_iterator()->get_experience() >= Data::get_iterator()->get_experience_required_for_levelUp()){
