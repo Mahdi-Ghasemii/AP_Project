@@ -244,7 +244,7 @@ color: rgb(170, 0, 0);
    </property>
    <property name="font">
     <font>
-     <pointsize>28</pointsize>
+     <pointsize>25</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>

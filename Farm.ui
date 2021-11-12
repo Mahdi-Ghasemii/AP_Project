@@ -386,8 +386,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;تجربه&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(85, 85, 255);
-background-color: rgb(85, 85, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="value">
      <number>0</number>
@@ -445,14 +444,17 @@ background-color: rgb(85, 85, 255);</string>
    <widget class="QLabel" name="_Experience">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>465</x>
       <y>30</y>
-      <width>16</width>
+      <width>31</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
      <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -506,7 +508,7 @@ background-color: rgb(85, 85, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>29</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="font">

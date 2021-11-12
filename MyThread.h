@@ -11,6 +11,7 @@ class MyThread : public QThread
     Q_OBJECT
 public:
     MyThread();
+    ~MyThread(){this->terminate();}
     void operator=(const MyThread& temp);
     void run();
 
