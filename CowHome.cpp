@@ -74,7 +74,7 @@ void CowHome::on_feeding_btn_clicked()
 {
     if(stock_animal!=0){
         if(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=2*stock_animal){
-            if(time(NULL),Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow()>3*24*3600){
+            if(time(NULL)-Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow()>3*24*3600){
                 if (Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow()==0){
                     Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-2*stock_animal);
                     Data::get_iterator()->get_farm().Get_MyThread().Set_feed_time_cow(time(NULL));

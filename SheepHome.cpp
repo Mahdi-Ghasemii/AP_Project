@@ -79,7 +79,7 @@ void SheepHome::on_feeding_btn_clicked()
 {
     if(stock_animal!=0){
         if(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()>=stock_animal){
-            if(time(NULL),Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
+            if(time(NULL)-Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
                 if (Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()==0){
                     Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number()-stock_animal);
                     Data::get_iterator()->get_farm().Get_MyThread().Set_feed_time_sheep(time(NULL));
