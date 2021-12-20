@@ -126,7 +126,7 @@ void SheepHome::on_collect_btn_clicked()
 {
     if(Data::get_iterator()->get_coin()>=10*stock_animal){
         if(Data::get_iterator()->get_farm().get_storage().GetCapasity()-Data::get_iterator()->get_farm().get_storage().Get_Occupied_Capacity()>=stock_animal){
-            if(time(NULL),Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
+            if(time(NULL)-Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()>10*24*3600){
                 if(Data::get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep()!=0){
                     Data::get_iterator()->get_farm().Get_MyThread().Set_feed_time_sheep(0);
                     Data::get_iterator()->get_farm().get_storage().Get_pashm().Set_Number(Data::get_iterator()->get_farm().get_storage().Get_pashm().Get_Number()+stock_animal);
