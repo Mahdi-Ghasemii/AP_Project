@@ -4,7 +4,6 @@
 #include <QWidget>
 #include "mainfarm.h"
 #include <ctime>
-#include "MyThread.h"
 
 
 
