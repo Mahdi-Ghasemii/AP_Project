@@ -171,10 +171,8 @@ void Storage::on_Upgrade_Storage_clicked()
             ui->Mikh_Available->setText(QString::number(this->mikh.Get_Number()));
             ui->Bill_Available->setText(QString::number(this->bill.Get_Number()));
 
-            qDebug() << this->mikh.Get_Number();
             time_t now = time(NULL);
             Data::get_iterator()->get_farm().Get_MyThread().Set_upgrade_Storage(now);
-            qDebug()<<now<<"\n"<< Data::get_iterator()->get_farm().Get_MyThread().Get_upgrade_Storage();
             return;
         }
 
@@ -192,6 +190,8 @@ void Storage::Get_Signal_From_Farm()
 
     //*******************************************************************
     // Set 3 arguman of storage building
+
+    occupied_capacity = yonjeh.Get_Number()+bill.Get_Number()+mikh.Get_Number()+milk.Get_Number()+pashm.Get_Number()+egg.Get_Number();
 
     ui->Occupied_Capasity->setText(QString::number(this->occupied_capacity));
     ui->Storage_Level->setText(QString::number(this->building_Level));
